@@ -1,6 +1,7 @@
 #+title: Rabbit & Steel Shadow Guide
 #+author: Quoise
 #+date: 2026-04-15
+#+startup: inlineimages
 
 * Intro
 Rabbit & Steel Shadow Class guide written primarily for v2.0.2.7. 
@@ -19,6 +20,8 @@ Details of Shadow's kit can be found in:
 
 For latest available guides, see [[https://discord.com/channels/496640298844422149/1238375581486288916][Guides Catalogue maintained by Stagz | mino_dev Discord (discord.com)]]
 
+For community jargon, see [[https://docs.google.com/document/d/1rrSEIEstdKtajTY1xkXWoQKw3BIz4eENyJBHiyqCKcU/edit?tab=t.0][Rabbit & Steel Community Jargon by tomeking (docs.google.com)]] 
+
 # attributions and claims to not own used images of R&S Loot + Gems
 
 * Changelog (Releases)
@@ -29,7 +32,8 @@ For latest available guides, see [[https://discord.com/channels/4966402988444221
 Maximum damage rotation would prioritize in order of availibility,
 4312.
 
-As a rule-of-thumb, N1/N4 and N2 have about the same hitbox horizontally.[fn:N2: diameter of N1 and N4 is 5% bigger than the length of N2.]
+As a rule-of-thumb, N1/N4 and N2 have about the same hitbox horizontally.
+[fn:N2:diameter of N1 and N4 is 5% bigger than the length of N2.]
 
 * Gems Tier List
 - NX :: Normal (non-gem) variant of X ability
@@ -44,19 +48,19 @@ G1, G4 or special gem.
 
 ** S: Auto-picks, damage now and scales, always synergistic
 1. R4
-2. S3
+2. S3[fn:S3:Sapphire Special is practically ~110 DPS due to oGCD]
    
-** A: Carries/versatile
+** A: Carries/versatile/usually good
 1. R1
 2. R2
 3. S1
 4. S4
-5. S2
-6. O2
-7. G3
+5. O2[fn:O2:Opal Secondary, practically, is SS O4.]
+6. G3[fn:G3:Garnet Special, practically, is Dancer N4/Druid G4.]
+7. S2
     
 ** B: Alternatives
-1. E3[fn:E3:Emerald Special enables Shadow to take +GCD, buff and debuff items; G1 scaling.]
+1. E3[fn:E3:Emerald Special enables Shadow to take +GCD, buff and debuff items; G1 scaling. Affected by Obi Rod, Cursed Candlestaff, Old Bonnet/Haunted Gloves and other special items.]
 2. E1
 3. G2[fn:G2:Garnet Secondary is risky DPS-wise without synergies or second gem.]
 4. O1
@@ -73,5 +77,6 @@ G1, G4 or special gem.
 2. E4[fn:O3E4]
 
 * Item Tier List
+Assume unsorted special ordering.
 
 * Example Builds
