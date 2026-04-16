@@ -11,7 +11,7 @@
 * Playstyle
 
 * Gems Tier List
-- NX = Normal (non-gem) variant of X ability
+- NX :: Normal (non-gem) variant of X ability
 
 Tier placing prioritizes "lines" and WR consistency. Shadow, by gem design, should
 always buy a gem first gem first shop, most are damage positive.
@@ -35,20 +35,23 @@ G1, G4 or special gem.
 7. G3
     
 ** B: Alternatives
-1. E3[fn:E3:Emerald Special enables Shadow to take +GCD, buff and debuff items; G1 scaling]
+1. E3[fn:E3:Emerald Special enables Shadow to take +GCD, buff and debuff items; G1 scaling.]
 2. E1
-3. G2[fn:G2:Garnet Secondary is risky DPS-wise without synergies or second gem]
+3. G2[fn:G2:Garnet Secondary is risky DPS-wise without synergies or second gem.]
 4. O1
 5. O4
 6. R3
 
 ** C: Niche; good immediate damage
 1. G1
-2. G4
-3. E2[fn:E2:Emerald Secondary I rate low due to poor Shackle RNG and Lunar rotations; it can still carry]
+2. G4[fn:G4:Garnet Defensive is also good for pvp-ing items.]
+3. E2[fn:E2:Emerald Secondary I rate low due to poor Shackle RNG and Lunar rotations; it can still carry.]
 
 ** D: Ultra-niche
-1. O3 [fn:O3E4:Opal Special and Emerald Defensive close too many future lines and don't do efficient damage at base kit.]
-2. E4 [fn:O3E4]
+1. O3[fn:O3E4:Opal Special and Emerald Defensive close too many future lines and don't do efficient damage at base kit.]
+2. E4[fn:O3E4]
 
 * Item Tier List
+- 
+
+* Example Builds
