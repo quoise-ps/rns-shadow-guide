@@ -3,12 +3,33 @@
 #+date: 2026-04-15
 
 * Intro
+Rabbit & Steel Shadow Class guide written primarily for v2.0.2.7. 
 
-** Shackle
+At the time of starting this guide, the author has 10 Multiplayer Lunar wins on Shadow, 0 SP Lunar Wins. Primarily, the recommendations
+here are targetted at 4P Lunar and high WR/consistency.
+
+This guide could not be made possible without the help of other players in mino_dev Discord.
+# check to see if said players are okay with being mentioned in guide.
+
+** Related Resources
+Details of Shadow's kit can be found in:
+- [[https://rns.miraheze.org/wiki/Shadow][Shadow | Rabbit & Steel Wiki (rns.miraheze.org)]]
+- [[https://babit.gitlab.io/rns-definitions/characters/shadow/][Shadow abilities | Babit's Rabbit & Steel Definitions++ (babit.gitlab.io)]]
+  + More accessible "gamecode" and numbers regarding R&S.
+
+For latest available guides, see [[https://discord.com/channels/496640298844422149/1238375581486288916][Guides Catalogue maintained by Stagz | mino_dev Discord (discord.com)]]
+
+# attributions and claims to not own used images of R&S Loot + Gems
 
 * Changelog (Releases)
+# likely first release at 0.1.0, given I don't feel confident in gem and item tiering
 
 * Playstyle
+** Base Kit
+Maximum damage rotation would prioritize in order of availibility,
+4312.
+
+As a rule-of-thumb, N1/N4 and N2 have about the same hitbox horizontally.[fn:N2: diameter of N1 and N4 is 5% bigger than the length of N2.]
 
 * Gems Tier List
 - NX :: Normal (non-gem) variant of X ability
@@ -52,6 +73,5 @@ G1, G4 or special gem.
 2. E4[fn:O3E4]
 
 * Item Tier List
-- 
 
 * Example Builds
