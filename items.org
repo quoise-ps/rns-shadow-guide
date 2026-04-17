@@ -1,5 +1,6 @@
 #+title: Items Tier List
 * _S: Perfect_
+#+begin_center
 {{{itm(Stuffed-Rabbit)}}}
 {{{itm(Eternity-Flute)}}}
 {{{itm(Timewarp-Wand)}}}
@@ -52,7 +53,9 @@
 {{{itm(Stirring-Spoon)}}}
 {{{itm(Fanciful-Book)}}}
 {{{itm(Apple-Plate)}}}
+#+end_center
 * _A: Great_
+#+begin_center
 {{{itm(Pajama-Hat)}}}
 {{{itm(Sleeping-Greatbow)}}}
 {{{itm(Crescentmoon-Dagger)}}}
@@ -93,7 +96,9 @@
 {{{itm(Rosered-Leotard)}}}
 {{{itm(Pyrite-Earrings)}}}
 {{{itm(Caver's-Cloak)}}}
+#+end_center
 * _B: Good, often conditional_
+#+begin_center
 {{{itm(Blackwing-Staff)}}}
 {{{itm(Curse-Talon)}}}
 {{{itm(Darkmagic-Blade)}}}
@@ -201,16 +206,15 @@
 {{{itm(Drill-Shield)}}}
 {{{itm(Canary-Charm)}}}
 {{{itm(Miner's-Headlamp)}}}
+#+end_center
 ** Gold (first shop only)
-Gold items solely are B solely for the ability to buy 2 gems early on Shadow on
-first shop.  Most gems are damage positive on Shadow over base and drastically
-changes your item prio on MP.
-
+#+begin_center
 {{{itm(Topaz-Charm)}}}
 {{{itm(Silver-Coin)}}}
 {{{itm(Vanilla-Wafers)}}}
-
+#+end_center
 * _C: Need synergy, anti-synergy, uncommon_
+#+begin_center
 {{{itm(Ninja-Robe)}}}
 {{{itm(Stonebreaker-Staff)}}}
 {{{itm(Lightning-Bow)}}}
@@ -245,14 +249,18 @@ changes your item prio on MP.
 {{{itm(Jester's-Hat)}}}
 {{{itm(Hooked-Staff)}}}
 {{{itm(Crown-of-Swords)}}}
+#+end_center
 * _D: Super-niche, rare_
+#+begin_center
 {{{itm(Tiny-Hourglass)}}}
 {{{itm(Nova-Crown)}}}
 {{{itm(Twinstar-Earrings)}}}
 {{{itm(Metronome-Boots)}}}
 {{{itm(Starry-Cloak)}}}
 {{{itm(Pidgeon-Bow)}}}
+#+end_center
 * _E: QoL/Unranked_
+#+begin_center
 {{{itm(Timemage-Cap)}}}
 {{{itm(Rockdragon-Mail)}}}
 {{{itm(Volcano-Spear)}}}
@@ -289,3 +297,4 @@ changes your item prio on MP.
 {{{itm(Caramel-Tea)}}}
 {{{itm(Strawberry-Cake)}}}
 {{{itm(Sweet-Taffy)}}}
+#+end_center
