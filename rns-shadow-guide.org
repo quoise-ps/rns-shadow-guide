@@ -1,13 +1,22 @@
-#+title: Rabbit & Steel Shadow Guide
+#+bind: org-latex-image-default-width "2.0em"
+#+bind: org-latex-images-centered nil
+#+bind: org-footnote-section nil
+#+title: Rabbit & Steel Shadow Guide (v2.0.2.7)
 #+author: Quoise
 #+date: 2026-04-15
 #+startup: inlineimages
+#+OPTIONS: ^:nil
+#+LATEX_HEADER: \usepackage[colorlinks=true,urlcolor=pink,linkcolor=blue]{hyperref}
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="https://gongzhitaao.org/orgcss/org.css"/>
+#+OPTIONS: html-style:nil
+#+INFOJS_OPT: view:info toc:non-nil sdepth:1
+# #+HTML_HEAD_EXTRA: <style> img { width: 7.5% } </style>
 
 * Intro
 Rabbit & Steel Shadow Class guide written primarily for v2.0.2.7. 
 
-At the time of starting this guide, the author has 10 Multiplayer Lunar wins on Shadow, 0 SP Lunar Wins. Primarily, the recommendations
-here are targetted at 4P Lunar and high WR/consistency.
+At the time of starting this guide, the author has 10 Multiplayer Lunar wins on Shadow, 0 SP Lunar Wins.
+Primarily, the recommendations here are targetted at 4P Lunar and high WR consistency.
 
 This guide could not be made possible without the help of other players in mino_dev Discord.
 # check to see if said players are okay with being mentioned in guide.
@@ -29,11 +38,15 @@ For community jargon, see [[https://docs.google.com/document/d/1rrSEIEstdKtajTY1
 
 * Playstyle
 ** Base Kit
-Maximum damage rotation would prioritize in order of availibility,
-4312.
+Maximum damage rotation would prioritize in order of availibility.
+
+\(N4 -> N3 -> N1 -> N1\)
+
+Though more typically, for mobile targets, I save N3 for when I'm out of range or shackled.
+N4 is good for burst, i.e. on 4P Lunar against the unshielded butterfly on (Geode) Plee or (Sanctum) Capricorn.
 
 As a rule-of-thumb, N1/N4 and N2 have about the same hitbox horizontally.
-[fn:N2:diameter of N1 and N4 is 5% bigger than the length of N2.]
+[fn:N2:Diameter of N1 and N4 is 5% bigger than the length of N2.]
 
 * Gems Tier List
 - NX :: Normal (non-gem) variant of X ability
@@ -47,36 +60,40 @@ If on Subterra Sanctum or Churchmouse Streets first stage, consider
 G1, G4 or special gem.
 
 ** S: Auto-picks, damage now and scales, always synergistic
-1. R4
-2. S3[fn:S3:Sapphire Special is practically ~110 DPS due to oGCD]
+
+[[./img-gems/R4.png]]
+[[./img-gems/S3.png]][fn:S3:Sapphire Special is practically ~110 DPS due to oGCD]
    
 ** A: Carries/versatile/usually good
-1. R1
-2. R2
-3. S1
-4. S4
-5. O2[fn:O2:Opal Secondary, practically, is SS O4.]
-6. G3[fn:G3:Garnet Special, practically, is Dancer N4/Druid G4.]
-7. S2
+[[./img-gems/R1.png]]
+[[./img-gems/R2.png]]
+[[./img-gems/S1.png]]
+[[./img-gems/S4.png]]
+[[./img-gems/O2.png]][fn:O2:Opal Secondary, practically, is SS O4.]
+[[./img-gems/G3.png]][fn:G3:Garnet Special, practically, is Dancer N4/Druid G4.]
+[[./img-gems/S2.png]]
     
 ** B: Alternatives
-1. E3[fn:E3:Emerald Special enables Shadow to take +GCD, buff and debuff items; G1 scaling. Affected by Obi Rod, Cursed Candlestaff, Old Bonnet/Haunted Gloves and other special items.]
-2. E1
-3. G2[fn:G2:Garnet Secondary is risky DPS-wise without synergies or second gem.]
-4. O1
-5. O4
-6. R3
+[[./img-gems/E3.png]][fn:E3:Emerald Special enables Shadow to take +GCD, buff and debuff items; G1 scaling. Affected by Obi Rod, Cursed Candlestaff, Old Bonnet/Haunted Gloves and other special items.]
+[[./img-gems/E1.png]]
+[[./img-gems/G2.png]][fn:G2:Garnet Secondary is risky DPS-wise without synergies or second gem.]
+[[./img-gems/O1.png]]
+[[./img-gems/O4.png]]
+[[./img-gems/R3.png]]
 
 ** C: Niche; good immediate damage
-1. G1
-2. G4[fn:G4:Garnet Defensive is also good for pvp-ing items.]
-3. E2[fn:E2:Emerald Secondary I rate low due to poor Shackle RNG and Lunar rotations; it can still carry.]
+[[./img-gems/G1.png]]
+[[./img-gems/G4.png]][fn:G4:Garnet Defensive is also good for pvp-ing items.]
+[[./img-gems/E2.png]][fn:E2:Emerald Secondary I rate low due to poor Shackle RNG and Lunar rotations; it can still carry.]
 
 ** D: Ultra-niche
-1. O3[fn:O3E4:Opal Special and Emerald Defensive close too many future lines and don't do efficient damage at base kit.]
-2. E4[fn:O3E4]
+[[./img-gems/O3.png]][fn:O3E4:Opal Special and Emerald Defensive close too many future lines and don't do efficient damage at base kit.]
+[[./img-gems/E4.png]][fn:O3E4]
 
 * Item Tier List
 Assume unsorted special ordering.
+
+# ./img/Raven's-Dagger.png]]
+# ./img/Gemini-Necklace.png]]
 
 * Example Builds
