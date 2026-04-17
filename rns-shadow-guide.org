@@ -28,14 +28,6 @@ Primarily, the recommendations here are targetted as a carry at 4P Lunar and hig
 This guide could not be made possible without the help of other players in mino_dev Discord.
 # check to see if said players are okay with being mentioned in guide.
 
-** Sample Definitions
-- {{{abls(N1)}}}, {{{gems(O1)}}}, {{{gems(S1)}}}, {{{gems(R1)}}}, {{{gems(E1)}}}, {{{gems(G1)}}} :: _Normal_, _Opal_, _Sapphire_, _Ruby_, _Emerald_ and _Garnet_ variants of Primary respectively.
-- {{{gems(R1)}}}, {{{gems(R2)}}}, {{{gems(R3)}}}, {{{gems(R4)}}} :: _Ruby_ variants of each respectively: Primary, Secondary, Special and Defensive.
-- BiS :: Best in Slot; universal best upgrade.
-- AoE :: Area-of-Effect; typically used in context of hitting multiple enemies, e.g. fights in Churchouse or Sanctum.
-- oGCD :: Shadow's S3, S4; these can be used without sacrificing GCD time spent on other abilities.
-- iframe :: Invincibility
-
 ** Related Resources
 Details of Shadow's kit can be found in:
 - [[https://rns.miraheze.org/wiki/Shadow][Shadow | Rabbit & Steel Wiki (rns.miraheze.org)]]
@@ -47,6 +39,14 @@ For community jargon:
 - [[https://docs.google.com/document/d/1rrSEIEstdKtajTY1xkXWoQKw3BIz4eENyJBHiyqCKcU/edit?tab=t.0][Rabbit & Steel Community Jargon by tomeking (docs.google.com)]] 
 
 # attributions and claims to not own used images of R&S Loot + Gems
+
+** Sample Definitions
+- {{{abls(N1)}}}, {{{gems(O1)}}}, {{{gems(S1)}}}, {{{gems(R1)}}}, {{{gems(E1)}}}, {{{gems(G1)}}} :: _Normal_, _Opal_, _Sapphire_, _Ruby_, _Emerald_ and _Garnet_ variants of Primary respectively.
+- {{{gems(R1)}}}, {{{gems(R2)}}}, {{{gems(R3)}}}, {{{gems(R4)}}} :: _Ruby_ variants of each respectively: Primary, Secondary, Special and Defensive.
+- BiS :: Best in Slot; universal best upgrade.
+- AoE :: Area-of-Effect; typically used in context of hitting multiple enemies, e.g. fights in Churchouse or Sanctum.
+- oGCD :: Shadow's S3, S4; these can be used without sacrificing GCD time spent on other abilities.
+- iframe :: Invincibility
 
 ** Changelog (Releases)
 # likely first release at 0.1.0, given I don't feel confident in gem and item tiering
