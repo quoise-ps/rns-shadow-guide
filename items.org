@@ -93,7 +93,7 @@
 {{{itm(Rosered-Leotard)}}}
 {{{itm(Pyrite-Earrings)}}}
 {{{itm(Caver's-Cloak)}}}
-* B: Good, often conditional
+* _B: Good, often conditional_
 {{{itm(Blackwing-Staff)}}}
 {{{itm(Curse-Talon)}}}
 {{{itm(Darkmagic-Blade)}}}
