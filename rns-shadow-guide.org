@@ -1,6 +1,7 @@
 #+bind: org-latex-image-default-width "2.0em"
 #+bind: org-latex-images-centered nil
 #+bind: org-footnote-section nil
+#+bind: org-hide-macro-markers t
 #+title: Rabbit & Steel Shadow Guide (v2.0.2.7)
 #+author: Quoise
 #+date: 2026-04-15
@@ -11,86 +12,98 @@
 #+OPTIONS: html-style:nil
 #+INFOJS_OPT: view:info toc:non-nil sdepth:1
 # #+HTML_HEAD_EXTRA: <style> img { width: 7.5% } </style>
+#+MACRO: gem [[./img/gems/$1.png]]
+#+MACRO: gems [[./img/gems-40px/$1.png]] $1
+#+MACRO: abl [[./img/abilities-40px/$1.png]]
+#+MACRO: abls [[./img/abilities-40px/$1.png]] $1
+#+MACRO: itm [[./img/items/$1.png]]
+#+MACRO: itms [[./img/items/$1.png]] $1
 
 * Intro
 Rabbit & Steel Shadow Class guide written primarily for v2.0.2.7. 
 
-At the time of starting this guide, the author has 10 Multiplayer Lunar wins on Shadow, 0 SP Lunar Wins.
-Primarily, the recommendations here are targetted at 4P Lunar and high WR consistency.
+At the time of starting this guide, the author (Quoise) has 11 Multiplayer (MP) Lunar wins and 20 Hard wins on Shadow.
+Primarily, the recommendations here are targetted as a carry at 4P Lunar and high WR consistency.
 
 This guide could not be made possible without the help of other players in mino_dev Discord.
 # check to see if said players are okay with being mentioned in guide.
 
+** Sample Definitions
+- {{{abls(N1)}}}, {{{gems(O1)}}}, {{{gems(S1)}}}, {{{gems(R1)}}}, {{{gems(E1)}}}, {{{gems(G1)}}} :: _Normal_, _Opal_, _Sapphire_, _Ruby_, _Emerald_ and _Garnet_ variants of Primary respectively.
+- {{{gems(R1)}}}, {{{gems(R2)}}}, {{{gems(R3)}}}, {{{gems(R4)}}} :: _Ruby_ variants of each respectively: Primary, Secondary, Special and Defensive.
+- BiS :: Best in Slot; universal best upgrade.
+- AoE :: Area-of-Effect; typically used in context of hitting multiple enemies, e.g. fights in Churchouse or Sanctum.
+- oGCD :: Shadow's S3, S4; these can be used without sacrificing GCD time spent on other abilities.
+- iframe :: Invincibility
+
 ** Related Resources
 Details of Shadow's kit can be found in:
 - [[https://rns.miraheze.org/wiki/Shadow][Shadow | Rabbit & Steel Wiki (rns.miraheze.org)]]
-- [[https://babit.gitlab.io/rns-definitions/characters/shadow/][Shadow abilities | Babit's Rabbit & Steel Definitions++ (babit.gitlab.io)]]
-  + More accessible "gamecode" and numbers regarding R&S.
+  
+For latest available guides:
+- [[https://discord.com/channels/496640298844422149/1238375581486288916][Guides Catalogue maintained by Stagz | mino_dev Discord (discord.com)]]
 
-For latest available guides, see [[https://discord.com/channels/496640298844422149/1238375581486288916][Guides Catalogue maintained by Stagz | mino_dev Discord (discord.com)]]
-
-For community jargon, see [[https://docs.google.com/document/d/1rrSEIEstdKtajTY1xkXWoQKw3BIz4eENyJBHiyqCKcU/edit?tab=t.0][Rabbit & Steel Community Jargon by tomeking (docs.google.com)]] 
+For community jargon:
+- [[https://docs.google.com/document/d/1rrSEIEstdKtajTY1xkXWoQKw3BIz4eENyJBHiyqCKcU/edit?tab=t.0][Rabbit & Steel Community Jargon by tomeking (docs.google.com)]] 
 
 # attributions and claims to not own used images of R&S Loot + Gems
 
-* Changelog (Releases)
+** Changelog (Releases)
 # likely first release at 0.1.0, given I don't feel confident in gem and item tiering
 
 * Playstyle
-- NX :: _Normal_ (non-gem) of _X_ ability; N1 is Shadow's base Primary.
-- OX, SX, RX, EX, GX :: _Opal_, _Sapphire_, _Ruby_, _Emerald_, _Garnet_ of _X_ ability respectively.
-
-
 ** Base Kit
-Maximum damage rotation would prioritize in order of availibility.
+Maximum damage rotation would prioritize in order of availability.
 
 \(N4 \to N3 \to N1 \to N1\)
 
-Though more typically, for mobile targets, I save N3 for when I'm out of range or shackled.
+More typically, for mobile targets, I save N3 for when I'm out of range or shackled.
 N4 is good for burst, i.e. on 4P Lunar against the unshielded butterfly on (Geode) Plee or (Sanctum) Capricorn.
 
 As a rule-of-thumb, N1/N4 and N2 have about the same hitbox horizontally.
 [fn:N2:Diameter of N1 and N4 is 5% bigger than the length of N2.]
 
-* Gems Tier List
-Tier placing prioritizes "lines" and WR consistency. Shadow, by gem design, should
-always buy a gem first gem first shop, most are damage positive.
+** Avoiding MP PvP
 
-Newer players (avoiding leap pvp) can consider auto-buying S2 and G2; avoid O4.
+** Cheating Abilities Out
+
+* Gems Tier List
+Tier placing prioritizes "lines" and WR consistency. Shadow, by gem design, should buy a gem first gem first shop, most are damage positive.
+
+Newer players (avoiding leap PvP) can consider auto-buying *S2* and *G2*; avoid *O4*.
 
 If on Subterra Sanctum or Churchmouse Streets first stage, consider
-G1, G4 or special gem.
+*G1*, *G4* or special gem.
 
 ** S: Auto-picks, damage now and scales, always synergistic
-
-[[./img-gems/R4.png]]
-[[./img-gems/S3.png]][fn:S3:S3 is practically ~110 DPS due to oGCD]
+[[./img/gems/R4.png]]
+[[./img/gems/S3.png]][fn:S3:S3 is practically ~110 DPS due to oGCD]
    
 ** A: Carries/versatile/usually good
-[[./img-gems/R1.png]]
-[[./img-gems/R2.png]]
-[[./img-gems/S1.png]]
-[[./img-gems/S4.png]]
-[[./img-gems/O2.png]][fn:O2:O2, practically, is SS O4.]
-[[./img-gems/G3.png]][fn:G3:G3, practically, is Dancer N4/Druid G4.]
-[[./img-gems/S2.png]]
+[[./img/gems/R1.png]]
+[[./img/gems/R2.png]]
+[[./img/gems/S1.png]]
+[[./img/gems/S4.png]]
+[[./img/gems/O2.png]][fn:O2:O2, practically, is SS O4.]
+[[./img/gems/G3.png]][fn:G3:G3, practically, is Dancer N4/Druid G4.]
+[[./img/gems/S2.png]]
     
 ** B: Alternatives
-[[./img-gems/E3.png]][fn:E3:E3 enables Shadow to take +GCD, buff and debuff items; G1 scaling. Affected by Obi Rod, Candlestaff, Bonnet/Haunted Gloves and other special items changes.]
-[[./img-gems/E1.png]]
-[[./img-gems/G2.png]][fn:G2:G2 is risky DPS-wise without synergies or second gem.]
-[[./img-gems/O1.png]]
-[[./img-gems/O4.png]]
-[[./img-gems/R3.png]]
+[[./img/gems/E3.png]][fn:E3:E3 enables Shadow to take +GCD, buff and debuff items; G1 scaling. Affected by Obi Rod, Candlestaff, Bonnet/Haunted Gloves and other special items changes.]
+[[./img/gems/E1.png]]
+[[./img/gems/G2.png]][fn:G2:G2 is risky DPS-wise without synergies or second gem.]
+[[./img/gems/O1.png]]
+[[./img/gems/O4.png]]
+[[./img/gems/R3.png]]
 
 ** C: Niche; good immediate damage
-[[./img-gems/G1.png]]
-[[./img-gems/G4.png]][fn:G4:G4 is also good for pvp-ing items.]
-[[./img-gems/E2.png]][fn:E2:E2 I rate low due to poor Shackle RNG and Lunar rotations; it can still carry.]
+[[./img/gems/G1.png]]
+[[./img/gems/G4.png]][fn:G4:G4 is also good for pvp-ing items.]
+[[./img/gems/E2.png]][fn:E2:E2 I rate low due to poor Shackle RNG and Lunar rotations; it can still carry.]
 
 ** D: Ultra-niche
-[[./img-gems/O3.png]][fn:O3E4:O3 and E4 close too many future lines and don't do efficient damage at base kit.]
-[[./img-gems/E4.png]][fn:O3E4]
+[[./img/gems/O3.png]][fn:O3E4:O3 and E4 close too many future lines and don't do efficient damage at base kit.]
+[[./img/gems/E4.png]][fn:O3E4]
 
 * Item Tier List
 Assume unsorted special ordering.
