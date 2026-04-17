@@ -108,7 +108,6 @@ If on Subterra Sanctum or Churchmouse Streets first stage, consider
 * Item Tier List
 Assume unsorted special ordering.
 
-# ./img/Raven's-Dagger.png]]
-# ./img/Gemini-Necklace.png]]
+#+include: items.org :minlevel 2
 
 * Example Builds
