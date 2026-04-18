@@ -1,4 +1,4 @@
-#+bind: org-latex-image-default-width "2.0em"
+#+bind: org-latex-image-default-width "1.8em"
 #+bind: org-latex-images-centered nil
 #+bind: org-footnote-section nil
 #+bind: org-hide-macro-markers t
@@ -18,11 +18,13 @@
 #+MACRO: abl [[./img/abilities-40px/$1.png]]
 #+MACRO: abls [[./img/abilities-40px/$1.png]] *$1*
 #+MACRO: itm [[./img/items/$1.png]]
-#+MACRO: itms1 [[./img/items/$1.png]] $1
-#+MACRO: itms2 [[./img/items/$1.png]] $2
+#+MACRO: itms1 (eval (s-concat "[[./img/items/" $1 ".png]] *" (s-replace-regexp "\-" " " $1) "*"))
+#+MACRO: itms2 [[./img/items/$1.png]] *$2*
+#+MACRO: gamever v2.0.2.7
+#+MACRO: guidever v0.1.0
 
 * Intro
-Rabbit & Steel Shadow Class guide written primarily for v2.0.2.7. 
+Rabbit & Steel Shadow Class guide written primarily for {{{gamever}}}. 
 
 At the time of starting this guide, the author (Quoise) has 11 Multiplayer (MP) Lunar wins and 20 Hard wins on Shadow.
 Primarily, the recommendations here are targetted as a carry at 4P Lunar and high WR consistency.
@@ -76,21 +78,30 @@ As a rule-of-thumb, {{{abls(N1)}}}, {{{abls(N4)}}} and {{{abls(N2)}}} have about
 Regarding item synergies, generic numeric or percent bonuses to damage are assumed:
 - E.g. for uncontested primary core, pick items like {{{itms1(Waterfall-Polearm)}}}, {{{itms1(Grandmaster-Spear)}}} and {{{itms1(Youkai-Bracelet)}}}
 
+Unique or notable gem and item synergies are only presented.
+
 ** Primary
 #+MACRO: N1i 
-#+MACRO: O1i
-#+MACRO: S1i
+#+MACRO: O1i short CD items;
+#+MACRO: S1i {{{itm(Windbite-Dagger)}}}
 #+MACRO: R1i {{{itm(Firststrike-Bracelet)}}}; Flash- Buff
 #+MACRO: G1i luck-boost; RL({{{itm(Brightstorm-Spear)}}})
 #+MACRO: E1i {{{itm(Firststrike-Bracelet)}}}; Flash- Buff
 |           | Gem Synergies                 | Item Synergies | Notes                                                         |
 |-----------+-------------------------------+----------------+---------------------------------------------------------------|
-| {{{abl(N1)}}}   |                               | {{{N1i}}}            | Good base primary.                                            |
+| {{{abl(N1)}}}   |                               | {{{N1i}}}            | Good class N1.                                                |
 | {{{gemss(O1)}}} | {{{gemss(S3)}}} {{{gemss(S4)}}}           | {{{O1i}}}            | Weaker {{{gems(G2)}}} variant for {{{gems(S3)}}} + {{{gems(S4)}}}               |
 | {{{gemss(S1)}}} |                               | {{{S1i}}}            | More consistent than {{{gems(G1)}}} for single-target               |
-| {{{gemss(R1)}}} | {{{gemss(S2)}}}                     | {{{R1i}}}            | iframe req, easiest with {{{gems(S2)}}}                             |
+| {{{gemss(R1)}}} | {{{gemss(S2)}}}                     | {{{R1i}}}            | _600dmg on only iframe req_; easiest with {{{gems(S2)}}}              |
 | {{{gemss(G1)}}} | {{{gemss(E3)}}} {{{gemss(G4)}}} {{{gemss(S4)}}} | {{{G1i}}}            | Multiple-target version of {{{gems(S1)}}}, not limited to secondary |
-| {{{gemss(E1)}}} |                               | {{{E1i}}}            | Hardest-hitting primary, harsh movement slow                  |
+| {{{gemss(E1)}}} | {{{gemss(E3)}}}                     | {{{E1i}}}            | Hardest-hitting primary, harsh movement slow                  |
+
+#+begin_quote
+{{{gems(S1)}}} and {{{gems(G1)}}} effects does not trigger "use" abilities like Black Wakizashi or Golden Katana, but can trigger Brightstorm Spear.
+
+{{{gems(E1)}}} 2s GCD effect can't be cheated via GCD items, Berserk, Quickdraw or other effects.
+At base kit, the effect triggers {{{itms1(Winter-Hat)}}}, but not {{{itms1(Sacredstone-Charm)}}}.
+#+end_quote
 
 ** Secondary
 #+MACRO: N2i {{{itm(Butterfly-Hairpin)}}} {{{itm(Caver's-Cloak)}}}
@@ -99,46 +110,69 @@ Regarding item synergies, generic numeric or percent bonuses to damage are assum
 #+MACRO: R2i +m/s;
 #+MACRO: G2i +luck; {{{itm(Jester's-Hat)}}}
 #+MACRO: E2i
-|           | Leap? | Gem Synergies                 | Item Synergies | Notes                                                                       |
-|-----------+-------+-------------------------------+----------------+-----------------------------------------------------------------------------|
-| {{{abl(N2)}}}   | Yes   | {{{gemss(R4)}}}                     | {{{N2i}}}            | 0.7s invincibility on leap                                                  |
-| {{{gemss(O2)}}} | Yes   | {{{gemss(R4)}}}                     | {{{O2i}}}            | SS Superhex                                                                 |
-| {{{gemss(S2)}}} | No    | {{{gemss(R4)}}} {{{gemss(R1)}}} {{{gemss(S3)}}} | {{{S2i}}}            | (No leap) the Dancer secondary                                              |
-| {{{gemss(R2)}}} | Yes   | {{{gemss(R4)}}} {{{gemss(S3)}}}           | {{{R2i}}}            | 2x dmg on only leap req, S-tier                                             |
-| {{{gemss(G2)}}} | No    | {{{gemss(S3)}}} {{{gemss(S4)}}} {{{gemss(G4)}}} | {{{G2i}}}            | (No leap) consumes GCD so better with oGCD; risky first-buy without synergy |
-| {{{gemss(E2)}}} | Yes   | {{{gemss(R4)}}} {{{gemss(S3)}}}           | {{{E2i}}}            | Easier damage req; good if you don't hit Dancer special resets              |
+|           | Leap? | Gem Synergies                 | Item Synergies | Notes                                                             |
+|-----------+-------+-------------------------------+----------------+-------------------------------------------------------------------|
+| {{{abl(N2)}}}   | Yes   | {{{gemss(R4)}}}                     | {{{N2i}}}            | Good class N2; 0.7s invin.                                        |
+| {{{gemss(O2)}}} | Yes   | {{{gemss(R4)}}}                     | {{{O2i}}}            | SS Superhex                                                       |
+| {{{gemss(S2)}}} | No    | {{{gemss(R4)}}} {{{gemss(R1)}}} {{{gemss(S3)}}} | {{{S2i}}}            | The Dancer secondary                                              |
+| {{{gemss(R2)}}} | Yes   | {{{gemss(R4)}}} {{{gemss(S3)}}}           | {{{R2i}}}            | _360dmg for 1.0s GCD/0s CD_ with only leap req                      |
+| {{{gemss(G2)}}} | No    | {{{gemss(S3)}}} {{{gemss(S4)}}} {{{gemss(G4)}}} | {{{G2i}}}            | Consumes GCD so better with oGCD; risky first-buy without synergy |
+| {{{gemss(E2)}}} | Yes   | {{{gemss(R4)}}} {{{gemss(S3)}}}           | {{{E2i}}}            | Uncheatable, easy req effect to fulfill                           |
+
+#+begin_quote
+Hitting multiple {{{gems(E2)}}} (33%) is similar to not hitting Special Reset on Dancer (30%). The effect +% is a multiplier after any percent or additive bonuses are calc'd though.
+#+end_quote
 
 ** Special
-#+MACRO: N3i Debuff Spreader; {{{itm(Hawkfeather-Fan)}}} 
-#+MACRO: O3i {{{itm(Miner's-Headlamp)}}} {{{itm(Darkglass-Spear)}}} {{{itm(Timespace-Dagger)}}}          
-#+MACRO: S3i {{{itm(Hawkfeather-Fan)}}} {{{itm(Mountain-Staff)}}} {{{itm(Obsidian-Rod)}}} {{{itm(Garnet-Staff)}}}  {{{itm(Lion-Charm)}}} {{{itm(Hawkfeather-Fan)}}} 
-#+MACRO: R3i {{{itm(Hawkfeather-Fan)}}} {{{itm(Obsidian-Rod)}}} {{{itm(Garnet-Staff)}}}
-#+MACRO: G3i {{{itm(Hawkfeather-Fan)}}} {{{itm(Sacred-Bow)}}}
-#+MACRO: E3i +GCD items; {{{itm(Hawkfeather-Fan)}}} {{{itm(Sacred-Bow)}}}
- |           | Gem Synergies | Item Synergies | Notes                                                                                                        |
- |-----------+---------------+----------------+--------------------------------------------------------------------------------------------------------------|
- | {{{abl(N3)}}}   |               | {{{N3i}}}            | Weak base Class special, hits all enemies though                                                             |
- | {{{gemss(O3)}}} |               | {{{o3i}}}            | No %, 15s CD with effective internal resets is rough                                                         |
- | {{{gemss(S3)}}} | {{{gemss(G2)}}}     | {{{s3i}}}            | Always buy if nothing else; oGCD, no slow, decent with CD reduction; good in its own and any other archetype |
- | {{{gemss(R3)}}} |               | {{{R3i}}}            | Good if building special uncontested                                                                         |
- | {{{gemss(G3)}}} |               | {{{G3i}}}            | Dancer Warcry                                                                                                |
- | {{{gemss(E3)}}} | {{{gemss(G1)}}}     | {{{E3i}}}            | Gamba machine for damage, debuffs, Berserk/Abyssal Rage GCD cheats                                           |
+#+MACRO: N3i Debuff Spreader; {{{itm(Hawkfeather-Fan)}}} {{{itm(Spear-of-Winds)}}} {{{itm(Bolt-Staff)}}}
+#+MACRO: O3i1 {{{itm(Miner's-Headlamp)}}} {{{itm(Darkglass-Spear)}}} {{{itm(Timespace-Dagger)}}}
+#+MACRO: O3i2 {{{o3i1}}} {{{itm(Raindrop-Earrings)}}}
+#+MACRO: O3i {{{o3i2}}} {{{itm(Sun-Pendant)}}} {{{itm(Heaven's-Codex)}}} {{{itm(Staff-of-Sorrow)}}}
+#+MACRO: S3i N3 items; {{{itm(Hawkfeather-Fan)}}} {{{itm(Mountain-Staff)}}} {{{itm(Obsidian-Rod)}}} {{{itm(Garnet-Staff)}}}  {{{itm(Lion-Charm)}}} {{{itm(Obsidian-Hairpin)}}}
+#+MACRO: R3i N3 Items; {{{itm(Hawkfeather-Fan)}}} {{{itm(Obsidian-Rod)}}} {{{itm(Garnet-Staff)}}}
+#+MACRO: G3i N3 Items; {{{itm(Hawkfeather-Fan)}}} {{{itm(Sacred-Bow)}}}
+#+MACRO: E3i N3 Items; +GCD/debuff items; {{{itm(Hawkfeather-Fan)}}} {{{itm(Sacred-Bow)}}} {{{itm(Shrinemaiden's-Kosode)}}}; 
+#+MACRO: S3n "Best" Spc., ~+60DPS at base; oGCD, no slow, loves CD reduction (including 1s \rightarrow 0s); 0.7s "cd" minimum
+ |           | Gem Synergies | Item Synergies | Notes                                                            |
+ |-----------+---------------+----------------+------------------------------------------------------------------|
+ | {{{abl(N3)}}}   |               | {{{N3i}}}            | Weaker class N3, hits all enemies though                         |
+ | {{{gemss(O3)}}} |               | {{{o3i}}}            | No universal %; long CD with lack of acccessible resets is rough |
+ | {{{gemss(S3)}}} | {{{gemss(G2)}}}     | {{{s3i}}}            | {{{s3n}}}                                                              |
+ | {{{gemss(R3)}}} |               | {{{R3i}}}            | Good if building special uncontested                             |
+ | {{{gemss(G3)}}} |               | {{{G3i}}}            | Dancer Warcry                                                    |
+ | {{{gemss(E3)}}} | {{{gemss(G1)}}}     | {{{E3i}}}            | debuff/buff archetype; Berserk GCD and *+m/s*                      |
 
+#+begin_quote
+[MP] Shadow has low prio on Special damage-boosting items without prior synergies (except {{{itms1(Garnet-Staff)}}} or {{{itms1(Hawkfeather-Fan)}}}.)
+
+E3 is affected by {{{itms1(Obsidian-Rod)}}}, {{{itms1(Cursed-Candlestaff)}}}, {{{itms1(Old-Bonnet)}}} / {{{itms1(Haunted-Gloves)}}} and other special items changes.
+Note, additive bonuses like {{{itms1(Eaglewing-Charm)}}} will not apply to debuffs.
+#+end_quote
+ 
 ** Defensive
-#+MACRO: N4i {{{itm(Gemini-Necklace)}}} {{{itm(Firststrike-Bracelet)}}}                    '
-#+MACRO: O4i {{{itm(Hermes-Bow)}}}  {{{itm(Talon-Charm)}}}  {{{itm(Sacred-Bow)}}}
-#+MACRO: S4i N4 items + {{{itm(Coldsteel-Shield)}}}
-#+MACRO: R4i {{{itm(Garnet-Staff)}}} {{{itm(Peridot-Rapier)}}}
-#+MACRO: G4i N4 items + {{{itm(Brightstorm-Spear)}}}
+#+MACRO: N4i {{{itm(Gemini-Necklace)}}} {{{itm(Firststrike-Bracelet)}}}
+#+MACRO: O4i N4 items; {{{itm(Hermes-Bow)}}}  {{{itm(Talon-Charm)}}}  {{{itm(Sacred-Bow)}}}
+#+MACRO: S4i N4 items; {{{itm(Coldsteel-Shield)}}}
+#+MACRO: R4i +m/s; {{{itm(Garnet-Staff)}}} {{{itm(Peridot-Rapier)}}} {{{itm(Greysteel-Shield)}}} 
+#+MACRO: G4i N4 items; {{{itm(Brightstorm-Spear)}}}
 #+MACRO: E4i {{{itm(Firststrike-Bracelet)}}} {{{itm(Starry-Cloak)}}} {{{itm(Timespace-Dagger)}}}
-|           | Gem Synergies                 | Item Synergies | Notes                                                                                    |
-|-----------+-------------------------------+----------------+------------------------------------------------------------------------------------------|
-| {{{abl(N4)}}}   |                               | {{{N4i}}}            | Harsh slow, good burst, doesn't consume Blackstrike                                      |
-| {{{gemss(O4)}}} |                               | {{{O4i}}}            | (Adds leap) +m/s; better than {{{gemss(S4)}}} / {{{gemss(R4)}}} if Primary/Secondary is loot-boosted |
-| {{{gemss(S4)}}} | {{{gemss(G2)}}}                     | {{{S4i}}}            | oGCD; {{{gemss(S3)}}} with multihit but fewer synergies and long CD                            |
-| {{{gemss(R4)}}} | Any secondary but {{{gemss(G2)}}}   | {{{R4i}}}            | Also 2x dmg on only leap req, SSS-tier                                                   |
-| {{{gemss(G4)}}} | {{{gemss(G1)}}} {{{gemss(G2)}}} {{{gemss(R3)}}} | {{{G4i}}}            | Good on Sanctum/Mice                                                                     |
-| {{{gemss(E4)}}} |                               | {{{E4i}}}            | Should not pick unless maybe-maybee already holding synergies                            |
+#+MACRO: R4g  Safety\rightarrow{{{gemss(S2)}}}; DPS\rightarrow{{{gemss(R2)}}} 
+|           | Gem Synergies                 | Item Synergies | Notes                                                                             |
+|-----------+-------------------------------+----------------+-----------------------------------------------------------------------------------|
+| {{{abl(N4)}}}   |                               | {{{N4i}}}            | Harsh slow, good burst, doesn't consume Blackstrike                               |
+| {{{gemss(O4)}}} |                               | {{{O4i}}}            | *Leaps*; *+m/s*; better than {{{gemss(S4)}}} / {{{gemss(R4)}}} if Pri. or Sec. core or non-invin. |
+| {{{gemss(S4)}}} | {{{gemss(G2)}}}                     | {{{S4i}}}            | oGCD like {{{gemss(S3)}}} but long CD                                                   |
+| {{{gemss(R4)}}} | {{{R4g}}}                           | {{{R4i}}}            | Also 2x dmg on only leap req, SSS-tier                                            |
+| {{{gemss(G4)}}} | {{{gemss(G1)}}} {{{gemss(G2)}}} {{{gemss(R3)}}} | {{{G4i}}}            | Good on Sanctum/Mice                                                              |
+| {{{gemss(E4)}}} |                               | {{{E4i}}}            | Should not pick unless maybe-maybee already holding synergies                     |
+
+#+begin_quote
+{{{itms1(Firststrike-Bracelet)}}} or Blackstrike source ({{{itms1(Book-of-Cheats)}}}, {{{gems(E3)}}})
+is oddly quite good given it applies to Defensive damage without consuming it.
+
+Blackstrike on {{{gems(R4)}}} isn't affected by the Secondary leap that triggers {{{itm(Firststrike-Bracelet)}}},
+instead the one after.
+#+end_quote
 
 * Gems Tier List
 Tier placing prioritizes "lines" and WR consistency.
@@ -162,29 +196,37 @@ You're looking for Wavestrike, Flash-, Firstrike, Flow-, Haste buffs; and applic
 #+end_quote
    
 ** A: Good
-[[./img/gems/S3.png]][fn:S3:S3 is practically ~110 DPS (simultaneous N1/N2) due to oGCD]
-[[./img/gems/S1.png]][fn:S1G1:S1 and G1 not trigger use abilities like Black Wakizashi or Golden Katana, though can trigger Brightstorm Spear]
+[[./img/gems/S3.png]]
+[[./img/gems/S1.png]]
 [[./img/gems/S4.png]]
 [[./img/gems/O4.png]]
 [[./img/gems/S2.png]]
-[[./img/gems/E3.png]][fn:E3:E3 enables Shadow to take +GCD, buff and debuff items; G1 scaling. Affected by Obi Rod, Candlestaff, Bonnet/Haunted Gloves and other special items changes.]
+[[./img/gems/E3.png]]
     
 ** B: Alternative
-[[./img/gems/O2.png]][fn:O2:O2, practically, is SS O4.]
-[[./img/gems/G2.png]][fn:G2:G2 is risky DPS-wise without synergies or second gem.]
-[[./img/gems/G3.png]][fn:G3:G3, practically, is Dancer N4/Druid G4.]
+[[./img/gems/O2.png]]
+[[./img/gems/G2.png]]
+[[./img/gems/G3.png]]
 [[./img/gems/E1.png]]
 [[./img/gems/R3.png]]
 
+#+begin_quote
+[Author] {{{gems(E1)}}} is, personally, an inferior {{{gems(R1)}}}. It should be more than viable, but the gem's long movement slow and unbypasseable 2s GCD demands a different playstyle.
+#+end_quote
+
 ** C: Niche, but viable
 [[./img/gems/O1.png]]
-[[./img/gems/G1.png]][fn:S1G1]
-[[./img/gems/G4.png]][fn:G4:G4 is also good for pvp-ing items.]
+[[./img/gems/G1.png]]
+[[./img/gems/G4.png]]
 [[./img/gems/E2.png]]
 
 ** D: Ultra-niche
-[[./img/gems/O3.png]][fn:O3E4:O3 and E4 close too many future lines and don't do efficient damage at base kit.]
-[[./img/gems/E4.png]][fn:O3E4]
+[[./img/gems/O3.png]]
+[[./img/gems/E4.png]]
+
+#+begin_quote
+{{{gems(O3)}}} and {{{gems(E4)}}} close too many future lines for its damage at base kit.
+#+end_quote
 
 * Item Tier List
 
