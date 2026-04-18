@@ -1,0 +1,1177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2026-04-18 Sat 15:11 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>R&amp;S Shadow Class Guide (v0.1.0)</title>
+<meta name="author" content="Quoise" />
+<meta name="generator" content="Org Mode" />
+<style type="text/css">
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-c:before { content: 'C'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'JavaScript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+<link rel="stylesheet" type="text/css" href="https://gongzhitaao.org/orgcss/org.css"/>
+
+<script src="https://orgmode.org/org-info.js">
+// @license magnet:?xt=urn:btih:1f739d935676111cfff4b4693e3816e664797050&amp;dn=gpl-3.0.txt GPL-v3-or-Later
+// @license-end
+</script>
+
+<script>
+// @license magnet:?xt=urn:btih:1f739d935676111cfff4b4693e3816e664797050&amp;dn=gpl-3.0.txt GPL-v3-or-Later
+org_html_manager.set("TOC_DEPTH", "1");
+org_html_manager.set("LINK_HOME", "");
+org_html_manager.set("LINK_UP", "");
+org_html_manager.set("LOCAL_TOC", "1");
+org_html_manager.set("VIEW_BUTTONS", "0");
+org_html_manager.set("MOUSE_HINT", "underline");
+org_html_manager.set("FIXED_TOC", "0");
+org_html_manager.set("TOC", "non-nil");
+org_html_manager.set("VIEW", "info");
+org_html_manager.setup();  // activate after the parameters are set
+// @license-end
+</script>
+<script>
+  window.MathJax = {
+    tex: {
+      ams: {
+        multlineWidth: '85%'
+      },
+      tags: 'ams',
+      tagSide: 'right',
+      tagIndent: '.8em'
+    },
+    chtml: {
+      scale: 1.0,
+      displayAlign: 'center',
+      displayIndent: '0em'
+    },
+    svg: {
+      scale: 1.0,
+      displayAlign: 'center',
+      displayIndent: '0em'
+    },
+    output: {
+      font: 'mathjax-modern',
+      displayOverflow: 'overflow'
+    }
+  };
+</script>
+
+<script
+  id="MathJax-script"
+  async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">R&amp;S Shadow Class Guide (v0.1.0)</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org8bbba70">1. Intro</a></li>
+<li><a href="#org68defde">2. Playstyle</a></li>
+<li><a href="#org2775492">3. Ability synergies</a></li>
+<li><a href="#org20c2fec">4. Gems Tier List</a></li>
+<li><a href="#org39acd88">5. Item Tier List</a></li>
+<li><a href="#orgae2c192">6. Example Builds</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org8bbba70" class="outline-2">
+<h2 id="org8bbba70"><span class="section-number-2">1.</span> Intro</h2>
+<div class="outline-text-2" id="text-1">
+<div class="org-center">
+<p>
+<span class="underline"><b>This guide is not finished.</b></span>
+</p>
+
+<p>
+<span class="underline"><b>Pending playstyle writeups and example builds, plus feedback from other players.</b></span>
+</p>
+</div>
+
+<p>
+Rabbit &amp; Steel Shadow Class guide written primarily for v2.0.2.7. 
+</p>
+
+<p>
+At the time of starting this guide, the 13 Multiplayer (MP) Lunar wins and 22
+Hard wins on Shadow.  Primarily, the recommendations here are targetted as a
+carry at 4P Lunar and high WR consistency, with likely author bias.
+</p>
+
+<p>
+This guide could not be made possible without the help of other players in mino_dev Discord.
+</p>
+</div>
+<div id="outline-container-orgf548565" class="outline-3">
+<h3 id="orgf548565"><span class="section-number-3">1.1.</span> Related Resources</h3>
+<div class="outline-text-3" id="text-1-1">
+<p>
+Details of Shadow&rsquo;s kit can be found in:
+</p>
+<ul class="org-ul">
+<li><a href="https://rns.miraheze.org/wiki/Shadow">Shadow | Rabbit &amp; Steel Wiki (rns.miraheze.org)</a></li>
+</ul>
+
+<p>
+For latest available guides:
+</p>
+<ul class="org-ul">
+<li><a href="https://discord.com/channels/496640298844422149/1238375581486288916">Guides Catalogue maintained by Stagz | mino_dev Discord (discord.com)</a></li>
+</ul>
+
+<p>
+For community jargon:
+</p>
+<ul class="org-ul">
+<li><a href="https://docs.google.com/document/d/1rrSEIEstdKtajTY1xkXWoQKw3BIz4eENyJBHiyqCKcU/edit?tab=t.0">Rabbit &amp; Steel Community Jargon by tomeking (docs.google.com)</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org9f44ee0" class="outline-3">
+<h3 id="org9f44ee0"><span class="section-number-3">1.2.</span> Sample Definitions</h3>
+<div class="outline-text-3" id="text-1-2">
+<dl class="org-dl">
+<dt><img src="./img/abilities-40px/N1.png" alt="N1.png" /> <b>N1</b>, <img src="./img/gems-40px/O1.png" alt="O1.png" /> <b>O1</b>, <img src="./img/gems-40px/S1.png" alt="S1.png" /> <b>S1</b>, <img src="./img/gems-40px/R1.png" alt="R1.png" /> <b>R1</b>, <img src="./img/gems-40px/E1.png" alt="E1.png" /> <b>E1</b>, <img src="./img/gems-40px/G1.png" alt="G1.png" /> <b>G1</b></dt><dd><span class="underline">Normal</span>, <span class="underline">Opal</span>, <span class="underline">Sapphire</span>, <span class="underline">Ruby</span>, <span class="underline">Emerald</span> and <span class="underline">Garnet</span> variants of Primary respectively.</dd>
+<dt><img src="./img/gems-40px/R1.png" alt="R1.png" /> <b>R1</b>, <img src="./img/gems-40px/R2.png" alt="R2.png" /> <b>R2</b>, <img src="./img/gems-40px/R3.png" alt="R3.png" /> <b>R3</b>, <img src="./img/gems-40px/R4.png" alt="R4.png" /> <b>R4</b></dt><dd><span class="underline">Ruby</span> variants of each respectively: Primary, Secondary, Special and Defensive.</dd>
+<dt>BiS</dt><dd>Best in Slot; universal best upgrade.</dd>
+<dt>AoE</dt><dd>Area-of-Effect; typically used in context of hitting multiple enemies, e.g. fights in Churchouse or Sanctum.</dd>
+<dt>oGCD</dt><dd>Shadow&rsquo;s S3, S4; these can be used without sacrificing GCD time spent on other abilities.</dd>
+<dt>iframe</dt><dd>Invincibility</dd>
+<dt>prio</dt><dd>priority; typically what item/gems should be picked and by whom</dd>
+</dl>
+</div>
+</div>
+<div id="outline-container-orgcd238d8" class="outline-3">
+<h3 id="orgcd238d8"><span class="section-number-3">1.3.</span> Changelog (Releases)</h3>
+<div class="outline-text-3" id="text-1-3">
+<dl class="org-dl">
+<dt>v0.1.0</dt><dd>release with ability synergies, gem tier list and ability tier list</dd>
+</dl>
+</div>
+</div>
+</div>
+<div id="outline-container-org68defde" class="outline-2">
+<h2 id="org68defde"><span class="section-number-2">2.</span> Playstyle</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-org11df26c" class="outline-3">
+<h3 id="org11df26c"><span class="section-number-3">2.1.</span> Base Kit</h3>
+<div class="outline-text-3" id="text-2-1">
+<p>
+Maximum damage rotation would prioritize in order of availability.
+</p>
+
+<p>
+\(N4 \to N3 \to N1 \to N1\)
+</p>
+
+<p>
+More typically, for mobile targets, I save <img src="./img/abilities-40px/N3.png" alt="N3.png" /> <b>N3</b> for when I&rsquo;m out of range or shackled.
+<img src="./img/abilities-40px/N4.png" alt="N4.png" /> <b>N4</b> is good for burst,
+i.e. on 4P Lunar against the unshielded butterfly on (Geode) Plee or (Sanctum) Capricorn.
+</p>
+
+<p>
+As a rule-of-thumb, <img src="./img/abilities-40px/N1.png" alt="N1.png" /> <b>N1</b>, <img src="./img/abilities-40px/N4.png" alt="N4.png" /> <b>N4</b> and <img src="./img/abilities-40px/N2.png" alt="N2.png" /> <b>N2</b> have about the same hitbox horizontally.
+<sup><a id="fnr.N2" class="footref" href="#fn.N2" role="doc-backlink">1</a></sup>
+</p>
+</div>
+</div>
+<div id="outline-container-org370c1b0" class="outline-3">
+<h3 id="org370c1b0"><span class="section-number-3">2.2.</span> Cheating Abilities Out</h3>
+</div>
+
+<div id="outline-container-orgf03f014" class="outline-3">
+<h3 id="orgf03f014"><span class="section-number-3">2.3.</span> Multiplayer Notes</h3>
+<div class="outline-text-3" id="text-2-3">
+</div>
+<div id="outline-container-orgcb41a3c" class="outline-4">
+<h4 id="orgcb41a3c"><span class="section-number-4">2.3.1.</span> Item Priority</h4>
+</div>
+</div>
+</div>
+<div id="outline-container-org2775492" class="outline-2">
+<h2 id="org2775492"><span class="section-number-2">3.</span> Ability synergies</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+Unique or notable gem and item synergies are only presented. Regarding item
+synergies, generic numeric or percent bonuses to damage are assumed:
+</p>
+<ul class="org-ul">
+<li>E.g. for uncontested primary core, pick items like <img src="./img/items/Waterfall-Polearm.png" alt="Waterfall-Polearm.png" /> <b>Waterfall Polearm</b>, <img src="./img/items/Grandmaster-Spear.png" alt="Grandmaster-Spear.png" /> <b>Grandmaster Spear</b> and <img src="./img/items/Youkai-Bracelet.png" alt="Youkai-Bracelet.png" /> <b>Youkai Bracelet</b></li>
+</ul>
+</div>
+<div id="outline-container-org62284bf" class="outline-3">
+<h3 id="org62284bf"><span class="section-number-3">3.1.</span> Primary</h3>
+<div class="outline-text-3" id="text-3-1">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">&nbsp;</th>
+<th scope="col" class="org-left">Gem Synergies</th>
+<th scope="col" class="org-left">Item Synergies</th>
+<th scope="col" class="org-left">Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left"><img src="./img/abilities-40px/N1.png" alt="N1.png" /></td>
+<td class="org-left">&nbsp;</td>
+<td class="org-left">&nbsp;</td>
+<td class="org-left">Good class N1.</td>
+</tr>
+
+<tr>
+<td class="org-left"><img src="./img/gems-40px/O1.png" alt="O1.png" /></td>
+<td class="org-left"><img src="./img/gems-40px/S3.png" alt="S3.png" /> <img src="./img/gems-40px/S4.png" alt="S4.png" /></td>
+<td class="org-left">short CD items;</td>
+<td class="org-left">Weaker <img src="./img/gems-40px/G2.png" alt="G2.png" /> <b>G2</b> variant for <img src="./img/gems-40px/S3.png" alt="S3.png" /> <b>S3</b> + <img src="./img/gems-40px/S4.png" alt="S4.png" /> <b>S4</b></td>
+</tr>
+
+<tr>
+<td class="org-left"><img src="./img/gems-40px/S1.png" alt="S1.png" /></td>
+<td class="org-left">&nbsp;</td>
+<td class="org-left"><img src="./img/items/Windbite-Dagger.png" alt="Windbite-Dagger.png" /></td>
+<td class="org-left">More consistent than <img src="./img/gems-40px/G1.png" alt="G1.png" /> <b>G1</b> for single-target</td>
+</tr>
+
+<tr>
+<td class="org-left"><img src="./img/gems-40px/R1.png" alt="R1.png" /></td>
+<td class="org-left"><img src="./img/gems-40px/S2.png" alt="S2.png" /></td>
+<td class="org-left"><img src="./img/items/Firststrike-Bracelet.png" alt="Firststrike-Bracelet.png" />; Flash- Buff</td>
+<td class="org-left"><span class="underline">600dmg on only iframe req</span>; easiest with <img src="./img/gems-40px/S2.png" alt="S2.png" /> <b>S2</b></td>
+</tr>
+
+<tr>
+<td class="org-left"><img src="./img/gems-40px/G1.png" alt="G1.png" /></td>
+<td class="org-left"><img src="./img/gems-40px/E3.png" alt="E3.png" /> <img src="./img/gems-40px/G4.png" alt="G4.png" /> <img src="./img/gems-40px/S4.png" alt="S4.png" /></td>
+<td class="org-left">luck-boost; RL(<img src="./img/items/Brightstorm-Spear.png" alt="Brightstorm-Spear.png" />)</td>
+<td class="org-left">Multiple-target version of <img src="./img/gems-40px/S1.png" alt="S1.png" /> <b>S1</b>, not limited to secondary</td>
+</tr>
+
+<tr>
+<td class="org-left"><img src="./img/gems-40px/E1.png" alt="E1.png" /></td>
+<td class="org-left"><img src="./img/gems-40px/E3.png" alt="E3.png" /></td>
+<td class="org-left"><img src="./img/items/Firststrike-Bracelet.png" alt="Firststrike-Bracelet.png" />; Flash- Buff</td>
+<td class="org-left">Hardest-hitting primary, harsh movement slow</td>
+</tr>
+</tbody>
+</table>
+
+<blockquote>
+<p>
+<img src="./img/gems-40px/S1.png" alt="S1.png" /> <b>S1</b> and <img src="./img/gems-40px/G1.png" alt="G1.png" /> <b>G1</b> effects does not trigger &ldquo;use&rdquo; abilities like Black Wakizashi or Golden Katana, but can trigger Brightstorm Spear.
+</p>
+
+<p>
+<img src="./img/gems-40px/E1.png" alt="E1.png" /> <b>E1</b> 2s GCD effect can&rsquo;t be cheated via GCD items, Berserk, Quickdraw or other effects.
+At base kit, the effect triggers <img src="./img/items/Winter-Hat.png" alt="Winter-Hat.png" /> <b>Winter Hat</b>, but not <img src="./img/items/Sacredstone-Charm.png" alt="Sacredstone-Charm.png" /> <b>Sacredstone Charm</b>.
+</p>
+</blockquote>
+</div>
+</div>
+<div id="outline-container-orge0ca3aa" class="outline-3">
+<h3 id="orge0ca3aa"><span class="section-number-3">3.2.</span> Secondary</h3>
+<div class="outline-text-3" id="text-3-2">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">&nbsp;</th>
+<th scope="col" class="org-left">Leap?</th>
+<th scope="col" class="org-left">Gem Synergies</th>
+<th scope="col" class="org-left">Item Synergies</th>
+<th scope="col" class="org-left">Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left"><img src="./img/abilities-40px/N2.png" alt="N2.png" /></td>
+<td class="org-left">Yes</td>
+<td class="org-left"><img src="./img/gems-40px/R4.png" alt="R4.png" /></td>
+<td class="org-left"><img src="./img/items/Butterfly-Hairpin.png" alt="Butterfly-Hairpin.png" /> <img src="./img/items/Caver's-Cloak.png" alt="Caver's-Cloak.png" /></td>
+<td class="org-left">Good class N2; 0.7s invin.</td>
+</tr>
+
+<tr>
+<td class="org-left"><img src="./img/gems-40px/O2.png" alt="O2.png" /></td>
+<td class="org-left">Yes</td>
+<td class="org-left"><img src="./img/gems-40px/R4.png" alt="R4.png" /></td>
+<td class="org-left">&nbsp;</td>
+<td class="org-left">SS Superhex</td>
+</tr>
+
+<tr>
+<td class="org-left"><img src="./img/gems-40px/S2.png" alt="S2.png" /></td>
+<td class="org-left">No</td>
+<td class="org-left"><img src="./img/gems-40px/R4.png" alt="R4.png" /> <img src="./img/gems-40px/R1.png" alt="R1.png" /> <img src="./img/gems-40px/S3.png" alt="S3.png" /></td>
+<td class="org-left">&nbsp;</td>
+<td class="org-left">The Dancer secondary</td>
+</tr>
+
+<tr>
+<td class="org-left"><img src="./img/gems-40px/R2.png" alt="R2.png" /></td>
+<td class="org-left">Yes</td>
+<td class="org-left"><img src="./img/gems-40px/R4.png" alt="R4.png" /> <img src="./img/gems-40px/S3.png" alt="S3.png" /></td>
+<td class="org-left">+m/s;</td>
+<td class="org-left"><span class="underline">360dmg for 1.0s GCD/0s CD</span> with only leap req</td>
+</tr>
+
+<tr>
+<td class="org-left"><img src="./img/gems-40px/G2.png" alt="G2.png" /></td>
+<td class="org-left">No</td>
+<td class="org-left"><img src="./img/gems-40px/S3.png" alt="S3.png" /> <img src="./img/gems-40px/S4.png" alt="S4.png" /> <img src="./img/gems-40px/G4.png" alt="G4.png" /></td>
+<td class="org-left">+luck; <img src="./img/items/Jester's-Hat.png" alt="Jester's-Hat.png" /></td>
+<td class="org-left">Consumes GCD so better with oGCD; risky first-buy without synergy</td>
+</tr>
+
+<tr>
+<td class="org-left"><img src="./img/gems-40px/E2.png" alt="E2.png" /></td>
+<td class="org-left">Yes</td>
+<td class="org-left"><img src="./img/gems-40px/R4.png" alt="R4.png" /> <img src="./img/gems-40px/S3.png" alt="S3.png" /></td>
+<td class="org-left">&nbsp;</td>
+<td class="org-left">Uncheatable, easy req effect to fulfill</td>
+</tr>
+</tbody>
+</table>
+
+<blockquote>
+<p>
+Hitting multiple <img src="./img/gems-40px/E2.png" alt="E2.png" /> <b>E2</b> (33%) is similar to not hitting Special Reset on Dancer (30%). The effect +% is a multiplier after any percent or additive bonuses are calc&rsquo;d though.
+</p>
+</blockquote>
+</div>
+</div>
+<div id="outline-container-org3bffd17" class="outline-3">
+<h3 id="org3bffd17"><span class="section-number-3">3.3.</span> Special</h3>
+<div class="outline-text-3" id="text-3-3">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">&nbsp;</th>
+<th scope="col" class="org-left">Gem Synergies</th>
+<th scope="col" class="org-left">Item Synergies</th>
+<th scope="col" class="org-left">Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left"><img src="./img/abilities-40px/N3.png" alt="N3.png" /></td>
+<td class="org-left">&nbsp;</td>
+<td class="org-left">Debuff apply; <img src="./img/items/Hawkfeather-Fan.png" alt="Hawkfeather-Fan.png" /> <img src="./img/items/Spear-of-Winds.png" alt="Spear-of-Winds.png" /> <img src="./img/items/Bolt-Staff.png" alt="Bolt-Staff.png" /></td>
+<td class="org-left">Weaker class N3, hits all enemies though</td>
+</tr>
+
+<tr>
+<td class="org-left"><img src="./img/gems-40px/O3.png" alt="O3.png" /></td>
+<td class="org-left">&nbsp;</td>
+<td class="org-left"><img src="./img/items/Miner's-Headlamp.png" alt="Miner's-Headlamp.png" /> <img src="./img/items/Darkglass-Spear.png" alt="Darkglass-Spear.png" /> <img src="./img/items/Timespace-Dagger.png" alt="Timespace-Dagger.png" /> <img src="./img/items/Raindrop-Earrings.png" alt="Raindrop-Earrings.png" /> <img src="./img/items/Sun-Pendant.png" alt="Sun-Pendant.png" /> <img src="./img/items/Heaven's-Codex.png" alt="Heaven's-Codex.png" /> <img src="./img/items/Staff-of-Sorrow.png" alt="Staff-of-Sorrow.png" /></td>
+<td class="org-left">No universal %; long CD with lack of acccessible resets is rough</td>
+</tr>
+
+<tr>
+<td class="org-left"><img src="./img/gems-40px/S3.png" alt="S3.png" /></td>
+<td class="org-left"><img src="./img/gems-40px/G2.png" alt="G2.png" /></td>
+<td class="org-left">N3 items; <img src="./img/items/Hawkfeather-Fan.png" alt="Hawkfeather-Fan.png" /> <img src="./img/items/Mountain-Staff.png" alt="Mountain-Staff.png" /> <img src="./img/items/Obsidian-Rod.png" alt="Obsidian-Rod.png" /> <img src="./img/items/Garnet-Staff.png" alt="Garnet-Staff.png" />  <img src="./img/items/Lion-Charm.png" alt="Lion-Charm.png" /> <img src="./img/items/Obsidian-Hairpin.png" alt="Obsidian-Hairpin.png" /></td>
+<td class="org-left">&ldquo;Best&rdquo; Spc., ~+60DPS at base; oGCD, no slow, loves CD reduction (including 1s &rarr; 0s); 0.7s &ldquo;cd&rdquo; minimum</td>
+</tr>
+
+<tr>
+<td class="org-left"><img src="./img/gems-40px/R3.png" alt="R3.png" /></td>
+<td class="org-left">&nbsp;</td>
+<td class="org-left">N3 Items; <img src="./img/items/Hawkfeather-Fan.png" alt="Hawkfeather-Fan.png" /> <img src="./img/items/Obsidian-Rod.png" alt="Obsidian-Rod.png" /> <img src="./img/items/Garnet-Staff.png" alt="Garnet-Staff.png" /></td>
+<td class="org-left">Good if building special uncontested</td>
+</tr>
+
+<tr>
+<td class="org-left"><img src="./img/gems-40px/G3.png" alt="G3.png" /></td>
+<td class="org-left">&nbsp;</td>
+<td class="org-left">N3 Items; <img src="./img/items/Hawkfeather-Fan.png" alt="Hawkfeather-Fan.png" /> <img src="./img/items/Sacred-Bow.png" alt="Sacred-Bow.png" /> <img src="./img/items/Shrinemaiden's-Kosode.png" alt="Shrinemaiden's-Kosode.png" /></td>
+<td class="org-left">Dancer Warcry</td>
+</tr>
+
+<tr>
+<td class="org-left"><img src="./img/gems-40px/E3.png" alt="E3.png" /></td>
+<td class="org-left"><img src="./img/gems-40px/G1.png" alt="G1.png" /></td>
+<td class="org-left">N3 Items; +GCD/debuff items; <img src="./img/items/Hawkfeather-Fan.png" alt="Hawkfeather-Fan.png" /> <img src="./img/items/Sacred-Bow.png" alt="Sacred-Bow.png" /> <img src="./img/items/Shrinemaiden's-Kosode.png" alt="Shrinemaiden's-Kosode.png" /></td>
+<td class="org-left">debuff/buff archetype; Berserk GCD and <b>+m/s</b></td>
+</tr>
+</tbody>
+</table>
+
+<blockquote>
+<p>
+[MP] Shadow has low prio on Special damage-boosting items without prior synergies (except <img src="./img/items/Garnet-Staff.png" alt="Garnet-Staff.png" /> <b>Garnet Staff</b> or <img src="./img/items/Hawkfeather-Fan.png" alt="Hawkfeather-Fan.png" /> <b>Hawkfeather Fan</b>.)
+</p>
+
+<p>
+E3 is affected by <img src="./img/items/Obsidian-Rod.png" alt="Obsidian-Rod.png" /> <b>Obsidian Rod</b>, <img src="./img/items/Cursed-Candlestaff.png" alt="Cursed-Candlestaff.png" /> <b>Cursed Candlestaff</b>, <img src="./img/items/Old-Bonnet.png" alt="Old-Bonnet.png" /> <b>Old Bonnet</b> / <img src="./img/items/Haunted-Gloves.png" alt="Haunted-Gloves.png" /> <b>Haunted Gloves</b> and other special items changes.
+Note, additive bonuses like <img src="./img/items/Eaglewing-Charm.png" alt="Eaglewing-Charm.png" /> <b>Eaglewing Charm</b> will not apply to debuffs.
+</p>
+</blockquote>
+</div>
+</div>
+<div id="outline-container-org81e4a45" class="outline-3">
+<h3 id="org81e4a45"><span class="section-number-3">3.4.</span> Defensive</h3>
+<div class="outline-text-3" id="text-3-4">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">&nbsp;</th>
+<th scope="col" class="org-left">Gem Synergies</th>
+<th scope="col" class="org-left">Item Synergies</th>
+<th scope="col" class="org-left">Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left"><img src="./img/abilities-40px/N4.png" alt="N4.png" /></td>
+<td class="org-left">&nbsp;</td>
+<td class="org-left"><img src="./img/items/Gemini-Necklace.png" alt="Gemini-Necklace.png" /> <img src="./img/items/Firststrike-Bracelet.png" alt="Firststrike-Bracelet.png" /></td>
+<td class="org-left">Harsh slow, good burst, doesn&rsquo;t consume Blackstrike</td>
+</tr>
+
+<tr>
+<td class="org-left"><img src="./img/gems-40px/O4.png" alt="O4.png" /></td>
+<td class="org-left">&nbsp;</td>
+<td class="org-left">N4 items; <img src="./img/items/Hermes-Bow.png" alt="Hermes-Bow.png" />  <img src="./img/items/Talon-Charm.png" alt="Talon-Charm.png" />  <img src="./img/items/Sacred-Bow.png" alt="Sacred-Bow.png" /></td>
+<td class="org-left"><b>Leaps</b>; <b>+m/s</b>; better than <img src="./img/gems-40px/S4.png" alt="S4.png" /> / <img src="./img/gems-40px/R4.png" alt="R4.png" /> if Pri. or Sec. core or non-invin.</td>
+</tr>
+
+<tr>
+<td class="org-left"><img src="./img/gems-40px/S4.png" alt="S4.png" /></td>
+<td class="org-left"><img src="./img/gems-40px/G2.png" alt="G2.png" /></td>
+<td class="org-left">N4 items; <img src="./img/items/Coldsteel-Shield.png" alt="Coldsteel-Shield.png" /></td>
+<td class="org-left">oGCD like <img src="./img/gems-40px/S3.png" alt="S3.png" /> but long CD</td>
+</tr>
+
+<tr>
+<td class="org-left"><img src="./img/gems-40px/R4.png" alt="R4.png" /></td>
+<td class="org-left">Safety&rarr;<img src="./img/gems-40px/S2.png" alt="S2.png" />; DPS&rarr;<img src="./img/gems-40px/R2.png" alt="R2.png" /></td>
+<td class="org-left">+m/s; <img src="./img/items/Garnet-Staff.png" alt="Garnet-Staff.png" /> <img src="./img/items/Peridot-Rapier.png" alt="Peridot-Rapier.png" /> <img src="./img/items/Greysteel-Shield.png" alt="Greysteel-Shield.png" /></td>
+<td class="org-left">Also 2x dmg on only leap req, SSS-tier</td>
+</tr>
+
+<tr>
+<td class="org-left"><img src="./img/gems-40px/G4.png" alt="G4.png" /></td>
+<td class="org-left"><img src="./img/gems-40px/G1.png" alt="G1.png" /> <img src="./img/gems-40px/G2.png" alt="G2.png" /> <img src="./img/gems-40px/R3.png" alt="R3.png" /></td>
+<td class="org-left">N4 items; <img src="./img/items/Brightstorm-Spear.png" alt="Brightstorm-Spear.png" /></td>
+<td class="org-left">Good on Sanctum/Mice</td>
+</tr>
+
+<tr>
+<td class="org-left"><img src="./img/gems-40px/E4.png" alt="E4.png" /></td>
+<td class="org-left">&nbsp;</td>
+<td class="org-left"><img src="./img/items/Firststrike-Bracelet.png" alt="Firststrike-Bracelet.png" /> <img src="./img/items/Starry-Cloak.png" alt="Starry-Cloak.png" /> <img src="./img/items/Timespace-Dagger.png" alt="Timespace-Dagger.png" /></td>
+<td class="org-left">Should not pick unless maybe-maybee already holding synergies</td>
+</tr>
+</tbody>
+</table>
+
+<blockquote>
+<p>
+<img src="./img/items/Firststrike-Bracelet.png" alt="Firststrike-Bracelet.png" /> <b>Firststrike Bracelet</b> or Blackstrike source (<img src="./img/items/Book-of-Cheats.png" alt="Book-of-Cheats.png" /> <b>Book of Cheats</b>, <img src="./img/gems-40px/E3.png" alt="E3.png" /> <b>E3</b>)
+is oddly quite good given it applies to Defensive damage without consuming it.
+</p>
+
+<p>
+Blackstrike on <img src="./img/gems-40px/R4.png" alt="R4.png" /> <b>R4</b> isn&rsquo;t affected by the Secondary leap that triggers <img src="./img/items/Firststrike-Bracelet.png" alt="Firststrike-Bracelet.png" />,
+instead the one after.
+</p>
+</blockquote>
+</div>
+</div>
+</div>
+<div id="outline-container-org20c2fec" class="outline-2">
+<h2 id="org20c2fec"><span class="section-number-2">4.</span> Gems Tier List</h2>
+<div class="outline-text-2" id="text-4">
+<p>
+Tier placing prioritizes &ldquo;lines&rdquo; and WR consistency.
+Shadow, by gem design, should buy a gem first gem first shop, most are damage positive.
+</p>
+
+<ul class="org-ul">
+<li>Newer players, if avoiding leap PvP, can consider auto-buying <img src="./img/gems-40px/S2.png" alt="S2.png" /> <b>S2</b> and <img src="./img/gems-40px/G2.png" alt="G2.png" /> <b>G2</b>; avoid <img src="./img/gems-40px/O4.png" alt="O4.png" /> <b>O4</b>.</li>
+<li>If on Subterra Sanctum or Churchmouse Streets first stage,
+consider <img src="./img/gems-40px/G1.png" alt="G1.png" /> <b>G1</b>, <img src="./img/gems-40px/G4.png" alt="G4.png" /> <b>G4</b> or special gem.</li>
+<li><img src="./img/gems-40px/O2.png" alt="O2.png" /> <b>O2</b>, <img src="./img/gems-40px/G3.png" alt="G3.png" /> <b>G3</b> is great for MP, they&rsquo;re practically SS&rsquo;s Superhex and Dancer&rsquo;s Warcry respectively.</li>
+</ul>
+</div>
+<div id="outline-container-org1d3c932" class="outline-3">
+<h3 id="org1d3c932"><span class="section-number-3">4.1.</span> S: Mainstays</h3>
+<div class="outline-text-3" id="text-4-1">
+<p>
+<img src="./img/gems/R4.png" alt="R4.png" />
+<img src="./img/gems/R2.png" alt="R2.png" />
+<img src="./img/gems/R1.png" alt="R1.png" />
+</p>
+
+<blockquote>
+<p>
+R4, R2 and R1, each alone, can do +30-100% DPS without external support,
+though more difficult to work with due to iframe req.
+</p>
+
+<p>
+You&rsquo;re looking for Wavestrike, Flash-, Firstrike, Flow-, Haste buffs; and applicable ability damage bonuses.
+</p>
+</blockquote>
+</div>
+</div>
+<div id="outline-container-org6ed8dc7" class="outline-3">
+<h3 id="org6ed8dc7"><span class="section-number-3">4.2.</span> A: Good</h3>
+<div class="outline-text-3" id="text-4-2">
+<p>
+<img src="./img/gems/S3.png" alt="S3.png" />
+<img src="./img/gems/S1.png" alt="S1.png" />
+<img src="./img/gems/S4.png" alt="S4.png" />
+<img src="./img/gems/O4.png" alt="O4.png" />
+<img src="./img/gems/S2.png" alt="S2.png" />
+<img src="./img/gems/E3.png" alt="E3.png" />
+</p>
+</div>
+</div>
+<div id="outline-container-org73f73ac" class="outline-3">
+<h3 id="org73f73ac"><span class="section-number-3">4.3.</span> B: Alternative</h3>
+<div class="outline-text-3" id="text-4-3">
+<p>
+<img src="./img/gems/O2.png" alt="O2.png" />
+<img src="./img/gems/G2.png" alt="G2.png" />
+<img src="./img/gems/G3.png" alt="G3.png" />
+<img src="./img/gems/E1.png" alt="E1.png" />
+<img src="./img/gems/R3.png" alt="R3.png" />
+</p>
+
+<blockquote>
+<p>
+[Author] <img src="./img/gems-40px/E1.png" alt="E1.png" /> <b>E1</b> is, personally, an inferior <img src="./img/gems-40px/R1.png" alt="R1.png" /> <b>R1</b>. It should be more than viable, but the gem&rsquo;s long movement slow and unbypasseable 2s GCD demands a different playstyle.
+</p>
+</blockquote>
+</div>
+</div>
+<div id="outline-container-org8b74267" class="outline-3">
+<h3 id="org8b74267"><span class="section-number-3">4.4.</span> C: Niche, but viable</h3>
+<div class="outline-text-3" id="text-4-4">
+<p>
+<img src="./img/gems/O1.png" alt="O1.png" />
+<img src="./img/gems/G1.png" alt="G1.png" />
+<img src="./img/gems/G4.png" alt="G4.png" />
+<img src="./img/gems/E2.png" alt="E2.png" />
+</p>
+</div>
+</div>
+<div id="outline-container-orgcaced90" class="outline-3">
+<h3 id="orgcaced90"><span class="section-number-3">4.5.</span> D: Ultra-niche</h3>
+<div class="outline-text-3" id="text-4-5">
+<p>
+<img src="./img/gems/O3.png" alt="O3.png" />
+<img src="./img/gems/E4.png" alt="E4.png" />
+</p>
+
+<blockquote>
+<p>
+<img src="./img/gems-40px/O3.png" alt="O3.png" /> <b>O3</b> and <img src="./img/gems-40px/E4.png" alt="E4.png" /> <b>E4</b> close too many future lines for its damage at base kit.
+</p>
+</blockquote>
+</div>
+</div>
+</div>
+<div id="outline-container-org39acd88" class="outline-2">
+<h2 id="org39acd88"><span class="section-number-2">5.</span> Item Tier List</h2>
+<div class="outline-text-2" id="text-5">
+</div>
+<div id="outline-container-org28f68c7" class="outline-3">
+<h3 id="org28f68c7"><span class="section-number-3">5.1.</span> <span class="underline">S: Perfect</span></h3>
+<div class="outline-text-3" id="text-5-1">
+<div class="org-center">
+<p>
+<img src="./img/items/Stuffed-Rabbit.png" alt="Stuffed-Rabbit.png" />
+<img src="./img/items/Eternity-Flute.png" alt="Eternity-Flute.png" />
+<img src="./img/items/Timewarp-Wand.png" alt="Timewarp-Wand.png" />
+<img src="./img/items/Chrome-Shield.png" alt="Chrome-Shield.png" />
+<img src="./img/items/Gemini-Necklace.png" alt="Gemini-Necklace.png" />
+<img src="./img/items/Windbite-Dagger.png" alt="Windbite-Dagger.png" />
+<img src="./img/items/Eaglewing-Charm.png" alt="Eaglewing-Charm.png" />
+<img src="./img/items/Vampiric-Dagger.png" alt="Vampiric-Dagger.png" />
+<img src="./img/items/Bloody-Bandage.png" alt="Bloody-Bandage.png" />
+<img src="./img/items/Leech-Staff.png" alt="Leech-Staff.png" />
+<img src="./img/items/Bloodhound-Greatsword.png" alt="Bloodhound-Greatsword.png" />
+<img src="./img/items/Bloodflower-Brooch.png" alt="Bloodflower-Brooch.png" />
+<img src="./img/items/Blood-Vial.png" alt="Blood-Vial.png" />
+<img src="./img/items/Kunoichi-Hood.png" alt="Kunoichi-Hood.png" />
+<img src="./img/items/Shadow-Bracelet.png" alt="Shadow-Bracelet.png" />
+<img src="./img/items/Greysteel-Shield.png" alt="Greysteel-Shield.png" />
+<img src="./img/items/Firescale-Corset.png" alt="Firescale-Corset.png" />
+<img src="./img/items/Garnet-Staff.png" alt="Garnet-Staff.png" />
+<img src="./img/items/Amethyst-Bracelet.png" alt="Amethyst-Bracelet.png" />
+<img src="./img/items/Storm-Petticoat.png" alt="Storm-Petticoat.png" />
+<img src="./img/items/Divine-Mirror.png" alt="Divine-Mirror.png" />
+<img src="./img/items/Mermaid-Scalemail.png" alt="Mermaid-Scalemail.png" />
+<img src="./img/items/Killing-Note.png" alt="Killing-Note.png" />
+<img src="./img/items/Blacksteel-Buckler.png" alt="Blacksteel-Buckler.png" />
+<img src="./img/items/Nightguard-Gloves.png" alt="Nightguard-Gloves.png" />
+<img src="./img/items/Firststrike-Bracelet.png" alt="Firststrike-Bracelet.png" />
+<img src="./img/items/Pocketwatch.png" alt="Pocketwatch.png" />
+<img src="./img/items/Youkai-Bracelet.png" alt="Youkai-Bracelet.png" />
+<img src="./img/items/Hermes-Bow.png" alt="Hermes-Bow.png" />
+<img src="./img/items/Talon-Charm.png" alt="Talon-Charm.png" />
+<img src="./img/items/Butterfly-Hairpin.png" alt="Butterfly-Hairpin.png" />
+<img src="./img/items/Polar-Coat.png" alt="Polar-Coat.png" />
+<img src="./img/items/Angel's-Halo.png" alt="Angel's-Halo.png" />
+<img src="./img/items/Hexed-Blindfold.png" alt="Hexed-Blindfold.png" />
+<img src="./img/items/Whitewing-Bracelet.png" alt="Whitewing-Bracelet.png" />
+<img src="./img/items/Heaven's-Codex.png" alt="Heaven's-Codex.png" />
+<img src="./img/items/Hell's-Codex.png" alt="Hell's-Codex.png" />
+<img src="./img/items/Robe-of-Light.png" alt="Robe-of-Light.png" />
+<img src="./img/items/Robe-of-Dark.png" alt="Robe-of-Dark.png" />
+<img src="./img/items/Springloaded-Scythe.png" alt="Springloaded-Scythe.png" />
+<img src="./img/items/Pointed-Ring.png" alt="Pointed-Ring.png" />
+<img src="./img/items/Rusted-Greatsword.png" alt="Rusted-Greatsword.png" />
+<img src="./img/items/Sand-Shovel.png" alt="Sand-Shovel.png" />
+<img src="./img/items/Saltwater-Staff.png" alt="Saltwater-Staff.png" />
+<img src="./img/items/Large-Umbrella.png" alt="Large-Umbrella.png" />
+<img src="./img/items/Beach-Sandals.png" alt="Beach-Sandals.png" />
+<img src="./img/items/Spinning-Chakram.png" alt="Spinning-Chakram.png" />
+<img src="./img/items/Tiny-Fork.png" alt="Tiny-Fork.png" />
+<img src="./img/items/Stirring-Spoon.png" alt="Stirring-Spoon.png" />
+<img src="./img/items/Fanciful-Book.png" alt="Fanciful-Book.png" />
+<img src="./img/items/Apple-Plate.png" alt="Apple-Plate.png" />
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org86f1e05" class="outline-3">
+<h3 id="org86f1e05"><span class="section-number-3">5.2.</span> <span class="underline">A: Great</span></h3>
+<div class="outline-text-3" id="text-5-2">
+<div class="org-center">
+<p>
+<img src="./img/items/Sparrow-Feather.png" alt="Sparrow-Feather.png" />
+<img src="./img/items/Reaper-Cloak.png" alt="Reaper-Cloak.png" />
+<img src="./img/items/Wolf-Hood.png" alt="Wolf-Hood.png" />
+<img src="./img/items/Assassin's-Knife.png" alt="Assassin's-Knife.png" />
+<img src="./img/items/Black-Wakizashi.png" alt="Black-Wakizashi.png" />
+<img src="./img/items/Throwing-Dagger.png" alt="Throwing-Dagger.png" />
+<img src="./img/items/Ninjutsu-Scroll.png" alt="Ninjutsu-Scroll.png" />
+<img src="./img/items/Obsidian-Hairpin.png" alt="Obsidian-Hairpin.png" />
+<img src="./img/items/Demon-Horns.png" alt="Demon-Horns.png" />
+<img src="./img/items/Flamewalker-Boots.png" alt="Flamewalker-Boots.png" />
+<img src="./img/items/Meteor-Staff.png" alt="Meteor-Staff.png" />
+<img src="./img/items/Ruby-Circlet.png" alt="Ruby-Circlet.png" />
+<img src="./img/items/Peridot-Rapier.png" alt="Peridot-Rapier.png" />
+<img src="./img/items/Brightstorm-Spear.png" alt="Brightstorm-Spear.png" />
+<img src="./img/items/Bolt-Staff.png" alt="Bolt-Staff.png" />
+<img src="./img/items/Darkstorm-Knife.png" alt="Darkstorm-Knife.png" />
+<img src="./img/items/Thunderclap-Gloves.png" alt="Thunderclap-Gloves.png" />
+<img src="./img/items/Moss-Shield.png" alt="Moss-Shield.png" />
+<img src="./img/items/Venom-Hood.png" alt="Venom-Hood.png" />
+<img src="./img/items/Necronomicon.png" alt="Necronomicon.png" />
+<img src="./img/items/Quartz-Shield.png" alt="Quartz-Shield.png" />
+<img src="./img/items/Kyou-No-Omikuji.png" alt="Kyou-No-Omikuji.png" />
+<img src="./img/items/Hawkfeather-Fan.png" alt="Hawkfeather-Fan.png" />
+<img src="./img/items/Cursed-Candlestaff.png" alt="Cursed-Candlestaff.png" />
+<img src="./img/items/Maid-Outfit.png" alt="Maid-Outfit.png" />
+<img src="./img/items/Grandmaster-Spear.png" alt="Grandmaster-Spear.png" />
+<img src="./img/items/Gladiator-Helmet.png" alt="Gladiator-Helmet.png" />
+<img src="./img/items/Lion-Charm.png" alt="Lion-Charm.png" />
+<img src="./img/items/Blackbolt-Ribbon.png" alt="Blackbolt-Ribbon.png" />
+<img src="./img/items/Crane-Katana.png" alt="Crane-Katana.png" />
+<img src="./img/items/Falconfeather-Dagger.png" alt="Falconfeather-Dagger.png" />
+<img src="./img/items/Tornado-Staff.png" alt="Tornado-Staff.png" />
+<img src="./img/items/Sandpriestess-Spear.png" alt="Sandpriestess-Spear.png" />
+<img src="./img/items/Flamedancer-Dagger.png" alt="Flamedancer-Dagger.png" />
+<img src="./img/items/Whiteflame-Staff.png" alt="Whiteflame-Staff.png" />
+<img src="./img/items/Marble-Clasp.png" alt="Marble-Clasp.png" />
+<img src="./img/items/Giant-Stone-Club.png" alt="Giant-Stone-Club.png" />
+<img src="./img/items/Coldsteel-Shield.png" alt="Coldsteel-Shield.png" />
+<img src="./img/items/Daylight-Sword.png" alt="Daylight-Sword.png" />
+<img src="./img/items/Nightgleam-Sword.png" alt="Nightgleam-Sword.png" />
+<img src="./img/items/Hidden-Blade.png" alt="Hidden-Blade.png" />
+<img src="./img/items/Bladed-Cloak.png" alt="Bladed-Cloak.png" />
+<img src="./img/items/Large-Anchor.png" alt="Large-Anchor.png" />
+<img src="./img/items/Strongman's-Bar.png" alt="Strongman's-Bar.png" />
+<img src="./img/items/Ribboned-Staff.png" alt="Ribboned-Staff.png" />
+<img src="./img/items/Rosered-Leotard.png" alt="Rosered-Leotard.png" />
+<img src="./img/items/Pyrite-Earrings.png" alt="Pyrite-Earrings.png" />
+<img src="./img/items/Caver's-Cloak.png" alt="Caver's-Cloak.png" />
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orga3f0870" class="outline-3">
+<h3 id="orga3f0870"><span class="section-number-3">5.3.</span> <span class="underline">B: Good, often conditional</span></h3>
+<div class="outline-text-3" id="text-5-3">
+<div class="org-center">
+<p>
+<img src="./img/items/Blackwing-Staff.png" alt="Blackwing-Staff.png" />
+<img src="./img/items/Curse-Talon.png" alt="Curse-Talon.png" />
+<img src="./img/items/Darkmagic-Blade.png" alt="Darkmagic-Blade.png" />
+<img src="./img/items/Witch's-Cloak.png" alt="Witch's-Cloak.png" />
+<img src="./img/items/Crowfeather-Hairpin.png" alt="Crowfeather-Hairpin.png" />
+<img src="./img/items/Lullaby-Harp.png" alt="Lullaby-Harp.png" />
+<img src="./img/items/Redblack-Ribbon.png" alt="Redblack-Ribbon.png" />
+<img src="./img/items/Pajama-Hat.png" alt="Pajama-Hat.png" />
+<img src="./img/items/Sleeping-Greatbow.png" alt="Sleeping-Greatbow.png" />
+<img src="./img/items/Moon-Pendant.png" alt="Moon-Pendant.png" />
+<img src="./img/items/Crescentmoon-Dagger.png" alt="Crescentmoon-Dagger.png" />
+<img src="./img/items/Opal-Necklace.png" alt="Opal-Necklace.png" />
+<img src="./img/items/Nightstar-Grimoire.png" alt="Nightstar-Grimoire.png" />
+<img src="./img/items/Nightingale-Gown.png" alt="Nightingale-Gown.png" />
+<img src="./img/items/Clockwork-Tome.png" alt="Clockwork-Tome.png" />
+<img src="./img/items/Shinsoku-Katana.png" alt="Shinsoku-Katana.png" />
+<img src="./img/items/Winged-Cap.png" alt="Winged-Cap.png" />
+<img src="./img/items/Tiny-Wings.png" alt="Tiny-Wings.png" />
+<img src="./img/items/Thief's-Coat.png" alt="Thief's-Coat.png" />
+<img src="./img/items/Shinobi-Tabi.png" alt="Shinobi-Tabi.png" />
+<img src="./img/items/Dragonhead-Spear.png" alt="Dragonhead-Spear.png" />
+<img src="./img/items/Iron-Greaves.png" alt="Iron-Greaves.png" />
+<img src="./img/items/Granite-Greatsword.png" alt="Granite-Greatsword.png" />
+<img src="./img/items/Tough-Gauntlet.png" alt="Tough-Gauntlet.png" />
+<img src="./img/items/Flame-Bow.png" alt="Flame-Bow.png" />
+<img src="./img/items/Darkcloud-Necklace.png" alt="Darkcloud-Necklace.png" />
+<img src="./img/items/Holy-Greatsword.png" alt="Holy-Greatsword.png" />
+<img src="./img/items/Sacred-Bow.png" alt="Sacred-Bow.png" />
+<img src="./img/items/Purification-Rod.png" alt="Purification-Rod.png" />
+<img src="./img/items/Ornamental-Bell.png" alt="Ornamental-Bell.png" />
+<img src="./img/items/Golden-Katana.png" alt="Golden-Katana.png" />
+<img src="./img/items/Golden-Chime.png" alt="Golden-Chime.png" />
+<img src="./img/items/Book-of-Cheats.png" alt="Book-of-Cheats.png" />
+<img src="./img/items/Royal-Staff.png" alt="Royal-Staff.png" />
+<img src="./img/items/Floral-Bow.png" alt="Floral-Bow.png" />
+<img src="./img/items/Snakefang-Dagger.png" alt="Snakefang-Dagger.png" />
+<img src="./img/items/Ivy-Staff.png" alt="Ivy-Staff.png" />
+<img src="./img/items/Deathcap-Tome.png" alt="Deathcap-Tome.png" />
+<img src="./img/items/Spiderbite-Bow.png" alt="Spiderbite-Bow.png" />
+<img src="./img/items/Compound-Gloves.png" alt="Compound-Gloves.png" />
+<img src="./img/items/Poisonfrog-Charm.png" alt="Poisonfrog-Charm.png" />
+<img src="./img/items/Chemist's-Coat.png" alt="Chemist's-Coat.png" />
+<img src="./img/items/Seashell-Shield.png" alt="Seashell-Shield.png" />
+<img src="./img/items/Grasswoven-Bracelet.png" alt="Grasswoven-Bracelet.png" />
+<img src="./img/items/Tidal-Greatsword.png" alt="Tidal-Greatsword.png" />
+<img src="./img/items/Hydrous-Blob.png" alt="Hydrous-Blob.png" />
+<img src="./img/items/Sawtooth-Cleaver.png" alt="Sawtooth-Cleaver.png" />
+<img src="./img/items/Raven's-Dagger.png" alt="Raven's-Dagger.png" />
+<img src="./img/items/Obsidian-Rod.png" alt="Obsidian-Rod.png" />
+<img src="./img/items/Vega-Spear.png" alt="Vega-Spear.png" />
+<img src="./img/items/Kappa-Shield.png" alt="Kappa-Shield.png" />
+<img src="./img/items/Oni-Staff.png" alt="Oni-Staff.png" />
+<img src="./img/items/Altair-Dagger.png" alt="Altair-Dagger.png" />
+<img src="./img/items/Usagi-Kamen.png" alt="Usagi-Kamen.png" />
+<img src="./img/items/Ghost-Spear.png" alt="Ghost-Spear.png" />
+<img src="./img/items/Calling-Bell.png" alt="Calling-Bell.png" />
+<img src="./img/items/Spiked-Shield.png" alt="Spiked-Shield.png" />
+<img src="./img/items/Bluebolt-Staff.png" alt="Bluebolt-Staff.png" />
+<img src="./img/items/Lapis-Sword.png" alt="Lapis-Sword.png" />
+<img src="./img/items/Shockwave-Tome.png" alt="Shockwave-Tome.png" />
+<img src="./img/items/Battery-Shield.png" alt="Battery-Shield.png" />
+<img src="./img/items/Raiju-Crown.png" alt="Raiju-Crown.png" />
+<img src="./img/items/Staticshock-Earrings.png" alt="Staticshock-Earrings.png" />
+<img src="./img/items/Cloud-Guard.png" alt="Cloud-Guard.png" />
+<img src="./img/items/Feathered-Overcoat.png" alt="Feathered-Overcoat.png" />
+<img src="./img/items/Sacred-Shield.png" alt="Sacred-Shield.png" />
+<img src="./img/items/Sun-Pendant.png" alt="Sun-Pendant.png" />
+<img src="./img/items/Desert-Earrings.png" alt="Desert-Earrings.png" />
+<img src="./img/items/Ruins-Sword.png" alt="Ruins-Sword.png" />
+<img src="./img/items/Mountain-Staff.png" alt="Mountain-Staff.png" />
+<img src="./img/items/Vorpal-Dao.png" alt="Vorpal-Dao.png" />
+<img src="./img/items/Waterfall-Polearm.png" alt="Waterfall-Polearm.png" />
+<img src="./img/items/Reflection-Shield.png" alt="Reflection-Shield.png" />
+<img src="./img/items/Glacier-Spear.png" alt="Glacier-Spear.png" />
+<img src="./img/items/Frost-Dagger.png" alt="Frost-Dagger.png" />
+<img src="./img/items/Frozen-Staff.png" alt="Frozen-Staff.png" />
+<img src="./img/items/Winter-Hat.png" alt="Winter-Hat.png" />
+<img src="./img/items/Snow-Boots.png" alt="Snow-Boots.png" />
+<img src="./img/items/Staff-of-Sorrow.png" alt="Staff-of-Sorrow.png" />
+<img src="./img/items/Shield-of-Smiles.png" alt="Shield-of-Smiles.png" />
+<img src="./img/items/Spark-of-Determination.png" alt="Spark-of-Determination.png" />
+<img src="./img/items/Crown-of-Love.png" alt="Crown-of-Love.png" />
+<img src="./img/items/Comforting-Coat.png" alt="Comforting-Coat.png" />
+<img src="./img/items/Giant-Paintbrush.png" alt="Giant-Paintbrush.png" />
+<img src="./img/items/Sewing-Sword.png" alt="Sewing-Sword.png" />
+<img src="./img/items/Sketchbook.png" alt="Sketchbook.png" />
+<img src="./img/items/Palette-Shield.png" alt="Palette-Shield.png" />
+<img src="./img/items/Handmade-Charm.png" alt="Handmade-Charm.png" />
+<img src="./img/items/Spear-of-Winds.png" alt="Spear-of-Winds.png" />
+<img src="./img/items/Spear-of-Rains.png" alt="Spear-of-Rains.png" />
+<img src="./img/items/Sharpedged-Shield.png" alt="Sharpedged-Shield.png" />
+<img src="./img/items/Greatsword-Pendant.png" alt="Greatsword-Pendant.png" />
+<img src="./img/items/Onepiece-Swimsuit.png" alt="Onepiece-Swimsuit.png" />
+<img src="./img/items/Trick-Shield.png" alt="Trick-Shield.png" />
+<img src="./img/items/Performer's-Shoes.png" alt="Performer's-Shoes.png" />
+<img src="./img/items/Iron-Pickaxe.png" alt="Iron-Pickaxe.png" />
+<img src="./img/items/Dynamite-Staff.png" alt="Dynamite-Staff.png" />
+<img src="./img/items/Fossil-Dagger.png" alt="Fossil-Dagger.png" />
+<img src="./img/items/Drill-Shield.png" alt="Drill-Shield.png" />
+<img src="./img/items/Canary-Charm.png" alt="Canary-Charm.png" />
+<img src="./img/items/Miner's-Headlamp.png" alt="Miner's-Headlamp.png" />
+</p>
+</div>
+</div>
+<div id="outline-container-orgace4fe4" class="outline-4">
+<h4 id="orgace4fe4"><span class="section-number-4">5.3.1.</span> Gold (first shop only)</h4>
+<div class="outline-text-4" id="text-5-3-1">
+<div class="org-center">
+<p>
+<img src="./img/items/Topaz-Charm.png" alt="Topaz-Charm.png" />
+<img src="./img/items/Silver-Coin.png" alt="Silver-Coin.png" />
+<img src="./img/items/Vanilla-Wafers.png" alt="Vanilla-Wafers.png" />
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-orged037dd" class="outline-3">
+<h3 id="orged037dd"><span class="section-number-3">5.4.</span> <span class="underline">C: Need synergy, anti-synergy, uncommon</span></h3>
+<div class="outline-text-3" id="text-5-4">
+<div class="org-center">
+<p>
+<img src="./img/items/Ninja-Robe.png" alt="Ninja-Robe.png" />
+<img src="./img/items/Stonebreaker-Staff.png" alt="Stonebreaker-Staff.png" />
+<img src="./img/items/Lightning-Bow.png" alt="Lightning-Bow.png" />
+<img src="./img/items/Crown-of-Storms.png" alt="Crown-of-Storms.png" />
+<img src="./img/items/Shrinemaiden's-Kosode.png" alt="Shrinemaiden's-Kosode.png" />
+<img src="./img/items/Glittering-Trumpet.png" alt="Glittering-Trumpet.png" />
+<img src="./img/items/Ballroom-Gown.png" alt="Ballroom-Gown.png" />
+<img src="./img/items/Queen's-Crown.png" alt="Queen's-Crown.png" />
+<img src="./img/items/Mimick-Rabbitfoot.png" alt="Mimick-Rabbitfoot.png" />
+<img src="./img/items/Lost-Pendant.png" alt="Lost-Pendant.png" />
+<img src="./img/items/Darkmage-Charm.png" alt="Darkmage-Charm.png" />
+<img src="./img/items/Sniper's-Eyeglasses.png" alt="Sniper's-Eyeglasses.png" />
+<img src="./img/items/Darkglass-Spear.png" alt="Darkglass-Spear.png" />
+<img src="./img/items/Blackhole-Charm.png" alt="Blackhole-Charm.png" />
+<img src="./img/items/Phantom-Dagger.png" alt="Phantom-Dagger.png" />
+<img src="./img/items/Teacher-Knife.png" alt="Teacher-Knife.png" />
+<img src="./img/items/Tactician-Rod.png" alt="Tactician-Rod.png" />
+<img src="./img/items/Battlemaiden-Armor.png" alt="Battlemaiden-Armor.png" />
+<img src="./img/items/Lancer-Gauntlets.png" alt="Lancer-Gauntlets.png" />
+<img src="./img/items/Watermage-Pendant.png" alt="Watermage-Pendant.png" />
+<img src="./img/items/Raindrop-Earrings.png" alt="Raindrop-Earrings.png" />
+<img src="./img/items/Aquamarine-Bracelet.png" alt="Aquamarine-Bracelet.png" />
+<img src="./img/items/Icicle-Earrings.png" alt="Icicle-Earrings.png" />
+<img src="./img/items/Memory-Greatsword.png" alt="Memory-Greatsword.png" />
+<img src="./img/items/Spear-of-Remorse.png" alt="Spear-of-Remorse.png" />
+<img src="./img/items/Righthand-Cast.png" alt="Righthand-Cast.png" />
+<img src="./img/items/Lefthand-Cast.png" alt="Lefthand-Cast.png" />
+<img src="./img/items/Painter's-Beret.png" alt="Painter's-Beret.png" />
+<img src="./img/items/Artist-Smock.png" alt="Artist-Smock.png" />
+<img src="./img/items/Colorful-Earrings.png" alt="Colorful-Earrings.png" />
+<img src="./img/items/Straw-Hat.png" alt="Straw-Hat.png" />
+<img src="./img/items/Jester's-Hat.png" alt="Jester's-Hat.png" />
+<img src="./img/items/Hooked-Staff.png" alt="Hooked-Staff.png" />
+<img src="./img/items/Crown-of-Swords.png" alt="Crown-of-Swords.png" />
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org4ca30a6" class="outline-3">
+<h3 id="org4ca30a6"><span class="section-number-3">5.5.</span> <span class="underline">D: Super-niche, rare</span></h3>
+<div class="outline-text-3" id="text-5-5">
+<div class="org-center">
+<p>
+<img src="./img/items/Volcano-Spear.png" alt="Volcano-Spear.png" />
+<img src="./img/items/Reddragon-Blade.png" alt="Reddragon-Blade.png" />
+<img src="./img/items/Tiny-Hourglass.png" alt="Tiny-Hourglass.png" />
+<img src="./img/items/Nova-Crown.png" alt="Nova-Crown.png" />
+<img src="./img/items/Twinstar-Earrings.png" alt="Twinstar-Earrings.png" />
+<img src="./img/items/Metronome-Boots.png" alt="Metronome-Boots.png" />
+<img src="./img/items/Starry-Cloak.png" alt="Starry-Cloak.png" />
+<img src="./img/items/Pidgeon-Bow.png" alt="Pidgeon-Bow.png" />
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orgc7611c3" class="outline-3">
+<h3 id="orgc7611c3"><span class="section-number-3">5.6.</span> <span class="underline">E: QoL/Unranked</span></h3>
+<div class="outline-text-3" id="text-5-6">
+<div class="org-center">
+<p>
+<img src="./img/items/Timemage-Cap.png" alt="Timemage-Cap.png" />
+<img src="./img/items/Rockdragon-Mail.png" alt="Rockdragon-Mail.png" />
+<img src="./img/items/Phoenix-Charm.png" alt="Phoenix-Charm.png" />
+<img src="./img/items/Diamond-Shield.png" alt="Diamond-Shield.png" />
+<img src="./img/items/Emerald-Chestplate.png" alt="Emerald-Chestplate.png" />
+<img src="./img/items/Redwhite-Ribbon.png" alt="Redwhite-Ribbon.png" />
+<img src="./img/items/Butterfly-Ocarina.png" alt="Butterfly-Ocarina.png" />
+<img src="./img/items/Fairy-Spear.png" alt="Fairy-Spear.png" />
+<img src="./img/items/Blue-Rose.png" alt="Blue-Rose.png" />
+<img src="./img/items/Sunflower-Crown.png" alt="Sunflower-Crown.png" />
+<img src="./img/items/Midsummer-Dress.png" alt="Midsummer-Dress.png" />
+<img src="./img/items/Occult-Dagger.png" alt="Occult-Dagger.png" />
+<img src="./img/items/Abyss-Artifact.png" alt="Abyss-Artifact.png" />
+<img src="./img/items/Timespace-Dagger.png" alt="Timespace-Dagger.png" />
+<img src="./img/items/Red-Tanzaku.png" alt="Red-Tanzaku.png" />
+<img src="./img/items/Haunted-Gloves.png" alt="Haunted-Gloves.png" />
+<img src="./img/items/Old-Bonnet.png" alt="Old-Bonnet.png" />
+<img src="./img/items/Smoke-Shield.png" alt="Smoke-Shield.png" />
+<img src="./img/items/Stormdance-Gown.png" alt="Stormdance-Gown.png" />
+<img src="./img/items/Boulder-Shield.png" alt="Boulder-Shield.png" />
+<img src="./img/items/Golem's-Claymore.png" alt="Golem's-Claymore.png" />
+<img src="./img/items/Stoneplate-Armor.png" alt="Stoneplate-Armor.png" />
+<img src="./img/items/Sacredstone-Charm.png" alt="Sacredstone-Charm.png" />
+<img src="./img/items/Clay-Rabbit.png" alt="Clay-Rabbit.png" />
+<img src="./img/items/Jade-Staff.png" alt="Jade-Staff.png" />
+<img src="./img/items/Lonesome-Pendant.png" alt="Lonesome-Pendant.png" />
+<img src="./img/items/Unsacred-Pendant.png" alt="Unsacred-Pendant.png" />
+<img src="./img/items/Darkcrystal-Rose.png" alt="Darkcrystal-Rose.png" />
+<img src="./img/items/Dark-Wings.png" alt="Dark-Wings.png" />
+<img src="./img/items/Rainbow-Cape.png" alt="Rainbow-Cape.png" />
+<img src="./img/items/Caramel-Tea.png" alt="Caramel-Tea.png" />
+<img src="./img/items/Strawberry-Cake.png" alt="Strawberry-Cake.png" />
+<img src="./img/items/Sweet-Taffy.png" alt="Sweet-Taffy.png" />
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-orgae2c192" class="outline-2">
+<h2 id="orgae2c192"><span class="section-number-2">6.</span> Example Builds</h2>
+</div>
+<div id="footnotes">
+<h2 class="footnotes">Footnotes: </h2>
+<div id="text-footnotes">
+
+<div class="footdef"><sup><a id="fn.N2" class="footnum" href="#fnr.N2" role="doc-backlink">1</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">Diameter of N1 and N4 is 5% bigger than the length of N2.</p></div></div>
+
+
+</div>
+</div></div>
+<div id="postamble" class="status">
+<p class="date">Date: 2026-04-15</p>
+<p class="author">Author: Quoise</p>
+<p class="date">Created: 2026-04-18 Sat 15:11</p>
+</div>
+</body>
+</html>

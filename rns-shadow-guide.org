@@ -2,14 +2,13 @@
 #+bind: org-latex-images-centered nil
 #+bind: org-footnote-section nil
 #+bind: org-hide-macro-markers t
-#+title: Rabbit & Steel Shadow Guide (v2.0.2.7)
+#+title: R&S Shadow Class Guide ({{{guidever}}})
 #+author: Quoise
 #+date: 2026-04-15
 #+startup: inlineimages
 #+OPTIONS: ^:nil
 #+LATEX_HEADER: \usepackage[colorlinks=true,urlcolor=pink,linkcolor=blue]{hyperref}
 #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="https://gongzhitaao.org/orgcss/org.css"/>
-#+OPTIONS: html-style:nil
 #+INFOJS_OPT: view:info toc:non-nil sdepth:1
 # #+HTML_HEAD_EXTRA: <style> img { width: 7.5% } </style>
 #+MACRO: gem [[./img/gems/$1.png]]
@@ -24,10 +23,18 @@
 #+MACRO: guidever v0.1.0
 
 * Intro
+#+ATTR_HTML: :align right
+#+begin_center
+_*This guide is not finished.*_
+
+_*Pending playstyle writeups and example builds, plus feedback from other players.*_
+#+end_center
+
 Rabbit & Steel Shadow Class guide written primarily for {{{gamever}}}. 
 
-At the time of starting this guide, the author (Quoise) has 11 Multiplayer (MP) Lunar wins and 20 Hard wins on Shadow.
-Primarily, the recommendations here are targetted as a carry at 4P Lunar and high WR consistency.
+At the time of starting this guide, the 13 Multiplayer (MP) Lunar wins and 22
+Hard wins on Shadow.  Primarily, the recommendations here are targetted as a
+carry at 4P Lunar and high WR consistency, with likely author bias.
 
 This guide could not be made possible without the help of other players in mino_dev Discord.
 # check to see if said players are okay with being mentioned in guide.
@@ -54,6 +61,7 @@ For community jargon:
 - prio :: priority; typically what item/gems should be picked and by whom
 
 ** Changelog (Releases)
+- v0.1.0 :: release with ability synergies, gem tier list and ability tier list
 # likely first release at 0.1.0, given I don't feel confident in gem and item tiering
 
 * Playstyle
@@ -75,10 +83,9 @@ As a rule-of-thumb, {{{abls(N1)}}}, {{{abls(N4)}}} and {{{abls(N2)}}} have about
 *** Item Priority
 
 * Ability synergies
-Regarding item synergies, generic numeric or percent bonuses to damage are assumed:
+Unique or notable gem and item synergies are only presented. Regarding item
+synergies, generic numeric or percent bonuses to damage are assumed:
 - E.g. for uncontested primary core, pick items like {{{itms1(Waterfall-Polearm)}}}, {{{itms1(Grandmaster-Spear)}}} and {{{itms1(Youkai-Bracelet)}}}
-
-Unique or notable gem and item synergies are only presented.
 
 ** Primary
 #+MACRO: N1i 
