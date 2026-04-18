@@ -1,4 +1,3 @@
-#+title: Items Tier List
 * _S: Perfect_
 #+begin_center
 {{{itm(Stuffed-Rabbit)}}}
