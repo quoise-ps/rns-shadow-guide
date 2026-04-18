@@ -124,14 +124,14 @@ Hitting multiple {{{gems(E2)}}} (33%) is similar to not hitting Special Reset on
 #+end_quote
 
 ** Special
-#+MACRO: N3i Debuff Spreader; {{{itm(Hawkfeather-Fan)}}} {{{itm(Spear-of-Winds)}}} {{{itm(Bolt-Staff)}}}
+#+MACRO: N3i Debuff apply; {{{itm(Hawkfeather-Fan)}}} {{{itm(Spear-of-Winds)}}} {{{itm(Bolt-Staff)}}}
 #+MACRO: O3i1 {{{itm(Miner's-Headlamp)}}} {{{itm(Darkglass-Spear)}}} {{{itm(Timespace-Dagger)}}}
 #+MACRO: O3i2 {{{o3i1}}} {{{itm(Raindrop-Earrings)}}}
 #+MACRO: O3i {{{o3i2}}} {{{itm(Sun-Pendant)}}} {{{itm(Heaven's-Codex)}}} {{{itm(Staff-of-Sorrow)}}}
 #+MACRO: S3i N3 items; {{{itm(Hawkfeather-Fan)}}} {{{itm(Mountain-Staff)}}} {{{itm(Obsidian-Rod)}}} {{{itm(Garnet-Staff)}}}  {{{itm(Lion-Charm)}}} {{{itm(Obsidian-Hairpin)}}}
 #+MACRO: R3i N3 Items; {{{itm(Hawkfeather-Fan)}}} {{{itm(Obsidian-Rod)}}} {{{itm(Garnet-Staff)}}}
-#+MACRO: G3i N3 Items; {{{itm(Hawkfeather-Fan)}}} {{{itm(Sacred-Bow)}}}
-#+MACRO: E3i N3 Items; +GCD/debuff items; {{{itm(Hawkfeather-Fan)}}} {{{itm(Sacred-Bow)}}} {{{itm(Shrinemaiden's-Kosode)}}}; 
+#+MACRO: G3i N3 Items; {{{itm(Hawkfeather-Fan)}}} {{{itm(Sacred-Bow)}}} {{{itm(Shrinemaiden's-Kosode)}}}
+#+MACRO: E3i N3 Items; +GCD/debuff items; {{{itm(Hawkfeather-Fan)}}} {{{itm(Sacred-Bow)}}} {{{itm(Shrinemaiden's-Kosode)}}}
 #+MACRO: S3n "Best" Spc., ~+60DPS at base; oGCD, no slow, loves CD reduction (including 1s \rightarrow 0s); 0.7s "cd" minimum
  |           | Gem Synergies | Item Synergies | Notes                                                            |
  |-----------+---------------+----------------+------------------------------------------------------------------|
