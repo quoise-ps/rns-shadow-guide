@@ -61,7 +61,7 @@ For community jargon:
 - prio :: priority; typically what item/gems should be picked and by whom
 
 ** Changelog (Releases)
-- v0.1.0 :: release with ability synergies, gem tier list and ability tier list
+- v0.1.x :: release with ability synergies, gem tier list and ability tier list
 # likely first release at 0.1.0, given I don't feel confident in gem and item tiering
 
 * Playstyle
@@ -152,7 +152,7 @@ Hitting multiple {{{gems(E2)}}} (33%) is similar to not hitting Special Reset on
 #+begin_quote
 [MP] Shadow has low prio on Special damage-boosting items without prior synergies (except {{{itms1(Garnet-Staff)}}} or {{{itms1(Hawkfeather-Fan)}}}.)
 
-E3 is affected by {{{itms1(Obsidian-Rod)}}}, {{{itms1(Cursed-Candlestaff)}}}, {{{itms1(Old-Bonnet)}}} / {{{itms1(Haunted-Gloves)}}} and other special items changes.
+{{{gems(E3)}}} is affected by {{{itms1(Obsidian-Rod)}}}, {{{itms1(Cursed-Candlestaff)}}}, {{{itms1(Old-Bonnet)}}} / {{{itms1(Haunted-Gloves)}}} and other special items changes.
 Note, additive bonuses like {{{itms1(Eaglewing-Charm)}}} will not apply to debuffs.
 #+end_quote
  
@@ -161,7 +161,7 @@ Note, additive bonuses like {{{itms1(Eaglewing-Charm)}}} will not apply to debuf
 #+MACRO: O4i N4 items; {{{itm(Hermes-Bow)}}}  {{{itm(Talon-Charm)}}}  {{{itm(Sacred-Bow)}}}
 #+MACRO: S4i N4 items; {{{itm(Coldsteel-Shield)}}}
 #+MACRO: R4i +m/s; {{{itm(Garnet-Staff)}}} {{{itm(Peridot-Rapier)}}} {{{itm(Greysteel-Shield)}}} 
-#+MACRO: G4i N4 items; {{{itm(Brightstorm-Spear)}}}
+#+MACRO: G4i N4 items; {{{itm(Spark-of-Determination)}}}
 #+MACRO: E4i {{{itm(Firststrike-Bracelet)}}} {{{itm(Starry-Cloak)}}} {{{itm(Timespace-Dagger)}}}
 #+MACRO: R4g  Safety\rightarrow{{{gemss(S2)}}}; DPS\rightarrow{{{gemss(R2)}}} 
 |           | Gem Synergies                 | Item Synergies | Notes                                                                             |
@@ -196,7 +196,7 @@ Shadow, by gem design, should buy a gem first gem first shop, most are damage po
 [[./img/gems/R1.png]]
 
 #+begin_quote
-R4, R2 and R1, each alone, can do +30-100% DPS without external support,
+{{{gems(R4)}}}, {{{gems(R2)}}} and {{{gems(R1)}}}, each alone, can do +30-100% DPS without external support,
 though more difficult to work with due to iframe req.
 
 You're looking for Wavestrike, Flash-, Firstrike, Flow-, Haste buffs; and applicable ability damage bonuses.
