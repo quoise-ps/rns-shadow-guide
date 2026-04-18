@@ -13,9 +13,9 @@
 #+INFOJS_OPT: view:info toc:non-nil sdepth:1
 # #+HTML_HEAD_EXTRA: <style> img { width: 7.5% } </style>
 #+MACRO: gem [[./img/gems/$1.png]]
-#+MACRO: gems [[./img/gems-40px/$1.png]] $1
+#+MACRO: gems [[./img/gems-40px/$1.png]] *$1*
 #+MACRO: abl [[./img/abilities-40px/$1.png]]
-#+MACRO: abls [[./img/abilities-40px/$1.png]] $1
+#+MACRO: abls [[./img/abilities-40px/$1.png]] *$1*
 #+MACRO: itm [[./img/items/$1.png]]
 #+MACRO: itms [[./img/items/$1.png]] $1
 
@@ -47,6 +47,7 @@ For community jargon:
 - AoE :: Area-of-Effect; typically used in context of hitting multiple enemies, e.g. fights in Churchouse or Sanctum.
 - oGCD :: Shadow's S3, S4; these can be used without sacrificing GCD time spent on other abilities.
 - iframe :: Invincibility
+- prio :: priority; typically what item/gems should be picked and by whom
 
 ** Changelog (Releases)
 # likely first release at 0.1.0, given I don't feel confident in gem and item tiering
@@ -57,10 +58,11 @@ Maximum damage rotation would prioritize in order of availability.
 
 \(N4 \to N3 \to N1 \to N1\)
 
-More typically, for mobile targets, I save N3 for when I'm out of range or shackled.
-N4 is good for burst, i.e. on 4P Lunar against the unshielded butterfly on (Geode) Plee or (Sanctum) Capricorn.
+More typically, for mobile targets, I save {{{abls(N3)}}} for when I'm out of range or shackled.
+{{{abls(N4)}}} is good for burst,
+i.e. on 4P Lunar against the unshielded butterfly on (Geode) Plee or (Sanctum) Capricorn.
 
-As a rule-of-thumb, N1/N4 and N2 have about the same hitbox horizontally.
+As a rule-of-thumb, {{{abls(N1)}}}, {{{abls(N4)}}} and {{{abls(N2)}}} have about the same hitbox horizontally.
 [fn:N2:Diameter of N1 and N4 is 5% bigger than the length of N2.]
 
 ** Avoiding MP PvP
@@ -68,45 +70,45 @@ As a rule-of-thumb, N1/N4 and N2 have about the same hitbox horizontally.
 ** Cheating Abilities Out
 
 * Gems Tier List
-Tier placing prioritizes "lines" and WR consistency. Shadow, by gem design, should buy a gem first gem first shop, most are damage positive.
+Tier placing prioritizes "lines" and WR consistency.
+Shadow, by gem design, should buy a gem first gem first shop, most are damage positive.
 
-Newer players (avoiding leap PvP) can consider auto-buying *S2* and *G2*; avoid *O4*.
+- Newer players, if avoiding leap PvP, can consider auto-buying {{{gems(S2)}}} and {{{gems(G2)}}}; avoid {{{gems(O4)}}}.
+- If on Subterra Sanctum or Churchmouse Streets first stage,
+  consider {{{gems(G1)}}}, {{{gems(G4)}}} or special gem.
+- {{{gems(O2)}}}, {{{gems(G3)}}} is great for MP, they're practically SS's Superhex and Dancer's Warcry respectively.
 
-If on Subterra Sanctum or Churchmouse Streets first stage, consider
-*G1*, *G4* or special gem.
-
-** S: Auto-picks, damage now and scales, always synergistic
+** S: Mainstays
 [[./img/gems/R4.png]]
-[[./img/gems/S3.png]][fn:S3:S3 is practically ~110 DPS due to oGCD]
-   
-** A: Carries/versatile/usually good
-[[./img/gems/R1.png]]
 [[./img/gems/R2.png]]
+[[./img/gems/R1.png]]
+   
+** A: Good
+[[./img/gems/S3.png]][fn:S3:S3 is practically ~110 DPS (simultaneous N1/N2) due to oGCD]
 [[./img/gems/S1.png]]
 [[./img/gems/S4.png]]
-[[./img/gems/O2.png]][fn:O2:O2, practically, is SS O4.]
-[[./img/gems/G3.png]][fn:G3:G3, practically, is Dancer N4/Druid G4.]
-[[./img/gems/S2.png]]
-    
-** B: Alternatives
-[[./img/gems/E3.png]][fn:E3:E3 enables Shadow to take +GCD, buff and debuff items; G1 scaling. Affected by Obi Rod, Candlestaff, Bonnet/Haunted Gloves and other special items changes.]
-[[./img/gems/E1.png]]
-[[./img/gems/G2.png]][fn:G2:G2 is risky DPS-wise without synergies or second gem.]
-[[./img/gems/O1.png]]
 [[./img/gems/O4.png]]
+[[./img/gems/S2.png]]
+[[./img/gems/E3.png]][fn:E3:E3 enables Shadow to take +GCD, buff and debuff items; G1 scaling. Affected by Obi Rod, Candlestaff, Bonnet/Haunted Gloves and other special items changes.]
+    
+** B: Alternative
+[[./img/gems/O2.png]][fn:O2:O2, practically, is SS O4.]
+[[./img/gems/G2.png]][fn:G2:G2 is risky DPS-wise without synergies or second gem.]
+[[./img/gems/G3.png]][fn:G3:G3, practically, is Dancer N4/Druid G4.]
+[[./img/gems/E1.png]]
 [[./img/gems/R3.png]]
 
-** C: Niche; good immediate damage
+** C: Niche, but viable
+[[./img/gems/O1.png]]
 [[./img/gems/G1.png]]
 [[./img/gems/G4.png]][fn:G4:G4 is also good for pvp-ing items.]
-[[./img/gems/E2.png]][fn:E2:E2 I rate low due to poor Shackle RNG and Lunar rotations; it can still carry.]
+[[./img/gems/E2.png]]
 
 ** D: Ultra-niche
 [[./img/gems/O3.png]][fn:O3E4:O3 and E4 close too many future lines and don't do efficient damage at base kit.]
 [[./img/gems/E4.png]][fn:O3E4]
 
 * Item Tier List
-Assume unsorted special ordering.
 
 #+include: items.org :minlevel 2
 
