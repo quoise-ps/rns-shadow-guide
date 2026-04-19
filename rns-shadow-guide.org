@@ -6,7 +6,11 @@
 #+author: Quoise
 #+date: 2026-04-15
 #+startup: inlineimages
-#+OPTIONS: ^:nil
+#+TODO: TODO(t) DRAFT(D) REVIEW(r) | DONE(d)
+#+TODO: | RENEW(R)
+#+TODO: | CANCELLED(c)
+#+OPTIONS: ^:nil num:3 todo:1
+#+EXPORT_FILE_NAME: index
 #+LATEX_HEADER: \usepackage[colorlinks=true,urlcolor=pink,linkcolor=blue]{hyperref}
 #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="https://gongzhitaao.org/orgcss/org.css"/>
 #+INFOJS_OPT: view:info toc:non-nil sdepth:1
@@ -22,12 +26,16 @@
 #+MACRO: gamever v2.0.2.7
 #+MACRO: guidever v0.1.0
 
-* Intro
-#+ATTR_HTML: :align right
+* RENEW Intro
 #+begin_center
-_*This guide is not finished.*_
+@@html:<b><u>@@
+This guide is
+@@html: <span style="color:red;">@@
+not finished.
+@@html:</span>@@
 
-_*Pending playstyle writeups and example builds, plus feedback from other players.*_
+Pending playstyle writeups and example builds, plus feedback from other players.
+@@html:</b></u>@@
 #+end_center
 
 Rabbit & Steel Shadow Class guide written primarily for {{{gamever}}}. 
@@ -39,7 +47,7 @@ carry at 4P Lunar and high WR consistency, with likely author bias.
 This guide could not be made possible without the help of other players in mino_dev Discord.
 # check to see if said players are okay with being mentioned in guide.
 
-** Related Resources
+** DONE Related Resources
 Details of Shadow's kit can be found in:
 - [[https://rns.miraheze.org/wiki/Shadow][Shadow | Rabbit & Steel Wiki (rns.miraheze.org)]]
   
@@ -51,7 +59,7 @@ For community jargon:
 
 # attributions and claims to not own used images of R&S Loot + Gems
 
-** Sample Definitions
+** DONE Sample Definitions
 - {{{abls(N1)}}}, {{{gems(O1)}}}, {{{gems(S1)}}}, {{{gems(R1)}}}, {{{gems(E1)}}}, {{{gems(G1)}}} :: _Normal_, _Opal_, _Sapphire_, _Ruby_, _Emerald_ and _Garnet_ variants of Primary respectively.
 - {{{gems(R1)}}}, {{{gems(R2)}}}, {{{gems(R3)}}}, {{{gems(R4)}}} :: _Ruby_ variants of each respectively: Primary, Secondary, Special and Defensive.
 - BiS :: Best in Slot; universal best upgrade.
@@ -60,15 +68,15 @@ For community jargon:
 - iframe :: Invincibility
 - prio :: priority; typically what item/gems should be picked and by whom
 
-** Changelog (Releases)
+** RENEW Changelog (Releases)
 - v0.1.x :: release with ability synergies, gem tier list and ability tier list
 # likely first release at 0.1.0, given I don't feel confident in gem and item tiering
 
-* Playstyle
-** Base Kit
+* DRAFT Playstyle
+** DRAFT Base Kit
 Maximum damage rotation would prioritize in order of availability.
 
-\(N4 \to N3 \to N1 \to N1\)
+\(N4 \to N3 \to N1 \to N2\)
 
 More typically, for mobile targets, I save {{{abls(N3)}}} for when I'm out of range or shackled.
 {{{abls(N4)}}} is good for burst,
@@ -77,17 +85,17 @@ i.e. on 4P Lunar against the unshielded butterfly on (Geode) Plee or (Sanctum) C
 As a rule-of-thumb, {{{abls(N1)}}}, {{{abls(N4)}}} and {{{abls(N2)}}} have about the same hitbox horizontally.
 [fn:N2:Diameter of N1 and N4 is 5% bigger than the length of N2.]
 
-** Cheating Abilities Out
+** TODO Cheating Abilities Out
 
-** Multiplayer Notes
-*** Item Priority
+** TODO Multiplayer Notes
+*** TODO Item Priority
 
-* Ability synergies
+* REVIEW Ability synergies
 Unique or notable gem and item synergies are only presented. Regarding item
 synergies, generic numeric or percent bonuses to damage are assumed:
 - E.g. for uncontested primary core, pick items like {{{itms1(Waterfall-Polearm)}}}, {{{itms1(Grandmaster-Spear)}}} and {{{itms1(Youkai-Bracelet)}}}
 
-** Primary
+** REVIEW Primary
 #+MACRO: N1i 
 #+MACRO: O1i short CD items;
 #+MACRO: S1i {{{itm(Windbite-Dagger)}}}
@@ -110,7 +118,7 @@ synergies, generic numeric or percent bonuses to damage are assumed:
 At base kit, the effect triggers {{{itms1(Winter-Hat)}}}, but not {{{itms1(Sacredstone-Charm)}}}.
 #+end_quote
 
-** Secondary
+** REVIEW Secondary
 #+MACRO: N2i {{{itm(Butterfly-Hairpin)}}} {{{itm(Caver's-Cloak)}}}
 #+MACRO: O2i
 #+MACRO: S2i
@@ -130,7 +138,7 @@ At base kit, the effect triggers {{{itms1(Winter-Hat)}}}, but not {{{itms1(Sacre
 Hitting multiple {{{gems(E2)}}} (33%) is similar to not hitting Special Reset on Dancer (30%). The effect +% is a multiplier after any percent or additive bonuses are calc'd though.
 #+end_quote
 
-** Special
+** REVIEW Special
 #+MACRO: N3i Debuff apply; {{{itm(Hawkfeather-Fan)}}} {{{itm(Spear-of-Winds)}}} {{{itm(Bolt-Staff)}}}
 #+MACRO: O3i1 {{{itm(Miner's-Headlamp)}}} {{{itm(Darkglass-Spear)}}} {{{itm(Timespace-Dagger)}}}
 #+MACRO: O3i2 {{{o3i1}}} {{{itm(Raindrop-Earrings)}}}
@@ -156,7 +164,7 @@ Hitting multiple {{{gems(E2)}}} (33%) is similar to not hitting Special Reset on
 Note, additive bonuses like {{{itms1(Eaglewing-Charm)}}} will not apply to debuffs.
 #+end_quote
  
-** Defensive
+** REVIEW Defensive
 #+MACRO: N4i {{{itm(Gemini-Necklace)}}} {{{itm(Firststrike-Bracelet)}}}
 #+MACRO: O4i N4 items; {{{itm(Hermes-Bow)}}}  {{{itm(Talon-Charm)}}}  {{{itm(Sacred-Bow)}}}
 #+MACRO: S4i N4 items; {{{itm(Coldsteel-Shield)}}}
@@ -181,7 +189,7 @@ Blackstrike on {{{gems(R4)}}} isn't affected by the Secondary leap that triggers
 instead the one after.
 #+end_quote
 
-* Gems Tier List
+* REVIEW Gems Tier List
 Tier placing prioritizes "lines" and WR consistency.
 Shadow, by gem design, should buy a gem first gem first shop, most are damage positive.
 
@@ -190,7 +198,7 @@ Shadow, by gem design, should buy a gem first gem first shop, most are damage po
   consider {{{gems(G1)}}}, {{{gems(G4)}}} or special gem.
 - {{{gems(O2)}}}, {{{gems(G3)}}} is great for MP, they're practically SS's Superhex and Dancer's Warcry respectively.
 
-** S: Mainstays
+** RENEW S: Mainstays
 [[./img/gems/R4.png]]
 [[./img/gems/R2.png]]
 [[./img/gems/R1.png]]
@@ -202,7 +210,7 @@ though more difficult to work with due to iframe req.
 You're looking for Wavestrike, Flash-, Firstrike, Flow-, Haste buffs; and applicable ability damage bonuses.
 #+end_quote
    
-** A: Good
+** REVIEW A: Good
 [[./img/gems/S3.png]]
 [[./img/gems/S1.png]]
 [[./img/gems/S4.png]]
@@ -210,7 +218,7 @@ You're looking for Wavestrike, Flash-, Firstrike, Flow-, Haste buffs; and applic
 [[./img/gems/S2.png]]
 [[./img/gems/E3.png]]
     
-** B: Alternative
+** REVIEW B: Alternative
 [[./img/gems/O2.png]]
 [[./img/gems/G2.png]]
 [[./img/gems/G3.png]]
@@ -221,13 +229,13 @@ You're looking for Wavestrike, Flash-, Firstrike, Flow-, Haste buffs; and applic
 [Author] {{{gems(E1)}}} is, personally, an inferior {{{gems(R1)}}}. It should be more than viable, but the gem's long movement slow and unbypasseable 2s GCD demands a different playstyle.
 #+end_quote
 
-** C: Niche, but viable
+** REVIEW C: Niche, but viable
 [[./img/gems/O1.png]]
 [[./img/gems/G1.png]]
 [[./img/gems/G4.png]]
 [[./img/gems/E2.png]]
 
-** D: Ultra-niche
+** REVIEW D: Ultra-niche
 [[./img/gems/O3.png]]
 [[./img/gems/E4.png]]
 
@@ -235,8 +243,8 @@ You're looking for Wavestrike, Flash-, Firstrike, Flow-, Haste buffs; and applic
 {{{gems(O3)}}} and {{{gems(E4)}}} close too many future lines for its damage at base kit.
 #+end_quote
 
-* Item Tier List
+* REVIEW Item Tier List
 
 #+include: items.org :minlevel 2
 
-* Example Builds
+* TODO Example Builds
