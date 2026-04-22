@@ -1,21 +1,25 @@
+#+title: R&S Shadow Class Guide ({{{guidever}}})
+#+author: Quoise
+#+date: 2026-04-15
+:PREFERENCES:
+#+startup: inlineimages
 #+bind: org-latex-image-default-width "1.8em"
 #+bind: org-latex-images-centered nil
 #+bind: org-footnote-section nil
 #+bind: org-hide-macro-markers t
-#+title: R&S Shadow Class Guide ({{{guidever}}})
-#+author: Quoise
-#+date: 2026-04-15
-#+startup: inlineimages
-#+TODO: TODO(t) DRAFT(D) | REVIEW(r)
-#+TODO: | DONE(d)
-#+TODO: | RENEW(R)
-#+TODO: | CANCELLED(c)
 #+OPTIONS: ^:nil num:3 todo:1
 #+EXPORT_FILE_NAME: index
 #+LATEX_HEADER: \usepackage[colorlinks=true,urlcolor=pink,linkcolor=blue]{hyperref}
 #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="https://gongzhitaao.org/orgcss/org.css"/>
 #+INFOJS_OPT: view:info toc:non-nil sdepth:1
-# #+HTML_HEAD_EXTRA: <style> img { width: 7.5% } </style>
+:END:
+:TODOs:
+#+TODO: TODO(t) DRAFT(D) | REVIEW(r)
+#+TODO: | DONE(d)
+#+TODO: | RENEW(R)
+#+TODO: | CANCELLED(c)
+:END:
+:MACROS:
 #+MACRO: gem [[./img/gems/$1.png]]
 #+MACRO: gems [[./img/gems-40px/$1.png]] *$1*
 #+MACRO: gemss [[./img/gems-40px/$1.png]]
@@ -24,8 +28,11 @@
 #+MACRO: itm [[./img/items/$1.png]]
 #+MACRO: itms1 (eval (s-concat "[[./img/items/" $1 ".png]] *" (s-replace-regexp "\-" " " $1) "*"))
 #+MACRO: itms2 [[./img/items/$1.png]] *$2*
+#+MACRO: Shackle [[./img/other/Shackles.png]]
+#+MACRO: Shackles [[./img/other/Shackles.png]] *Shackles*
 #+MACRO: gamever v2.0.2.7
 #+MACRO: guidever v0.1.0
+:END:
 
 * RENEW Intro
 #+begin_center
@@ -68,28 +75,53 @@ For community jargon:
 - oGCD :: Shadow's S3, S4; these can be used without sacrificing GCD time spent on other abilities.
 - iframe :: Invincibility
 - prio :: priority; typically what item/gems should be picked and by whom
+- rotation :: pre-determined moveset classes use to maximize damage.
+  On Shadow, this is complicated by {{{Shackles}}} status effect.
 
 ** RENEW Changelog (Releases)
 - v0.1.x :: release with ability synergies, gem tier list and ability tier list
-# likely first release at 0.1.0, given I don't feel confident in gem and item tiering
+- v0.2.0 :: applied feedback changes to rotation, gems, items. Added [[*Shadow][Shadow]] section and todos.
 
 * DRAFT Playstyle
-** DRAFT Base Kit
-Maximum damage rotation would prioritize in order of availability.
+** REVIEW Shadow
+Shadow is a mobile close-quarters bunny; she excels when playing flexibly, due to {{{Shackles}}}.
 
-\(N4 \to N3 \to N1 \to N2\)
+Shadow is best characterized by having:
+- Decent-damage and short GCD (1.0s) abilities
+  + Close-Range multi-hit {{{abl(N1)}}} *Primary* and {{{abl(N2)}}} *Secondary* abilities
+  + {{{abl(N2)}}} *Secondary* having a leap, similar to Heavyblade's (HB) Special
+  + {{{abl(N3)}}} *Special* that hits all enemies on short CD
+  + {{{abl(N4)}}} *Defensives* with damage and GCD
+- Shares the fastest base movement speed (m/s) with Assassin (Sin)
+- Gem effects that mimic effects from other classes or items
+- {{{Shackles}}} status effect
 
-More typically, for mobile targets, I save {{{abls(N3)}}} for when I'm out of range or shackled.
-{{{abls(N4)}}} is good for burst,
-i.e. on 4P Lunar against the unshielded butterfly on (Geode) Plee or (Sanctum) Capricorn.
+Shadow's {{{Shackles}}} locks up one of her attacks[fn:attacks:Attacks include Primary, Secondary, Special.] from use on any ability usage.
+This is independent of any Magicklock trinket effects, cooldowns or item effects (e.g. {{{itms1(Lefthand-Cast)}}}.)
+As well, this can freeze up "input queues" where otherwise, on other characters, you could be able to hold multiple
+attacks down.
 
-As a rule-of-thumb, {{{abls(N1)}}}, {{{abls(N4)}}} and {{{abls(N2)}}} have about the same hitbox horizontally.
+** REVIEW 9 Gold MDP-Based Outskirts Rotation
+For regular encounters, defeating them by 22.5s will score 9 gold (for up to 47 gold on Random runs at first shop.)
+
+On base kit, in order of availibility:
+- If at ~6s/21s, {{{abls(N4)}}}
+- {{{abls(N3)}}}
+- {{{abls(N1)}}}
+- {{{abls(N4)}}}
+- {{{abls(N2)}}}
+
+The hitbox covered by {{{abls(N1)}}} and {{{abls(N4)}}} are equal; they also hit the same enemies {{{abls(N2)}}} can and more.
 [fn:N2:Diameter of N1 and N4 is 5% bigger than the length of N2.]
 
 ** TODO Cheating Abilities Out
 
+** TODO "Hovering" Proccing Leap Invincibility Procs
+# need screenshots of normal fights and p2 Farrah/Shira/Witch
+
 ** TODO Multiplayer Notes
 *** TODO Item Priority
+*** TODO Avoiding leap PVP
 
 * REVIEW Ability synergies
 Unique or notable gem and item synergies are only presented. Regarding item
@@ -245,7 +277,7 @@ m/s slow and uncheatble 2s GCD feels too demanding (excluding lining up Flash- o
 effects like {{{itms1(Book-of-Cheats)}}} or {{{itms1(Saltwater-Staff)}}}.
 #+end_quote
 
-** REVIEW D: Ultra-niche
+** DONE D: Ultra-niche
 [[./img/gems/O3.png]]
 [[./img/gems/E4.png]]
 

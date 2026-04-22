@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2026-04-21 Tue 20:26 -->
+<!-- 2026-04-21 Tue 22:28 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>R&amp;S Shadow Class Guide (v0.1.0)</title>
@@ -215,38 +215,6 @@ org_html_manager.set("VIEW", "info");
 org_html_manager.setup();  // activate after the parameters are set
 // @license-end
 </script>
-<script>
-  window.MathJax = {
-    tex: {
-      ams: {
-        multlineWidth: '85%'
-      },
-      tags: 'ams',
-      tagSide: 'right',
-      tagIndent: '.8em'
-    },
-    chtml: {
-      scale: 1.0,
-      displayAlign: 'center',
-      displayIndent: '0em'
-    },
-    svg: {
-      scale: 1.0,
-      displayAlign: 'center',
-      displayIndent: '0em'
-    },
-    output: {
-      font: 'mathjax-modern',
-      displayOverflow: 'overflow'
-    }
-  };
-</script>
-
-<script
-  id="MathJax-script"
-  async
-  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-</script>
 </head>
 <body>
 <div id="content" class="content">
@@ -255,17 +223,18 @@ org_html_manager.setup();  // activate after the parameters are set
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#orgca4c2d6">1. <span class="done RENEW">RENEW</span> Intro</a></li>
-<li><a href="#org92771e3">2. <span class="todo DRAFT">DRAFT</span> Playstyle</a></li>
-<li><a href="#orgbe3a749">3. <span class="done REVIEW">REVIEW</span> Ability synergies</a></li>
-<li><a href="#orgf4c94c2">4. <span class="done REVIEW">REVIEW</span> Gems Tier List</a></li>
-<li><a href="#org904b1eb">5. <span class="done REVIEW">REVIEW</span> Item Tier List</a></li>
-<li><a href="#orga2d1750">6. <span class="todo TODO">TODO</span> Example Builds</a></li>
+<li><a href="#orgcf48365">1. <span class="done RENEW">RENEW</span> Intro</a></li>
+<li><a href="#org875c7b1">2. <span class="todo DRAFT">DRAFT</span> Playstyle</a></li>
+<li><a href="#orgd2fb080">3. <span class="done REVIEW">REVIEW</span> Ability synergies</a></li>
+<li><a href="#orgaaffc6d">4. <span class="done REVIEW">REVIEW</span> Gems Tier List</a></li>
+<li><a href="#org6563280">5. <span class="done REVIEW">REVIEW</span> Item Tier List</a></li>
+<li><a href="#org6b577d1">6. <span class="todo TODO">TODO</span> Example Builds</a></li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgca4c2d6" class="outline-2">
-<h2 id="orgca4c2d6"><span class="section-number-2">1.</span> <span class="done RENEW">RENEW</span> Intro</h2>
+
+<div id="outline-container-orgcf48365" class="outline-2">
+<h2 id="orgcf48365"><span class="section-number-2">1.</span> <span class="done RENEW">RENEW</span> Intro</h2>
 <div class="outline-text-2" id="text-1">
 <div class="org-center">
 <p>
@@ -296,8 +265,8 @@ carry at 4P Lunar and high WR consistency, with likely author bias.
 This guide could not be made possible without the help of other players in mino_dev Discord.
 </p>
 </div>
-<div id="outline-container-org4cdc7d8" class="outline-3">
-<h3 id="org4cdc7d8"><span class="section-number-3">1.1.</span> <span class="done DONE">DONE</span> Related Resources</h3>
+<div id="outline-container-org42f5853" class="outline-3">
+<h3 id="org42f5853"><span class="section-number-3">1.1.</span> <span class="done DONE">DONE</span> Related Resources</h3>
 <div class="outline-text-3" id="text-1-1">
 <p>
 Details of Shadow&rsquo;s kit can be found in:
@@ -321,8 +290,8 @@ For community jargon:
 </ul>
 </div>
 </div>
-<div id="outline-container-org3eb184d" class="outline-3">
-<h3 id="org3eb184d"><span class="section-number-3">1.2.</span> <span class="done DONE">DONE</span> Sample Definitions</h3>
+<div id="outline-container-orgdc73f00" class="outline-3">
+<h3 id="orgdc73f00"><span class="section-number-3">1.2.</span> <span class="done DONE">DONE</span> Sample Definitions</h3>
 <div class="outline-text-3" id="text-1-2">
 <dl class="org-dl">
 <dt><img src="./img/abilities-40px/N1.png" alt="N1.png" /> <b>N1</b>, <img src="./img/gems-40px/O1.png" alt="O1.png" /> <b>O1</b>, <img src="./img/gems-40px/S1.png" alt="S1.png" /> <b>S1</b>, <img src="./img/gems-40px/R1.png" alt="R1.png" /> <b>R1</b>, <img src="./img/gems-40px/E1.png" alt="E1.png" /> <b>E1</b>, <img src="./img/gems-40px/G1.png" alt="G1.png" /> <b>G1</b></dt><dd><span class="underline">Normal</span>, <span class="underline">Opal</span>, <span class="underline">Sapphire</span>, <span class="underline">Ruby</span>, <span class="underline">Emerald</span> and <span class="underline">Garnet</span> variants of Primary respectively.</dd>
@@ -332,60 +301,103 @@ For community jargon:
 <dt>oGCD</dt><dd>Shadow&rsquo;s S3, S4; these can be used without sacrificing GCD time spent on other abilities.</dd>
 <dt>iframe</dt><dd>Invincibility</dd>
 <dt>prio</dt><dd>priority; typically what item/gems should be picked and by whom</dd>
+<dt>rotation</dt><dd>pre-determined moveset classes use to maximize damage.
+On Shadow, this is complicated by <img src="./img/other/Shackles.png" alt="Shackles.png" /> <b>Shackles</b> status effect.</dd>
 </dl>
 </div>
 </div>
-<div id="outline-container-org296704e" class="outline-3">
-<h3 id="org296704e"><span class="section-number-3">1.3.</span> <span class="done RENEW">RENEW</span> Changelog (Releases)</h3>
+<div id="outline-container-org3880fea" class="outline-3">
+<h3 id="org3880fea"><span class="section-number-3">1.3.</span> <span class="done RENEW">RENEW</span> Changelog (Releases)</h3>
 <div class="outline-text-3" id="text-1-3">
 <dl class="org-dl">
 <dt>v0.1.x</dt><dd>release with ability synergies, gem tier list and ability tier list</dd>
+<dt>v0.2.0</dt><dd>applied feedback changes to rotation, gems, items. Added <a href="#org48d5c09">Shadow</a> section and todos.</dd>
 </dl>
 </div>
 </div>
 </div>
-<div id="outline-container-org92771e3" class="outline-2">
-<h2 id="org92771e3"><span class="section-number-2">2.</span> <span class="todo DRAFT">DRAFT</span> Playstyle</h2>
+<div id="outline-container-org875c7b1" class="outline-2">
+<h2 id="org875c7b1"><span class="section-number-2">2.</span> <span class="todo DRAFT">DRAFT</span> Playstyle</h2>
 <div class="outline-text-2" id="text-2">
 </div>
-<div id="outline-container-org6ed4532" class="outline-3">
-<h3 id="org6ed4532"><span class="section-number-3">2.1.</span> <span class="todo DRAFT">DRAFT</span> Base Kit</h3>
+<div id="outline-container-org48d5c09" class="outline-3">
+<h3 id="org48d5c09"><span class="section-number-3">2.1.</span> <span class="done REVIEW">REVIEW</span> Shadow</h3>
 <div class="outline-text-3" id="text-2-1">
 <p>
-Maximum damage rotation would prioritize in order of availability.
+Shadow is a mobile close-quarters bunny; she excels when playing flexibly, due to <img src="./img/other/Shackles.png" alt="Shackles.png" /> <b>Shackles</b>.
 </p>
 
 <p>
-\(N4 \to N3 \to N1 \to N2\)
+Shadow is best characterized by having:
+</p>
+<ul class="org-ul">
+<li>Decent-damage and short GCD (1.0s) abilities
+<ul class="org-ul">
+<li>Close-Range multi-hit <img src="./img/abilities-40px/N1.png" alt="N1.png" /> <b>Primary</b> and <img src="./img/abilities-40px/N2.png" alt="N2.png" /> <b>Secondary</b> abilities</li>
+<li><img src="./img/abilities-40px/N2.png" alt="N2.png" /> <b>Secondary</b> having a leap, similar to Heavyblade&rsquo;s (HB) Special</li>
+<li><img src="./img/abilities-40px/N3.png" alt="N3.png" /> <b>Special</b> that hits all enemies on short CD</li>
+<li><img src="./img/abilities-40px/N4.png" alt="N4.png" /> <b>Defensives</b> with damage and GCD</li>
+</ul></li>
+<li>Shares the fastest base movement speed (m/s) with Assassin (Sin)</li>
+<li>Gem effects that mimic effects from other classes or items</li>
+<li><img src="./img/other/Shackles.png" alt="Shackles.png" /> <b>Shackles</b> status effect</li>
+</ul>
+
+<p>
+Shadow&rsquo;s <img src="./img/other/Shackles.png" alt="Shackles.png" /> <b>Shackles</b> locks up one of her attacks<sup><a id="fnr.attacks" class="footref" href="#fn.attacks" role="doc-backlink">1</a></sup> from use on any ability usage.
+This is independent of any Magicklock trinket effects, cooldowns or item effects (e.g. <img src="./img/items/Lefthand-Cast.png" alt="Lefthand-Cast.png" /> <b>Lefthand Cast</b>.)
+As well, this can freeze up &ldquo;input queues&rdquo; where otherwise, on other characters, you could be able to hold multiple
+attacks down.
+</p>
+</div>
+</div>
+<div id="outline-container-org653b311" class="outline-3">
+<h3 id="org653b311"><span class="section-number-3">2.2.</span> <span class="done REVIEW">REVIEW</span> 9 Gold MDP-Based Outskirts Rotation</h3>
+<div class="outline-text-3" id="text-2-2">
+<p>
+For regular encounters, defeating them by 22.5s will score 9 gold (for up to 47 gold on Random runs at first shop.)
 </p>
 
 <p>
-More typically, for mobile targets, I save <img src="./img/abilities-40px/N3.png" alt="N3.png" /> <b>N3</b> for when I&rsquo;m out of range or shackled.
-<img src="./img/abilities-40px/N4.png" alt="N4.png" /> <b>N4</b> is good for burst,
-i.e. on 4P Lunar against the unshielded butterfly on (Geode) Plee or (Sanctum) Capricorn.
+On base kit, in order of availibility:
 </p>
+<ul class="org-ul">
+<li>If at ~6s/21s, <img src="./img/abilities-40px/N4.png" alt="N4.png" /> <b>N4</b></li>
+<li><img src="./img/abilities-40px/N3.png" alt="N3.png" /> <b>N3</b></li>
+<li><img src="./img/abilities-40px/N1.png" alt="N1.png" /> <b>N1</b></li>
+<li><img src="./img/abilities-40px/N4.png" alt="N4.png" /> <b>N4</b></li>
+<li><img src="./img/abilities-40px/N2.png" alt="N2.png" /> <b>N2</b></li>
+</ul>
 
 <p>
-As a rule-of-thumb, <img src="./img/abilities-40px/N1.png" alt="N1.png" /> <b>N1</b>, <img src="./img/abilities-40px/N4.png" alt="N4.png" /> <b>N4</b> and <img src="./img/abilities-40px/N2.png" alt="N2.png" /> <b>N2</b> have about the same hitbox horizontally.
-<sup><a id="fnr.N2" class="footref" href="#fn.N2" role="doc-backlink">1</a></sup>
+The hitbox covered by <img src="./img/abilities-40px/N1.png" alt="N1.png" /> <b>N1</b> and <img src="./img/abilities-40px/N4.png" alt="N4.png" /> <b>N4</b> are equal; they also hit the same enemies <img src="./img/abilities-40px/N2.png" alt="N2.png" /> <b>N2</b> can and more.
+<sup><a id="fnr.N2" class="footref" href="#fn.N2" role="doc-backlink">2</a></sup>
 </p>
 </div>
 </div>
-<div id="outline-container-org0d0bd9d" class="outline-3">
-<h3 id="org0d0bd9d"><span class="section-number-3">2.2.</span> <span class="todo TODO">TODO</span> Cheating Abilities Out</h3>
+<div id="outline-container-orgddcd193" class="outline-3">
+<h3 id="orgddcd193"><span class="section-number-3">2.3.</span> <span class="todo TODO">TODO</span> Cheating Abilities Out</h3>
 </div>
 
-<div id="outline-container-org6c6d86a" class="outline-3">
-<h3 id="org6c6d86a"><span class="section-number-3">2.3.</span> <span class="todo TODO">TODO</span> Multiplayer Notes</h3>
-<div class="outline-text-3" id="text-2-3">
-</div>
-<div id="outline-container-orgf8ebd48" class="outline-4">
-<h4 id="orgf8ebd48"><span class="section-number-4">2.3.1.</span> <span class="todo TODO">TODO</span> Item Priority</h4>
+<div id="outline-container-orga6a752a" class="outline-3">
+<h3 id="orga6a752a"><span class="section-number-3">2.4.</span> <span class="todo TODO">TODO</span> &ldquo;Hovering&rdquo; Proccing Leap Invincibility Procs</h3>
+<div class="outline-text-3" id="text-2-4">
 </div>
 </div>
+<div id="outline-container-org6441f37" class="outline-3">
+<h3 id="org6441f37"><span class="section-number-3">2.5.</span> <span class="todo TODO">TODO</span> Multiplayer Notes</h3>
+<div class="outline-text-3" id="text-2-5">
 </div>
-<div id="outline-container-orgbe3a749" class="outline-2">
-<h2 id="orgbe3a749"><span class="section-number-2">3.</span> <span class="done REVIEW">REVIEW</span> Ability synergies</h2>
+<div id="outline-container-org62c6c05" class="outline-4">
+<h4 id="org62c6c05"><span class="section-number-4">2.5.1.</span> <span class="todo TODO">TODO</span> Item Priority</h4>
+</div>
+<div id="outline-container-org412f185" class="outline-4">
+<h4 id="org412f185"><span class="section-number-4">2.5.2.</span> <span class="todo TODO">TODO</span> Avoiding leap PVP</h4>
+</div>
+</div>
+</div>
+<div id="outline-container-orgd2fb080" class="outline-2">
+<h2 id="orgd2fb080"><span class="section-number-2">3.</span> <span class="done REVIEW">REVIEW</span> Ability synergies</h2>
 <div class="outline-text-2" id="text-3">
 <p>
 Unique or notable gem and item synergies are only presented. Regarding item
@@ -395,8 +407,8 @@ synergies, generic numeric or percent bonuses to damage are assumed:
 <li>E.g. for uncontested primary core, pick items like <img src="./img/items/Waterfall-Polearm.png" alt="Waterfall-Polearm.png" /> <b>Waterfall Polearm</b>, <img src="./img/items/Grandmaster-Spear.png" alt="Grandmaster-Spear.png" /> <b>Grandmaster Spear</b> and <img src="./img/items/Youkai-Bracelet.png" alt="Youkai-Bracelet.png" /> <b>Youkai Bracelet</b></li>
 </ul>
 </div>
-<div id="outline-container-orgba3b851" class="outline-3">
-<h3 id="orgba3b851"><span class="section-number-3">3.1.</span> <span class="done REVIEW">REVIEW</span> Primary</h3>
+<div id="outline-container-org7b4423a" class="outline-3">
+<h3 id="org7b4423a"><span class="section-number-3">3.1.</span> <span class="done REVIEW">REVIEW</span> Primary</h3>
 <div class="outline-text-3" id="text-3-1">
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
@@ -475,8 +487,8 @@ At base kit, the effect triggers <img src="./img/items/Winter-Hat.png" alt="Wint
 </blockquote>
 </div>
 </div>
-<div id="outline-container-org6294261" class="outline-3">
-<h3 id="org6294261"><span class="section-number-3">3.2.</span> <span class="done REVIEW">REVIEW</span> Secondary</h3>
+<div id="outline-container-org0e28435" class="outline-3">
+<h3 id="org0e28435"><span class="section-number-3">3.2.</span> <span class="done REVIEW">REVIEW</span> Secondary</h3>
 <div class="outline-text-3" id="text-3-2">
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
@@ -559,8 +571,8 @@ Hitting multiple <img src="./img/gems-40px/E2.png" alt="E2.png" /> <b>E2</b> (33
 </blockquote>
 </div>
 </div>
-<div id="outline-container-org28385f9" class="outline-3">
-<h3 id="org28385f9"><span class="section-number-3">3.3.</span> <span class="done REVIEW">REVIEW</span> Special</h3>
+<div id="outline-container-orgc28ed15" class="outline-3">
+<h3 id="orgc28ed15"><span class="section-number-3">3.3.</span> <span class="done REVIEW">REVIEW</span> Special</h3>
 <div class="outline-text-3" id="text-3-3">
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
@@ -639,8 +651,8 @@ Note, additive bonuses like <img src="./img/items/Eaglewing-Charm.png" alt="Eagl
 </blockquote>
 </div>
 </div>
-<div id="outline-container-orge03d888" class="outline-3">
-<h3 id="orge03d888"><span class="section-number-3">3.4.</span> <span class="done REVIEW">REVIEW</span> Defensive</h3>
+<div id="outline-container-org0b7d39d" class="outline-3">
+<h3 id="org0b7d39d"><span class="section-number-3">3.4.</span> <span class="done REVIEW">REVIEW</span> Defensive</h3>
 <div class="outline-text-3" id="text-3-4">
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
@@ -721,8 +733,8 @@ instead the one after.
 </div>
 </div>
 </div>
-<div id="outline-container-orgf4c94c2" class="outline-2">
-<h2 id="orgf4c94c2"><span class="section-number-2">4.</span> <span class="done REVIEW">REVIEW</span> Gems Tier List</h2>
+<div id="outline-container-orgaaffc6d" class="outline-2">
+<h2 id="orgaaffc6d"><span class="section-number-2">4.</span> <span class="done REVIEW">REVIEW</span> Gems Tier List</h2>
 <div class="outline-text-2" id="text-4">
 <p>
 Tier placing prioritizes &ldquo;lines&rdquo; and WR consistency.
@@ -737,8 +749,8 @@ consider <img src="./img/gems-40px/G1.png" alt="G1.png" /> <b>G1</b>, <img src="
 <li><img src="./img/gems-40px/O2.png" alt="O2.png" /> <b>O2</b>, <img src="./img/gems-40px/G3.png" alt="G3.png" /> <b>G3</b> is great for MP, they&rsquo;re practically SS&rsquo;s Superhex and Dancer&rsquo;s Warcry respectively.</li>
 </ul>
 </div>
-<div id="outline-container-org216dd2e" class="outline-3">
-<h3 id="org216dd2e"><span class="section-number-3">4.1.</span> <span class="done RENEW">RENEW</span> S: Mainstays</h3>
+<div id="outline-container-orgadca29e" class="outline-3">
+<h3 id="orgadca29e"><span class="section-number-3">4.1.</span> <span class="done RENEW">RENEW</span> S: Mainstays</h3>
 <div class="outline-text-3" id="text-4-1">
 <p>
 <img src="./img/gems/R4.png" alt="R4.png" />
@@ -759,8 +771,8 @@ Blackstrike, Haste buffs, and applicable ability damage bonuses.
 </blockquote>
 </div>
 </div>
-<div id="outline-container-org4a76406" class="outline-3">
-<h3 id="org4a76406"><span class="section-number-3">4.2.</span> <span class="done REVIEW">REVIEW</span> A: Good</h3>
+<div id="outline-container-orgd7c1cba" class="outline-3">
+<h3 id="orgd7c1cba"><span class="section-number-3">4.2.</span> <span class="done REVIEW">REVIEW</span> A: Good</h3>
 <div class="outline-text-3" id="text-4-2">
 <p>
 <img src="./img/gems/S3.png" alt="S3.png" />
@@ -772,8 +784,8 @@ Blackstrike, Haste buffs, and applicable ability damage bonuses.
 </p>
 </div>
 </div>
-<div id="outline-container-orgec3c0d6" class="outline-3">
-<h3 id="orgec3c0d6"><span class="section-number-3">4.3.</span> <span class="done REVIEW">REVIEW</span> B: Alternative</h3>
+<div id="outline-container-orgcecd747" class="outline-3">
+<h3 id="orgcecd747"><span class="section-number-3">4.3.</span> <span class="done REVIEW">REVIEW</span> B: Alternative</h3>
 <div class="outline-text-3" id="text-4-3">
 <p>
 <img src="./img/gems/G1.png" alt="G1.png" />
@@ -789,8 +801,8 @@ or, deliberate, builds where you focus Special or %&rsquo;s.
 </blockquote>
 </div>
 </div>
-<div id="outline-container-org2dbd8b6" class="outline-3">
-<h3 id="org2dbd8b6"><span class="section-number-3">4.4.</span> <span class="done REVIEW">REVIEW</span> C: Viable</h3>
+<div id="outline-container-org68a9d87" class="outline-3">
+<h3 id="org68a9d87"><span class="section-number-3">4.4.</span> <span class="done REVIEW">REVIEW</span> C: Viable</h3>
 <div class="outline-text-3" id="text-4-4">
 <p>
 <img src="./img/gems/E2.png" alt="E2.png" />
@@ -812,8 +824,8 @@ effects like <img src="./img/items/Book-of-Cheats.png" alt="Book-of-Cheats.png" 
 </blockquote>
 </div>
 </div>
-<div id="outline-container-orgf959fe9" class="outline-3">
-<h3 id="orgf959fe9"><span class="section-number-3">4.5.</span> <span class="done REVIEW">REVIEW</span> D: Ultra-niche</h3>
+<div id="outline-container-org83a2313" class="outline-3">
+<h3 id="org83a2313"><span class="section-number-3">4.5.</span> <span class="done DONE">DONE</span> D: Ultra-niche</h3>
 <div class="outline-text-3" id="text-4-5">
 <p>
 <img src="./img/gems/O3.png" alt="O3.png" />
@@ -828,12 +840,12 @@ effects like <img src="./img/items/Book-of-Cheats.png" alt="Book-of-Cheats.png" 
 </div>
 </div>
 </div>
-<div id="outline-container-org904b1eb" class="outline-2">
-<h2 id="org904b1eb"><span class="section-number-2">5.</span> <span class="done REVIEW">REVIEW</span> Item Tier List</h2>
+<div id="outline-container-org6563280" class="outline-2">
+<h2 id="org6563280"><span class="section-number-2">5.</span> <span class="done REVIEW">REVIEW</span> Item Tier List</h2>
 <div class="outline-text-2" id="text-5">
 </div>
-<div id="outline-container-org881f68b" class="outline-3">
-<h3 id="org881f68b"><span class="section-number-3">5.1.</span> <span class="underline">S: Perfect</span></h3>
+<div id="outline-container-org7abd565" class="outline-3">
+<h3 id="org7abd565"><span class="section-number-3">5.1.</span> <span class="underline">S: Perfect</span></h3>
 <div class="outline-text-3" id="text-5-1">
 <div class="org-center">
 <p>
@@ -878,8 +890,8 @@ effects like <img src="./img/items/Book-of-Cheats.png" alt="Book-of-Cheats.png" 
 </div>
 </div>
 </div>
-<div id="outline-container-org3d3e847" class="outline-3">
-<h3 id="org3d3e847"><span class="section-number-3">5.2.</span> <span class="underline">A: Great</span></h3>
+<div id="outline-container-orge88061c" class="outline-3">
+<h3 id="orge88061c"><span class="section-number-3">5.2.</span> <span class="underline">A: Great</span></h3>
 <div class="outline-text-3" id="text-5-2">
 <div class="org-center">
 <p>
@@ -941,8 +953,8 @@ effects like <img src="./img/items/Book-of-Cheats.png" alt="Book-of-Cheats.png" 
 </div>
 </div>
 </div>
-<div id="outline-container-org972e2a8" class="outline-3">
-<h3 id="org972e2a8"><span class="section-number-3">5.3.</span> <span class="underline">B: Good, often conditional</span></h3>
+<div id="outline-container-org39dd412" class="outline-3">
+<h3 id="org39dd412"><span class="section-number-3">5.3.</span> <span class="underline">B: Good, often conditional</span></h3>
 <div class="outline-text-3" id="text-5-3">
 <div class="org-center">
 <p>
@@ -1056,8 +1068,8 @@ effects like <img src="./img/items/Book-of-Cheats.png" alt="Book-of-Cheats.png" 
 </p>
 </div>
 </div>
-<div id="outline-container-orgba7a2ef" class="outline-4">
-<h4 id="orgba7a2ef"><span class="section-number-4">5.3.1.</span> Gold (first shop only)</h4>
+<div id="outline-container-org0545d70" class="outline-4">
+<h4 id="org0545d70"><span class="section-number-4">5.3.1.</span> Gold (first shop only)</h4>
 <div class="outline-text-4" id="text-5-3-1">
 <div class="org-center">
 <p>
@@ -1069,8 +1081,8 @@ effects like <img src="./img/items/Book-of-Cheats.png" alt="Book-of-Cheats.png" 
 </div>
 </div>
 </div>
-<div id="outline-container-orgd443432" class="outline-3">
-<h3 id="orgd443432"><span class="section-number-3">5.4.</span> <span class="underline">C: Need synergy, anti-synergy, uncommon</span></h3>
+<div id="outline-container-orgcd70a93" class="outline-3">
+<h3 id="orgcd70a93"><span class="section-number-3">5.4.</span> <span class="underline">C: Need synergy, anti-synergy, uncommon</span></h3>
 <div class="outline-text-3" id="text-5-4">
 <div class="org-center">
 <p>
@@ -1114,8 +1126,8 @@ effects like <img src="./img/items/Book-of-Cheats.png" alt="Book-of-Cheats.png" 
 </div>
 </div>
 </div>
-<div id="outline-container-org5d7bda4" class="outline-3">
-<h3 id="org5d7bda4"><span class="section-number-3">5.5.</span> <span class="underline">D: Super-niche, rare</span></h3>
+<div id="outline-container-org892b9be" class="outline-3">
+<h3 id="org892b9be"><span class="section-number-3">5.5.</span> <span class="underline">D: Super-niche, rare</span></h3>
 <div class="outline-text-3" id="text-5-5">
 <div class="org-center">
 <p>
@@ -1131,8 +1143,8 @@ effects like <img src="./img/items/Book-of-Cheats.png" alt="Book-of-Cheats.png" 
 </div>
 </div>
 </div>
-<div id="outline-container-org65fdc00" class="outline-3">
-<h3 id="org65fdc00"><span class="section-number-3">5.6.</span> <span class="underline">E: QoL/Unranked</span></h3>
+<div id="outline-container-org3f8ad40" class="outline-3">
+<h3 id="org3f8ad40"><span class="section-number-3">5.6.</span> <span class="underline">E: QoL/Unranked</span></h3>
 <div class="outline-text-3" id="text-5-6">
 <div class="org-center">
 <p>
@@ -1174,14 +1186,16 @@ effects like <img src="./img/items/Book-of-Cheats.png" alt="Book-of-Cheats.png" 
 </div>
 </div>
 </div>
-<div id="outline-container-orga2d1750" class="outline-2">
-<h2 id="orga2d1750"><span class="section-number-2">6.</span> <span class="todo TODO">TODO</span> Example Builds</h2>
+<div id="outline-container-org6b577d1" class="outline-2">
+<h2 id="org6b577d1"><span class="section-number-2">6.</span> <span class="todo TODO">TODO</span> Example Builds</h2>
 </div>
 <div id="footnotes">
 <h2 class="footnotes">Footnotes: </h2>
 <div id="text-footnotes">
 
-<div class="footdef"><sup><a id="fn.N2" class="footnum" href="#fnr.N2" role="doc-backlink">1</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">Diameter of N1 and N4 is 5% bigger than the length of N2.</p></div></div>
+<div class="footdef"><sup><a id="fn.attacks" class="footnum" href="#fnr.attacks" role="doc-backlink">1</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">Attacks include Primary, Secondary, Special.</p></div></div>
+
+<div class="footdef"><sup><a id="fn.N2" class="footnum" href="#fnr.N2" role="doc-backlink">2</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">Diameter of N1 and N4 is 5% bigger than the length of N2.</p></div></div>
 
 
 </div>
@@ -1189,7 +1203,7 @@ effects like <img src="./img/items/Book-of-Cheats.png" alt="Book-of-Cheats.png" 
 <div id="postamble" class="status">
 <p class="date">Date: 2026-04-15</p>
 <p class="author">Author: Quoise</p>
-<p class="date">Created: 2026-04-21 Tue 20:26</p>
+<p class="date">Created: 2026-04-21 Tue 22:28</p>
 </div>
 </body>
 </html>
