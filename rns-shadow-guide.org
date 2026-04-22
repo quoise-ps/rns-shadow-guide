@@ -1,4 +1,4 @@
-#+title: R&S Shadow Class Guide ({{{guidever}}})
+#+title: Something about Shadow ({{{guidever}}})
 #+author: Quoise
 #+date: 2026-04-15
 :PREFERENCES:
@@ -31,7 +31,7 @@
 #+MACRO: Shackle [[./img/other/Shackles.png]]
 #+MACRO: Shackles [[./img/other/Shackles.png]] *Shackles*
 #+MACRO: gamever v2.0.2.7
-#+MACRO: guidever v0.1.0
+#+MACRO: guidever v0.2.1
 :END:
 
 * RENEW Intro
@@ -79,8 +79,9 @@ For community jargon:
   On Shadow, this is complicated by {{{Shackles}}} status effect.
 
 ** RENEW Changelog (Releases)
-- v0.1.x :: release with ability synergies, gem tier list and ability tier list
-- v0.2.0 :: applied feedback changes to rotation, gems, items. Added [[*Shadow][Shadow]] section and todos.
+- v0.1.x (2026-04-18) :: release with ability synergies, gem tier list and ability tier list
+- v0.2.0 (2026-04-21) :: applied feedback changes to rotation, gems, items. Added Shadow section and todos.
+  - v0.2.1 (2026-04-21) :: fixed versioning and added dating
 
 * DRAFT Playstyle
 ** REVIEW Shadow
