@@ -6,7 +6,8 @@
 #+author: Quoise
 #+date: 2026-04-15
 #+startup: inlineimages
-#+TODO: TODO(t) DRAFT(D) REVIEW(r) | DONE(d)
+#+TODO: TODO(t) DRAFT(D) | REVIEW(r)
+#+TODO: | DONE(d)
 #+TODO: | RENEW(R)
 #+TODO: | CANCELLED(c)
 #+OPTIONS: ^:nil num:3 todo:1
@@ -193,8 +194,9 @@ instead the one after.
 Tier placing prioritizes "lines" and WR consistency.
 Shadow, by gem design, should buy a gem first gem first shop, most are damage positive.
 
-- Newer players, if avoiding leap PvP, can consider auto-buying {{{gems(S2)}}} and {{{gems(G2)}}}; avoid {{{gems(O4)}}}.
-- If on Subterra Sanctum or Churchmouse Streets first stage,
+- If avoiding leap, one can consider buying {{{gems(S2)}}} and {{{gems(G2)}}}; avoid {{{gems(O4)}}}.
+- Generally, Special damage gems, besides {{{gems(S3)}}}, are not a prio pick due to their GCD, CD and low base damage.
+- If on *Subterra Sanctum* or *Churchmouse Streets* first stage,
   consider {{{gems(G1)}}}, {{{gems(G4)}}} or special gem.
 - {{{gems(O2)}}}, {{{gems(G3)}}} is great for MP, they're practically SS's Superhex and Dancer's Warcry respectively.
 
@@ -204,10 +206,11 @@ Shadow, by gem design, should buy a gem first gem first shop, most are damage po
 [[./img/gems/R1.png]]
 
 #+begin_quote
-{{{gems(R4)}}}, {{{gems(R2)}}} and {{{gems(R1)}}}, each alone, can do +30-100% DPS without external support,
+{{{gems(R4)}}}, {{{gems(R2)}}} and {{{gems(R1)}}}, each alone, can do +30-100% DPS without external support early,
 though more difficult to work with due to iframe req.
 
-You're looking for Wavestrike, Flash-, Firstrike, Flow-, Haste buffs; and applicable ability damage bonuses.
+You're looking for Wavestrike, Flash-, Flow- (only {{{gems(R1)}}} and {{{gems(R2)}}});
+Blackstrike, Haste buffs, and applicable ability damage bonuses.
 #+end_quote
    
 ** REVIEW A: Good
@@ -219,21 +222,28 @@ You're looking for Wavestrike, Flash-, Firstrike, Flow-, Haste buffs; and applic
 [[./img/gems/E3.png]]
     
 ** REVIEW B: Alternative
+[[./img/gems/G1.png]]
 [[./img/gems/O2.png]]
 [[./img/gems/G2.png]]
 [[./img/gems/G3.png]]
-[[./img/gems/E1.png]]
-[[./img/gems/R3.png]]
-
 #+begin_quote
-[Author] {{{gems(E1)}}} is, personally, an inferior {{{gems(R1)}}}. It should be more than viable, but the gem's long movement slow and unbypasseable 2s GCD demands a different playstyle.
+{{{gems(G2)}}} is a risky early buy without {{{gems(S3)}}} and {{{gems(S4)}}} / {{{gems(G4)}}};
+or, deliberate, builds where you focus Special or %'s.
 #+end_quote
 
-** REVIEW C: Niche, but viable
-[[./img/gems/O1.png]]
-[[./img/gems/G1.png]]
-[[./img/gems/G4.png]]
+** REVIEW C: Viable
 [[./img/gems/E2.png]]
+[[./img/gems/R3.png]]
+[[./img/gems/O1.png]]
+[[./img/gems/G4.png]]
+[[./img/gems/E1.png]]
+#+begin_quote
+[Author] Although {{{gems(E1)}}} should be fine, in most games, I skip it. The long
+m/s slow and uncheatble 2s GCD feels too demanding (excluding lining up Flash- or Blackstrike buff.)
+
+{{{gems(R3)}}} is likely the best gem for spamming Special damage out or proccing
+effects like {{{itms1(Book-of-Cheats)}}} or {{{itms1(Saltwater-Staff)}}}.
+#+end_quote
 
 ** REVIEW D: Ultra-niche
 [[./img/gems/O3.png]]

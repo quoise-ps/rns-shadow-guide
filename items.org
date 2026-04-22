@@ -1,11 +1,9 @@
+# insert thanks for Obi's tiering suggestions in intro section
 * _S: Perfect_
 #+begin_center
-{{{itm(Stuffed-Rabbit)}}}
 {{{itm(Eternity-Flute)}}}
 {{{itm(Timewarp-Wand)}}}
 {{{itm(Chrome-Shield)}}}
-{{{itm(Gemini-Necklace)}}}
-{{{itm(Windbite-Dagger)}}}
 {{{itm(Eaglewing-Charm)}}}
 {{{itm(Vampiric-Dagger)}}}
 {{{itm(Bloody-Bandage)}}}
@@ -15,16 +13,9 @@
 {{{itm(Blood-Vial)}}}
 {{{itm(Kunoichi-Hood)}}}
 {{{itm(Shadow-Bracelet)}}}
-{{{itm(Greysteel-Shield)}}}
-{{{itm(Firescale-Corset)}}}
-{{{itm(Garnet-Staff)}}}
 {{{itm(Amethyst-Bracelet)}}}
 {{{itm(Storm-Petticoat)}}}
 {{{itm(Divine-Mirror)}}}
-{{{itm(Mermaid-Scalemail)}}}
-{{{itm(Killing-Note)}}}
-{{{itm(Blacksteel-Buckler)}}}
-{{{itm(Nightguard-Gloves)}}}
 {{{itm(Firststrike-Bracelet)}}}
 {{{itm(Pocketwatch)}}}
 {{{itm(Youkai-Bracelet)}}}
@@ -37,8 +28,6 @@
 {{{itm(Whitewing-Bracelet)}}}
 {{{itm(Heaven's-Codex)}}}
 {{{itm(Hell's-Codex)}}}
-{{{itm(Robe-of-Light)}}}
-{{{itm(Robe-of-Dark)}}}
 {{{itm(Springloaded-Scythe)}}}
 {{{itm(Pointed-Ring)}}}
 {{{itm(Rusted-Greatsword)}}}
@@ -49,8 +38,6 @@
 {{{itm(Spinning-Chakram)}}}
 {{{itm(Tiny-Fork)}}}
 {{{itm(Stirring-Spoon)}}}
-{{{itm(Fanciful-Book)}}}
-{{{itm(Apple-Plate)}}}
 #+end_center
 * _A: Great_
 #+begin_center
@@ -65,15 +52,18 @@
 {{{itm(Demon-Horns)}}}
 {{{itm(Flamewalker-Boots)}}}
 {{{itm(Meteor-Staff)}}}
+{{{itm(Greysteel-Shield)}}}
+{{{itm(Garnet-Staff)}}}
 {{{itm(Ruby-Circlet)}}}
 {{{itm(Peridot-Rapier)}}}
 {{{itm(Brightstorm-Spear)}}}
-{{{itm(Bolt-Staff)}}}
 {{{itm(Darkstorm-Knife)}}}
 {{{itm(Thunderclap-Gloves)}}}
 {{{itm(Moss-Shield)}}}
 {{{itm(Venom-Hood)}}}
 {{{itm(Necronomicon)}}}
+{{{itm(Mermaid-Scalemail)}}}
+{{{itm(Blacksteel-Buckler)}}}
 {{{itm(Quartz-Shield)}}}
 {{{itm(Kyou-No-Omikuji)}}}
 {{{itm(Hawkfeather-Fan)}}}
@@ -85,15 +75,18 @@
 {{{itm(Blackbolt-Ribbon)}}}
 {{{itm(Crane-Katana)}}}
 {{{itm(Falconfeather-Dagger)}}}
-{{{itm(Tornado-Staff)}}}
 {{{itm(Sandpriestess-Spear)}}}
 {{{itm(Flamedancer-Dagger)}}}
 {{{itm(Whiteflame-Staff)}}}
 {{{itm(Marble-Clasp)}}}
 {{{itm(Giant-Stone-Club)}}}
+{{{itm(Glacier-Spear)}}}
+{{{itm(Winter-Hat)}}}
 {{{itm(Coldsteel-Shield)}}}
 {{{itm(Daylight-Sword)}}}
 {{{itm(Nightgleam-Sword)}}}
+{{{itm(Robe-of-Light)}}}
+{{{itm(Robe-of-Dark)}}}
 {{{itm(Hidden-Blade)}}}
 {{{itm(Bladed-Cloak)}}}
 {{{itm(Large-Anchor)}}}
@@ -111,6 +104,7 @@
 {{{itm(Witch's-Cloak)}}}
 {{{itm(Crowfeather-Hairpin)}}}
 {{{itm(Lullaby-Harp)}}}
+{{{itm(Stuffed-Rabbit)}}}
 {{{itm(Redblack-Ribbon)}}}
 {{{itm(Pajama-Hat)}}}
 {{{itm(Sleeping-Greatbow)}}}
@@ -120,6 +114,7 @@
 {{{itm(Nightstar-Grimoire)}}}
 {{{itm(Nightingale-Gown)}}}
 {{{itm(Clockwork-Tome)}}}
+{{{itm(Gemini-Necklace)}}}
 {{{itm(Shinsoku-Katana)}}}
 {{{itm(Winged-Cap)}}}
 {{{itm(Tiny-Wings)}}}
@@ -130,7 +125,9 @@
 {{{itm(Granite-Greatsword)}}}
 {{{itm(Tough-Gauntlet)}}}
 {{{itm(Flame-Bow)}}}
+{{{itm(Firescale-Corset)}}}
 {{{itm(Darkcloud-Necklace)}}}
+{{{itm(Bolt-Staff)}}}
 {{{itm(Holy-Greatsword)}}}
 {{{itm(Sacred-Bow)}}}
 {{{itm(Purification-Rod)}}}
@@ -153,6 +150,9 @@
 {{{itm(Hydrous-Blob)}}}
 {{{itm(Sawtooth-Cleaver)}}}
 {{{itm(Raven's-Dagger)}}}
+{{{itm(Killing-Note)}}}
+{{{itm(Sniper's-Eyeglasses)}}}
+{{{itm(Nightguard-Gloves)}}}
 {{{itm(Obsidian-Rod)}}}
 {{{itm(Vega-Spear)}}}
 {{{itm(Kappa-Shield)}}}
@@ -178,10 +178,8 @@
 {{{itm(Vorpal-Dao)}}}
 {{{itm(Waterfall-Polearm)}}}
 {{{itm(Reflection-Shield)}}}
-{{{itm(Glacier-Spear)}}}
 {{{itm(Frost-Dagger)}}}
 {{{itm(Frozen-Staff)}}}
-{{{itm(Winter-Hat)}}}
 {{{itm(Snow-Boots)}}}
 {{{itm(Staff-of-Sorrow)}}}
 {{{itm(Shield-of-Smiles)}}}
@@ -206,6 +204,7 @@
 {{{itm(Drill-Shield)}}}
 {{{itm(Canary-Charm)}}}
 {{{itm(Miner's-Headlamp)}}}
+{{{itm(Fanciful-Book)}}}
 #+end_center
 ** Gold (first shop only)
 #+begin_center
@@ -215,6 +214,7 @@
 #+end_center
 * _C: Need synergy, anti-synergy, uncommon_
 #+begin_center
+{{{itm(Windbite-Dagger)}}}
 {{{itm(Ninja-Robe)}}}
 {{{itm(Stonebreaker-Staff)}}}
 {{{itm(Lightning-Bow)}}}
@@ -226,7 +226,6 @@
 {{{itm(Mimick-Rabbitfoot)}}}
 {{{itm(Lost-Pendant)}}}
 {{{itm(Darkmage-Charm)}}}
-{{{itm(Sniper's-Eyeglasses)}}}
 {{{itm(Darkglass-Spear)}}}
 {{{itm(Blackhole-Charm)}}}
 {{{itm(Phantom-Dagger)}}}
@@ -234,6 +233,7 @@
 {{{itm(Tactician-Rod)}}}
 {{{itm(Battlemaiden-Armor)}}}
 {{{itm(Lancer-Gauntlets)}}}
+{{{itm(Tornado-Staff)}}}
 {{{itm(Watermage-Pendant)}}}
 {{{itm(Raindrop-Earrings)}}}
 {{{itm(Aquamarine-Bracelet)}}}
@@ -249,6 +249,7 @@
 {{{itm(Jester's-Hat)}}}
 {{{itm(Hooked-Staff)}}}
 {{{itm(Crown-of-Swords)}}}
+{{{itm(Apple-Plate)}}}
 #+end_center
 * _D: Super-niche, rare_
 #+begin_center
