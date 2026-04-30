@@ -1,4 +1,4 @@
-#+title: {{{WIP}}} Something about Shadow ({{{guidever}}})
+#+title: [WIP] Something about Shadow ({{{guidever}}})
 #+author: Quoise
 #+date: {{{modification-time(%Y-%m-%d)}}}
 :PREFERENCES:
@@ -32,7 +32,6 @@
 #+MACRO: Shackles [[./img/other/Shackles.png]] *Shackles*
 #+MACRO: gamever v2.0.2.7
 #+MACRO: guidever v0.2.1
-#+MACRO: WIP @@html:<span style="color:red;">@@[WIP]@@html:</span>@@
 :END:
 :MACROS_ABBREVIATIONS:
 #+MACRO: pri {{{abl(N1)}}} *Primary*
@@ -40,6 +39,30 @@
 #+MACRO: secl {{{abl(N2)}}} *Leap Secondary*
 #+MACRO: spe {{{abl(N3)}}} *Special*
 #+MACRO: def {{{abl(N4)}}} *Defensive*
+#+MACRO: N1 {{{abls(N1)}}}
+#+MACRO: N2 {{{abls(N2)}}}
+#+MACRO: N3 {{{abls(N3)}}}
+#+MACRO: N4 {{{abls(N4)}}}
+#+MACRO: O1 {{{gems(O1)}}}
+#+MACRO: O2 {{{gems(O2)}}}
+#+MACRO: O3 {{{gems(O3)}}}
+#+MACRO: O4 {{{gems(O4)}}}
+#+MACRO: S1 {{{gems(S1)}}}
+#+MACRO: S2 {{{gems(S2)}}}
+#+MACRO: S3 {{{gems(S3)}}}
+#+MACRO: S4 {{{gems(S4)}}}
+#+MACRO: R1 {{{gems(R1)}}}
+#+MACRO: R2 {{{gems(R2)}}}
+#+MACRO: R3 {{{gems(R3)}}}
+#+MACRO: R4 {{{gems(R4)}}}
+#+MACRO: G1 {{{gems(G1)}}}
+#+MACRO: G2 {{{gems(G2)}}}
+#+MACRO: G3 {{{gems(G3)}}}
+#+MACRO: G4 {{{gems(G4)}}}
+#+MACRO: E1 {{{gems(E1)}}}
+#+MACRO: E2 {{{gems(E2)}}}
+#+MACRO: E3 {{{gems(E3)}}}
+#+MACRO: E4 {{{gems(E4)}}}
 :END:
 
 * RENEW Intro
@@ -76,8 +99,8 @@ For community jargon:
 # attributions and claims to not own used images of R&S Loot + Gems
 
 ** DONE Sample Definitions
-- {{{abls(N1)}}}, {{{gems(O1)}}}, {{{gems(S1)}}}, {{{gems(R1)}}}, {{{gems(E1)}}}, {{{gems(G1)}}} :: _Normal_, _Opal_, _Sapphire_, _Ruby_, _Emerald_ and _Garnet_ variants of Primary respectively.
-- {{{gems(R1)}}}, {{{gems(R2)}}}, {{{gems(R3)}}}, {{{gems(R4)}}} :: _Ruby_ variants of each respectively: Primary, Secondary, Special and Defensive.
+- {{{N1}}}, {{{O1}}}, {{{S1}}}, {{{R1}}}, {{{E1}}}, {{{G1}}} :: _Normal_, _Opal_, _Sapphire_, _Ruby_, _Emerald_ and _Garnet_ variants of Primary respectively.
+- {{{R1}}}, {{{R2}}}, {{{R3}}}, {{{R4}}} :: _Ruby_ variants of each respectively: Primary, Secondary, Special and Defensive.
 - BiS :: Best in Slot; universal best upgrade.
 - AoE :: Area-of-Effect; typically used in context of hitting multiple enemies, e.g. fights in Churchouse or Sanctum.
 - oGCD :: Shadow's S3, S4; these can be used without sacrificing GCD time spent on other abilities.
@@ -112,7 +135,7 @@ Shadow is best characterized by having:
 | Versatile, lots of potential lines             | Attacks have {{{Shackles}}}                       |
 | Secondary invinciblity                         | Punishes for leaping or wrong targeting     |
 | Most gems are primarily synergistic and viable | Non-default rotations                       |
-| 4P Support line in {{{gems(O2)}}} {{{gems(G3)}}}           | Weak Special builds                         |
+| 4P Support line in {{{O2}}} {{{G3}}}                       | Weak Special builds                         |
 | Consistent without % effects or BiS items/gems | Almost 0 hacky Rabbitluck 8k+ damage builds |
 
 ** REVIEW Shackles
@@ -127,16 +150,16 @@ attacks down.
 
 ** REVIEW Inspirations from other Classes and Loot
 Shadow gains some distinct effects that appear in other classes, namely:
-- {{{gems(S2)}}}'s range and charge effect like Dancer's Secondary
-- {{{gems(G3)}}} granting the Shadowcry buff, similar to Dancer's def
-- {{{gems(O2)}}} granting Shadowcurse debuff, similar to Spellsword's (SS) def
-- {{{gems(G1)}}} granting 100 damage 25% of the time to all enemies, is practically a {{{itms1(Brightstorm-Spear)}}} and {{{itms1(Darkstorm-Knife)}}}
+- {{{S2}}}'s range and charge effect like Dancer's Secondary
+- {{{G3}}} granting the Shadowcry buff, similar to Dancer's def
+- {{{O2}}} granting Shadowcurse debuff, similar to Spellsword's (SS) def
+- {{{G1}}} granting 100 damage 25% of the time to all enemies, is practically a {{{itms1(Brightstorm-Spear)}}} and {{{itms1(Darkstorm-Knife)}}}
 # too exhaustive?
-# - {{{gems(S1)}}}, {{{gems(S4)}}} oGCD's
-# - {{{gems(S1)}}}, {{{gems(G1)}}} and {{{gems(R4)}}} automatic abilities (do not trigger items that require /use/, i.e. {{{itms1(Black-Wakizashi)}}})
+# - {{{S1}}}, {{{S4}}} oGCD's
+# - {{{S1}}}, {{{G1}}} and {{{R4}}} automatic abilities (do not trigger items that require /use/, i.e. {{{itms1(Black-Wakizashi)}}})
 
 ** REVIEW Gacha ability
-{{{gems(E3)}}} grants Shadow common access to, often loot-only or class-exclusive, effects like Berserk, Sap and Blackstrike.
+{{{E3}}} grants Shadow common access to, often loot-only or class-exclusive, effects like Berserk, Sap and Blackstrike.
 This distinctly allows Shadow to build into debuffs, multi-hit (on Special); or support most Shadow builds.
 - See [[https://rns.miraheze.org/wiki/Shadow][Shadow (rns.miraheze.org)]] for exhaustive list of effects.
 
@@ -155,13 +178,13 @@ For regular encounters, defeating them by 22.5s will score 9 gold, for up to 47 
 This may allow you to buy two gems immediately or an extra pot.
 
 The hitbox covered by {{{abls(N1)}}} and {{{abls(N4)}}} are equal. {{{abls(N2)}}} doesn't hit as tall as either, but hits almost as wide.
-[fn:N2:Diameter of N1 and N4 is 5% bigger than the length of N2.]
+[fn:N2:Diameter of {{{N1}}} and {{{N4}}} is 5% bigger than the length of {{{N2}}}.]
 
 *** REVIEW Ruby Leap Archetypes - R2/R4
 #+MACRO: pb @@html: <b><span style="color:purple;">@@ $1 @@html: </b></span>@@
 # link to short YT clip displaying this
 The rotation typically goes:
-- {{{gems(R2)}}} / {{{secl}}} repeatedly
+- {{{R2}}} / {{{secl}}} repeatedly
 
 Stable on low-roll lines, archetype is nigh consistent for single-target DPS early and late.
 
@@ -178,17 +201,17 @@ With {{{gemss(R2)}}} and/or {{{gemss(R4)}}}, while returning towards this {{{pb(
 **** REVIEW Alt: Omega Ruby Primary (R1) :noexport:
 # unnecessary to include?
 Same principle to activate leap above, but allow Primary, cycling:
-- One of {{{secl}}} / {{{gems(S2)}}} / {{{def}}}
-- {{{gems(R1)}}}
+- One of {{{secl}}} / {{{S2}}} / {{{def}}}
+- {{{R1}}}
 
 *** REVIEW Auto-proc + oGCD's (S1/G1/R4 + S3/S4)
 Shadow, at base kit, has very symmetrical damage across her abilities, at expense of being GCD-limited.
 Any ability that gets auto-activates or avoids contesting GCD is valued highly
 
-- {{{gems(S1)}}} and {{{gems(G1)}}} allows Shadow to avoid clicking Primary in previous rotations, while supplementing extra damage
- + {{{gems(R4)}}} dealing on Secondary focused-builds
+- {{{S1}}} and {{{G1}}} allows Shadow to avoid clicking Primary in previous rotations, while supplementing extra damage
+ + {{{R4}}} dealing on Secondary focused-builds
 
-- {{{gems(S3)}}} and {{{gems(S4)}}}, as oGCD's, while listed equal damage to base, can be thought of adding +200 damage ({{{abls(N1)}}}) every click.
+- {{{S3}}} and {{{S4}}}, as oGCD's, while listed equal damage to base, can be thought of adding +200 damage ({{{abls(N1)}}}) every click.
 
 #+begin_quote
 In contrast, Druid is much more asymmetrical: her abilities are duration/CD-based;
@@ -198,16 +221,16 @@ While Druid may spend the most time clicking Primary's, often it is not her main
 #+end_quote
 
 * DRAFT Multiplayer Notes
-*** TODO Item Priority :noexport:
+** TODO Item Priority :noexport:
 
-*** REVIEW Avoiding leap PVP
+** REVIEW Avoiding leap PVP
 For damage/consistency, see [[*Ruby Leap Archetypes - R2/R4][Ruby Leap Archetypes - R2/R4]].
 
 #+begin_quote
 [Author] sometimes, IRL, I pull my finger or my entire hand.
 #+end_quote
 
-**** REVIEW Practices on Targetting
+** REVIEW Practices on Targetting
 #+MACRO: nt @@html: <span style="font-size: small; border:2px DarkSalmon solid; padding: 1px;">@@Nearest Target@@html:</span>@@
 #+MACRO: ct @@html: <span style="font-size: small; border:2px DarkSeaGreen solid; padding: 1px;">@@Change Target@@html:</span>@@
 # reminder to check default binds
@@ -223,18 +246,18 @@ If you're in a fight with multiple enemies (Sanctum/Churchmouse), and you do _no
 - slowing down your rotation
 - not holding attack buttons for prolonged periods
   
-**** DONE Leap Notification
+** DONE Leap Notification
 #+MACRO: options ~Options>More Options~
 #+MACRO: hotbar @@html: <span style="font-size: small; border:2px darkcyan solid; padding: 1px;">@@Mini Hotbar@@html:</span>@@
 In {{{options}}}, you can toggle and customize {{{hotbar}}}.
 
-_An accent colour will border the Secondary if leap is enabled,_ dependant on Shadow palette.
+An accent colour will border the Secondary if _leap is enabled,_ dependant on Shadow palette.
 
 #+begin_quote
 [Author] Green palettes are good for visibility, especially for Witch and Farrah.
 #+end_quote
 
-**** REVIEW Hidden Leap Disable Radius
+** REVIEW Hidden Leap Disable Radius
 After enabling leap on Secondary, the distance to _disable leap_ uses a hidden inner "buffer" distance
 (~2.94lp; ~2x size of Rabbit visible hitbox.)
 
@@ -257,16 +280,16 @@ synergies, generic numeric or percent bonuses to damage are assumed:
 |           | Gem Synergies                 | Item Synergies | Notes                                                         |
 |-----------+-------------------------------+----------------+---------------------------------------------------------------|
 | {{{abl(N1)}}}   |                               | {{{N1i}}}            | Good class N1.                                                |
-| {{{gemss(O1)}}} | {{{gemss(S3)}}} {{{gemss(S4)}}}           | {{{O1i}}}            | Weaker {{{gems(G2)}}} variant for {{{gems(S3)}}} + {{{gems(S4)}}}               |
-| {{{gemss(S1)}}} |                               | {{{S1i}}}            | More consistent than {{{gems(G1)}}} for single-target               |
-| {{{gemss(R1)}}} | {{{gemss(S2)}}}                     | {{{R1i}}}            | _600dmg on only iframe req_; easiest with {{{gems(S2)}}}              |
-| {{{gemss(G1)}}} | {{{gemss(E3)}}} {{{gemss(G4)}}} {{{gemss(S4)}}} | {{{G1i}}}            | Multiple-target version of {{{gems(S1)}}}, not limited to secondary |
+| {{{gemss(O1)}}} | {{{gemss(S3)}}} {{{gemss(S4)}}}           | {{{O1i}}}            | Weaker {{{G2}}} variant for {{{S3}}} + {{{S4}}}               |
+| {{{gemss(S1)}}} |                               | {{{S1i}}}            | More consistent than {{{G1}}} for single-target               |
+| {{{gemss(R1)}}} | {{{gemss(S2)}}}                     | {{{R1i}}}            | _600dmg on only iframe req_; easiest with {{{S2}}}              |
+| {{{gemss(G1)}}} | {{{gemss(E3)}}} {{{gemss(G4)}}} {{{gemss(S4)}}} | {{{G1i}}}            | Multiple-target version of {{{S1}}}, not limited to secondary |
 | {{{gemss(E1)}}} | {{{gemss(E3)}}}                     | {{{E1i}}}            | Hardest-hitting primary, harsh movement slow                  |
 
 #+begin_quote
-{{{gems(S1)}}} and {{{gems(G1)}}} effects does not trigger "use" abilities like Black Wakizashi or Golden Katana, but can trigger Brightstorm Spear.
+{{{S1}}} and {{{G1}}} effects does not trigger "use" abilities like Black Wakizashi or Golden Katana, but can trigger Brightstorm Spear.
 
-{{{gems(E1)}}} 2s GCD effect can't be cheated via GCD items, Berserk, Quickdraw or other effects.
+{{{E1}}} 2s GCD effect can't be cheated via GCD items, Berserk, Quickdraw or other effects.
 At base kit, the effect triggers {{{itms1(Winter-Hat)}}}, but not {{{itms1(Sacredstone-Charm)}}}.
 #+end_quote
 
@@ -287,7 +310,7 @@ At base kit, the effect triggers {{{itms1(Winter-Hat)}}}, but not {{{itms1(Sacre
 | {{{gemss(E2)}}} | Yes   | {{{gemss(R4)}}} {{{gemss(S3)}}}           | {{{E2i}}}            | Uncheatable, easy req effect to fulfill                           |
 
 #+begin_quote
-Hitting multiple {{{gems(E2)}}} (33%) is similar to not hitting Special Reset on Dancer (30%). The effect +% is a multiplier after any percent or additive bonuses are calc'd though.
+Hitting multiple {{{E2}}} (33%) is similar to not hitting Special Reset on Dancer (30%). The effect +% is a multiplier after any percent or additive bonuses are calc'd though.
 #+end_quote
 
 ** REVIEW Special
@@ -312,7 +335,7 @@ Hitting multiple {{{gems(E2)}}} (33%) is similar to not hitting Special Reset on
 #+begin_quote
 [MP] Shadow has low prio on Special damage-boosting items without prior synergies (except {{{itms1(Garnet-Staff)}}} or {{{itms1(Hawkfeather-Fan)}}}.)
 
-{{{gems(E3)}}} is affected by {{{itms1(Obsidian-Rod)}}}, {{{itms1(Cursed-Candlestaff)}}}, {{{itms1(Old-Bonnet)}}} / {{{itms1(Haunted-Gloves)}}} and other special items changes.
+{{{E3}}} is affected by {{{itms1(Obsidian-Rod)}}}, {{{itms1(Cursed-Candlestaff)}}}, {{{itms1(Old-Bonnet)}}} / {{{itms1(Haunted-Gloves)}}} and other special items changes.
 Note, additive bonuses like {{{itms1(Eaglewing-Charm)}}} will not apply to debuffs.
 #+end_quote
  
@@ -334,10 +357,10 @@ Note, additive bonuses like {{{itms1(Eaglewing-Charm)}}} will not apply to debuf
 | {{{gemss(E4)}}} |                               | {{{E4i}}}            | Should not pick unless maybe-maybee already holding synergies                     |
 
 #+begin_quote
-{{{itms1(Firststrike-Bracelet)}}} or Blackstrike source ({{{itms1(Book-of-Cheats)}}}, {{{gems(E3)}}})
+{{{itms1(Firststrike-Bracelet)}}} or Blackstrike source ({{{itms1(Book-of-Cheats)}}}, {{{E3}}})
 is oddly quite good given it applies to Defensive damage without consuming it.
 
-Blackstrike on {{{gems(R4)}}} isn't affected by the Secondary leap that triggers {{{itm(Firststrike-Bracelet)}}},
+Blackstrike on {{{R4}}} isn't affected by the Secondary leap that triggers {{{itm(Firststrike-Bracelet)}}},
 instead the one after.
 #+end_quote
 
@@ -345,11 +368,11 @@ instead the one after.
 Tier placing prioritizes "lines" and WR consistency.
 Shadow, by gem design, should buy a gem first gem first shop, most are damage positive.
 
-- If avoiding leap, one can consider buying {{{gems(S2)}}} and {{{gems(G2)}}}; avoid {{{gems(O4)}}}.
-- Generally, Special damage gems, besides {{{gems(S3)}}}, are not a prio pick due to their GCD, CD and low base damage.
+- If avoiding leap, one can consider buying {{{S2}}} and {{{G2}}}; avoid {{{O4}}}.
+- Generally, Special damage gems, besides {{{S3}}}, are not a prio pick due to their GCD, CD and low base damage.
 - If on *Subterra Sanctum* or *Churchmouse Streets* first stage,
-  consider {{{gems(G1)}}}, {{{gems(G4)}}} or special gem.
-- {{{gems(O2)}}}, {{{gems(G3)}}} is great for MP, they're practically SS's Superhex and Dancer's Warcry respectively.
+  consider {{{G1}}}, {{{G4}}} or special gem.
+- {{{O2}}}, {{{G3}}} is great for MP, they're practically SS's Superhex and Dancer's Warcry respectively.
 
 ** RENEW S: Mainstays
 [[./img/gems/R4.png]]
@@ -357,10 +380,10 @@ Shadow, by gem design, should buy a gem first gem first shop, most are damage po
 [[./img/gems/R1.png]]
 
 #+begin_quote
-{{{gems(R4)}}}, {{{gems(R2)}}} and {{{gems(R1)}}}, each alone, can do +30-100% DPS without external support early,
+{{{R4}}}, {{{R2}}} and {{{R1}}}, each alone, can do +30-100% DPS without external support early,
 though more difficult to work with due to iframe req.
 
-You're looking for Wavestrike, Flash-, Flow- (only {{{gems(R1)}}} and {{{gems(R2)}}});
+You're looking for Wavestrike, Flash-, Flow- (only {{{R1}}} and {{{R2}}});
 Blackstrike, Haste buffs, and applicable ability damage bonuses.
 #+end_quote
    
@@ -378,7 +401,7 @@ Blackstrike, Haste buffs, and applicable ability damage bonuses.
 [[./img/gems/G2.png]]
 [[./img/gems/G3.png]]
 #+begin_quote
-{{{gems(G2)}}} is a risky early buy without {{{gems(S3)}}} and {{{gems(S4)}}} / {{{gems(G4)}}};
+{{{G2}}} is a risky early buy without {{{S3}}} and {{{S4}}} / {{{G4}}};
 or, deliberate, builds where you focus Special or %'s.
 #+end_quote
 
@@ -389,10 +412,10 @@ or, deliberate, builds where you focus Special or %'s.
 [[./img/gems/G4.png]]
 [[./img/gems/E1.png]]
 #+begin_quote
-[Author] Although {{{gems(E1)}}} should be fine, in most games, I skip it. The long
+[Author] Although {{{E1}}} should be fine, in most games, I skip it. The long
 m/s slow and uncheatble 2s GCD feels too demanding (excluding lining up Flash- or Blackstrike buff.)
 
-{{{gems(R3)}}} is likely the best gem for spamming Special damage out or proccing
+{{{R3}}} is likely the best gem for spamming Special damage out or proccing
 effects like {{{itms1(Book-of-Cheats)}}} or {{{itms1(Saltwater-Staff)}}}.
 #+end_quote
 
@@ -401,7 +424,7 @@ effects like {{{itms1(Book-of-Cheats)}}} or {{{itms1(Saltwater-Staff)}}}.
 [[./img/gems/E4.png]]
 
 #+begin_quote
-{{{gems(O3)}}} and {{{gems(E4)}}} close too many future lines for its damage at base kit.
+{{{O3}}} and {{{E4}}} close too many future lines for its damage at base kit.
 #+end_quote
 
 * REVIEW Item Tier List
