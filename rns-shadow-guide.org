@@ -1,6 +1,6 @@
-#+title: Something about Shadow ({{{guidever}}})
+#+title: {{{WIP}}} Something about Shadow ({{{guidever}}})
 #+author: Quoise
-#+date: 2026-04-15
+#+date: {{{modification-time(%Y-%m-%d)}}}
 :PREFERENCES:
 #+startup: inlineimages
 #+bind: org-latex-image-default-width "1.8em"
@@ -32,13 +32,21 @@
 #+MACRO: Shackles [[./img/other/Shackles.png]] *Shackles*
 #+MACRO: gamever v2.0.2.7
 #+MACRO: guidever v0.2.1
+#+MACRO: WIP @@html:<span style="color:red;">@@[WIP]@@html:</span>@@
+:END:
+:MACROS_ABBREVIATIONS:
+#+MACRO: pri {{{abl(N1)}}} *Primary*
+#+MACRO: sec {{{abl(N2)}}} *Secondary*
+#+MACRO: secl {{{abl(N2)}}} *Leap Secondary*
+#+MACRO: spe {{{abl(N3)}}} *Special*
+#+MACRO: def {{{abl(N4)}}} *Defensive*
 :END:
 
 * RENEW Intro
 #+begin_center
 @@html:<b><u>@@
 This guide is
-@@html: <span style="color:red;">@@
+@@html:<span style="color:red;">@@
 not finished.
 @@html:</span>@@
 
@@ -83,9 +91,9 @@ For community jargon:
 - v0.2.0 (2026-04-21) :: applied feedback changes to rotation, gems, items. Added Shadow section and todos.
   - v0.2.1 (2026-04-21) :: fixed versioning and added dating
 
-* DRAFT Playstyle
-** REVIEW Shadow
-Shadow is a mobile close-quarters bunny; she excels when playing flexibly, due to {{{Shackles}}}.
+* REVIEW Class Summary
+Shadow is a mobile close-quarters bunny with a potent versatility; she excels when playing flexibly, due to {{{Shackles}}}.
+Many of her effects are unique to her own or inspirations from other classes and effects.
 
 Shadow is best characterized by having:
 - Decent-damage and short GCD (1.0s) abilities
@@ -94,17 +102,48 @@ Shadow is best characterized by having:
   + {{{abl(N3)}}} *Special* that hits all enemies on short CD
   + {{{abl(N4)}}} *Defensives* with damage and GCD
 - Shares the fastest base movement speed (m/s) with Assassin (Sin)
-- Gem effects that mimic effects from other classes or items
 - {{{Shackles}}} status effect
 
-Shadow's {{{Shackles}}} locks up one of her attacks[fn:attacks:Attacks include Primary, Secondary, Special.] from use on any ability usage.
+** REVIEW Advantages
+#+caption: Class Advantages Table
+| Pros                                           | Cons                                        |
+|------------------------------------------------+---------------------------------------------|
+| Unique, gacha-like ability effects             | Defensive has GCD                           |
+| Versatile, lots of potential lines             | Attacks have {{{Shackles}}}                       |
+| Secondary invinciblity                         | Punishes for leaping or wrong targeting     |
+| Most gems are primarily synergistic and viable | Non-default rotations                       |
+| 4P Support line in {{{gems(O2)}}} {{{gems(G3)}}}           | Weak Special builds                         |
+| Consistent without % effects or BiS items/gems | Almost 0 hacky Rabbitluck 8k+ damage builds |
+
+** REVIEW Shackles
+Shadow's {{{Shackles}}} locks up one of her attacks[fn:attacks:Attacks include {{{pri}}}, {{{sec}}}, {{{spe}}}.] from use on any ability usage.
 This is independent of any Magicklock trinket effects, cooldowns or item effects (e.g. {{{itms1(Lefthand-Cast)}}}.)
-As well, this can freeze up "input queues" where otherwise, on other characters, you could be able to hold multiple
+
+# This doesn't feel as relevant, but I'll quote it.
+#+begin_quote
+[Author] As well, this can freeze up "input queues" where otherwise, on other characters, you could be able to hold multiple
 attacks down.
+#+end_quote
 
-** REVIEW 9 Gold MDP-Based Outskirts Rotation
-For regular encounters, defeating them by 22.5s will score 9 gold (for up to 47 gold on Random runs at first shop.)
+** REVIEW Inspirations from other Classes and Loot
+Shadow gains some distinct effects that appear in other classes, namely:
+- {{{gems(S2)}}}'s range and charge effect like Dancer's Secondary
+- {{{gems(G3)}}} granting the Shadowcry buff, similar to Dancer's def
+- {{{gems(O2)}}} granting Shadowcurse debuff, similar to Spellsword's (SS) def
+- {{{gems(G1)}}} granting 100 damage 25% of the time to all enemies, is practically a {{{itms1(Brightstorm-Spear)}}} and {{{itms1(Darkstorm-Knife)}}}
+# too exhaustive?
+# - {{{gems(S1)}}}, {{{gems(S4)}}} oGCD's
+# - {{{gems(S1)}}}, {{{gems(G1)}}} and {{{gems(R4)}}} automatic abilities (do not trigger items that require /use/, i.e. {{{itms1(Black-Wakizashi)}}})
 
+** REVIEW Gacha ability
+{{{gems(E3)}}} grants Shadow common access to, often loot-only or class-exclusive, effects like Berserk, Sap and Blackstrike.
+This distinctly allows Shadow to build into debuffs, multi-hit (on Special); or support most Shadow builds.
+- See [[https://rns.miraheze.org/wiki/Shadow][Shadow (rns.miraheze.org)]] for exhaustive list of effects.
+
+* REVIEW Strategies
+** REVIEW Damage Rotations
+
+*** DONE Base (Outskirts/Geode)
 On base kit, in order of availibility:
 - If at ~6s/21s, {{{abls(N4)}}}
 - {{{abls(N3)}}}
@@ -112,17 +151,96 @@ On base kit, in order of availibility:
 - {{{abls(N4)}}}
 - {{{abls(N2)}}}
 
-The hitbox covered by {{{abls(N1)}}} and {{{abls(N4)}}} are equal; they also hit the same enemies {{{abls(N2)}}} can and more.
+For regular encounters, defeating them by 22.5s will score 9 gold, for up to 47 gold on Random runs.
+This may allow you to buy two gems immediately or an extra pot.
+
+The hitbox covered by {{{abls(N1)}}} and {{{abls(N4)}}} are equal. {{{abls(N2)}}} doesn't hit as tall as either, but hits almost as wide.
 [fn:N2:Diameter of N1 and N4 is 5% bigger than the length of N2.]
 
-** TODO Cheating Abilities Out
+*** REVIEW Ruby Leap Archetypes - R2/R4
+#+MACRO: pb @@html: <b><span style="color:purple;">@@ $1 @@html: </b></span>@@
+# link to short YT clip displaying this
+The rotation typically goes:
+- {{{gems(R2)}}} / {{{secl}}} repeatedly
 
-** TODO "Hovering" Proccing Leap Invincibility Procs
-# need screenshots of normal fights and p2 Farrah/Shira/Witch
+Stable on low-roll lines, archetype is nigh consistent for single-target DPS early and late.
 
-** TODO Multiplayer Notes
-*** TODO Item Priority
-*** TODO Avoiding leap PVP
+For normal-sized enemies, play near the distance {{{pb(leap)}}} can be [[*Leap Notification][enabled]].
+With {{{gemss(R2)}}} and/or {{{gemss(R4)}}}, while returning towards this {{{pb(leap)}}} border---:
+1. If Secondary is available, I move just outside to enable leap and use it.
+2. If Secondary gets {{{Shackles}}}, I may move inside to Primary/Defensive (to hit Stella's hitbox below);
+   or just Special.
+
+#+name: fig:rabbitleap
+#+CAPTION: Distances in Rabbitleaps (lp) with Stella
+[[./img/game/rabbitleap-inkscape2.svg]]
+
+**** REVIEW Alt: Omega Ruby Primary (R1) :noexport:
+# unnecessary to include?
+Same principle to activate leap above, but allow Primary, cycling:
+- One of {{{secl}}} / {{{gems(S2)}}} / {{{def}}}
+- {{{gems(R1)}}}
+
+*** REVIEW Auto-proc + oGCD's (S1/G1/R4 + S3/S4)
+Shadow, at base kit, has very symmetrical damage across her abilities, at expense of being GCD-limited.
+Any ability that gets auto-activates or avoids contesting GCD is valued highly
+
+- {{{gems(S1)}}} and {{{gems(G1)}}} allows Shadow to avoid clicking Primary in previous rotations, while supplementing extra damage
+ + {{{gems(R4)}}} dealing on Secondary focused-builds
+
+- {{{gems(S3)}}} and {{{gems(S4)}}}, as oGCD's, while listed equal damage to base, can be thought of adding +200 damage ({{{abls(N1)}}}) every click.
+
+#+begin_quote
+In contrast, Druid is much more asymmetrical: her abilities are duration/CD-based;
+with one Secondary, she deals 720 total damage unlike Shadow's 180.
+
+While Druid may spend the most time clicking Primary's, often it is not her main damage source.
+#+end_quote
+
+* DRAFT Multiplayer Notes
+*** TODO Item Priority :noexport:
+
+*** REVIEW Avoiding leap PVP
+For damage/consistency, see [[*Ruby Leap Archetypes - R2/R4][Ruby Leap Archetypes - R2/R4]].
+
+#+begin_quote
+[Author] sometimes, IRL, I pull my finger or my entire hand.
+#+end_quote
+
+**** REVIEW Practices on Targetting
+#+MACRO: nt @@html: <span style="font-size: small; border:2px DarkSalmon solid; padding: 1px;">@@Nearest Target@@html:</span>@@
+#+MACRO: ct @@html: <span style="font-size: small; border:2px DarkSeaGreen solid; padding: 1px;">@@Change Target@@html:</span>@@
+# reminder to check default binds
+Here are some good suggestions on using the targetting controls {{{nt}}} and {{{ct}}}.
+
+If you're in a fight with multiple enemies (Sanctum/Churchmouse), and you do _not want to leap_:
+- identify your current target (and if they're low health)
+- pressing {{{nt}}} prior to {{{sec}}}
+- pressing {{{nt}}} after pressing {{{ct}}}
+
+{{{ct}}}, while self-described, also allows you to slow your character or attack the "centre" (in-between) of targets:
+- alternatively, "tapping" movement keys for micromovements
+- slowing down your rotation
+- not holding attack buttons for prolonged periods
+  
+**** DONE Leap Notification
+#+MACRO: options ~Options>More Options~
+#+MACRO: hotbar @@html: <span style="font-size: small; border:2px darkcyan solid; padding: 1px;">@@Mini Hotbar@@html:</span>@@
+In {{{options}}}, you can toggle and customize {{{hotbar}}}.
+
+_An accent colour will border the Secondary if leap is enabled,_ dependant on Shadow palette.
+
+#+begin_quote
+[Author] Green palettes are good for visibility, especially for Witch and Farrah.
+#+end_quote
+
+**** REVIEW Hidden Leap Disable Radius
+After enabling leap on Secondary, the distance to _disable leap_ uses a hidden inner "buffer" distance
+(~2.94lp; ~2x size of Rabbit visible hitbox.)
+
+#+name: fig:rabbitleap_buffer
+#+CAPTION: Rabbitleap "Buffer" Disable Radius
+[[./img/game/rabbitleap-buffer-inkscape.svg]]
 
 * REVIEW Ability synergies
 Unique or notable gem and item synergies are only presented. Regarding item
@@ -290,4 +408,5 @@ effects like {{{itms1(Book-of-Cheats)}}} or {{{itms1(Saltwater-Staff)}}}.
 
 #+include: items.org :minlevel 2
 
-* TODO Example Builds
+* TODO Example Builds :noexport:
+
