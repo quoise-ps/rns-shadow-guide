@@ -1,4 +1,6 @@
-#+title: [WIP] Something about Shadow ({{{guidever}}})
+#+title: Something about Shadow
+#+subtitle: ({{{WIP}}}; {{{guidever}}})
+#+description: Unofficial Shadow Class guide for the Rabbit & Steel game.
 #+author: Quoise
 #+date: {{{modification-time(%Y-%m-%d)}}}
 :PREFERENCES:
@@ -7,7 +9,7 @@
 #+bind: org-latex-images-centered nil
 #+bind: org-footnote-section nil
 #+bind: org-hide-macro-markers t
-#+OPTIONS: ^:nil num:3 todo:1
+#+OPTIONS: ^:nil num:3 todo:nil
 #+EXPORT_FILE_NAME: index
 #+LATEX_HEADER: \usepackage[colorlinks=true,urlcolor=pink,linkcolor=blue]{hyperref}
 #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="https://gongzhitaao.org/orgcss/org.css"/>
@@ -20,18 +22,17 @@
 #+TODO: | CANCELLED(c)
 :END:
 :MACROS:
+#+include: macros.org
 #+MACRO: gem [[./img/gems/$1.png]]
 #+MACRO: gems [[./img/gems-40px/$1.png]] *$1*
 #+MACRO: gemss [[./img/gems-40px/$1.png]]
 #+MACRO: abl [[./img/abilities-40px/$1.png]]
 #+MACRO: abls [[./img/abilities-40px/$1.png]] *$1*
-#+MACRO: itm [[./img/items/$1.png]]
-#+MACRO: itms1 (eval (s-concat "[[./img/items/" $1 ".png]] *" (s-replace-regexp "\-" " " $1) "*"))
-#+MACRO: itms2 [[./img/items/$1.png]] *$2*
 #+MACRO: Shackle [[./img/other/Shackles.png]]
 #+MACRO: Shackles [[./img/other/Shackles.png]] *Shackles*
 #+MACRO: gamever v2.0.2.7
 #+MACRO: guidever v0.2.1
+#+MACRO: WIP @@html:<span style="color:red;">@@WIP@@html:</span>@@
 :END:
 :MACROS_ABBREVIATIONS:
 #+MACRO: pri {{{abl(N1)}}} *Primary*
@@ -140,7 +141,7 @@ Shadow is best characterized by having:
 
 ** REVIEW Shackles
 Shadow's {{{Shackles}}} locks up one of her attacks[fn:attacks:Attacks include {{{pri}}}, {{{sec}}}, {{{spe}}}.] from use on any ability usage.
-This is independent of any Magicklock trinket effects, cooldowns or item effects (e.g. {{{itms1(Lefthand-Cast)}}}.)
+This is independent of any Magicklock trinket effects, cooldowns or item effects (e.g. {{{Lefthand-Cast}}}.)
 
 # This doesn't feel as relevant, but I'll quote it.
 #+begin_quote
@@ -153,10 +154,10 @@ Shadow gains some distinct effects that appear in other classes, namely:
 - {{{S2}}}'s range and charge effect like Dancer's Secondary
 - {{{G3}}} granting the Shadowcry buff, similar to Dancer's def
 - {{{O2}}} granting Shadowcurse debuff, similar to Spellsword's (SS) def
-- {{{G1}}} granting 100 damage 25% of the time to all enemies, is practically a {{{itms1(Brightstorm-Spear)}}} and {{{itms1(Darkstorm-Knife)}}}
+- {{{G1}}} granting 100 damage 25% of the time to all enemies, is practically a {{{Brightstorm-Spear}}} and {{{Darkstorm-Knife}}}
 # too exhaustive?
 # - {{{S1}}}, {{{S4}}} oGCD's
-# - {{{S1}}}, {{{G1}}} and {{{R4}}} automatic abilities (do not trigger items that require /use/, i.e. {{{itms1(Black-Wakizashi)}}})
+# - {{{S1}}}, {{{G1}}} and {{{R4}}} automatic abilities (do not trigger items that require /use/, i.e. {{{Black-Wakizashi}}})
 
 ** REVIEW Gacha ability
 {{{E3}}} grants Shadow common access to, often loot-only or class-exclusive, effects like Berserk, Sap and Blackstrike.
@@ -268,15 +269,15 @@ After enabling leap on Secondary, the distance to _disable leap_ uses a hidden i
 * REVIEW Ability synergies
 Unique or notable gem and item synergies are only presented. Regarding item
 synergies, generic numeric or percent bonuses to damage are assumed:
-- E.g. for uncontested primary core, pick items like {{{itms1(Waterfall-Polearm)}}}, {{{itms1(Grandmaster-Spear)}}} and {{{itms1(Youkai-Bracelet)}}}
+- E.g. for uncontested primary core, pick items like {{{Waterfall-Polearm}}}, {{{Grandmaster-Spear}}} and {{{Youkai-Bracelet}}}
 
 ** REVIEW Primary
 #+MACRO: N1i 
 #+MACRO: O1i short CD items;
-#+MACRO: S1i {{{itm(Windbite-Dagger)}}}
-#+MACRO: R1i {{{itm(Firststrike-Bracelet)}}}; Flash- Buff
-#+MACRO: G1i luck-boost; RL({{{itm(Brightstorm-Spear)}}})
-#+MACRO: E1i {{{itm(Firststrike-Bracelet)}}}; Flash- Buff
+#+MACRO: S1i {{{i(Windbite-Dagger)}}}
+#+MACRO: R1i {{{i(Firststrike-Bracelet)}}}; Flash- Buff
+#+MACRO: G1i luck-boost; RL({{{i(Brightstorm-Spear)}}})
+#+MACRO: E1i {{{i(Firststrike-Bracelet)}}}; Flash- Buff
 |           | Gem Synergies                 | Item Synergies | Notes                                                         |
 |-----------+-------------------------------+----------------+---------------------------------------------------------------|
 | {{{abl(N1)}}}   |                               | {{{N1i}}}            | Good class N1.                                                |
@@ -290,15 +291,15 @@ synergies, generic numeric or percent bonuses to damage are assumed:
 {{{S1}}} and {{{G1}}} effects does not trigger "use" abilities like Black Wakizashi or Golden Katana, but can trigger Brightstorm Spear.
 
 {{{E1}}} 2s GCD effect can't be cheated via GCD items, Berserk, Quickdraw or other effects.
-At base kit, the effect triggers {{{itms1(Winter-Hat)}}}, but not {{{itms1(Sacredstone-Charm)}}}.
+At base kit, the effect triggers {{{Winter-Hat}}}, but not {{{Sacredstone-Charm}}}.
 #+end_quote
 
 ** REVIEW Secondary
-#+MACRO: N2i {{{itm(Butterfly-Hairpin)}}} {{{itm(Caver's-Cloak)}}}
+#+MACRO: N2i {{{i(Butterfly-Hairpin)}}} {{{i(Caver's-Cloak)}}}
 #+MACRO: O2i
 #+MACRO: S2i
 #+MACRO: R2i +m/s;
-#+MACRO: G2i +luck; {{{itm(Jester's-Hat)}}}
+#+MACRO: G2i +luck; {{{i(Jester's-Hat)}}}
 #+MACRO: E2i
 |           | Leap? | Gem Synergies                 | Item Synergies | Notes                                                             |
 |-----------+-------+-------------------------------+----------------+-------------------------------------------------------------------|
@@ -314,14 +315,14 @@ Hitting multiple {{{E2}}} (33%) is similar to not hitting Special Reset on Dance
 #+end_quote
 
 ** REVIEW Special
-#+MACRO: N3i Debuff apply; {{{itm(Hawkfeather-Fan)}}} {{{itm(Spear-of-Winds)}}} {{{itm(Bolt-Staff)}}}
-#+MACRO: O3i1 {{{itm(Miner's-Headlamp)}}} {{{itm(Darkglass-Spear)}}} {{{itm(Timespace-Dagger)}}}
-#+MACRO: O3i2 {{{o3i1}}} {{{itm(Raindrop-Earrings)}}}
-#+MACRO: O3i {{{o3i2}}} {{{itm(Sun-Pendant)}}} {{{itm(Heaven's-Codex)}}} {{{itm(Staff-of-Sorrow)}}}
-#+MACRO: S3i N3 items; {{{itm(Hawkfeather-Fan)}}} {{{itm(Mountain-Staff)}}} {{{itm(Obsidian-Rod)}}} {{{itm(Garnet-Staff)}}}  {{{itm(Lion-Charm)}}} {{{itm(Obsidian-Hairpin)}}}
-#+MACRO: R3i N3 Items; {{{itm(Hawkfeather-Fan)}}} {{{itm(Obsidian-Rod)}}} {{{itm(Garnet-Staff)}}}
-#+MACRO: G3i N3 Items; {{{itm(Hawkfeather-Fan)}}} {{{itm(Sacred-Bow)}}} {{{itm(Shrinemaiden's-Kosode)}}}
-#+MACRO: E3i N3 Items; +GCD/debuff items; {{{itm(Hawkfeather-Fan)}}} {{{itm(Sacred-Bow)}}} {{{itm(Shrinemaiden's-Kosode)}}}
+#+MACRO: N3i Debuff apply; {{{i(Hawkfeather-Fan)}}} {{{i(Spear-of-Winds)}}} {{{i(Bolt-Staff)}}}
+#+MACRO: O3i1 {{{i(Miner's-Headlamp)}}} {{{i(Darkglass-Spear)}}} {{{i(Timespace-Dagger)}}}
+#+MACRO: O3i2 {{{o3i1}}} {{{i(Raindrop-Earrings)}}}
+#+MACRO: O3i {{{o3i2}}} {{{i(Sun-Pendant)}}} {{{i(Heaven's-Codex)}}} {{{i(Staff-of-Sorrow)}}}
+#+MACRO: S3i N3 items; {{{i(Hawkfeather-Fan)}}} {{{i(Mountain-Staff)}}} {{{i(Obsidian-Rod)}}} {{{i(Garnet-Staff)}}}  {{{i(Lion-Charm)}}} {{{i(Obsidian-Hairpin)}}}
+#+MACRO: R3i N3 Items; {{{i(Hawkfeather-Fan)}}} {{{i(Obsidian-Rod)}}} {{{i(Garnet-Staff)}}}
+#+MACRO: G3i N3 Items; {{{i(Hawkfeather-Fan)}}} {{{i(Sacred-Bow)}}} {{{i(Shrinemaiden's-Kosode)}}}
+#+MACRO: E3i N3 Items; +GCD/debuff items; {{{i(Hawkfeather-Fan)}}} {{{i(Sacred-Bow)}}} {{{i(Shrinemaiden's-Kosode)}}}
 #+MACRO: S3n "Best" Spc., ~+60DPS at base; oGCD, no slow, loves CD reduction (including 1s \rightarrow 0s); 0.7s "cd" minimum
  |           | Gem Synergies | Item Synergies | Notes                                                            |
  |-----------+---------------+----------------+------------------------------------------------------------------|
@@ -333,19 +334,19 @@ Hitting multiple {{{E2}}} (33%) is similar to not hitting Special Reset on Dance
  | {{{gemss(E3)}}} | {{{gemss(G1)}}}     | {{{E3i}}}            | debuff/buff archetype; Berserk GCD and *+m/s*                      |
 
 #+begin_quote
-[MP] Shadow has low prio on Special damage-boosting items without prior synergies (except {{{itms1(Garnet-Staff)}}} or {{{itms1(Hawkfeather-Fan)}}}.)
+[MP] Shadow has low prio on Special damage-boosting items without prior synergies (except {{{Garnet-Staff}}} or {{{Hawkfeather-Fan}}}.)
 
-{{{E3}}} is affected by {{{itms1(Obsidian-Rod)}}}, {{{itms1(Cursed-Candlestaff)}}}, {{{itms1(Old-Bonnet)}}} / {{{itms1(Haunted-Gloves)}}} and other special items changes.
-Note, additive bonuses like {{{itms1(Eaglewing-Charm)}}} will not apply to debuffs.
+{{{E3}}} is affected by {{{Obsidian-Rod}}}, {{{Cursed-Candlestaff}}}, {{{Old-Bonnet}}} / {{{Haunted-Gloves}}} and other special items changes.
+Note, additive bonuses like {{{Eaglewing-Charm}}} will not apply to debuffs.
 #+end_quote
  
 ** REVIEW Defensive
-#+MACRO: N4i {{{itm(Gemini-Necklace)}}} {{{itm(Firststrike-Bracelet)}}}
-#+MACRO: O4i N4 items; {{{itm(Hermes-Bow)}}}  {{{itm(Talon-Charm)}}}  {{{itm(Sacred-Bow)}}}
-#+MACRO: S4i N4 items; {{{itm(Coldsteel-Shield)}}}
-#+MACRO: R4i +m/s; {{{itm(Garnet-Staff)}}} {{{itm(Peridot-Rapier)}}} {{{itm(Greysteel-Shield)}}} 
-#+MACRO: G4i N4 items; {{{itm(Spark-of-Determination)}}}
-#+MACRO: E4i {{{itm(Firststrike-Bracelet)}}} {{{itm(Starry-Cloak)}}} {{{itm(Timespace-Dagger)}}}
+#+MACRO: N4i {{{i(Gemini-Necklace)}}} {{{i(Firststrike-Bracelet)}}}
+#+MACRO: O4i N4 items; {{{i(Hermes-Bow)}}}  {{{i(Talon-Charm)}}}  {{{i(Sacred-Bow)}}}
+#+MACRO: S4i N4 items; {{{i(Coldsteel-Shield)}}}
+#+MACRO: R4i +m/s; {{{i(Garnet-Staff)}}} {{{i(Peridot-Rapier)}}} {{{i(Greysteel-Shield)}}} 
+#+MACRO: G4i N4 items; {{{i(Spark-of-Determination)}}}
+#+MACRO: E4i {{{i(Firststrike-Bracelet)}}} {{{i(Starry-Cloak)}}} {{{i(Timespace-Dagger)}}}
 #+MACRO: R4g  Safety\rightarrow{{{gemss(S2)}}}; DPS\rightarrow{{{gemss(R2)}}} 
 |           | Gem Synergies                 | Item Synergies | Notes                                                                             |
 |-----------+-------------------------------+----------------+-----------------------------------------------------------------------------------|
@@ -357,10 +358,10 @@ Note, additive bonuses like {{{itms1(Eaglewing-Charm)}}} will not apply to debuf
 | {{{gemss(E4)}}} |                               | {{{E4i}}}            | Should not pick unless maybe-maybee already holding synergies                     |
 
 #+begin_quote
-{{{itms1(Firststrike-Bracelet)}}} or Blackstrike source ({{{itms1(Book-of-Cheats)}}}, {{{E3}}})
+{{{Firststrike-Bracelet}}} or Blackstrike source ({{{Book-of-Cheats}}}, {{{E3}}})
 is oddly quite good given it applies to Defensive damage without consuming it.
 
-Blackstrike on {{{R4}}} isn't affected by the Secondary leap that triggers {{{itm(Firststrike-Bracelet)}}},
+Blackstrike on {{{R4}}} isn't affected by the Secondary leap that triggers {{{i(Firststrike-Bracelet)}}},
 instead the one after.
 #+end_quote
 
@@ -416,7 +417,7 @@ or, deliberate, builds where you focus Special or %'s.
 m/s slow and uncheatble 2s GCD feels too demanding (excluding lining up Flash- or Blackstrike buff.)
 
 {{{R3}}} is likely the best gem for spamming Special damage out or proccing
-effects like {{{itms1(Book-of-Cheats)}}} or {{{itms1(Saltwater-Staff)}}}.
+effects like {{{Book-of-Cheats}}} or {{{Saltwater-Staff}}}.
 #+end_quote
 
 ** DONE D: Ultra-niche
