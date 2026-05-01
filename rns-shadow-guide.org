@@ -122,6 +122,9 @@ For community jargon:
 ** DONE Sample Definitions
 - {{{N1}}}, {{{O1}}}, {{{S1}}}, {{{R1}}}, {{{E1}}}, {{{G1}}} :: _Normal_, _Opal_, _Sapphire_, _Ruby_, _Emerald_ and _Garnet_ variants of Primary respectively.
 - {{{R1}}}, {{{R2}}}, {{{R3}}}, {{{R4}}} :: _Ruby_ variants of each respectively: Primary, Secondary, Special and Defensive.
+- $2' \ggg 3 > 1 > 4 > 2$ (move priority "rotation") :: the move priority with {{{R2}}} or {{{R4}}}
+  + {{{secl}}} ($2'$) is drastically favoured and clicked whenever available;
+    followed by Special, Primary, Defensive and (non-leap) Secondary.
 - BiS :: Best in Slot; universal best upgrade.
 - AoE :: Area-of-Effect; typically used in context of hitting multiple enemies, e.g. fights in Churchouse or Sanctum.
 - oGCD :: Shadow's S3, S4; these can be used without sacrificing GCD time spent on other abilities.
@@ -184,71 +187,74 @@ Shadow gains some distinct effects that appear in other classes, namely:
 This distinctly allows Shadow to build into debuffs, multi-hit (on Special); or support most Shadow builds.
 - See [[https://rns.miraheze.org/wiki/Shadow][Shadow (rns.miraheze.org)]] for exhaustive list of effects.
 
-* REVIEW Strategies
-** REVIEW Damage Rotations
+* REVIEW Move Priority (/Rotations/)
+Shadow's abilities' damage are more "symmetrical" at base kit.
+The base optimization below in magnitudes of \pm~20dps (\pm~10%),
+are _only valid if attacks hit consistently_.
 
-*** DONE Base (Outskirts/Geode)
-On base kit, in order of availibility:
-- If at ~6s/21s, {{{N4}}}
-- {{{N3}}}
-- {{{N1}}}
-- {{{N4}}}
-- {{{N2}}}
+#+name: rotations
+#+caption: Common Move Priorities off Base Kit
+| Base*        | $3 > 1 > 4 > 2$                      |
+| {{{R2}}} \lor {{{R4}}}      | $2' \ggg \text{Base}$                   |
+| {{{E2}}}           | $2 \ggg 3 > 4 > 1$                      |
+| {{{S1}}} \lor {{{G1}}}      | $2 > 4 > 1 > 3$                      |
+| {{{R1}}}           | $\text{Cycle}(1'' \rightarrow 2' \lor 4) \gg Base$ |
+| {{{E4}}} \lor {{{S4}}} \lor {{{O4}}} | $4 > 3 > 1 > 2$                      |
+@@html:<div style="padding-left:20%; padding-right:20%;">@@
+Leaps are designated by $2'$; charge by $2''$.
 
-For regular encounters, defeating them by 22.5s will score 9 gold, for up to 47 gold on Random runs.
-This may allow you to buy two gems immediately or an extra pot.
+*Based on MDP; in Outskirts, forcing defensive by 6s and 21s (twice),
+can reach 9 gold easier if the enemy is beaten by 22.5s.
 
-The hitbox covered by {{{N1}}} and {{{N4}}} are equal. {{{N2}}} doesn't hit as tall as either, but hits almost as wide.
-[fn:N2:Diameter of {{{N1}}} and {{{N4}}} is 5% bigger than the length of {{{N2}}}.]
+{{{spe}}} can be delayed for mobile enemies.
+@@html:</div>@@
 
-*** REVIEW Ruby Leap Archetypes - R2/R4
+In fights with _multiple enemies_, like *Churchmosue Streets'* Matti's P2 mice ads,
+save your {{{spe}}} or {{{def}}} for burst damage and AOE.
+
+Specifically, *Depths'* Darkbeast Tauros, due to her zoning,
+use the late hit animations of {{{pri}}} and {{{def}}} to deal damage consistently.
+
+** REVIEW Ruby Leap Archetypes - R2/R4
 #+MACRO: pb @@html: <b><span style="color:purple;">@@ $1 @@html: </b></span>@@
 # link to short YT clip displaying this
 The rotation typically goes:
-- {{{R2}}} / {{{secl}}} repeatedly
+- {{{R2}}} / {{{N2}}} repeatedly with Leap [[*Leap Notification][enabled]]
 
 Stable on low-roll lines, archetype is nigh consistent for single-target DPS early and late.
 
-For normal-sized enemies, play near the distance {{{pb(leap)}}} can be [[*Leap Notification][enabled]].
-With {{{R2s}}} and/or {{{R4s}}}, while returning towards this {{{pb(leap)}}} border---:
-1. If Secondary is available, I move just outside to enable leap and use it.
-2. If Secondary gets {{{Shackles}}}, I may move inside to Primary/Defensive (to hit Stella's hitbox below);
-   or just Special.
+For normal-sized enemies, play near the distance {{{pb(leap)}}} can be enabled.
+With {{{R2s}}} and/or {{{R4s}}}, while returning towards this {{{pb(leap)}}} border, then:
+1. Available {{{sec}}} \rightarrow move outside (leap enables) and use {{{sec}}}
+2. {{{Shackles}}} {{{sec}}} \rightarrow Special; or move inside to hit Primary/Defensive (to hit Stella's hitbox below)
 
 #+name: fig:rabbitleap
 #+CAPTION: Distances in Rabbitleaps (lp) with Stella
 [[./img/game/rabbitleap-inkscape2.svg]]
 
-**** REVIEW Alt: Omega Ruby Primary (R1) :noexport:
+*** REVIEW Alt: Omega Ruby Primary (R1) :noexport:
 # unnecessary to include?
 Same principle to activate leap above, but allow Primary, cycling:
 - One of {{{secl}}} / {{{S2}}} / {{{def}}}
 - {{{R1}}}
 
-*** REVIEW Auto-proc + oGCD's (S1/G1/R4 + S3/S4)
-Shadow, at base kit, has very symmetrical damage across her abilities, at expense of being GCD-limited.
-Any ability that gets auto-activates or avoids contesting GCD is valued highly
+** REVIEW Auto-proc + oGCD's (S1/G1/R4 + S3/S4)
+Shadow, at base kit, is again somewhat GCD-limited.
+Any ability that gets that skips contesting every the usual {{{pri}}} and {{{sec}}} is good.
 
 - {{{S1}}} and {{{G1}}} allows Shadow to avoid clicking Primary in previous rotations, while supplementing extra damage
  + {{{R4}}} dealing on Secondary focused-builds
 
 - {{{S3}}} and {{{S4}}}, as oGCD's, while listed equal damage to base, can be thought of adding +200 damage ({{{N1}}}) every click.
 
-#+begin_quote
-In contrast, Druid is much more asymmetrical: her abilities are duration/CD-based;
-with one Secondary, she deals 720 total damage unlike Shadow's 180.
-
-While Druid may spend the most time clicking Primary's, often it is not her main damage source.
-#+end_quote
-
-* DRAFT Multiplayer Notes
+* DRAFT Strategy
 ** TODO Item Priority :noexport:
 
 ** REVIEW Avoiding leap PVP
 For damage/consistency, see [[*Ruby Leap Archetypes - R2/R4][Ruby Leap Archetypes - R2/R4]].
 
 #+begin_quote
-[Author] sometimes, IRL, I pull my finger or my entire hand.
+[Author] sometimes, I pull my entire hand away from my keyboard (to prevent clicking leap.)
 #+end_quote
 
 ** REVIEW Practices on Targetting
