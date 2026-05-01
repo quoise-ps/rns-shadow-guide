@@ -64,6 +64,26 @@
 #+MACRO: E2 {{{gems(E2)}}}
 #+MACRO: E3 {{{gems(E3)}}}
 #+MACRO: E4 {{{gems(E4)}}}
+#+MACRO: O1s {{{gemss(O1)}}}
+#+MACRO: O2s {{{gemss(O2)}}}
+#+MACRO: O3s {{{gemss(O3)}}}
+#+MACRO: O4s {{{gemss(O4)}}}
+#+MACRO: S1s {{{gemss(S1)}}}
+#+MACRO: S2s {{{gemss(S2)}}}
+#+MACRO: S3s {{{gemss(S3)}}}
+#+MACRO: S4s {{{gemss(S4)}}}
+#+MACRO: R1s {{{gemss(R1)}}}
+#+MACRO: R2s {{{gemss(R2)}}}
+#+MACRO: R3s {{{gemss(R3)}}}
+#+MACRO: R4s {{{gemss(R4)}}}
+#+MACRO: G1s {{{gemss(G1)}}}
+#+MACRO: G2s {{{gemss(G2)}}}
+#+MACRO: G3s {{{gemss(G3)}}}
+#+MACRO: G4s {{{gemss(G4)}}}
+#+MACRO: E1s {{{gemss(E1)}}}
+#+MACRO: E2s {{{gemss(E2)}}}
+#+MACRO: E3s {{{gemss(E3)}}}
+#+MACRO: E4s {{{gemss(E4)}}}
 :END:
 
 * RENEW Intro
@@ -169,16 +189,16 @@ This distinctly allows Shadow to build into debuffs, multi-hit (on Special); or 
 
 *** DONE Base (Outskirts/Geode)
 On base kit, in order of availibility:
-- If at ~6s/21s, {{{abls(N4)}}}
-- {{{abls(N3)}}}
-- {{{abls(N1)}}}
-- {{{abls(N4)}}}
-- {{{abls(N2)}}}
+- If at ~6s/21s, {{{N4}}}
+- {{{N3}}}
+- {{{N1}}}
+- {{{N4}}}
+- {{{N2}}}
 
 For regular encounters, defeating them by 22.5s will score 9 gold, for up to 47 gold on Random runs.
 This may allow you to buy two gems immediately or an extra pot.
 
-The hitbox covered by {{{abls(N1)}}} and {{{abls(N4)}}} are equal. {{{abls(N2)}}} doesn't hit as tall as either, but hits almost as wide.
+The hitbox covered by {{{N1}}} and {{{N4}}} are equal. {{{N2}}} doesn't hit as tall as either, but hits almost as wide.
 [fn:N2:Diameter of {{{N1}}} and {{{N4}}} is 5% bigger than the length of {{{N2}}}.]
 
 *** REVIEW Ruby Leap Archetypes - R2/R4
@@ -190,7 +210,7 @@ The rotation typically goes:
 Stable on low-roll lines, archetype is nigh consistent for single-target DPS early and late.
 
 For normal-sized enemies, play near the distance {{{pb(leap)}}} can be [[*Leap Notification][enabled]].
-With {{{gemss(R2)}}} and/or {{{gemss(R4)}}}, while returning towards this {{{pb(leap)}}} border---:
+With {{{R2s}}} and/or {{{R4s}}}, while returning towards this {{{pb(leap)}}} border---:
 1. If Secondary is available, I move just outside to enable leap and use it.
 2. If Secondary gets {{{Shackles}}}, I may move inside to Primary/Defensive (to hit Stella's hitbox below);
    or just Special.
@@ -212,7 +232,7 @@ Any ability that gets auto-activates or avoids contesting GCD is valued highly
 - {{{S1}}} and {{{G1}}} allows Shadow to avoid clicking Primary in previous rotations, while supplementing extra damage
  + {{{R4}}} dealing on Secondary focused-builds
 
-- {{{S3}}} and {{{S4}}}, as oGCD's, while listed equal damage to base, can be thought of adding +200 damage ({{{abls(N1)}}}) every click.
+- {{{S3}}} and {{{S4}}}, as oGCD's, while listed equal damage to base, can be thought of adding +200 damage ({{{N1}}}) every click.
 
 #+begin_quote
 In contrast, Druid is much more asymmetrical: her abilities are duration/CD-based;
@@ -278,14 +298,14 @@ synergies, generic numeric or percent bonuses to damage are assumed:
 #+MACRO: R1i {{{i(Firststrike-Bracelet)}}}; Flash- Buff
 #+MACRO: G1i luck-boost; RL({{{i(Brightstorm-Spear)}}})
 #+MACRO: E1i {{{i(Firststrike-Bracelet)}}}; Flash- Buff
-|           | Gem Synergies                 | Item Synergies | Notes                                                         |
-|-----------+-------------------------------+----------------+---------------------------------------------------------------|
-| {{{abl(N1)}}}   |                               | {{{N1i}}}            | Good class N1.                                                |
-| {{{gemss(O1)}}} | {{{gemss(S3)}}} {{{gemss(S4)}}}           | {{{O1i}}}            | Weaker {{{G2}}} variant for {{{S3}}} + {{{S4}}}               |
-| {{{gemss(S1)}}} |                               | {{{S1i}}}            | More consistent than {{{G1}}} for single-target               |
-| {{{gemss(R1)}}} | {{{gemss(S2)}}}                     | {{{R1i}}}            | _600dmg on only iframe req_; easiest with {{{S2}}}              |
-| {{{gemss(G1)}}} | {{{gemss(E3)}}} {{{gemss(G4)}}} {{{gemss(S4)}}} | {{{G1i}}}            | Multiple-target version of {{{S1}}}, not limited to secondary |
-| {{{gemss(E1)}}} | {{{gemss(E3)}}}                     | {{{E1i}}}            | Hardest-hitting primary, harsh movement slow                  |
+|         | Gem Synergies | Item Synergies | Notes                                                   |
+|---------+---------------+----------------+---------------------------------------------------------|
+| {{{abl(N1)}}} |               | {{{N1i}}}            | Good class N1.                                          |
+| {{{O1s}}}     | {{{S3s}}} {{{S4s}}}       | {{{O1i}}}            | Weaker {{{G2}}} variant for {{{S3}}} + {{{S4}}}                           |
+| {{{S1s}}}     |               | {{{S1i}}}            | More consistent than {{{G1}}} for single-target               |
+| {{{R1s}}}     | {{{S2s}}}           | {{{R1i}}}            | _600dmg on only iframe req_; easiest with {{{S2}}}              |
+| {{{G1s}}}     | {{{E3s}}} {{{G4s}}} {{{S4s}}}   | {{{G1i}}}            | Multiple-target version of {{{S1}}}, not limited to secondary |
+| {{{E1s}}}     | {{{E3s}}}           | {{{E1i}}}            | Hardest-hitting primary, harsh movement slow            |
 
 #+begin_quote
 {{{S1}}} and {{{G1}}} effects does not trigger "use" abilities like Black Wakizashi or Golden Katana, but can trigger Brightstorm Spear.
@@ -301,14 +321,14 @@ At base kit, the effect triggers {{{Winter-Hat}}}, but not {{{Sacredstone-Charm}
 #+MACRO: R2i +m/s;
 #+MACRO: G2i +luck; {{{i(Jester's-Hat)}}}
 #+MACRO: E2i
-|           | Leap? | Gem Synergies                 | Item Synergies | Notes                                                             |
-|-----------+-------+-------------------------------+----------------+-------------------------------------------------------------------|
-| {{{abl(N2)}}}   | Yes   | {{{gemss(R4)}}}                     | {{{N2i}}}            | Good class N2; 0.7s invin.                                        |
-| {{{gemss(O2)}}} | Yes   | {{{gemss(R4)}}}                     | {{{O2i}}}            | SS Superhex                                                       |
-| {{{gemss(S2)}}} | No    | {{{gemss(R4)}}} {{{gemss(R1)}}} {{{gemss(S3)}}} | {{{S2i}}}            | The Dancer secondary                                              |
-| {{{gemss(R2)}}} | Yes   | {{{gemss(R4)}}} {{{gemss(S3)}}}           | {{{R2i}}}            | _360dmg for 1.0s GCD/0s CD_ with only leap req                      |
-| {{{gemss(G2)}}} | No    | {{{gemss(S3)}}} {{{gemss(S4)}}} {{{gemss(G4)}}} | {{{G2i}}}            | Consumes GCD so better with oGCD; risky first-buy without synergy |
-| {{{gemss(E2)}}} | Yes   | {{{gemss(R4)}}} {{{gemss(S3)}}}           | {{{E2i}}}            | Uncheatable, easy req effect to fulfill                           |
+|         | Leap? | Gem Synergies | Item Synergies | Notes                                                             |
+|---------+-------+---------------+----------------+-------------------------------------------------------------------|
+| {{{abl(N2)}}} | Yes   | {{{R4s}}}           | {{{N2i}}}            | Good class N2; 0.7s invin.                                        |
+| {{{O2s}}}     | Yes   | {{{R4s}}}           | {{{O2i}}}            | SS Superhex                                                       |
+| {{{S2s}}}     | No    | {{{R4s}}} {{{R1s}}} {{{S3s}}}   | {{{S2i}}}            | The Dancer secondary                                              |
+| {{{R2s}}}     | Yes   | {{{R4s}}} {{{S3s}}}       | {{{R2i}}}            | _360dmg for 1.0s GCD/0s CD_ with only leap req                      |
+| {{{G2s}}}     | No    | {{{S3s}}} {{{S4s}}} {{{G4s}}}   | {{{G2i}}}            | Consumes GCD so better with oGCD; risky first-buy without synergy |
+| {{{E2s}}}     | Yes   | {{{R4s}}} {{{S3s}}}       | {{{E2i}}}            | Uncheatable, easy req effect to fulfill                           |
 
 #+begin_quote
 Hitting multiple {{{E2}}} (33%) is similar to not hitting Special Reset on Dancer (30%). The effect +% is a multiplier after any percent or additive bonuses are calc'd though.
@@ -327,11 +347,11 @@ Hitting multiple {{{E2}}} (33%) is similar to not hitting Special Reset on Dance
  |           | Gem Synergies | Item Synergies | Notes                                                            |
  |-----------+---------------+----------------+------------------------------------------------------------------|
  | {{{abl(N3)}}}   |               | {{{N3i}}}            | Weaker class N3, hits all enemies though                         |
- | {{{gemss(O3)}}} |               | {{{o3i}}}            | No universal %; long CD with lack of acccessible resets is rough |
- | {{{gemss(S3)}}} | {{{gemss(G2)}}}     | {{{s3i}}}            | {{{s3n}}}                                                              |
- | {{{gemss(R3)}}} |               | {{{R3i}}}            | Good if building special uncontested                             |
- | {{{gemss(G3)}}} |               | {{{G3i}}}            | Dancer Warcry                                                    |
- | {{{gemss(E3)}}} | {{{gemss(G1)}}}     | {{{E3i}}}            | debuff/buff archetype; Berserk GCD and *+m/s*                      |
+ | {{{O3s}}} |               | {{{o3i}}}            | No universal %; long CD with lack of acccessible resets is rough |
+ | {{{S3s}}} | {{{G2s}}}     | {{{s3i}}}            | {{{s3n}}}                                                              |
+ | {{{R3s}}} |               | {{{R3i}}}            | Good if building special uncontested                             |
+ | {{{G3s}}} |               | {{{G3i}}}            | Dancer Warcry                                                    |
+ | {{{E3s}}} | {{{G1s}}}     | {{{E3i}}}            | debuff/buff archetype; Berserk GCD and *+m/s*                      |
 
 #+begin_quote
 [MP] Shadow has low prio on Special damage-boosting items without prior synergies (except {{{Garnet-Staff}}} or {{{Hawkfeather-Fan}}}.)
@@ -347,15 +367,15 @@ Note, additive bonuses like {{{Eaglewing-Charm}}} will not apply to debuffs.
 #+MACRO: R4i +m/s; {{{i(Garnet-Staff)}}} {{{i(Peridot-Rapier)}}} {{{i(Greysteel-Shield)}}} 
 #+MACRO: G4i N4 items; {{{i(Spark-of-Determination)}}}
 #+MACRO: E4i {{{i(Firststrike-Bracelet)}}} {{{i(Starry-Cloak)}}} {{{i(Timespace-Dagger)}}}
-#+MACRO: R4g  Safety\rightarrow{{{gemss(S2)}}}; DPS\rightarrow{{{gemss(R2)}}} 
-|           | Gem Synergies                 | Item Synergies | Notes                                                                             |
-|-----------+-------------------------------+----------------+-----------------------------------------------------------------------------------|
-| {{{abl(N4)}}}   |                               | {{{N4i}}}            | Harsh slow, good burst, doesn't consume Blackstrike                               |
-| {{{gemss(O4)}}} |                               | {{{O4i}}}            | *Leaps*; *+m/s*; better than {{{gemss(S4)}}} / {{{gemss(R4)}}} if Pri. or Sec. core or non-invin. |
-| {{{gemss(S4)}}} | {{{gemss(G2)}}}                     | {{{S4i}}}            | oGCD like {{{gemss(S3)}}} but long CD                                                   |
-| {{{gemss(R4)}}} | {{{R4g}}}                           | {{{R4i}}}            | Also 2x dmg on only leap req, SSS-tier                                            |
-| {{{gemss(G4)}}} | {{{gemss(G1)}}} {{{gemss(G2)}}} {{{gemss(R3)}}} | {{{G4i}}}            | Good on Sanctum/Mice                                                              |
-| {{{gemss(E4)}}} |                               | {{{E4i}}}            | Should not pick unless maybe-maybee already holding synergies                     |
+#+MACRO: R4g  Safety\rightarrow{{{S2s}}}; DPS\rightarrow{{{R2s}}} 
+|         | Gem Synergies | Item Synergies | Notes                                                                 |
+|---------+---------------+----------------+-----------------------------------------------------------------------|
+| {{{abl(N4)}}} |               | {{{N4i}}}            | Harsh slow, good burst, doesn't consume Blackstrike                   |
+| {{{O4s}}}     |               | {{{O4i}}}            | *Leaps*; *+m/s*; better than {{{S4s}}} / {{{R4s}}} if Pri. or Sec. core or non-invin. |
+| {{{S4s}}}     | {{{G2s}}}           | {{{S4i}}}            | oGCD like {{{S3s}}} but long CD                                             |
+| {{{R4s}}}     | {{{R4g}}}           | {{{R4i}}}            | Also 2x dmg on only leap req, SSS-tier                                |
+| {{{G4s}}}     | {{{G1s}}} {{{G2s}}} {{{R3s}}}   | {{{G4i}}}            | Good on Sanctum/Mice                                                  |
+| {{{E4s}}}     |               | {{{E4i}}}            | Should not pick unless maybe-maybee already holding synergies         |
 
 #+begin_quote
 {{{Firststrike-Bracelet}}} or Blackstrike source ({{{Book-of-Cheats}}}, {{{E3}}})
