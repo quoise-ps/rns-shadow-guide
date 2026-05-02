@@ -1,7 +1,9 @@
-#+MACRO: itm_link [[./img/items/$1.png]] {{{n$1}}}
+#+MACRO: span_dot @@html:<span style="text-decoration:underline; text-decoration-style:dotted;">@@
+#+MACRO: span_end @@html:</span>@@
+#+MACRO: itm_link [[./img/items/$1.png]] {{{span_dot}}}{{{n$1}}}{{{span_end}}}
 #+MACRO: itm_aria {{{t$1}}}
 # html + tooltip + html + image and name + html
-#+MACRO: i1 @@html:<span class="hint--large" border-radius="4px;" aria-label="
+#+MACRO: i1 @@html:<span class="hint--large" aria-label="
 #+MACRO: i2 ">@@
 #+MACRO: i3 @@html:</span>@@
 #+MACRO: itm {{{i1}}}{{{itm_aria($1)}}}{{{i2}}}{{{itm_link($1)}}}{{{i3}}}
@@ -857,3 +859,37 @@
 #+MACRO: tCaramel-Tea Grants Elegy for 45 seconds at the beginning of each fight. Works for 6 fights.
 #+MACRO: tStrawberry-Cake Heals you for 1, and starts with 2 charges on pickup. When you take damage, 1 charge will be expended to heal you. All damage is increased by 10% for each charge still remaining.
 #+MACRO: tSweet-Taffy For the next 6 fights, heal for 1 and deal 2500 damage to all enemies at the beginning of the fight. This loot cannot hit for critical damage.
+# -----
+# Ability Tooltip Description Macros
+# -----
+# Regexps to replace up/downarrows
+# '<,'>s/\\uparrow/\&#x2191;/g
+# '<,'>s/\\downarrow/\&#x2193;/g
+#+MACRO: tN1 Deal 100x2 by 420px radius.
+#+MACRO: tN2 Deal 100x2 by 400px-wide box; leaps if >3 rabbitleaps (0.7s invuln.)
+#+MACRO: tN3 Deal 250 to all enemies. -m/s on use.
+#+MACRO: tN4 Deal 90x4 by 420px radius; 1450ms invuln; -m/s on use.
+#+MACRO: tO1 Reset cooldowns &le;4s.
+#+MACRO: tS1 Hits once on Secondary use.
+#+MACRO: tR1 Gain Omegacharge on invuln.
+#+MACRO: tG1 On any hit by other abilities, 25% to deal one hit's damage to all enemies.
+#+MACRO: tE1 On 4th use, deal damage 10 times, sets 2.0s GCD and harsh -m/s on use.
+#+MACRO: tO2 Inflicts +20% Shadowcurse debuff (5s.)
+#+MACRO: tS2 [&not;LEAP] Deal &#x2191;110x2 on ranged 400px radius; Charge on other ability use (max 1); invuln on Charge use.
+#+MACRO: tR2 Deals 180. On leaps, trigger again in 600px radius.
+#+MACRO: tG2 [&not;LEAP] No damage, leap or invuln. +m/s. Individual 40% chances to Supercharge+reset Special or Def.
+#+MACRO: tE2 +30% damage and radius per consecutive use (max 9.)
+#+MACRO: tO3 (&#x2191;15s CD) Deals &#x2191;1000. Starts on CD. Disables % triggers.
+#+MACRO: tS3 No GCD or slow.
+#+MACRO: tR3 40% chance to Supercharge+reset itself.
+#+MACRO: tG3 Deal &#x2191;280; grants all players +15% Shadowcry buff; and erase bullets by 250px radius.
+#+MACRO: tE3 Random effects.
+#+MACRO: tO4 (&#x2193;10s CD) [LEAP] Deal 90x3. Now always leaps. Grants 10s Ability Haste. 1000ms invuln.
+#+MACRO: tS4 (&#x2193;10s CD) No GCD.
+#+MACRO: tR4 Deal &#x2193;300. Damage on other invuln effects. &#x2193;1400ms invuln.
+#+MACRO: tG4 Deal &#x2191;140x4 to all enemies; gain +10% luck.
+#+MACRO: tE4 (&#x2191;20s CD) Deal &#x2191;90x10. Unresettable. &#x2191;1700ms invuln.
+# -----
+# Other Description Macros
+# -----
+#+MACRO: tShackles On ability use, an attack is disabled randomly.
