@@ -13,6 +13,7 @@
 #+EXPORT_FILE_NAME: index
 #+LATEX_HEADER: \usepackage[colorlinks=true,urlcolor=pink,linkcolor=blue]{hyperref}
 #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="https://gongzhitaao.org/orgcss/org.css"/>
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="./styles/hint.base.css">
 #+INFOJS_OPT: view:info toc:non-nil sdepth:1
 :END:
 :TODOs:
@@ -321,11 +322,11 @@ At base kit, the effect triggers {{{Winter-Hat}}}, but not {{{Sacredstone-Charm}
 #+end_quote
 
 ** REVIEW Secondary
-#+MACRO: N2i {{{i(Butterfly-Hairpin)}}} {{{i(Caver's-Cloak)}}}
+#+MACRO: N2i {{{i(Butterfly-Hairpin)}}} {{{i(Cavers-Cloak)}}}
 #+MACRO: O2i
 #+MACRO: S2i
 #+MACRO: R2i +m/s;
-#+MACRO: G2i +luck; {{{i(Jester's-Hat)}}}
+#+MACRO: G2i +luck; {{{i(Jesters-Hat)}}}
 #+MACRO: E2i
 |         | Leap? | Gem Synergies | Item Synergies | Notes                                                             |
 |---------+-------+---------------+----------------+-------------------------------------------------------------------|
@@ -342,13 +343,13 @@ Hitting multiple {{{E2}}} (33%) is similar to not hitting Special Reset on Dance
 
 ** REVIEW Special
 #+MACRO: N3i Debuff apply; {{{i(Hawkfeather-Fan)}}} {{{i(Spear-of-Winds)}}} {{{i(Bolt-Staff)}}}
-#+MACRO: O3i1 {{{i(Miner's-Headlamp)}}} {{{i(Darkglass-Spear)}}} {{{i(Timespace-Dagger)}}}
+#+MACRO: O3i1 {{{i(Miners-Headlamp)}}} {{{i(Darkglass-Spear)}}} {{{i(Timespace-Dagger)}}}
 #+MACRO: O3i2 {{{o3i1}}} {{{i(Raindrop-Earrings)}}}
-#+MACRO: O3i {{{o3i2}}} {{{i(Sun-Pendant)}}} {{{i(Heaven's-Codex)}}} {{{i(Staff-of-Sorrow)}}}
+#+MACRO: O3i {{{o3i2}}} {{{i(Sun-Pendant)}}} {{{i(Heavens-Codex)}}} {{{i(Staff-of-Sorrow)}}}
 #+MACRO: S3i N3 items; {{{i(Hawkfeather-Fan)}}} {{{i(Mountain-Staff)}}} {{{i(Obsidian-Rod)}}} {{{i(Garnet-Staff)}}}  {{{i(Lion-Charm)}}} {{{i(Obsidian-Hairpin)}}}
 #+MACRO: R3i N3 Items; {{{i(Hawkfeather-Fan)}}} {{{i(Obsidian-Rod)}}} {{{i(Garnet-Staff)}}}
-#+MACRO: G3i N3 Items; {{{i(Hawkfeather-Fan)}}} {{{i(Sacred-Bow)}}} {{{i(Shrinemaiden's-Kosode)}}}
-#+MACRO: E3i N3 Items; +GCD/debuff items; {{{i(Hawkfeather-Fan)}}} {{{i(Sacred-Bow)}}} {{{i(Shrinemaiden's-Kosode)}}}
+#+MACRO: G3i N3 Items; {{{i(Hawkfeather-Fan)}}} {{{i(Sacred-Bow)}}} {{{i(Shrinemaidens-Kosode)}}}
+#+MACRO: E3i N3 Items; +GCD/debuff items; {{{i(Hawkfeather-Fan)}}} {{{i(Sacred-Bow)}}} {{{i(Shrinemaidens-Kosode)}}}
 #+MACRO: S3n "Best" Spc., ~+60DPS at base; oGCD, no slow, loves CD reduction (including 1s \rightarrow 0s); 0.7s "cd" minimum
  |           | Gem Synergies | Item Synergies | Notes                                                            |
  |-----------+---------------+----------------+------------------------------------------------------------------|

@@ -1,0 +1,859 @@
+#+MACRO: itm_link [[./img/items/$1.png]] {{{n$1}}}
+#+MACRO: itm_aria {{{t$1}}}
+# html + tooltip + html + image and name + html
+#+MACRO: i1 @@html:<span class="hint--large" border-radius="4px;" aria-label="
+#+MACRO: i2 ">@@
+#+MACRO: i3 @@html:</span>@@
+#+MACRO: itm {{{i1}}}{{{itm_aria($1)}}}{{{i2}}}{{{itm_link($1)}}}{{{i3}}}
+# version without name showing for item tier list
+#+MACRO: i {{{i1}}}{{{i_aria($1)}}}{{{i2}}}[[./img/items/$1.png]]{{{i3}}}
+#+MACRO: i_aria ({{{n$1}}}) {{{t$1}}}
+# -----
+# Item Names Macros
+# -----
+#+MACRO: nAbyss-Artifact Abyss Artifact
+#+MACRO: nAltair-Dagger Altair Dagger
+#+MACRO: nAmethyst-Bracelet Amethyst Bracelet
+#+MACRO: nAngels-Halo Angel's Halo
+#+MACRO: nApple-Plate Apple Plate
+#+MACRO: nAquamarine-Bracelet Aquamarine Bracelet
+#+MACRO: nArtist-Smock Artist Smock
+#+MACRO: nAssassins-Knife Assassin's Knife
+#+MACRO: nBallroom-Gown Ballroom Gown
+#+MACRO: nBattery-Shield Battery Shield
+#+MACRO: nBattlemaiden-Armor Battlemaiden Armor
+#+MACRO: nBeach-Sandals Beach Sandals
+#+MACRO: nBlack-Wakizashi Black Wakizashi
+#+MACRO: nBlackbolt-Ribbon Blackbolt Ribbon
+#+MACRO: nBlackhole-Charm Blackhole Charm
+#+MACRO: nBlacksteel-Buckler Blacksteel Buckler
+#+MACRO: nBlackwing-Staff Blackwing Staff
+#+MACRO: nBladed-Cloak Bladed Cloak
+#+MACRO: nBlood-Vial Blood Vial
+#+MACRO: nBloodflower-Brooch Bloodflower Brooch
+#+MACRO: nBloodhound-Greatsword Bloodhound Greatsword
+#+MACRO: nBloody-Bandage Bloody Bandage
+#+MACRO: nBlue-Rose Blue Rose
+#+MACRO: nBluebolt-Staff Bluebolt Staff
+#+MACRO: nBolt-Staff Bolt Staff
+#+MACRO: nBook-of-Cheats Book of Cheats
+#+MACRO: nBoulder-Shield Boulder Shield
+#+MACRO: nBrightstorm-Spear Brightstorm Spear
+#+MACRO: nButterfly-Hairpin Butterfly Hairpin
+#+MACRO: nButterfly-Ocarina Butterfly Ocarina
+#+MACRO: nCalling-Bell Calling Bell
+#+MACRO: nCanary-Charm Canary Charm
+#+MACRO: nCaramel-Tea Caramel Tea
+#+MACRO: nCavers-Cloak Caver's Cloak
+#+MACRO: nChemists-Coat Chemist's Coat
+#+MACRO: nChrome-Shield Chrome Shield
+#+MACRO: nClay-Rabbit Clay Rabbit
+#+MACRO: nClockwork-Tome Clockwork Tome
+#+MACRO: nCloud-Guard Cloud Guard
+#+MACRO: nColdsteel-Shield Coldsteel Shield
+#+MACRO: nColorful-Earrings Colorful Earrings
+#+MACRO: nComforting-Coat Comforting Coat
+#+MACRO: nCompound-Gloves Compound Gloves
+#+MACRO: nCrane-Katana Crane Katana
+#+MACRO: nCrescentmoon-Dagger Crescentmoon Dagger
+#+MACRO: nCrowfeather-Hairpin Crowfeather Hairpin
+#+MACRO: nCrown-of-Love Crown of Love
+#+MACRO: nCrown-of-Storms Crown of Storms
+#+MACRO: nCrown-of-Swords Crown of Swords
+#+MACRO: nCurse-Talon Curse Talon
+#+MACRO: nCursed-Candlestaff Cursed Candlestaff
+#+MACRO: nDark-Wings Dark Wings
+#+MACRO: nDarkcloud-Necklace Darkcloud Necklace
+#+MACRO: nDarkcrystal-Rose Darkcrystal Rose
+#+MACRO: nDarkglass-Spear Darkglass Spear
+#+MACRO: nDarkmage-Charm Darkmage Charm
+#+MACRO: nDarkmagic-Blade Darkmagic Blade
+#+MACRO: nDarkstorm-Knife Darkstorm Knife
+#+MACRO: nDaylight-Sword Daylight Sword
+#+MACRO: nDeathcap-Tome Deathcap Tome
+#+MACRO: nDemon-Horns Demon Horns
+#+MACRO: nDesert-Earrings Desert Earrings
+#+MACRO: nDiamond-Shield Diamond Shield
+#+MACRO: nDivine-Mirror Divine Mirror
+#+MACRO: nDragonhead-Spear Dragonhead Spear
+#+MACRO: nDrill-Shield Drill Shield
+#+MACRO: nDynamite-Staff Dynamite Staff
+#+MACRO: nEaglewing-Charm Eaglewing Charm
+#+MACRO: nEmerald-Chestplate Emerald Chestplate
+#+MACRO: nEternity-Flute Eternity Flute
+#+MACRO: nFairy-Spear Fairy Spear
+#+MACRO: nFalconfeather-Dagger Falconfeather Dagger
+#+MACRO: nFanciful-Book Fanciful Book
+#+MACRO: nFeathered-Overcoat Feathered Overcoat
+#+MACRO: nFirescale-Corset Firescale Corset
+#+MACRO: nFirststrike-Bracelet Firststrike Bracelet
+#+MACRO: nFlame-Bow Flame Bow
+#+MACRO: nFlamedancer-Dagger Flamedancer Dagger
+#+MACRO: nFlamewalker-Boots Flamewalker Boots
+#+MACRO: nFloral-Bow Floral Bow
+#+MACRO: nFossil-Dagger Fossil Dagger
+#+MACRO: nFrost-Dagger Frost Dagger
+#+MACRO: nFrozen-Staff Frozen Staff
+#+MACRO: nGarnet-Staff Garnet Staff
+#+MACRO: nGemini-Necklace Gemini Necklace
+#+MACRO: nGhost-Spear Ghost Spear
+#+MACRO: nGiant-Paintbrush Giant Paintbrush
+#+MACRO: nGiant-Stone-Club Giant Stone Club
+#+MACRO: nGlacier-Spear Glacier Spear
+#+MACRO: nGladiator-Helmet Gladiator Helmet
+#+MACRO: nGlittering-Trumpet Glittering Trumpet
+#+MACRO: nGolden-Chime Golden Chime
+#+MACRO: nGolden-Katana Golden Katana
+#+MACRO: nGolems-Claymore Golem's Claymore
+#+MACRO: nGrandmaster-Spear Grandmaster Spear
+#+MACRO: nGranite-Greatsword Granite Greatsword
+#+MACRO: nGrasswoven-Bracelet Grasswoven Bracelet
+#+MACRO: nGreatsword-Pendant Greatsword Pendant
+#+MACRO: nGreysteel-Shield Greysteel Shield
+#+MACRO: nHandmade-Charm Handmade Charm
+#+MACRO: nHaunted-Gloves Haunted Gloves
+#+MACRO: nHawkfeather-Fan Hawkfeather Fan
+#+MACRO: nHeavens-Codex Heaven's Codex
+#+MACRO: nHells-Codex Hell's Codex
+#+MACRO: nHermes-Bow Hermes Bow
+#+MACRO: nHexed-Blindfold Hexed Blindfold
+#+MACRO: nHidden-Blade Hidden Blade
+#+MACRO: nHoly-Greatsword Holy Greatsword
+#+MACRO: nHooked-Staff Hooked Staff
+#+MACRO: nHydrous-Blob Hydrous Blob
+#+MACRO: nIcicle-Earrings Icicle Earrings
+#+MACRO: nIron-Greaves Iron Greaves
+#+MACRO: nIron-Pickaxe Iron Pickaxe
+#+MACRO: nIvy-Staff Ivy Staff
+#+MACRO: nJade-Staff Jade Staff
+#+MACRO: nJesters-Hat Jester's Hat
+#+MACRO: nKappa-Shield Kappa Shield
+#+MACRO: nKilling-Note Killing Note
+#+MACRO: nKunoichi-Hood Kunoichi Hood
+#+MACRO: nKyou-No-Omikuji Kyou No Omikuji
+#+MACRO: nLancer-Gauntlets Lancer Gauntlets
+#+MACRO: nLapis-Sword Lapis Sword
+#+MACRO: nLarge-Anchor Large Anchor
+#+MACRO: nLarge-Umbrella Large Umbrella
+#+MACRO: nLeech-Staff Leech Staff
+#+MACRO: nLefthand-Cast Lefthand Cast
+#+MACRO: nLightning-Bow Lightning Bow
+#+MACRO: nLion-Charm Lion Charm
+#+MACRO: nLonesome-Pendant Lonesome Pendant
+#+MACRO: nLost-Pendant Lost Pendant
+#+MACRO: nLullaby-Harp Lullaby Harp
+#+MACRO: nMaid-Outfit Maid Outfit
+#+MACRO: nMarble-Clasp Marble Clasp
+#+MACRO: nMemory-Greatsword Memory Greatsword
+#+MACRO: nMermaid-Scalemail Mermaid Scalemail
+#+MACRO: nMeteor-Staff Meteor Staff
+#+MACRO: nMetronome-Boots Metronome Boots
+#+MACRO: nMidsummer-Dress Midsummer Dress
+#+MACRO: nMimick-Rabbitfoot Mimick Rabbitfoot
+#+MACRO: nMiners-Headlamp Miner's Headlamp
+#+MACRO: nMoon-Pendant Moon Pendant
+#+MACRO: nMoss-Shield Moss Shield
+#+MACRO: nMountain-Staff Mountain Staff
+#+MACRO: nNecronomicon Necronomicon 
+#+MACRO: nNightgleam-Sword Nightgleam Sword
+#+MACRO: nNightguard-Gloves Nightguard Gloves
+#+MACRO: nNightingale-Gown Nightingale Gown
+#+MACRO: nNightstar-Grimoire Nightstar Grimoire
+#+MACRO: nNinja-Robe Ninja Robe
+#+MACRO: nNinjutsu-Scroll Ninjutsu Scroll
+#+MACRO: nNova-Crown Nova Crown
+#+MACRO: nObsidian-Hairpin Obsidian Hairpin
+#+MACRO: nObsidian-Rod Obsidian Rod
+#+MACRO: nOccult-Dagger Occult Dagger
+#+MACRO: nOld-Bonnet Old Bonnet
+#+MACRO: nOnepiece-Swimsuit Onepiece Swimsuit
+#+MACRO: nOni-Staff Oni Staff
+#+MACRO: nOpal-Necklace Opal Necklace
+#+MACRO: nOrnamental-Bell Ornamental Bell
+#+MACRO: nPainters-Beret Painter's Beret
+#+MACRO: nPajama-Hat Pajama Hat
+#+MACRO: nPalette-Shield Palette Shield
+#+MACRO: nPerformers-Shoes Performer's Shoes
+#+MACRO: nPeridot-Rapier Peridot Rapier
+#+MACRO: nPhantom-Dagger Phantom Dagger
+#+MACRO: nPhoenix-Charm Phoenix Charm
+#+MACRO: nPidgeon-Bow Pidgeon Bow
+#+MACRO: nPocketwatch Pocketwatch 
+#+MACRO: nPointed-Ring Pointed Ring
+#+MACRO: nPoisonfrog-Charm Poisonfrog Charm
+#+MACRO: nPolar-Coat Polar Coat
+#+MACRO: nPurification-Rod Purification Rod
+#+MACRO: nPyrite-Earrings Pyrite Earrings
+#+MACRO: nQuartz-Shield Quartz Shield
+#+MACRO: nQueens-Crown Queen's Crown
+#+MACRO: nRaiju-Crown Raiju Crown
+#+MACRO: nRainbow-Cape Rainbow Cape
+#+MACRO: nRaindrop-Earrings Raindrop Earrings
+#+MACRO: nRavens-Dagger Raven's Dagger
+#+MACRO: nRaven-Grimoire Raven Grimoire
+#+MACRO: nReaper-Cloak Reaper Cloak
+#+MACRO: nRed-Tanzaku Red Tanzaku
+#+MACRO: nRedblack-Ribbon Redblack Ribbon
+#+MACRO: nReddragon-Blade Reddragon Blade
+#+MACRO: nRedwhite-Ribbon Redwhite Ribbon
+#+MACRO: nReflection-Shield Reflection Shield
+#+MACRO: nRibboned-Staff Ribboned Staff
+#+MACRO: nRighthand-Cast Righthand Cast
+#+MACRO: nRobe-of-Dark Robe of Dark
+#+MACRO: nRobe-of-Light Robe of Light
+#+MACRO: nRockdragon-Mail Rockdragon Mail
+#+MACRO: nRosered-Leotard Rosered Leotard
+#+MACRO: nRoyal-Staff Royal Staff
+#+MACRO: nRuby-Circlet Ruby Circlet
+#+MACRO: nRuins-Sword Ruins Sword
+#+MACRO: nRusted-Greatsword Rusted Greatsword
+#+MACRO: nSacred-Bow Sacred Bow
+#+MACRO: nSacred-Shield Sacred Shield
+#+MACRO: nSacredstone-Charm Sacredstone Charm
+#+MACRO: nSaltwater-Staff Saltwater Staff
+#+MACRO: nSand-Shovel Sand Shovel
+#+MACRO: nSandpriestess-Spear Sandpriestess Spear
+#+MACRO: nSapphire-Violin Sapphire Violin
+#+MACRO: nSawtooth-Cleaver Sawtooth Cleaver
+#+MACRO: nSeashell-Shield Seashell Shield
+#+MACRO: nSewing-Sword Sewing Sword
+#+MACRO: nShadow-Bracelet Shadow Bracelet
+#+MACRO: nSharpedged-Shield Sharpedged Shield
+#+MACRO: nShield-of-Smiles Shield of Smiles
+#+MACRO: nShinobi-Tabi Shinobi Tabi
+#+MACRO: nShinsoku-Katana Shinsoku Katana
+#+MACRO: nShockwave-Tome Shockwave Tome
+#+MACRO: nShrinemaidens-Kosode Shrinemaiden's Kosode
+#+MACRO: nSilver-Coin Silver Coin
+#+MACRO: nSketchbook Sketchbook 
+#+MACRO: nSleeping-Greatbow Sleeping Greatbow
+#+MACRO: nSmoke-Shield Smoke Shield
+#+MACRO: nSnakefang-Dagger Snakefang Dagger
+#+MACRO: nSnipers-Eyeglasses Sniper's Eyeglasses
+#+MACRO: nSnow-Boots Snow Boots
+#+MACRO: nSpark-of-Determination Spark of Determination
+#+MACRO: nSparrow-Feather Sparrow Feather
+#+MACRO: nSpear-of-Rains Spear of Rains
+#+MACRO: nSpear-of-Remorse Spear of Remorse
+#+MACRO: nSpear-of-Winds Spear of Winds
+#+MACRO: nSpiderbite-Bow Spiderbite Bow
+#+MACRO: nSpiked-Shield Spiked Shield
+#+MACRO: nSpinning-Chakram Spinning Chakram
+#+MACRO: nSpringloaded-Scythe Springloaded Scythe
+#+MACRO: nStaff-of-Sorrow Staff of Sorrow
+#+MACRO: nStarry-Cloak Starry Cloak
+#+MACRO: nStaticshock-Earrings Staticshock Earrings
+#+MACRO: nStirring-Spoon Stirring Spoon
+#+MACRO: nStonebreaker-Staff Stonebreaker Staff
+#+MACRO: nStoneplate-Armor Stoneplate Armor
+#+MACRO: nStorm-Petticoat Storm Petticoat
+#+MACRO: nStormdance-Gown Stormdance Gown
+#+MACRO: nStraw-Hat Straw Hat
+#+MACRO: nStrawberry-Cake Strawberry Cake
+#+MACRO: nStrongmans-Bar Strongman's Bar
+#+MACRO: nStuffed-Rabbit Stuffed Rabbit
+#+MACRO: nSun-Pendant Sun Pendant
+#+MACRO: nSunflower-Crown Sunflower Crown
+#+MACRO: nSweet-Taffy Sweet Taffy
+#+MACRO: nTactician-Rod Tactician Rod
+#+MACRO: nTalon-Charm Talon Charm
+#+MACRO: nTeacher-Knife Teacher Knife
+#+MACRO: nThiefs-Coat Thief's Coat
+#+MACRO: nThrowing-Dagger Throwing Dagger
+#+MACRO: nThunderclap-Gloves Thunderclap Gloves
+#+MACRO: nTidal-Greatsword Tidal Greatsword
+#+MACRO: nTimemage-Cap Timemage Cap
+#+MACRO: nTimespace-Dagger Timespace Dagger
+#+MACRO: nTimewarp-Wand Timewarp Wand
+#+MACRO: nTiny-Fork Tiny Fork
+#+MACRO: nTiny-Hourglass Tiny Hourglass
+#+MACRO: nTiny-Wings Tiny Wings
+#+MACRO: nTopaz-Charm Topaz Charm
+#+MACRO: nTornado-Staff Tornado Staff
+#+MACRO: nTough-Gauntlet Tough Gauntlet
+#+MACRO: nTrick-Shield Trick Shield
+#+MACRO: nTwinstar-Earrings Twinstar Earrings
+#+MACRO: nUnsacred-Pendant Unsacred Pendant
+#+MACRO: nUsagi-Kamen Usagi Kamen
+#+MACRO: nVampiric-Dagger Vampiric Dagger
+#+MACRO: nVanilla-Wafers Vanilla Wafers
+#+MACRO: nVega-Spear Vega Spear
+#+MACRO: nVenom-Hood Venom Hood
+#+MACRO: nVolcano-Spear Volcano Spear
+#+MACRO: nVorpal-Dao Vorpal Dao
+#+MACRO: nWaterfall-Polearm Waterfall Polearm
+#+MACRO: nWatermage-Pendant Watermage Pendant
+#+MACRO: nWhiteflame-Staff Whiteflame Staff
+#+MACRO: nWhitewing-Bracelet Whitewing Bracelet
+#+MACRO: nWindbite-Dagger Windbite Dagger
+#+MACRO: nWinged-Cap Winged Cap
+#+MACRO: nWinter-Hat Winter Hat
+#+MACRO: nWitchs-Cloak Witch's Cloak
+#+MACRO: nWolf-Hood Wolf Hood
+#+MACRO: nYoukai-Bracelet Youkai Bracelet
+# -----
+# Item Abbreviation Macros
+# -----
+#+MACRO: Abyss-Artifact {{{itm(Abyss-Artifact)}}}
+#+MACRO: Altair-Dagger {{{itm(Altair-Dagger)}}}
+#+MACRO: Amethyst-Bracelet {{{itm(Amethyst-Bracelet)}}}
+#+MACRO: Angels-Halo {{{itm(Angels-Halo)}}}
+#+MACRO: Apple-Plate {{{itm(Apple-Plate)}}}
+#+MACRO: Aquamarine-Bracelet {{{itm(Aquamarine-Bracelet)}}}
+#+MACRO: Artist-Smock {{{itm(Artist-Smock)}}}
+#+MACRO: Assassins-Knife {{{itm(Assassins-Knife)}}}
+#+MACRO: Ballroom-Gown {{{itm(Ballroom-Gown)}}}
+#+MACRO: Battery-Shield {{{itm(Battery-Shield)}}}
+#+MACRO: Battlemaiden-Armor {{{itm(Battlemaiden-Armor)}}}
+#+MACRO: Beach-Sandals {{{itm(Beach-Sandals)}}}
+#+MACRO: Black-Wakizashi {{{itm(Black-Wakizashi)}}}
+#+MACRO: Blackbolt-Ribbon {{{itm(Blackbolt-Ribbon)}}}
+#+MACRO: Blackhole-Charm {{{itm(Blackhole-Charm)}}}
+#+MACRO: Blacksteel-Buckler {{{itm(Blacksteel-Buckler)}}}
+#+MACRO: Blackwing-Staff {{{itm(Blackwing-Staff)}}}
+#+MACRO: Bladed-Cloak {{{itm(Bladed-Cloak)}}}
+#+MACRO: Blood-Vial {{{itm(Blood-Vial)}}}
+#+MACRO: Bloodflower-Brooch {{{itm(Bloodflower-Brooch)}}}
+#+MACRO: Bloodhound-Greatsword {{{itm(Bloodhound-Greatsword)}}}
+#+MACRO: Bloody-Bandage {{{itm(Bloody-Bandage)}}}
+#+MACRO: Blue-Rose {{{itm(Blue-Rose)}}}
+#+MACRO: Bluebolt-Staff {{{itm(Bluebolt-Staff)}}}
+#+MACRO: Bolt-Staff {{{itm(Bolt-Staff)}}}
+#+MACRO: Book-of-Cheats {{{itm(Book-of-Cheats)}}}
+#+MACRO: Boulder-Shield {{{itm(Boulder-Shield)}}}
+#+MACRO: Brightstorm-Spear {{{itm(Brightstorm-Spear)}}}
+#+MACRO: Butterfly-Hairpin {{{itm(Butterfly-Hairpin)}}}
+#+MACRO: Butterfly-Ocarina {{{itm(Butterfly-Ocarina)}}}
+#+MACRO: Calling-Bell {{{itm(Calling-Bell)}}}
+#+MACRO: Canary-Charm {{{itm(Canary-Charm)}}}
+#+MACRO: Caramel-Tea {{{itm(Caramel-Tea)}}}
+#+MACRO: Cavers-Cloak {{{itm(Cavers-Cloak)}}}
+#+MACRO: Chemists-Coat {{{itm(Chemists-Coat)}}}
+#+MACRO: Chrome-Shield {{{itm(Chrome-Shield)}}}
+#+MACRO: Clay-Rabbit {{{itm(Clay-Rabbit)}}}
+#+MACRO: Clockwork-Tome {{{itm(Clockwork-Tome)}}}
+#+MACRO: Cloud-Guard {{{itm(Cloud-Guard)}}}
+#+MACRO: Coldsteel-Shield {{{itm(Coldsteel-Shield)}}}
+#+MACRO: Colorful-Earrings {{{itm(Colorful-Earrings)}}}
+#+MACRO: Comforting-Coat {{{itm(Comforting-Coat)}}}
+#+MACRO: Compound-Gloves {{{itm(Compound-Gloves)}}}
+#+MACRO: Crane-Katana {{{itm(Crane-Katana)}}}
+#+MACRO: Crescentmoon-Dagger {{{itm(Crescentmoon-Dagger)}}}
+#+MACRO: Crowfeather-Hairpin {{{itm(Crowfeather-Hairpin)}}}
+#+MACRO: Crown-of-Love {{{itm(Crown-of-Love)}}}
+#+MACRO: Crown-of-Storms {{{itm(Crown-of-Storms)}}}
+#+MACRO: Crown-of-Swords {{{itm(Crown-of-Swords)}}}
+#+MACRO: Curse-Talon {{{itm(Curse-Talon)}}}
+#+MACRO: Cursed-Candlestaff {{{itm(Cursed-Candlestaff)}}}
+#+MACRO: Dark-Wings {{{itm(Dark-Wings)}}}
+#+MACRO: Darkcloud-Necklace {{{itm(Darkcloud-Necklace)}}}
+#+MACRO: Darkcrystal-Rose {{{itm(Darkcrystal-Rose)}}}
+#+MACRO: Darkglass-Spear {{{itm(Darkglass-Spear)}}}
+#+MACRO: Darkmage-Charm {{{itm(Darkmage-Charm)}}}
+#+MACRO: Darkmagic-Blade {{{itm(Darkmagic-Blade)}}}
+#+MACRO: Darkstorm-Knife {{{itm(Darkstorm-Knife)}}}
+#+MACRO: Daylight-Sword {{{itm(Daylight-Sword)}}}
+#+MACRO: Deathcap-Tome {{{itm(Deathcap-Tome)}}}
+#+MACRO: Demon-Horns {{{itm(Demon-Horns)}}}
+#+MACRO: Desert-Earrings {{{itm(Desert-Earrings)}}}
+#+MACRO: Diamond-Shield {{{itm(Diamond-Shield)}}}
+#+MACRO: Divine-Mirror {{{itm(Divine-Mirror)}}}
+#+MACRO: Dragonhead-Spear {{{itm(Dragonhead-Spear)}}}
+#+MACRO: Drill-Shield {{{itm(Drill-Shield)}}}
+#+MACRO: Dynamite-Staff {{{itm(Dynamite-Staff)}}}
+#+MACRO: Eaglewing-Charm {{{itm(Eaglewing-Charm)}}}
+#+MACRO: Emerald-Chestplate {{{itm(Emerald-Chestplate)}}}
+#+MACRO: Eternity-Flute {{{itm(Eternity-Flute)}}}
+#+MACRO: Fairy-Spear {{{itm(Fairy-Spear)}}}
+#+MACRO: Falconfeather-Dagger {{{itm(Falconfeather-Dagger)}}}
+#+MACRO: Fanciful-Book {{{itm(Fanciful-Book)}}}
+#+MACRO: Feathered-Overcoat {{{itm(Feathered-Overcoat)}}}
+#+MACRO: Firescale-Corset {{{itm(Firescale-Corset)}}}
+#+MACRO: Firststrike-Bracelet {{{itm(Firststrike-Bracelet)}}}
+#+MACRO: Flame-Bow {{{itm(Flame-Bow)}}}
+#+MACRO: Flamedancer-Dagger {{{itm(Flamedancer-Dagger)}}}
+#+MACRO: Flamewalker-Boots {{{itm(Flamewalker-Boots)}}}
+#+MACRO: Floral-Bow {{{itm(Floral-Bow)}}}
+#+MACRO: Fossil-Dagger {{{itm(Fossil-Dagger)}}}
+#+MACRO: Frost-Dagger {{{itm(Frost-Dagger)}}}
+#+MACRO: Frozen-Staff {{{itm(Frozen-Staff)}}}
+#+MACRO: Garnet-Staff {{{itm(Garnet-Staff)}}}
+#+MACRO: Gemini-Necklace {{{itm(Gemini-Necklace)}}}
+#+MACRO: Ghost-Spear {{{itm(Ghost-Spear)}}}
+#+MACRO: Giant-Paintbrush {{{itm(Giant-Paintbrush)}}}
+#+MACRO: Giant-Stone-Club {{{itm(Giant-Stone-Club)}}}
+#+MACRO: Glacier-Spear {{{itm(Glacier-Spear)}}}
+#+MACRO: Gladiator-Helmet {{{itm(Gladiator-Helmet)}}}
+#+MACRO: Glittering-Trumpet {{{itm(Glittering-Trumpet)}}}
+#+MACRO: Golden-Chime {{{itm(Golden-Chime)}}}
+#+MACRO: Golden-Katana {{{itm(Golden-Katana)}}}
+#+MACRO: Golems-Claymore {{{itm(Golems-Claymore)}}}
+#+MACRO: Grandmaster-Spear {{{itm(Grandmaster-Spear)}}}
+#+MACRO: Granite-Greatsword {{{itm(Granite-Greatsword)}}}
+#+MACRO: Grasswoven-Bracelet {{{itm(Grasswoven-Bracelet)}}}
+#+MACRO: Greatsword-Pendant {{{itm(Greatsword-Pendant)}}}
+#+MACRO: Greysteel-Shield {{{itm(Greysteel-Shield)}}}
+#+MACRO: Handmade-Charm {{{itm(Handmade-Charm)}}}
+#+MACRO: Haunted-Gloves {{{itm(Haunted-Gloves)}}}
+#+MACRO: Hawkfeather-Fan {{{itm(Hawkfeather-Fan)}}}
+#+MACRO: Heavens-Codex {{{itm(Heavens-Codex)}}}
+#+MACRO: Hells-Codex {{{itm(Hells-Codex)}}}
+#+MACRO: Hermes-Bow {{{itm(Hermes-Bow)}}}
+#+MACRO: Hexed-Blindfold {{{itm(Hexed-Blindfold)}}}
+#+MACRO: Hidden-Blade {{{itm(Hidden-Blade)}}}
+#+MACRO: Holy-Greatsword {{{itm(Holy-Greatsword)}}}
+#+MACRO: Hooked-Staff {{{itm(Hooked-Staff)}}}
+#+MACRO: Hydrous-Blob {{{itm(Hydrous-Blob)}}}
+#+MACRO: Icicle-Earrings {{{itm(Icicle-Earrings)}}}
+#+MACRO: Iron-Greaves {{{itm(Iron-Greaves)}}}
+#+MACRO: Iron-Pickaxe {{{itm(Iron-Pickaxe)}}}
+#+MACRO: Ivy-Staff {{{itm(Ivy-Staff)}}}
+#+MACRO: Jade-Staff {{{itm(Jade-Staff)}}}
+#+MACRO: Jesters-Hat {{{itm(Jesters-Hat)}}}
+#+MACRO: Kappa-Shield {{{itm(Kappa-Shield)}}}
+#+MACRO: Killing-Note {{{itm(Killing-Note)}}}
+#+MACRO: Kunoichi-Hood {{{itm(Kunoichi-Hood)}}}
+#+MACRO: Kyou-No-Omikuji {{{itm(Kyou-No-Omikuji)}}}
+#+MACRO: Lancer-Gauntlets {{{itm(Lancer-Gauntlets)}}}
+#+MACRO: Lapis-Sword {{{itm(Lapis-Sword)}}}
+#+MACRO: Large-Anchor {{{itm(Large-Anchor)}}}
+#+MACRO: Large-Umbrella {{{itm(Large-Umbrella)}}}
+#+MACRO: Leech-Staff {{{itm(Leech-Staff)}}}
+#+MACRO: Lefthand-Cast {{{itm(Lefthand-Cast)}}}
+#+MACRO: Lightning-Bow {{{itm(Lightning-Bow)}}}
+#+MACRO: Lion-Charm {{{itm(Lion-Charm)}}}
+#+MACRO: Lonesome-Pendant {{{itm(Lonesome-Pendant)}}}
+#+MACRO: Lost-Pendant {{{itm(Lost-Pendant)}}}
+#+MACRO: Lullaby-Harp {{{itm(Lullaby-Harp)}}}
+#+MACRO: Maid-Outfit {{{itm(Maid-Outfit)}}}
+#+MACRO: Marble-Clasp {{{itm(Marble-Clasp)}}}
+#+MACRO: Memory-Greatsword {{{itm(Memory-Greatsword)}}}
+#+MACRO: Mermaid-Scalemail {{{itm(Mermaid-Scalemail)}}}
+#+MACRO: Meteor-Staff {{{itm(Meteor-Staff)}}}
+#+MACRO: Metronome-Boots {{{itm(Metronome-Boots)}}}
+#+MACRO: Midsummer-Dress {{{itm(Midsummer-Dress)}}}
+#+MACRO: Mimick-Rabbitfoot {{{itm(Mimick-Rabbitfoot)}}}
+#+MACRO: Miners-Headlamp {{{itm(Miners-Headlamp)}}}
+#+MACRO: Moon-Pendant {{{itm(Moon-Pendant)}}}
+#+MACRO: Moss-Shield {{{itm(Moss-Shield)}}}
+#+MACRO: Mountain-Staff {{{itm(Mountain-Staff)}}}
+#+MACRO: Necronomicon {{{itm(Necronomicon)}}}
+#+MACRO: Nightgleam-Sword {{{itm(Nightgleam-Sword)}}}
+#+MACRO: Nightguard-Gloves {{{itm(Nightguard-Gloves)}}}
+#+MACRO: Nightingale-Gown {{{itm(Nightingale-Gown)}}}
+#+MACRO: Nightstar-Grimoire {{{itm(Nightstar-Grimoire)}}}
+#+MACRO: Ninja-Robe {{{itm(Ninja-Robe)}}}
+#+MACRO: Ninjutsu-Scroll {{{itm(Ninjutsu-Scroll)}}}
+#+MACRO: Nova-Crown {{{itm(Nova-Crown)}}}
+#+MACRO: Obsidian-Hairpin {{{itm(Obsidian-Hairpin)}}}
+#+MACRO: Obsidian-Rod {{{itm(Obsidian-Rod)}}}
+#+MACRO: Occult-Dagger {{{itm(Occult-Dagger)}}}
+#+MACRO: Old-Bonnet {{{itm(Old-Bonnet)}}}
+#+MACRO: Onepiece-Swimsuit {{{itm(Onepiece-Swimsuit)}}}
+#+MACRO: Oni-Staff {{{itm(Oni-Staff)}}}
+#+MACRO: Opal-Necklace {{{itm(Opal-Necklace)}}}
+#+MACRO: Ornamental-Bell {{{itm(Ornamental-Bell)}}}
+#+MACRO: Painters-Beret {{{itm(Painters-Beret)}}}
+#+MACRO: Pajama-Hat {{{itm(Pajama-Hat)}}}
+#+MACRO: Palette-Shield {{{itm(Palette-Shield)}}}
+#+MACRO: Performers-Shoes {{{itm(Performers-Shoes)}}}
+#+MACRO: Peridot-Rapier {{{itm(Peridot-Rapier)}}}
+#+MACRO: Phantom-Dagger {{{itm(Phantom-Dagger)}}}
+#+MACRO: Phoenix-Charm {{{itm(Phoenix-Charm)}}}
+#+MACRO: Pidgeon-Bow {{{itm(Pidgeon-Bow)}}}
+#+MACRO: Pocketwatch {{{itm(Pocketwatch)}}}
+#+MACRO: Pointed-Ring {{{itm(Pointed-Ring)}}}
+#+MACRO: Poisonfrog-Charm {{{itm(Poisonfrog-Charm)}}}
+#+MACRO: Polar-Coat {{{itm(Polar-Coat)}}}
+#+MACRO: Purification-Rod {{{itm(Purification-Rod)}}}
+#+MACRO: Pyrite-Earrings {{{itm(Pyrite-Earrings)}}}
+#+MACRO: Quartz-Shield {{{itm(Quartz-Shield)}}}
+#+MACRO: Queens-Crown {{{itm(Queens-Crown)}}}
+#+MACRO: Raiju-Crown {{{itm(Raiju-Crown)}}}
+#+MACRO: Rainbow-Cape {{{itm(Rainbow-Cape)}}}
+#+MACRO: Raindrop-Earrings {{{itm(Raindrop-Earrings)}}}
+#+MACRO: Ravens-Dagger {{{itm(Ravens-Dagger)}}}
+#+MACRO: Raven-Grimoire {{{itm(Raven-Grimoire)}}}
+#+MACRO: Reaper-Cloak {{{itm(Reaper-Cloak)}}}
+#+MACRO: Red-Tanzaku {{{itm(Red-Tanzaku)}}}
+#+MACRO: Redblack-Ribbon {{{itm(Redblack-Ribbon)}}}
+#+MACRO: Reddragon-Blade {{{itm(Reddragon-Blade)}}}
+#+MACRO: Redwhite-Ribbon {{{itm(Redwhite-Ribbon)}}}
+#+MACRO: Reflection-Shield {{{itm(Reflection-Shield)}}}
+#+MACRO: Ribboned-Staff {{{itm(Ribboned-Staff)}}}
+#+MACRO: Righthand-Cast {{{itm(Righthand-Cast)}}}
+#+MACRO: Robe-of-Dark {{{itm(Robe-of-Dark)}}}
+#+MACRO: Robe-of-Light {{{itm(Robe-of-Light)}}}
+#+MACRO: Rockdragon-Mail {{{itm(Rockdragon-Mail)}}}
+#+MACRO: Rosered-Leotard {{{itm(Rosered-Leotard)}}}
+#+MACRO: Royal-Staff {{{itm(Royal-Staff)}}}
+#+MACRO: Ruby-Circlet {{{itm(Ruby-Circlet)}}}
+#+MACRO: Ruins-Sword {{{itm(Ruins-Sword)}}}
+#+MACRO: Rusted-Greatsword {{{itm(Rusted-Greatsword)}}}
+#+MACRO: Sacred-Bow {{{itm(Sacred-Bow)}}}
+#+MACRO: Sacred-Shield {{{itm(Sacred-Shield)}}}
+#+MACRO: Sacredstone-Charm {{{itm(Sacredstone-Charm)}}}
+#+MACRO: Saltwater-Staff {{{itm(Saltwater-Staff)}}}
+#+MACRO: Sand-Shovel {{{itm(Sand-Shovel)}}}
+#+MACRO: Sandpriestess-Spear {{{itm(Sandpriestess-Spear)}}}
+#+MACRO: Sapphire-Violin {{{itm(Sapphire-Violin)}}}
+#+MACRO: Sawtooth-Cleaver {{{itm(Sawtooth-Cleaver)}}}
+#+MACRO: Seashell-Shield {{{itm(Seashell-Shield)}}}
+#+MACRO: Sewing-Sword {{{itm(Sewing-Sword)}}}
+#+MACRO: Shadow-Bracelet {{{itm(Shadow-Bracelet)}}}
+#+MACRO: Sharpedged-Shield {{{itm(Sharpedged-Shield)}}}
+#+MACRO: Shield-of-Smiles {{{itm(Shield-of-Smiles)}}}
+#+MACRO: Shinobi-Tabi {{{itm(Shinobi-Tabi)}}}
+#+MACRO: Shinsoku-Katana {{{itm(Shinsoku-Katana)}}}
+#+MACRO: Shockwave-Tome {{{itm(Shockwave-Tome)}}}
+#+MACRO: Shrinemaidens-Kosode {{{itm(Shrinemaidens-Kosode)}}}
+#+MACRO: Silver-Coin {{{itm(Silver-Coin)}}}
+#+MACRO: Sketchbook {{{itm(Sketchbook)}}}
+#+MACRO: Sleeping-Greatbow {{{itm(Sleeping-Greatbow)}}}
+#+MACRO: Smoke-Shield {{{itm(Smoke-Shield)}}}
+#+MACRO: Snakefang-Dagger {{{itm(Snakefang-Dagger)}}}
+#+MACRO: Snipers-Eyeglasses {{{itm(Snipers-Eyeglasses)}}}
+#+MACRO: Snow-Boots {{{itm(Snow-Boots)}}}
+#+MACRO: Spark-of-Determination {{{itm(Spark-of-Determination)}}}
+#+MACRO: Sparrow-Feather {{{itm(Sparrow-Feather)}}}
+#+MACRO: Spear-of-Rains {{{itm(Spear-of-Rains)}}}
+#+MACRO: Spear-of-Remorse {{{itm(Spear-of-Remorse)}}}
+#+MACRO: Spear-of-Winds {{{itm(Spear-of-Winds)}}}
+#+MACRO: Spiderbite-Bow {{{itm(Spiderbite-Bow)}}}
+#+MACRO: Spiked-Shield {{{itm(Spiked-Shield)}}}
+#+MACRO: Spinning-Chakram {{{itm(Spinning-Chakram)}}}
+#+MACRO: Springloaded-Scythe {{{itm(Springloaded-Scythe)}}}
+#+MACRO: Staff-of-Sorrow {{{itm(Staff-of-Sorrow)}}}
+#+MACRO: Starry-Cloak {{{itm(Starry-Cloak)}}}
+#+MACRO: Staticshock-Earrings {{{itm(Staticshock-Earrings)}}}
+#+MACRO: Stirring-Spoon {{{itm(Stirring-Spoon)}}}
+#+MACRO: Stonebreaker-Staff {{{itm(Stonebreaker-Staff)}}}
+#+MACRO: Stoneplate-Armor {{{itm(Stoneplate-Armor)}}}
+#+MACRO: Storm-Petticoat {{{itm(Storm-Petticoat)}}}
+#+MACRO: Stormdance-Gown {{{itm(Stormdance-Gown)}}}
+#+MACRO: Straw-Hat {{{itm(Straw-Hat)}}}
+#+MACRO: Strawberry-Cake {{{itm(Strawberry-Cake)}}}
+#+MACRO: Strongmans-Bar {{{itm(Strongmans-Bar)}}}
+#+MACRO: Stuffed-Rabbit {{{itm(Stuffed-Rabbit)}}}
+#+MACRO: Sun-Pendant {{{itm(Sun-Pendant)}}}
+#+MACRO: Sunflower-Crown {{{itm(Sunflower-Crown)}}}
+#+MACRO: Sweet-Taffy {{{itm(Sweet-Taffy)}}}
+#+MACRO: Tactician-Rod {{{itm(Tactician-Rod)}}}
+#+MACRO: Talon-Charm {{{itm(Talon-Charm)}}}
+#+MACRO: Teacher-Knife {{{itm(Teacher-Knife)}}}
+#+MACRO: Thiefs-Coat {{{itm(Thiefs-Coat)}}}
+#+MACRO: Throwing-Dagger {{{itm(Throwing-Dagger)}}}
+#+MACRO: Thunderclap-Gloves {{{itm(Thunderclap-Gloves)}}}
+#+MACRO: Tidal-Greatsword {{{itm(Tidal-Greatsword)}}}
+#+MACRO: Timemage-Cap {{{itm(Timemage-Cap)}}}
+#+MACRO: Timespace-Dagger {{{itm(Timespace-Dagger)}}}
+#+MACRO: Timewarp-Wand {{{itm(Timewarp-Wand)}}}
+#+MACRO: Tiny-Fork {{{itm(Tiny-Fork)}}}
+#+MACRO: Tiny-Hourglass {{{itm(Tiny-Hourglass)}}}
+#+MACRO: Tiny-Wings {{{itm(Tiny-Wings)}}}
+#+MACRO: Topaz-Charm {{{itm(Topaz-Charm)}}}
+#+MACRO: Tornado-Staff {{{itm(Tornado-Staff)}}}
+#+MACRO: Tough-Gauntlet {{{itm(Tough-Gauntlet)}}}
+#+MACRO: Trick-Shield {{{itm(Trick-Shield)}}}
+#+MACRO: Twinstar-Earrings {{{itm(Twinstar-Earrings)}}}
+#+MACRO: Unsacred-Pendant {{{itm(Unsacred-Pendant)}}}
+#+MACRO: Usagi-Kamen {{{itm(Usagi-Kamen)}}}
+#+MACRO: Vampiric-Dagger {{{itm(Vampiric-Dagger)}}}
+#+MACRO: Vanilla-Wafers {{{itm(Vanilla-Wafers)}}}
+#+MACRO: Vega-Spear {{{itm(Vega-Spear)}}}
+#+MACRO: Venom-Hood {{{itm(Venom-Hood)}}}
+#+MACRO: Volcano-Spear {{{itm(Volcano-Spear)}}}
+#+MACRO: Vorpal-Dao {{{itm(Vorpal-Dao)}}}
+#+MACRO: Waterfall-Polearm {{{itm(Waterfall-Polearm)}}}
+#+MACRO: Watermage-Pendant {{{itm(Watermage-Pendant)}}}
+#+MACRO: Whiteflame-Staff {{{itm(Whiteflame-Staff)}}}
+#+MACRO: Whitewing-Bracelet {{{itm(Whitewing-Bracelet)}}}
+#+MACRO: Windbite-Dagger {{{itm(Windbite-Dagger)}}}
+#+MACRO: Winged-Cap {{{itm(Winged-Cap)}}}
+#+MACRO: Winter-Hat {{{itm(Winter-Hat)}}}
+#+MACRO: Witchs-Cloak {{{itm(Witchs-Cloak)}}}
+#+MACRO: Wolf-Hood {{{itm(Wolf-Hood)}}}
+#+MACRO: Youkai-Bracelet {{{itm(Youkai-Bracelet)}}}
+# -----
+# Item Tooltip Description Macros
+# -----
+#+MACRO: tRaven-Grimoire Your Special applies Curse.
+#+MACRO: tBlackwing-Staff Your Primary applies Curse.
+#+MACRO: tCurse-Talon Your Secondary applies Curse.
+#+MACRO: tDarkmagic-Blade Every 10s, slices the air around you dealing 300 damage and applying Curse to nearby enemies.
+#+MACRO: tWitchs-Cloak Your Secondary deals 10% more damage. Debuffs you place deal 70% more damage. Slightly increases movement speed.
+#+MACRO: tCrowfeather-Hairpin Increases Special damage by 20%. When you place a debuff on an opponent, your Special has a 50% chance of resetting.
+#+MACRO: tRedblack-Ribbon You deal 5% more damage. When you place a debuff on an opponent, your Defensive has a 50% chance of resetting.
+#+MACRO: tOpal-Necklace When you use your Defensive, apply Curse to all enemies.
+#+MACRO: tSleeping-Greatbow Every 6s, fires a slow-moving projectile at your targeted enemy that deals 200 damage.
+#+MACRO: tCrescentmoon-Dagger Every 10s, your Secondary will deal an additional 400 damage on hit.
+#+MACRO: tLullaby-Harp Every 10s, resets Defensive cooldowns for you and all allies.
+#+MACRO: tNightstar-Grimoire Every 25s, deal 900 damage to all enemies.
+#+MACRO: tMoon-Pendant Every 12s, using your Special will deal 400 damage to enemies in a moderate radius around you.
+#+MACRO: tPajama-Hat Defensive and loot cooldowns are shortened by 2s.
+#+MACRO: tStuffed-Rabbit Increases Special damage by 20%. Every 12s, using your Special will grant you invulnerability for 3s. Starts battle on cooldown.
+#+MACRO: tNightingale-Gown Every 15s, Omegacharge your Special.
+#+MACRO: tEternity-Flute Every 12s, grants Haste to all allies.
+#+MACRO: tTimewarp-Wand Your Secondary has a 40% chance of giving you Haste.
+#+MACRO: tChrome-Shield Using your Defensive will grant you Haste.
+#+MACRO: tClockwork-Tome Your Special has a 50% chance of giving you Haste.
+#+MACRO: tMetronome-Boots Your GCDs become 1.1s. Also moderately increases movement speed.
+#+MACRO: tTimemage-Cap Cooldowns less than or equal to 10s become 5s.
+#+MACRO: tStarry-Cloak Your Defensive's cooldown becomes 10s. Slightly increases movement speed.
+#+MACRO: tGemini-Necklace Your Special and Defensive have a 30% chance of instantly resetting when used.
+#+MACRO: tHawkfeather-Fan Reduces your Special's cooldown by 2s.
+#+MACRO: tWindbite-Dagger Your Secondary's GCD becomes 0.5s, but its damage is reduced by 60%.
+#+MACRO: tPidgeon-Bow Every 3s, fires a projectile at your targeted enemy that deals 70 damage.
+#+MACRO: tShinsoku-Katana Your Primary's GCD has a 50% chance to be 0.8s instead of its normal amount.
+#+MACRO: tEaglewing-Charm All your abilities deal 20 more damage. Significantly increases movement speed.
+#+MACRO: tSparrow-Feather Deals 50 damage to all enemies when your Primary or Secondary is used.
+#+MACRO: tWinged-Cap Grants a brief speed boost when your Secondary is used. Moderately increases movement speed.
+#+MACRO: tThiefs-Coat Every 10s, Gain Vanish and gain a brief speed boost when you use your Special. Moderately increases movement speed.
+#+MACRO: tVampiric-Dagger Your Secondary inflicts Bleed.
+#+MACRO: tBloody-Bandage When you use your Defensive, apply Bleed to all enemies.
+#+MACRO: tLeech-Staff Your Primary inflicts Bleed.
+#+MACRO: tBloodhound-Greatsword Every 12s, slices the air around you dealing 380 damage and applying Bleed to nearby enemies.
+#+MACRO: tReaper-Cloak Your Defensive additionally deals 100 damage 3 times to enemies facing away from you. Slightly increases movement speed.
+#+MACRO: tBloodflower-Brooch All abilities deal 40 damage 2 times to the 2 closest enemies facing away from you.
+#+MACRO: tWolf-Hood Every 6 seconds when you use your Primary, deal 250 damage to enemies facing away from you. Moderately increases movement speed.
+#+MACRO: tBlood-Vial At the start of each fight, inflict all enemies with Sap.
+#+MACRO: tBlack-Wakizashi Your Primary has a 30% chance of dealing an additional 3 blows, dealing 50 damage each, in a radius around your target enemy.
+#+MACRO: tThrowing-Dagger Every 5s, fires a projectile at your targeted enemy that deals 120 damage. Cooldown resets every time you use your Special.
+#+MACRO: tAssassins-Knife Your Secondary has a 30% chance of dealing an additional 2 blows, dealing 50 damage each, in a radius around your target enemy.
+#+MACRO: tNinjutsu-Scroll Your Special has a 30% chance of dealing an additional 3 blows, dealing 150 damage each, in a radius around your target enemy.
+#+MACRO: tShadow-Bracelet Abilities and loot that hit more than once deal 30 more damage.
+#+MACRO: tNinja-Robe When a % chance succeeds, erase projectiles around you and Vanish. Slightly increases movement speed.
+#+MACRO: tKunoichi-Hood Your abilities do 15 more damage. Your loot does 50 more damage. Slightly increases movement speed.
+#+MACRO: tShinobi-Tabi Standing still will cause you to Vanish and resets your Special. Available every 8s. Starts battle on cooldown. Slightly increases movement speed.
+#+MACRO: tDragonhead-Spear Your Primary is 40% more powerful, but gains a cooldown of 3s. Also slightly reduces movement speed.
+#+MACRO: tGranite-Greatsword Every 16s, slices a large radius around you dealing 700 damage.
+#+MACRO: tGreysteel-Shield Your Defensive has a 30% larger radius. Invulnerability effects last 1s longer.
+#+MACRO: tStonebreaker-Staff Your Special's cooldown is increased by 2s, but deals 40% more damage.
+#+MACRO: tTough-Gauntlet Your abilities and loot all deal 30% more damage, but all GCDs are 0.2s longer.
+#+MACRO: tRockdragon-Mail Your movement speed is slightly reduced. Every 30 seconds, your Defensive will grant you Dragonskin. Cooldown cannot be reset by ability or loot effects.
+#+MACRO: tObsidian-Hairpin Increases Special damage by 20%. Whenever you gain invulnerability, your Special has a 50% chance of resetting.
+#+MACRO: tIron-Greaves Every 12s, standing still will grant brief invulnerability and reset your Defensive. Movement speed is slightly reduced. Starts battle on cooldown.
+#+MACRO: tVolcano-Spear Your Primary inflicts Burn.
+#+MACRO: tReddragon-Blade Your Secondary inflicts Burn.
+#+MACRO: tFlame-Bow Every 10s, fires a projectile at your targeted enemy that deals 180 damage and applies Burn.
+#+MACRO: tMeteor-Staff Your Special inflicts Burn.
+#+MACRO: tPhoenix-Charm If you perish in battle, restore to full HP instead. Only works once.
+#+MACRO: tFirescale-Corset All of your cooldowns are reduced by 3s. If you use your Defensive, this effect ends until the end of battle.
+#+MACRO: tDemon-Horns All your abilities and loot deal 30% more damage. If you use your Defensive, this effect ends until the end of battle.
+#+MACRO: tFlamewalker-Boots All GCDs are shortened by 0.2 seconds and your movement speed is increased significantly. If you use your Defensive, this effect ends until the end of battle.
+#+MACRO: tDiamond-Shield When a % chance succeeds, place down a small field for 2 seconds that erases projectiles. While standing in the field, allies don't take damage. This effect has a cooldown of 10 seconds, and can't be reset by ability or loot effects.
+#+MACRO: tPeridot-Rapier Increases Secondary damage by 20%. Every 8s, using your Secondary will grant you brief invulnerability and erase projectiles in a large radius around you.
+#+MACRO: tGarnet-Staff Increases Special damage by 20%. Your Special will erase projectiles in a radius around you and grant brief invulnerability.
+#+MACRO: tSapphire-Violin Every 18s, grants Elegy to all allies. Breaks if you take damage 2 times. Starts battle on cooldown.
+#+MACRO: tEmerald-Chestplate The counter on this item will decrease instead of you taking damage. The counter starts at 3 on pickup.
+#+MACRO: tAmethyst-Bracelet Deal 30% more damage. Breaks if you take damage 3 times.
+#+MACRO: tTopaz-Charm Gain 8 extra Gold at the end of each fight. Breaks if you take damage 3 times.
+#+MACRO: tRuby-Circlet Your Special deals 80% more damage. Breaks if you take damage once.
+#+MACRO: tBrightstorm-Spear Has a 30% chance of dealing 100 damage to all enemies when your Primary does damage.
+#+MACRO: tBolt-Staff Deals 150 damage to all enemies when you use your Special.
+#+MACRO: tLightning-Bow Every 12s, fires a projectile at your targeted enemy that deals 300 damage. Cooldown instantly resets when a % chance succeeds.
+#+MACRO: tDarkstorm-Knife Has a 30% chance of dealing 100 damage to all enemies when your Secondary does damage.
+#+MACRO: tDarkcloud-Necklace Damage from loot is increased 50%.
+#+MACRO: tCrown-of-Storms When a % chance succeeds, deal 200 damage to all enemies.
+#+MACRO: tThunderclap-Gloves All abilities have a 20% chance of dealing 200 damage to all enemies when used.
+#+MACRO: tStorm-Petticoat Do 250 damage to all enemies when you gain invulnerability.
+#+MACRO: tHoly-Greatsword Every 10s, grants you Smite and then slices the air around you, dealing 200 damage to nearby enemies.
+#+MACRO: tSacred-Bow Every 10s, fires a projectile at your targeted enemy that deals 250 damage. Cooldown instantly resets when you gain a buff.
+#+MACRO: tPurification-Rod Every 18s, using your Primary will give you Elegy.
+#+MACRO: tOrnamental-Bell Every 15s, grants Smite to all allies.
+#+MACRO: tShrinemaidens-Kosode When you have a buff, your movement speed increases significantly and you deal 25% more damage.
+#+MACRO: tRedwhite-Ribbon You deal 5% more damage. Buffs you place last 50% longer.
+#+MACRO: tDivine-Mirror Every 10 times you use an ability, deal 500 damage to all enemies.
+#+MACRO: tGolden-Chime Every 2 times you use your Defensive, gain Elegy.
+#+MACRO: tBook-of-Cheats Your Special will have random, chaotic effects.
+#+MACRO: tGolden-Katana Your Primary and Secondary have a 5% chance to deal 100 damage 5 times to a large radius around your targeted enemy when used.
+#+MACRO: tGlittering-Trumpet Every 20s, grant Rabbitluck to all allies. Cooldown cannot be reset by ability or loot effects.
+#+MACRO: tRoyal-Staff Your Special deals extra damage based on how much gold you have (1% for every 1 gold).
+#+MACRO: tBallroom-Gown Makes you slightly luckier and slightly increases your movement speed.
+#+MACRO: tSilver-Coin On pickup, gain 30 gold.
+#+MACRO: tQueens-Crown When you have at least 20 gold, become slightly luckier. When you have at least 50 gold, become dramatically luckier.
+#+MACRO: tMimick-Rabbitfoot Makes you significantly luckier. Not a real rabbit's foot.
+#+MACRO: tButterfly-Ocarina On pickup, heal all allies for 1. Heals all allies for 1 HP every 2 fights.
+#+MACRO: tFairy-Spear Your Primary has a 30% larger radius and deals 40% more damage, but stops movement when used.
+#+MACRO: tMoss-Shield Every 12s, using your Defensive will reset its cooldown instantly.
+#+MACRO: tFloral-Bow Every 6s, fires a projectile at your targeted enemy that deals 250 damage. Only activates while standing still.
+#+MACRO: tBlue-Rose Your max HP is increased by 1. Has a 50% chance of healing you for 1 and granting you 100 XP at the end of each fight.
+#+MACRO: tSunflower-Crown Your max HP is increased by 1. You become able to graze slightly into a projectile without taking damage. Slightly increases movement speed.
+#+MACRO: tMidsummer-Dress Your max HP is increased by 1. Ability or loot effects that temporarily slow your movement no longer affect you. Slightly increases movement speed.
+#+MACRO: tGrasswoven-Bracelet Your max HP is increased by 1. All abilities and loot's hitboxes are 30% larger. Slightly increases movement speed.
+#+MACRO: tSnakefang-Dagger Your Secondary applies Poison.
+#+MACRO: tIvy-Staff Your Primary applies Poison.
+#+MACRO: tDeathcap-Tome Your Special applies Poison.
+#+MACRO: tSpiderbite-Bow Every 10s, fires a projectile at your targeted enemy that deals 50 damage and applies Poison.
+#+MACRO: tCompound-Gloves When you deal damage, has a 20% chance to apply Decay.
+#+MACRO: tPoisonfrog-Charm At the start of each fight, inflict all enemies with Poison for 99 seconds.
+#+MACRO: tVenom-Hood Your abilities do 15 more damage. Debuffs you place deal 50 more damage.
+#+MACRO: tChemists-Coat Your Defensive applies Poison to nearby enemies. Slightly increases movement speed.
+#+MACRO: tSeashell-Shield Your Defensive has a random cooldown between 1s and 15s every time you use it.
+#+MACRO: tNecronomicon Every 8s, using your Special will reset its cooldown instantly and gains Charge.
+#+MACRO: tTidal-Greatsword Each cooldown, slices a large radius around you dealing 450 damage. Cooldown is equal to the longest cooldown among your other loot and abilities.
+#+MACRO: tOccult-Dagger Your Secondary is 80% more powerful. 5s of cooldown is added to your Secondary.
+#+MACRO: tMermaid-Scalemail All cooldowns are reduced by 2s. All loot and abilities with cooldowns start battles on a 8s cooldown.
+#+MACRO: tHydrous-Blob Every 8s, using your Secondary will fire an eldritch beast towards your target, dealing 300 damage. Starts battles on cooldown.
+#+MACRO: tAbyss-Artifact Every 30s, using your Defensive will grant you Super. Starts on a 15s cooldown.
+#+MACRO: tLost-Pendant When a % chance succeeds, apply Decay to all enemies for 10 seconds.
+#+MACRO: tSawtooth-Cleaver Increases your Primary's damage by 30%, but decreases its radius by 20%.
+#+MACRO: tRavens-Dagger Increases your Secondary's damage by 50%, but decreases its radius by 40%.
+#+MACRO: tKilling-Note Increases your Special's damage by 30%, but decreases its radius by 20%.
+#+MACRO: tBlacksteel-Buckler Your Defensive's range decreases by 30%, but now has a 2s shorter cooldown and grants Counter.
+#+MACRO: tNightguard-Gloves Whichever ability has the highest base damage value deals 20% more damage.
+#+MACRO: tSnipers-Eyeglasses You deal 30% more damage when you are separated from your target by at least 3 rabbitleaps.
+#+MACRO: tDarkmage-Charm When you've been standing still for 1s, your Special deals 40% more damage.
+#+MACRO: tFirststrike-Bracelet Every 15s, gain Blackstrike when you use your Secondary.
+#+MACRO: tObsidian-Rod Your Special's strength becomes the total cooldown time of all your abilities and loot, in seconds, multiplied by 10, divided by the times it hits your target (Maximum of 1000 total).
+#+MACRO: tDarkglass-Spear Your Primary's strength becomes your Special's cooldown, multiplied by 30, minus your Secondary's strength, divided by the times your Primary hits your target (Maximum of 500 total).
+#+MACRO: tTimespace-Dagger Your Secondary's strength becomes your Special and Defensive's cooldown added together, multiplied by 10, divided by the times your Secondary hits your target. (Maximum of 500 total).
+#+MACRO: tQuartz-Shield Your Defensive's cooldown becomes 2 seconds longer. All other cooldowns become 2 seconds shorter.
+#+MACRO: tPocketwatch Abilities with a GCD less than or equal to 1.1s deal 30% more damage.
+#+MACRO: tNova-Crown Your Special's cooldown becomes 30s. Every 8s, this loot item resets your Special and Charge it.
+#+MACRO: tBlackhole-Charm Deal 200 damage to all enemies when you use an ability or loot item with a cooldown of 10s or more. Hits one extra time for every 10s longer the cooldown is than that, up to 5 times.
+#+MACRO: tTwinstar-Earrings Your Primary and Secondary now have a 2s GCD, and deal 70% more damage.
+#+MACRO: tKyou-No-Omikuji All damage you deal increases by 20%. % chance triggers no longer happen.
+#+MACRO: tYoukai-Bracelet All abilities, loot, and damaging debuffs deal 40 more damage. If a % chance succeeds, this effect ends until the end of battle.
+#+MACRO: tOni-Staff Your Special deals 30% more damage. When a % chance succeeds, your Special goes on an 8s cooldown.
+#+MACRO: tKappa-Shield Your Defensive has a 3s shorter cooldown, but can no longer be reset by ability or loot effects.
+#+MACRO: tUsagi-Kamen When a % chance succeeds, gain a random buff for 5s.
+#+MACRO: tRed-Tanzaku Miracles occasionally happen.
+#+MACRO: tVega-Spear Your Primary deals 70% more damage, but gains a 7s cooldown. When a % chance succeeds, its cooldown resets.
+#+MACRO: tAltair-Dagger Whenever you use your Secondary, has a 70% chance to additionally slice to your left and right, dealing 80 damage. Damage and radius increase by 30% for every time in a row this effect succeeds, up to 9 times.
+#+MACRO: tGhost-Spear Your Primary now only deals 10 damage, and applies Ghostflame.
+#+MACRO: tPhantom-Dagger Your Secondary now only deals 10 damage, and applies Ghostflame.
+#+MACRO: tCursed-Candlestaff Your Special now only deals 10 damage, and applies Ghostflame.
+#+MACRO: tHaunted-Gloves Abilities and loot that hit for 100 damage or less now hit for 100 damage, regardless of other loot effects.
+#+MACRO: tOld-Bonnet Abilities and loot that hit once now deal 250 damage, regardless of other loot effects or ability effects.
+#+MACRO: tMaid-Outfit Afflicts surrounding enemies with Ghostflame when you gain invulnerability. Slightly increases movement speed.
+#+MACRO: tCalling-Bell Every 12s, afflicts surrounding enemies with Ghostflame.
+#+MACRO: tSmoke-Shield Every 15s, your Defensive now grants Ghost. Your Secondary no longer breaks Vanish or Ghost. Starts battle on a 5 second cooldown.
+#+MACRO: tGrandmaster-Spear Your Primary's damage increases by 40%. Your Special's cooldown increases by 4s.
+#+MACRO: tTeacher-Knife Your Secondary's damage increases by 40%. 2s of cooldown is added to your Primary.
+#+MACRO: tTactician-Rod Your Special's damage increases by 30%. 2s of cooldown is added to your Secondary.
+#+MACRO: tSpiked-Shield When an ability or loot effect erases projectiles in a radius around you, deal 300 damage to that radius as well.
+#+MACRO: tBattlemaiden-Armor Using your Defensive will reset loot and ability cooldowns with less than 8s left on their timer.
+#+MACRO: tGladiator-Helmet Abilities and loot that have cooldowns deal 20% more damage.
+#+MACRO: tLancer-Gauntlets All damage is increased by 30%. Your Primary and Secondary gain cooldowns of 2s.
+#+MACRO: tLion-Charm Deal 180 damage to nearby enemies when an ability or loot with a cooldown is activated.
+#+MACRO: tBluebolt-Staff Your Primary applies Spark.
+#+MACRO: tLapis-Sword Your Secondary applies Spark.
+#+MACRO: tShockwave-Tome Your Special applies Spark.
+#+MACRO: tBattery-Shield Every 30 times you or debuffs you apply deal damage to an enemy, your Defensive's cooldown resets.
+#+MACRO: tRaiju-Crown Every 20 times you or debuffs you apply deal damage to an enemy, apply Spark. to all enemies.
+#+MACRO: tStaticshock-Earrings Every 10 times you or debuffs you apply deal damage to an enemy, deal 200 damage to all enemies.
+#+MACRO: tStormdance-Gown Every 40 times you or debuffs you apply deal damage to an enemy, gain invulnerability for 5s.
+#+MACRO: tBlackbolt-Ribbon Every 50 times you or debuffs you apply deal damage to an enemy, deal 1200 damage to all enemies.
+#+MACRO: tCrane-Katana Gain Flow-Str every time you move 15 rabbitleaps.
+#+MACRO: tFalconfeather-Dagger Gain Flow-Dex every time you move 15 rabbitleaps.
+#+MACRO: tTornado-Staff Gain Flow-Int every time you move 15 rabbitleaps.
+#+MACRO: tCloud-Guard Gain invulnerability for 1 second every time you move 10 rabbitleaps.
+#+MACRO: tHermes-Bow Every 10s, fires a projectile at your targeted enemy that deals 250 damage. Cooldown resets every time you move 10 rabbitleaps.
+#+MACRO: tTalon-Charm Deals 150 damage to all enemies every time you move 5 rabbitleaps.
+#+MACRO: tTiny-Wings Dramatically increases movement speed.
+#+MACRO: tFeathered-Overcoat Start each battle with Feathercoat.
+#+MACRO: tSandpriestess-Spear Your Primary has a 40% chance to grant you Flash-Dex.
+#+MACRO: tFlamedancer-Dagger Your Secondary has a 40% chance to grant you Flash-Str.
+#+MACRO: tWhiteflame-Staff Every 2 times you use your Special, gain Flash-Str.
+#+MACRO: tSacred-Shield Every 2 times you use your Defensive, gain Flash-Int.
+#+MACRO: tMarble-Clasp Every 5 times you use an ability, gain Flash-Dex.
+#+MACRO: tSun-Pendant Every 10 times you use an ability, reset your Special's cooldown and gain Flash-Int.
+#+MACRO: tTiny-Hourglass Every 12s, deal 120 damage to all enemies. Damage increase by 120 each time it activates. This loot cannot hit for critical damage.
+#+MACRO: tDesert-Earrings Every time you gain a buff, gain another random buff for 5s.
+#+MACRO: tGiant-Stone-Club Your Primary deals 70% more damage. Its GCD is increased by 0.6s. Your movement speed is also moderately reduced.
+#+MACRO: tRuins-Sword Your Secondary deals 100% more damage. Its GCD is increased by 0.8s. Your movement speed is also slightly reduced.
+#+MACRO: tMountain-Staff Your Special deals 200% more damage. Its GCD is increased by 2.5s. Your movement speed is also moderately reduced.
+#+MACRO: tBoulder-Shield Every 30s, using your Defensive will grant all allies Stoneskin. Starts battle off cooldown. Reduces your movement speed slightly.
+#+MACRO: tGolems-Claymore Every 20s, grants you Stoneskin and then slices the air around you, dealing 500 damage to nearby enemies. Also slows your movement speed slightly.
+#+MACRO: tStoneplate-Armor Start each battle with Graniteskin.
+#+MACRO: tSacredstone-Charm Abilities with a GCD equal to or higher than 1.5s deal 50% more damage.
+#+MACRO: tClay-Rabbit Every 16 seconds, standing still will grant you Tranquility.
+#+MACRO: tWaterfall-Polearm Every 10s, when you use your Primary, gain Flow-Str
+#+MACRO: tVorpal-Dao Every 10s, when you use your Secondary, gain Flow-Dex.
+#+MACRO: tJade-Staff Every 16 seconds, when you use your Special, gain Tranquility.
+#+MACRO: tReflection-Shield When you erase projectiles in a radius around you, gain Counter
+#+MACRO: tButterfly-Hairpin When you gain invincibility, gain a random buff for 5s.
+#+MACRO: tWatermage-Pendant Every 12s, when you stand still, gain Flow-Int.
+#+MACRO: tRaindrop-Earrings Every 18s, when you stand still, gain Repeat.
+#+MACRO: tAquamarine-Bracelet Every 12s, gain a random buff for 10s.
+#+MACRO: tGlacier-Spear Your Primary applies Freeze.
+#+MACRO: tFrost-Dagger Your Secondary applies Freeze.
+#+MACRO: tFrozen-Staff Your Special applies Freeze.
+#+MACRO: tColdsteel-Shield When you use your Defensive, deal 70 damage 3 times in a radius around you, applying Freeze.
+#+MACRO: tPolar-Coat Slightly increases movement speed. When you gain invincibility, apply Deepfreeze to all enemies.
+#+MACRO: tIcicle-Earrings When a % chance succeeds, apply Deepfreeze to all enemies.
+#+MACRO: tWinter-Hat Abilities with a GCD less than or equal to 1.10 seconds apply Freeze on hit.
+#+MACRO: tSnow-Boots Slightly increases movement speed. When you stand still for 1 second, apply Freeze to all enemies once per second.
+#+MACRO: tSpear-of-Remorse Every 7 seconds, using any attack will grant you Flash-Str. Cooldown is set to 20 seconds when you use your Defensive. Starts fights on cooldown.
+#+MACRO: tMemory-Greatsword Deals 280 damage in a radius around you every 30 seconds. Cooldown is set to 6 seconds when you use your Secondary. Starts fights on cooldown.
+#+MACRO: tStaff-of-Sorrow Every 30, using any attack will reset your Special and grant you Flash-Int. Cooldown is set to 7 seconds when you use your Primary. Starts fights on cooldown.
+#+MACRO: tShield-of-Smiles Grants yourself and nearby allies a random buff for 8 seconds every 30 seconds. Cooldown is set to 5 seconds when you use your Defensive. Starts fights on cooldown.
+#+MACRO: tLonesome-Pendant All cooldowns equal to or over 15 seconds are reduced to 12 seconds.
+#+MACRO: tSpark-of-Determination Every time you use an ability, has a 15% chance to reset the cooldown with the most time remaining.
+#+MACRO: tCrown-of-Love Whenever you activate the longest cooldown among your abilities and loot, deal 400 damage in a large radius around you.
+#+MACRO: tComforting-Coat When you use your Defensive, deals 80 damage in a radius around you once for every ability or loot that has a cooldown.
+#+MACRO: tRighthand-Cast Deal 40% more damage. Your Primary becomes permanently unusable.
+#+MACRO: tLefthand-Cast Deal 40% more damage. Your Secondary becomes permanently unusable.
+#+MACRO: tHexed-Blindfold All GCDs are reduced by 0.40 seconds. Your Special becomes permanently unusable.
+#+MACRO: tAngels-Halo Deal 40% more damage. Your Defensive becomes permanently unusable.
+#+MACRO: tUnsacred-Pendant Deal 20% more damage. When you use an ability, that ability is disabled until you use another ability.
+#+MACRO: tWhitewing-Bracelet The first attack you use each fight will deal 40 more damage (per hit) for the rest of the fight.
+#+MACRO: tDarkcrystal-Rose Your max HP is increased by 1. If you win a fight without using your Defensive, heals you for 1 and grants you 100 XP.
+#+MACRO: tDark-Wings All of your cooldowns are reduced by 2 seconds and movement speed is dramatically increased. If you use the same ability twice in a row, this effect ends until the end of battle.
+#+MACRO: tGiant-Paintbrush Your Primary applies Paint.
+#+MACRO: tSewing-Sword Your Secondary applies Paint.
+#+MACRO: tSketchbook Your Special applies Paint.
+#+MACRO: tPalette-Shield Deals 100 damage and applies Paint to all enemies when you use your Defensive.
+#+MACRO: tHandmade-Charm Every 8 seconds, deal 70 damage and apply a random debuff to all enemies for 5 seconds.
+#+MACRO: tPainters-Beret Deal 5% more damage. When a debuff you applied wears off, deal 120 damage in an explosion around that enemy.
+#+MACRO: tArtist-Smock Moderately increases movement speed. When a debuff you applied wears off, has a 50% chance to deal 120 damage and apply a copy of that debuff.
+#+MACRO: tColorful-Earrings When a % chance succeeds, deal 50 damage and apply a random debuff to all enemies for 5 seconds.
+#+MACRO: tDaylight-Sword Every 18 seconds, deals 300 damage to a radius around you. Cooldown is reduced by 3 seconds when you use your Primary. Transforms into the Nightgleam Sword after it activates. Starts fights on cooldown.
+#+MACRO: tNightgleam-Sword Every 18 seconds, deals 100 damage 3 times to a radius around you. Cooldown is reduced by 3 seconds when you use your Secondary. Transforms into the Daylight Sword after it activates. Starts fights on cooldown.
+#+MACRO: tSpear-of-Winds When you use your Primary, reduce the cooldown of your Special by 2 seconds. Transforms into the Spear of Rains after you've used 5 abilities.
+#+MACRO: tSpear-of-Rains Deals 150 damage to all enemies when you use your Special. Transforms into the Spear of Winds after you've used 5 abilities.
+#+MACRO: tHeavens-Codex Your Special deals 20% more damage and instantly resets upon use. Transforms into the Hell's Codex after you've used 3 abilities.
+#+MACRO: tHells-Codex Disables your Special. Your abilities deal 30 more damage. Transforms into the Heaven's Codex after you've used 8 abilities.
+#+MACRO: tRobe-of-Light You become significantly luckier. Transforms into the Robe of Dark when you use your Defensive.
+#+MACRO: tRobe-of-Dark All GCDs are reduced by 0.2 seconds. % chance triggers no longer happen. Transforms into the Robe of Light when you use your Defensive.
+#+MACRO: tHooked-Staff When you have a buff, your Special will always hit for critical damage.
+#+MACRO: tSpringloaded-Scythe Whenever you use any ability other than your Primary, your next Primary will always hit for critical damage.
+#+MACRO: tHidden-Blade Whenever you use any ability other than your Secondary, your next Secondary will always hit for critical damage.
+#+MACRO: tSharpedged-Shield Critical hits deal 20% more damage. When you use your Defensive, deal 40 damage 3 times to a large radius around you. This attack will always deal critical damage.
+#+MACRO: tPointed-Ring Critical hits deal 100% more damage.
+#+MACRO: tCrown-of-Swords Every 6 times abilities or loot items other than this one deal critical damage, deal 250 damage to all enemies.
+#+MACRO: tBladed-Cloak Critical hits deal 30% more damage. Moderately increases movement speed.
+#+MACRO: tGreatsword-Pendant Critical hits deal 20% more damage. Loot will always deal critical damage.
+#+MACRO: tRusted-Greatsword Every 12 seconds, deal 150 damage to a radius around you and grant self and nearby allies Wavestrike.
+#+MACRO: tSand-Shovel Every 6 seconds, your Secondary grants Flash-Chr to nearby allies.
+#+MACRO: tSaltwater-Staff Your Special grants Flash-Chr to nearby allies.
+#+MACRO: tLarge-Umbrella Every 14 seconds, your Defensive grants Wavestrike to nearby allies, and its radius is significantly increased.
+#+MACRO: tOnepiece-Swimsuit When a % chance succeeds, grants Flash-Chr to nearby allies. Moderately increases movement speed.
+#+MACRO: tStraw-Hat Become dramatically luckier when you have at least one buff.
+#+MACRO: tLarge-Anchor Every 7 seconds, using your Primary grants you Wavestrike. Moderately reduces movement speed.
+#+MACRO: tBeach-Sandals Moderately increases movement speed. Every time you move 8 rabbitleaps, grant Flash-Chr to nearby allies.
+#+MACRO: tStrongmans-Bar Whenever you use your Primary directly after your Secondary, deal 200 damage in a radius around you.
+#+MACRO: tSpinning-Chakram Every 3 times you use an ability, deal 80 damage twice to your left and right.
+#+MACRO: tRibboned-Staff Whenever you use your Special directly after your Secondary, deal 350 damage in a large radius around you.
+#+MACRO: tTrick-Shield Whenever you use your Defensive directly after your Secondary, deal 350 damage in a large radius around you.
+#+MACRO: tRosered-Leotard Gain Quickdraw when you use your Defensive.
+#+MACRO: tJesters-Hat When you use an ability that doesn't deal damage, deal 200 damage in a radius around you.
+#+MACRO: tRainbow-Cape Gives you a copy of the loot item you picked up last.
+#+MACRO: tPerformers-Shoes Significantly increases movement speed. Every 10 times you use an ability, gain Quickdraw.
+#+MACRO: tIron-Pickaxe When your Primary deals damage, it has a 20% chance to deal 300 damage in an explosion at the point of impact. This effect has a 5 second cooldown.
+#+MACRO: tDynamite-Staff Every 15 seconds, using your Special additionally throws a bomb a fixed distance in front of you, dealing 700 damage. Starts fights on cooldown.
+#+MACRO: tFossil-Dagger Every 4 seconds, using your Secondary additionally slices to your left and right, dealing 150 damage.
+#+MACRO: tDrill-Shield Every 10 seconds, using your Defensive additionally fires a projectile that explodes upon impact, dealing 400 damage to a large area. Starts fights on cooldown.
+#+MACRO: tCanary-Charm Increases your damage by 5%. Every 15 seconds, increases damage by an additional 5%, to a maximum of 50%.
+#+MACRO: tPyrite-Earrings Increases your damage by 5%, and by an additional 10% for every piece of loot that deals damage (including those that apply damaging status effects).
+#+MACRO: tCavers-Cloak When you gain invulnerability, reduce all cooldowns by 2 seconds.
+#+MACRO: tMiners-Headlamp Every 6 seconds, reduce all other cooldowns by 2 seconds. Starts fights on cooldown.
+#+MACRO: tTiny-Fork While active, your Primary deals 120% more damage. Starts fights inactive, and switches between active and inactive every 6 seconds.
+#+MACRO: tStirring-Spoon While active, your Secondary deals 120% more damage. Starts fights active, and switches between active and inactive every 6 seconds.
+#+MACRO: tFanciful-Book Your Special deals 20% more damage. For every loot that is "spent" (greyed out with no effect), your Special deals 40% more damage.
+#+MACRO: tApple-Plate Reduces your Defensive's cooldown by 2 seconds. For every loot that is "spent" (greyed out with no effect), ALL cooldowns are reduced by 1 second.
+#+MACRO: tVanilla-Wafers Heals you for 1 and gives you 5 gold when you pick this item, then again at the end of the next 5 fights.
+#+MACRO: tCaramel-Tea Grants Elegy for 45 seconds at the beginning of each fight. Works for 6 fights.
+#+MACRO: tStrawberry-Cake Heals you for 1, and starts with 2 charges on pickup. When you take damage, 1 charge will be expended to heal you. All damage is increased by 10% for each charge still remaining.
+#+MACRO: tSweet-Taffy For the next 6 fights, heal for 1 and deal 2500 damage to all enemies at the beginning of the fight. This loot cannot hit for critical damage.
