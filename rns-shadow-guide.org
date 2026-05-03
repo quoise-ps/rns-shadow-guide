@@ -32,7 +32,7 @@
 #+MACRO: Shackle [[./img/other/Shackles.png]]
 #+MACRO: Shackles {{{i1}}}{{{tShackles}}}{{{i2}}}{{{Shackle}}} {{{span_dot}}}Shackles{{{span_end}}}{{{i3}}}
 #+MACRO: gamever v2.0.2.7
-#+MACRO: guidever v0.2.1
+#+MACRO: guidever v0.3.0
 #+MACRO: WIP @@html:<span style="color:red;">@@WIP@@html:</span>@@
 :END:
 :MACROS_ABBREVIATIONS:
