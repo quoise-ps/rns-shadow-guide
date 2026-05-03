@@ -32,7 +32,7 @@
 #+MACRO: Shackle [[./img/other/Shackles.png]]
 #+MACRO: Shackles {{{i1}}}{{{tShackles}}}{{{i2}}}{{{Shackle}}} {{{span_dot}}}Shackles{{{span_end}}}{{{i3}}}
 #+MACRO: gamever v2.0.2.7
-#+MACRO: guidever v0.3.0
+#+MACRO: guidever v0.3.1
 #+MACRO: WIP @@html:<span style="color:red;">@@WIP@@html:</span>@@
 :END:
 :MACROS_ABBREVIATIONS:
@@ -119,11 +119,15 @@ Pending playstyle writeups and example builds, plus feedback from other players.
 @@html:</b></u>@@
 #+end_center
 
-Rabbit & Steel Shadow Class guide written primarily for {{{gamever}}}. 
+Post class-rework Shadow Class guide written primarily for {{{gamever}}} of Rabbit & Steel.
 
-At the time of starting this guide, the 23 multiplayer (MP) Lunar wins and 37
-Hard wins on Shadow. Primarily, the recommendations here are targetted as a
-carry at 4P Lunar and high WR consistency and with tactless author bias.
+Primarily, the recommendations here are targetted as a carry at 4P Lunar
+and high WR consistency and with tactless author bias.
+
+#+begin_quote
+- Author typically mains Dancer
+- On Shadow, 23 MP Lunar wins and 37 Hard wins
+#+end_quote
 
 This guide could not be made possible without the help of other players in mino_dev Discord.
 
@@ -158,6 +162,7 @@ For community jargon:
 - v0.2.0 (2026-04-21) :: applied feedback changes to rotation, gems, items. Added Shadow section and todos.
   - v0.2.1 (2026-04-21) :: fixed versioning and added dating
 - v0.3.0 (2026-05-02) :: added rotations, class summary, tooltips, other notes; moved gems again.
+  - v0.3.1 (2026-05-02) :: fixed some grammar 
 
 * REVIEW Class Summary
 Shadow is a mobile close-quarters bunny with a potent versatility; she excels when playing flexibly, due to {{{Shackles}}}.
@@ -175,7 +180,7 @@ Shadow is best characterized by having:
 #+caption: Class Advantages Table
 | Pros                                           | Cons                                        |
 |------------------------------------------------+---------------------------------------------|
-| Unique, gacha-like                             | Defensive has GCD                           |
+| Unique, gacha-like effects                     | Defensive has GCD                           |
 | Versatile and variety between runs             | Attacks have {{{Shackles}}}                       |
 | Secondary invinciblity                         | Punishes for leaping or wrong targeting     |
 | Most gems are damage-viable and reqs           | Non-default rotations                       |
@@ -321,7 +326,7 @@ Hitting multiple {{{E2}}} (33%) is similar to not hitting Special Reset on Dance
 ** REVIEW Special
 #+MACRO: N3i Debuff apply; {{{i(Hawkfeather-Fan)}}} {{{i(Spear-of-Winds)}}} {{{i(Bolt-Staff)}}}
 #+MACRO: O3i1 {{{i(Miners-Headlamp)}}} {{{i(Darkglass-Spear)}}} {{{i(Timespace-Dagger)}}}
-#+MACRO: O3i2 {{{o3i1}}} {{{i(Raindrop-Earrings)}}}
+#+MACRO: O3i2 {{{o effects3i1}}} {{{i(Raindrop-Earrings)}}}
 #+MACRO: O3i {{{o3i2}}} {{{i(Sun-Pendant)}}} {{{i(Heavens-Codex)}}} {{{i(Staff-of-Sorrow)}}}
 #+MACRO: S3i N3 items; {{{i(Hawkfeather-Fan)}}} {{{i(Mountain-Staff)}}} {{{i(Obsidian-Rod)}}} {{{i(Garnet-Staff)}}}  {{{i(Lion-Charm)}}} {{{i(Obsidian-Hairpin)}}}
 #+MACRO: R3i N3 Items; {{{i(Hawkfeather-Fan)}}} {{{i(Obsidian-Rod)}}} {{{i(Garnet-Staff)}}}
