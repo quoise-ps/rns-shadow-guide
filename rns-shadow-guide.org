@@ -1,5 +1,5 @@
 #+title: Something about Shadow
-#+subtitle: ({{{WIP}}}; {{{guidever}}})
+#+subtitle: ({{{guidever}}})
 #+description: Unofficial Shadow Class guide for the Rabbit & Steel game.
 #+author: Quoise
 #+date: {{{modification-time(%Y-%m-%d)}}}
@@ -15,7 +15,10 @@
 #+LATEX_HEADER: \usepackage[colorlinks=true,urlcolor=pink,linkcolor=blue]{hyperref}
 #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="https://gongzhitaao.org/orgcss/org.css"/>
 #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="./styles/hint.base.css">
-#+INFOJS_OPT: view:info toc:non-nil sdepth:1
+#+HTML_HEAD_EXTRA: <style> p {line-height: 1.8em;} </style>
+#+HTML_HEAD_EXTRA: <style> html {background-color: #e7e7e7;} </style>
+#+HTML_HEAD_EXTRA: <style> body {max-width: 80em; margin: 0 auto 2em; padding: .5em 1.5em 1.5em 1.5em; border: .1em solid #c0c0c0;} </style>
+#+INFOJS_OPT: view:info sdepth:1 tdepth:1
 :END:
 :TODOs:
 #+TODO: TODO(t) DRAFT(D) | REVIEW(r)
@@ -32,7 +35,7 @@
 #+MACRO: Shackle [[./img/other/Shackles.png]]
 #+MACRO: Shackles {{{i1}}}{{{tShackles}}}{{{i2}}}{{{Shackle}}} {{{span_dot}}}Shackles{{{span_end}}}{{{i3}}}
 #+MACRO: gamever v2.0.2.7
-#+MACRO: guidever v0.3.1
+#+MACRO: guidever v0.3.2
 #+MACRO: WIP @@html:<span style="color:red;">@@WIP@@html:</span>@@
 :END:
 :MACROS_ABBREVIATIONS:
@@ -85,37 +88,44 @@
 #+MACRO: E2s {{{i1}}}{{{tE2}}}{{{i2}}}{{{gemss(E2)}}}{{{i3}}}
 #+MACRO: E3s {{{i1}}}{{{tE3}}}{{{i2}}}{{{gemss(E3)}}}{{{i3}}}
 #+MACRO: E4s {{{i1}}}{{{tE4}}}{{{i2}}}{{{gemss(E4)}}}{{{i3}}}
-#+MACRO: O1g {{{i1}}}{{{tO1}}}{{{i2}}}{{{gem(O1)}}}{{{i3}}}
-#+MACRO: O2g {{{i1}}}{{{tO2}}}{{{i2}}}{{{gem(O2)}}}{{{i3}}}
-#+MACRO: O3g {{{i1}}}{{{tO3}}}{{{i2}}}{{{gem(O3)}}}{{{i3}}}
-#+MACRO: O4g {{{i1}}}{{{tO4}}}{{{i2}}}{{{gem(O4)}}}{{{i3}}}
-#+MACRO: S1g {{{i1}}}{{{tS1}}}{{{i2}}}{{{gem(S1)}}}{{{i3}}}
-#+MACRO: S2g {{{i1}}}{{{tS2}}}{{{i2}}}{{{gem(S2)}}}{{{i3}}}
-#+MACRO: S3g {{{i1}}}{{{tS3}}}{{{i2}}}{{{gem(S3)}}}{{{i3}}}
-#+MACRO: S4g {{{i1}}}{{{tS4}}}{{{i2}}}{{{gem(S4)}}}{{{i3}}}
-#+MACRO: R1g {{{i1}}}{{{tR1}}}{{{i2}}}{{{gem(R1)}}}{{{i3}}}
-#+MACRO: R2g {{{i1}}}{{{tR2}}}{{{i2}}}{{{gem(R2)}}}{{{i3}}}
-#+MACRO: R3g {{{i1}}}{{{tR3}}}{{{i2}}}{{{gem(R3)}}}{{{i3}}}
-#+MACRO: R4g {{{i1}}}{{{tR4}}}{{{i2}}}{{{gem(R4)}}}{{{i3}}}
-#+MACRO: G1g {{{i1}}}{{{tG1}}}{{{i2}}}{{{gem(G1)}}}{{{i3}}}
-#+MACRO: G2g {{{i1}}}{{{tG2}}}{{{i2}}}{{{gem(G2)}}}{{{i3}}}
-#+MACRO: G3g {{{i1}}}{{{tG3}}}{{{i2}}}{{{gem(G3)}}}{{{i3}}}
-#+MACRO: G4g {{{i1}}}{{{tG4}}}{{{i2}}}{{{gem(G4)}}}{{{i3}}}
-#+MACRO: E1g {{{i1}}}{{{tE1}}}{{{i2}}}{{{gem(E1)}}}{{{i3}}}
-#+MACRO: E2g {{{i1}}}{{{tE2}}}{{{i2}}}{{{gem(E2)}}}{{{i3}}}
-#+MACRO: E3g {{{i1}}}{{{tE3}}}{{{i2}}}{{{gem(E3)}}}{{{i3}}}
-#+MACRO: E4g {{{i1}}}{{{tE4}}}{{{i2}}}{{{gem(E4)}}}{{{i3}}}
+#+MACRO: O1g {{{i1}}}(O1) {{{tO1}}}{{{i2}}}{{{gem(O1)}}}{{{i3}}}
+#+MACRO: O2g {{{i1}}}(O2) {{{tO2}}}{{{i2}}}{{{gem(O2)}}}{{{i3}}}
+#+MACRO: O3g {{{i1}}}(O3) {{{tO3}}}{{{i2}}}{{{gem(O3)}}}{{{i3}}}
+#+MACRO: O4g {{{i1}}}(O4) {{{tO4}}}{{{i2}}}{{{gem(O4)}}}{{{i3}}}
+#+MACRO: S1g {{{i1}}}(S1) {{{tS1}}}{{{i2}}}{{{gem(S1)}}}{{{i3}}}
+#+MACRO: S2g {{{i1}}}(S2) {{{tS2}}}{{{i2}}}{{{gem(S2)}}}{{{i3}}}
+#+MACRO: S3g {{{i1}}}(S3) {{{tS3}}}{{{i2}}}{{{gem(S3)}}}{{{i3}}}
+#+MACRO: S4g {{{i1}}}(S4) {{{tS4}}}{{{i2}}}{{{gem(S4)}}}{{{i3}}}
+#+MACRO: R1g {{{i1}}}(R1) {{{tR1}}}{{{i2}}}{{{gem(R1)}}}{{{i3}}}
+#+MACRO: R2g {{{i1}}}(R2) {{{tR2}}}{{{i2}}}{{{gem(R2)}}}{{{i3}}}
+#+MACRO: R3g {{{i1}}}(R3) {{{tR3}}}{{{i2}}}{{{gem(R3)}}}{{{i3}}}
+#+MACRO: R4g {{{i1}}}(R4) {{{tR4}}}{{{i2}}}{{{gem(R4)}}}{{{i3}}}
+#+MACRO: G1g {{{i1}}}(G1) {{{tG1}}}{{{i2}}}{{{gem(G1)}}}{{{i3}}}
+#+MACRO: G2g {{{i1}}}(G2) {{{tG2}}}{{{i2}}}{{{gem(G2)}}}{{{i3}}}
+#+MACRO: G3g {{{i1}}}(G3) {{{tG3}}}{{{i2}}}{{{gem(G3)}}}{{{i3}}}
+#+MACRO: G4g {{{i1}}}(G4) {{{tG4}}}{{{i2}}}{{{gem(G4)}}}{{{i3}}}
+#+MACRO: E1g {{{i1}}}(E1) {{{tE1}}}{{{i2}}}{{{gem(E1)}}}{{{i3}}}
+#+MACRO: E2g {{{i1}}}(E2) {{{tE2}}}{{{i2}}}{{{gem(E2)}}}{{{i3}}}
+#+MACRO: E3g {{{i1}}}(E3) {{{tE3}}}{{{i2}}}{{{gem(E3)}}}{{{i3}}}
+#+MACRO: E4g {{{i1}}}(E4) {{{tE4}}}{{{i2}}}{{{gem(E4)}}}{{{i3}}}
 :END:
 
 * RENEW Intro
+:PROPERTIES:
+:CUSTOM_ID: h:intro
+:END:
+
 #+begin_center
 @@html:<b><u>@@
-This guide is
-@@html:<span style="color:red;">@@
-not finished.
+This guide is in
+@@html:<span style="color:green;">@@
+review phase.
 @@html:</span>@@
+@@html:</b></u>@@
 
-Pending playstyle writeups and example builds, plus feedback from other players.
+@@html:<b><u>@@
+Please feel free to send any feedback or corrections in ~mino_dev~ Discord.
+Additions would be welcome.
 @@html:</b></u>@@
 #+end_center
 
@@ -125,8 +135,8 @@ Primarily, the recommendations here are targetted as a carry at 4P Lunar
 and high WR consistency and with tactless author bias.
 
 #+begin_quote
-- Author typically mains Dancer
-- On Shadow, 23 MP Lunar wins and 37 Hard wins
+[Author] I come from maining Dancer after 200 MP Lunar games.
+On Shadow, currently, have 23 MP Lunar wins and 37 Hard wins.
 #+end_quote
 
 This guide could not be made possible without the help of other players in mino_dev Discord.
@@ -135,6 +145,10 @@ Special thanks to Obi Rod, Ins'Ania and Kero for early help.
 # check to see if said players are okay with being mentioned in guide.
 
 ** DONE Related Resources
+:PROPERTIES:
+:CUSTOM_ID: h:related_resources
+:END:
+
 Details of Shadow's kit can be found in:
 - [[https://rns.miraheze.org/wiki/Shadow][Shadow | Rabbit & Steel Wiki (rns.miraheze.org)]]
   
@@ -147,6 +161,10 @@ For community jargon:
 # attributions and claims to not own used images of R&S Loot + Gems
 
 ** DONE Sample Definitions
+:PROPERTIES:
+:CUSTOM_ID: h:sample_definitions
+:END:
+
 - {{{N1}}}, {{{O1}}}, {{{S1}}}, {{{R1}}}, {{{E1}}}, {{{G1}}} :: _Normal_ and _gem_ variants of Primary.
 - {{{R1}}}, {{{R2}}}, {{{R3}}}, {{{R4}}} :: _Ruby_ variants of each respectively: Primary, Secondary, Special and Defensive.
 - $2' \ggg 3 > 1 > 4 > 2$ :: move priority for {{{R2}}}
@@ -158,13 +176,23 @@ For community jargon:
 - prio :: priority; typically what item/gems should be picked and by whom
 
 ** RENEW Changelog (Releases)
+:PROPERTIES:
+:CUSTOM_ID: h:changelog
+:END:
+
 - v0.1.x (2026-04-18) :: release with ability synergies, gem tier list and ability tier list
 - v0.2.0 (2026-04-21) :: applied feedback changes to rotation, gems, items. Added Shadow section and todos.
   - v0.2.1 (2026-04-21) :: fixed versioning and added dating
 - v0.3.0 (2026-05-02) :: added rotations, class summary, tooltips, other notes; moved gems again.
   - v0.3.1 (2026-05-02) :: fixed some grammar 
+  - v0.3.2 (2026-05-14) :: corrected bad macro in item table, modified CSS,
+    added abbreviations in gem tier list, headers are "fixed"
 
 * REVIEW Class Summary
+:PROPERTIES:
+:CUSTOM_ID: h:class_summary
+:END:
+
 Shadow is a mobile close-quarters bunny with a potent versatility; she excels when playing flexibly, due to {{{Shackles}}}.
 Many of her effects are unique or inspired from other classes and effects.
 
@@ -189,6 +217,10 @@ Shadow is best characterized by having:
 |                                                | [MP] Contests many of Sin's items           |
 
 ** REVIEW Shackles
+:PROPERTIES:
+:CUSTOM_ID: h:shackles
+:END:
+
 Shadow's {{{Shackles}}} locks up one of her attacks[fn:attacks:Attacks include {{{pri}}}, {{{sec}}}, {{{spe}}}.] from use on any ability usage.
 This is independent of any Magicklock trinket effects, cooldowns or item effects (e.g. {{{Lefthand-Cast}}}.)
 
@@ -199,6 +231,10 @@ attacks down.
 #+end_quote
 
 ** REVIEW Inspirations from other Classes and Loot
+:PROPERTIES:
+:CUSTOM_ID: h:inspirations
+:END:
+
 Shadow gains some distinct effects that appear in other classes, namely:
 - {{{S2}}}'s range and charge effect like Dancer's Secondary
 - {{{G3}}} granting the Shadowcry buff, similar to Dancer's def
@@ -209,11 +245,19 @@ Shadow gains some distinct effects that appear in other classes, namely:
 # - {{{S1}}}, {{{G1}}} and {{{R4}}} automatic abilities (do not trigger items that require /use/, i.e. {{{Black-Wakizashi}}})
 
 ** REVIEW Gacha ability
+:PROPERTIES:
+:CUSTOM_ID: h:gacha
+:END:
+
 {{{E3}}} grants Shadow common access to, often loot-only or class-exclusive, effects like Berserk, Sap and Blackstrike.
 This distinctly allows Shadow to build into debuffs, multi-hit (on Special); or support most Shadow builds.
 - See [[https://rns.miraheze.org/wiki/Shadow][Shadow (rns.miraheze.org)]] for exhaustive list of effects.
 
 * REVIEW Move Priority (/Rotations/)
+:PROPERTIES:
+:CUSTOM_ID: h:rotation
+:END:
+
 Shadow's abilities' damage are more "symmetrical" at base kit.
 The base kit optimization below are in magnitudes of about \pm20dps (10%) and only
 _only valid if attacks hit consistently_.
@@ -243,7 +287,11 @@ For *Darkhouse Depths'* Darkbeast Tauros, due to her zoning,
 use the late hit animations of {{{pri}}} and {{{def}}} to deal damage consistently.
 
 ** REVIEW Ruby Leap Archetypes - R2/R4
+:PROPERTIES:
+:CUSTOM_ID: h:ruby_leap
+:END:
 #+MACRO: pb @@html: <b><span style="color:purple;">@@$1@@html: </b></span>@@
+
 # link to short YT clip displaying this
 For normal-sized enemies, play near 3 Rabbitleaps away.
 1. Position near {{{pb(leap)}}} border;
@@ -261,6 +309,10 @@ Larger enemies like *Red Darkhouse* Ranalie P2 allow you to leap without lunging
 [[./img/game/rabbitleap-inkscape2.svg]]
 
 *** REVIEW Alt: Omegacharge Ruby Primary (R1)
+:PROPERTIES:
+:CUSTOM_ID: h:r1
+:END:
+
 # unnecessary to include?
 Same principle to activate leap above:
 1. One of {{{secl}}} / {{{S2}}} / {{{def}}};
@@ -268,6 +320,10 @@ Same principle to activate leap above:
 3. Repeat.
 
 ** REVIEW Auto-proc + oGCD's (S1/G1/R4 + S3/S4)
+:PROPERTIES:
+:CUSTOM_ID: h:auto-proc
+:END:
+
 Shadow, at base kit, is again somewhat GCD-limited.
 Any ability that gets that skips contesting every the usual {{{pri}}} and {{{sec}}} is good.
 
@@ -275,47 +331,59 @@ Any ability that gets that skips contesting every the usual {{{pri}}} and {{{sec
 - {{{S3}}} and {{{S4}}}, as oGCD's, while listed equal damage to base, can be thought of adding +200 damage ({{{N1}}}) every click.
 
 * REVIEW Ability synergies
+:PROPERTIES:
+:CUSTOM_ID: h:ability_synergies
+:END:
+
 Unique or notable gem and item synergies are only presented.
 
 Generic item synergies or damage bonuses are assumed:
 - E.g. for uncontested primary core, pick items like {{{Waterfall-Polearm}}}, {{{Grandmaster-Spear}}} and {{{Youkai-Bracelet}}}
 
 ** REVIEW Primary
+:PROPERTIES:
+:CUSTOM_ID: h:primary
+:END:
 #+MACRO: N1i 
 #+MACRO: O1i short CD items;
 #+MACRO: S1i {{{i(Windbite-Dagger)}}}
 #+MACRO: R1i {{{i(Firststrike-Bracelet)}}}; Flash- Buff
 #+MACRO: G1i luck-boost; RL({{{i(Brightstorm-Spear)}}})
 #+MACRO: E1i {{{i(Firststrike-Bracelet)}}}; Flash- Buff; Bleed
-| Gem | Gem Synergies | Item Synergies | Notes                                                                        |
-|-----+---------------+----------------+------------------------------------------------------------------------------|
-| {{{N1}}}  |               | {{{N1i}}}            | Good class N1                                                                |
-| {{{O1}}}  | {{{S3s}}} {{{S4s}}}       | {{{O1i}}}            | Weaker {{{G2}}} variant for {{{S3}}} + {{{S4}}}                                                |
-| {{{S1}}}  |               | {{{S1i}}}            | More consistent than {{{G1}}} for single enemies                                   |
+
+| Gem | Gem Synergies | Item Synergies | Notes                                                                          |
+|-----+---------------+----------------+--------------------------------------------------------------------------------|
+| {{{N1}}}  |               | {{{N1i}}}            | Good class N1                                                                  |
+| {{{O1}}}  | {{{S3s}}} {{{S4s}}}       | {{{O1i}}}            | Weaker {{{G2}}} variant for {{{S3}}} + {{{S4}}}                                                  |
+| {{{S1}}}  |               | {{{S1i}}}            | More consistent than {{{G1}}} for single enemies                                     |
 | {{{R1}}}  | Leap or {{{S2s}}}   | {{{R1i}}}            | _600dmg on only iframe req_; easiest with {{{S2}}}                                   |
-| {{{G1}}}  | {{{E3s}}} {{{G4s}}} {{{S4s}}}   | {{{G1i}}}            | Multiple-target version of {{{S1}}}, not limited to secondary                      |
+| {{{G1}}}  | {{{E3s}}} {{{G4s}}} {{{S4s}}}   | {{{G1i}}}            | Multiple-target version of {{{S1}}}, not limited to secondary                        |
 | {{{E1}}}  | {{{E3s}}}           | {{{E1i}}}            | Hardest-hitting primary in-game; Shadow's highest _best_ option for multi-hits |
 
 #+begin_quote
-{{{S1}}} and {{{G1}}} effects does not trigger "use" abilities like Black Wakizashi or Golden Katana, but can trigger Brightstorm Spear.
+{{{S1}}} and {{{G1}}} effects does not trigger "use" abilities like {{{Black-Wakizashi}}} or {{{Golden-Katana}}}, but can trigger {{{Brightstorm-Spear}}}.
 
 {{{E1}}} 2s GCD effect can't be cheated via GCD items, Berserk, Quickdraw or other effects.
 At base kit, the effect triggers {{{Winter-Hat}}}, but not {{{Sacredstone-Charm}}}.
 #+end_quote
 
 ** REVIEW Secondary
+:PROPERTIES:
+:CUSTOM_ID: h:secondary
+:END:
 #+MACRO: N2i {{{i(Butterfly-Hairpin)}}} {{{i(Cavers-Cloak)}}}
 #+MACRO: O2i
 #+MACRO: S2i
 #+MACRO: R2i +m/s;
 #+MACRO: G2i +luck; {{{i(Jesters-Hat)}}}
 #+MACRO: E2i
+
 | Gem | Leap? | Gem Synergies | Item Synergies | Notes                                                |
 |-----+-------+---------------+----------------+------------------------------------------------------|
 | {{{N2}}}  | Yes   | {{{R4s}}}           | {{{N2i}}}            | Good class N2                                        |
 | {{{O2}}}  | Yes   | {{{R4s}}}           | {{{O2i}}}            | SS Superhex                                          |
 | {{{S2}}}  | No    | {{{R4s}}} {{{R1s}}} {{{S3s}}}   | {{{S2i}}}            | Dancer secondary, good uptime                        |
-| {{{R2}}}  | Yes   | {{{R4s}}} {{{S3s}}}       | {{{R2i}}}            | _360dmg for 1.0s GCD/0s CD_ with only leap req         |
+| {{{R2}}}  | Yes   | {{{R4s}}} {{{S3s}}}       | {{{R2i}}}            | _360dmg for 1.0s GCD/0s CD_ with only leap req       |
 | {{{G2}}}  | No    | {{{S3s}}} {{{S4s}}} {{{G4s}}}   | {{{G2i}}}            | Good with oGCD gems; risky first-buy without synergy |
 | {{{E2}}}  | Yes   | {{{R4s}}} {{{S3s}}}       | {{{E2i}}}            | Uncheatable Shackles, easy req                       |
 
@@ -324,15 +392,19 @@ Hitting multiple {{{E2}}} (33%) is similar to not hitting Special Reset on Dance
 #+end_quote
 
 ** REVIEW Special
+:PROPERTIES:
+:CUSTOM_ID: h:special
+:END:
 #+MACRO: N3i Debuff apply; {{{i(Hawkfeather-Fan)}}} {{{i(Spear-of-Winds)}}} {{{i(Bolt-Staff)}}}
 #+MACRO: O3i1 {{{i(Miners-Headlamp)}}} {{{i(Darkglass-Spear)}}} {{{i(Timespace-Dagger)}}}
-#+MACRO: O3i2 {{{o effects3i1}}} {{{i(Raindrop-Earrings)}}}
+#+MACRO: O3i2 {{{o3i1}}} {{{i(Raindrop-Earrings)}}}
 #+MACRO: O3i {{{o3i2}}} {{{i(Sun-Pendant)}}} {{{i(Heavens-Codex)}}} {{{i(Staff-of-Sorrow)}}}
 #+MACRO: S3i N3 items; {{{i(Hawkfeather-Fan)}}} {{{i(Mountain-Staff)}}} {{{i(Obsidian-Rod)}}} {{{i(Garnet-Staff)}}}  {{{i(Lion-Charm)}}} {{{i(Obsidian-Hairpin)}}}
 #+MACRO: R3i N3 Items; {{{i(Hawkfeather-Fan)}}} {{{i(Obsidian-Rod)}}} {{{i(Garnet-Staff)}}}
 #+MACRO: G3i N3 Items; {{{i(Hawkfeather-Fan)}}} {{{i(Sacred-Bow)}}} {{{i(Shrinemaidens-Kosode)}}}
 #+MACRO: E3i N3 Items; +GCD/debuff items; {{{i(Hawkfeather-Fan)}}} {{{i(Sacred-Bow)}}} {{{i(Shrinemaidens-Kosode)}}}
 #+MACRO: S3n "Best" Spc., ~+60DPS at base; oGCD, no slow, loves CD reduction (including 1s \rightarrow 0s); 0.7s "cd" minimum
+
  | Gem | Gem Synergies | Item Synergies | Notes                                       |
  |-----+---------------+----------------+---------------------------------------------|
  | {{{N3}}}  |               | {{{N3i}}}            | Weaker class N3, hits all enemies though    |
@@ -350,6 +422,9 @@ Note, additive bonuses like {{{Eaglewing-Charm}}} will not apply to debuffs.
 #+end_quote
  
 ** REVIEW Defensive
+:PROPERTIES:
+:CUSTOM_ID: h:defensive
+:END:
 #+MACRO: N4i {{{i(Gemini-Necklace)}}} {{{i(Firststrike-Bracelet)}}}
 #+MACRO: O4i N4 items; {{{i(Hermes-Bow)}}}  {{{i(Talon-Charm)}}}  {{{i(Sacred-Bow)}}}
 #+MACRO: S4i N4 items; {{{i(Coldsteel-Shield)}}}
@@ -357,14 +432,15 @@ Note, additive bonuses like {{{Eaglewing-Charm}}} will not apply to debuffs.
 #+MACRO: G4i N4 items; {{{i(Spark-of-Determination)}}}
 #+MACRO: E4i {{{i(Firststrike-Bracelet)}}} {{{i(Starry-Cloak)}}} {{{i(Timespace-Dagger)}}}
 #+MACRO: R4gs (Safety\rightarrow{{{S2s}}}; DPS\rightarrow{{{R2s}}})
-| Gem | Gem Synergies | Item Synergies | Notes                                                 |
-|-----+---------------+----------------+-------------------------------------------------------|
-| {{{N4}}}  |               | {{{N4i}}}            | Harsh slow, good burst, doesn't consume Blackstrike   |
+
+| Gem | Gem Synergies | Item Synergies | Notes                                                     |
+|-----+---------------+----------------+-----------------------------------------------------------|
+| {{{N4}}}  |               | {{{N4i}}}            | Harsh slow, good burst, doesn't consume Blackstrike       |
 | {{{O4}}}  |               | {{{O4i}}}            | *Leaps*; *+m/s*; allows to click Pri./Sec. 1.5 more times |
-| {{{S4}}}  | {{{G2s}}}           | {{{S4i}}}            | oGCD like {{{S3s}}} but longer CD                           |
-| {{{R4}}}  | {{{R4s}}} {{{R4gs}}}      | {{{R4i}}}            | 480 damage on leap is amazing                         |
-| {{{G4}}}  | {{{G1s}}} {{{G2s}}} {{{R3s}}}   | {{{G4i}}}            | Sanctum/Mice tech                                     |
-| {{{E4}}}  |               | {{{E4i}}}            | Amazing burst, useable twice in reg encounters        |
+| {{{S4}}}  | {{{G2s}}}           | {{{S4i}}}            | oGCD like {{{S3s}}} but longer CD                               |
+| {{{R4}}}  | {{{R4s}}} {{{R4gs}}}      | {{{R4i}}}            | 480 damage on leap is amazing                             |
+| {{{G4}}}  | {{{G1s}}} {{{G2s}}} {{{R3s}}}   | {{{G4i}}}            | Sanctum/Mice tech                                         |
+| {{{E4}}}  |               | {{{E4i}}}            | Amazing burst, useable twice in reg encounters            |
 
 #+begin_quote
 {{{Firststrike-Bracelet}}} or Blackstrike source ({{{Book-of-Cheats}}}, {{{E3}}})
@@ -375,6 +451,10 @@ instead the one after.
 #+end_quote
 
 * REVIEW Gems Tier List
+:PROPERTIES:
+:CUSTOM_ID: h:gems_tier_list
+:END:
+
 Tier placing prioritizes "lines" and WR consistency.
 Shadow, by design, should always buy a gem first shop; most gems are damage positive.
 
@@ -385,6 +465,10 @@ Shadow, by design, should always buy a gem first shop; most gems are damage posi
 - {{{O2}}}, {{{G3}}} is great for MP, they're practically SS's Superhex and Dancer's Warcry respectively.
 
 ** RENEW S: Multipliers
+:PROPERTIES:
+:CUSTOM_ID: h:gems_s
+:END:
+
 {{{R4g}}}
 {{{R2g}}}
 {{{R1g}}}
@@ -395,6 +479,10 @@ Scales well late.
 #+end_quote
    
 ** REVIEW A: Amazing
+:PROPERTIES:
+:CUSTOM_ID: h:gems_a
+:END:
+
 {{{S3g}}}
 {{{S1g}}}
 {{{E3g}}}
@@ -420,6 +508,10 @@ Amazing, but more limited, synergies as an oGCD on 10s and Defensive (non-attack
 #+end_quote
 
 ** REVIEW B: Good
+:PROPERTIES:
+:CUSTOM_ID: h:gems_b
+:END:
+
 {{{O2g}}}
 {{{E4g}}}
 {{{G3g}}}
@@ -434,6 +526,10 @@ The lack of reset isn't really "felt" in most games.
 #+end_quote
 
 ** REVIEW C: Viable
+:PROPERTIES:
+:CUSTOM_ID: h:gems_c
+:END:
+
 {{{G2g}}}
 {{{E2g}}}
 {{{R3g}}}
@@ -446,7 +542,11 @@ or item builds on spamming {{{spe}}} and {{{def}}}.
 {{{R3}}} is the best option for spamming out Special damage out or loot effects like {{{Saltwater-Staff}}}.
 #+end_quote
 
-** DONE D: Other (Viable, but...)
+** DONE _Other_: Viable, but...
+:PROPERTIES:
+:CUSTOM_ID: h:gems_other
+:END:
+
 {{{O3g}}}
 {{{E1g}}}
 {{{O1g}}}
@@ -458,12 +558,16 @@ Only triggers once per regular encounter. Limits % lines but eh.
 {{{E1}}} is the worst "feels" gem in R&S' entirity.
 Though it's, by-far, the best option for multihit synergies when supported by {{{E3}}}.
 
-{{{O1}}} is an auto-take with {{{S3}}}; but it doesn't end up scaling with most item CD's.
+{{{O1}}} is an auto-take with {{{S3}}} and fine for spamming Special; but it doesn't end up scaling with most item CD's.
 The effects of Dancer's O3 (-4s max CD) or Wizard's
 O1 (-2s CD/use) are significantly better.
 #+end_quote
 
 * REVIEW Item Tier List
+:PROPERTIES:
+:CUSTOM_ID: h:item_tier_list
+:END:
+
 Again, tier placing prioritizes "lines" and WR consistency.
 
 - [4P] Shadow, _for AoE_, has higher prio on {{{spe}}} loots if:
@@ -476,7 +580,15 @@ Again, tier placing prioritizes "lines" and WR consistency.
 #+include: items.org :minlevel 2
 
 * REVIEW Other Notes
+:PROPERTIES:
+:CUSTOM_ID: h:other
+:END:
+
 ** REVIEW Avoiding leap PVP
+:PROPERTIES:
+:CUSTOM_ID: h:leap_pvp
+:END:
+
 For damage/consistency, see [[*Ruby Leap Archetypes - R2/R4][Ruby Leap Archetypes - R2/R4]]. To repeat:
 - For {{{R1}}}/{{{R2}}}/{{{R4}}} leaps, leap near the leap distance when you can.
 - Position yourself in a way that allows you to hit either Secondary and another ability, if affected by {{{Shackles}}}.
@@ -488,6 +600,10 @@ Additionally,
 - Use your [[*Turn on Mini Hotbar][mini hotbar]] to check if leap is enabled.
 
 *** DONE Turn on Mini Hotbar
+:PROPERTIES:
+:CUSTOM_ID: h:mini_hotbar
+:END:
+
 #+MACRO: options ~Options>More Options~
 #+MACRO: hotbar @@html: <span style="font-size: small; border:2px darkcyan solid; padding: 1px;">@@Mini Hotbar@@html:</span>@@
 In {{{options}}}, you can toggle and customize your {{{hotbar}}}. This allows you to see
@@ -500,8 +616,12 @@ Shadow palette.
 [[./img/game/options_hotbar.jpg]]
 
 *** REVIEW Practices on Targetting
+:PROPERTIES:
+:CUSTOM_ID: h:targetting
+:END:
 #+MACRO: nt @@html: <span style="font-size: small; border:2px DarkSalmon solid; padding: 1px;">@@Nearest Target@@html:</span>@@
 #+MACRO: ct @@html: <span style="font-size: small; border:2px DarkSeaGreen solid; padding: 1px;">@@Change Target@@html:</span>@@
+
 # reminder to check default binds
 Regarding player controls {{{nt}}} and {{{ct}}}.
 
@@ -516,6 +636,10 @@ If you're in a fight with multiple enemies, and you do _not want to leap_:
 - not holding attack buttons for prolonged periods.
   
 ** REVIEW Hidden Leap Disable Radius
+:PROPERTIES:
+:CUSTOM_ID: h:leap_buffer
+:END:
+
 After enabling leap on Secondary, disabling leap uses an inner "buffer" distance
 (~2.94lp; ~2x size of Rabbit visible hitbox.)
 
@@ -524,4 +648,7 @@ After enabling leap on Secondary, disabling leap uses an inner "buffer" distance
 [[./img/game/rabbitleap-buffer-inkscape.svg]]
 
 * TODO Example Builds :noexport:
+:PROPERTIES:
+:CUSTOM_ID: h:builds
+:END:
 

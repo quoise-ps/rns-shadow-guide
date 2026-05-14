@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2026-05-02 Sat 22:13 -->
+<!-- 2026-05-14 Thu 17:59 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Something about Shadow</title>
@@ -197,7 +197,9 @@
 </style>
 <link rel="stylesheet" type="text/css" href="https://gongzhitaao.org/orgcss/org.css"/>
 <link rel="stylesheet" type="text/css" href="./styles/hint.base.css">
-
+<style> p {line-height: 1.8em;} </style>
+<style> html {background-color: #e7e7e7;} </style>
+<style> body {max-width: 80em; margin: 0 auto 2em; padding: .5em 1.5em 1.5em 1.5em; border: .1em solid #c0c0c0;} </style>
 <script src="https://orgmode.org/org-info.js">
 // @license magnet:?xt=urn:btih:1f739d935676111cfff4b4693e3816e664797050&amp;dn=gpl-3.0.txt GPL-v3-or-Later
 // @license-end
@@ -212,7 +214,7 @@ org_html_manager.set("LOCAL_TOC", "1");
 org_html_manager.set("VIEW_BUTTONS", "0");
 org_html_manager.set("MOUSE_HINT", "underline");
 org_html_manager.set("FIXED_TOC", "0");
-org_html_manager.set("TOC", "non-nil");
+org_html_manager.set("TOC", "1");
 org_html_manager.set("VIEW", "info");
 org_html_manager.setup();  // activate after the parameters are set
 // @license-end
@@ -254,37 +256,40 @@ org_html_manager.setup();  // activate after the parameters are set
 <div id="content" class="content">
 <h1 class="title">Something about Shadow
 <br />
-<span class="subtitle">(<span style="color:red;">WIP</span>; v0.3.1)</span>
+<span class="subtitle">(v0.3.2)</span>
 </h1>
 <div id="table-of-contents" role="doc-toc">
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org25bb296">1. Intro</a></li>
-<li><a href="#org690cd61">2. Class Summary</a></li>
-<li><a href="#org596c7ce">3. Move Priority (<i>Rotations</i>)</a></li>
-<li><a href="#org657cf6a">4. Ability synergies</a></li>
-<li><a href="#orgd843576">5. Gems Tier List</a></li>
-<li><a href="#orgb639204">6. Item Tier List</a></li>
-<li><a href="#org5217efa">7. Other Notes</a></li>
+<li><a href="#h:intro">1. Intro</a></li>
+<li><a href="#h:class_summary">2. Class Summary</a></li>
+<li><a href="#h:rotation">3. Move Priority (<i>Rotations</i>)</a></li>
+<li><a href="#h:ability_synergies">4. Ability synergies</a></li>
+<li><a href="#h:gems_tier_list">5. Gems Tier List</a></li>
+<li><a href="#h:item_tier_list">6. Item Tier List</a></li>
+<li><a href="#h:other">7. Other Notes</a></li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-org25bb296" class="outline-2">
-<h2 id="org25bb296"><span class="section-number-2">1.</span> Intro</h2>
-<div class="outline-text-2" id="text-1">
+<div id="outline-container-h:intro" class="outline-2">
+<h2 id="h:intro"><span class="section-number-2">1.</span> Intro</h2>
+<div class="outline-text-2" id="text-h:intro">
 <div class="org-center">
 <p>
 <b><u>
-This guide is
-<span style="color:red;">
-not finished.
+This guide is in
+<span style="color:green;">
+review phase.
 </span>
+</b></u>
 </p>
 
 <p>
-Pending playstyle writeups and example builds, plus feedback from other players.
+<b><u>
+Please feel free to send any feedback or corrections in <code>mino_dev</code> Discord.
+Additions would be welcome.
 </b></u>
 </p>
 </div>
@@ -299,10 +304,10 @@ and high WR consistency and with tactless author bias.
 </p>
 
 <blockquote>
-<ul class="org-ul">
-<li>Author typically mains Dancer</li>
-<li>On Shadow, 23 MP Lunar wins and 37 Hard wins</li>
-</ul>
+<p>
+[Author] I come from maining Dancer after 200 MP Lunar games.
+On Shadow, currently, have 23 MP Lunar wins and 37 Hard wins.
+</p>
 </blockquote>
 
 <p>
@@ -313,9 +318,9 @@ This guide could not be made possible without the help of other players in mino_
 Special thanks to Obi Rod, Ins&rsquo;Ania and Kero for early help.
 </p>
 </div>
-<div id="outline-container-org0d5c5be" class="outline-3">
-<h3 id="org0d5c5be"><span class="section-number-3">1.1.</span> Related Resources</h3>
-<div class="outline-text-3" id="text-1-1">
+<div id="outline-container-h:related_resources" class="outline-3">
+<h3 id="h:related_resources"><span class="section-number-3">1.1.</span> Related Resources</h3>
+<div class="outline-text-3" id="text-h:related_resources">
 <p>
 Details of Shadow&rsquo;s kit can be found in:
 </p>
@@ -338,9 +343,9 @@ For community jargon:
 </ul>
 </div>
 </div>
-<div id="outline-container-orgdb6f592" class="outline-3">
-<h3 id="orgdb6f592"><span class="section-number-3">1.2.</span> Sample Definitions</h3>
-<div class="outline-text-3" id="text-1-2">
+<div id="outline-container-h:sample_definitions" class="outline-3">
+<h3 id="h:sample_definitions"><span class="section-number-3">1.2.</span> Sample Definitions</h3>
+<div class="outline-text-3" id="text-h:sample_definitions">
 <dl class="org-dl">
 <dt><span class="hint--large" aria-label="Deal 100x2 by 420px radius."><img src="./img/abilities-40px/N1.png" alt="N1.png" /> <span style="text-decoration:underline; text-decoration-style:dotted;">N1</span></span>, <span class="hint--large" aria-label="Reset cooldowns &le;4s."><img src="./img/gems-40px/O1.png" alt="O1.png" /> <span style="text-decoration:underline; text-decoration-style:dotted;">O1</span></span>, <span class="hint--large" aria-label="Hits once on Secondary use."><img src="./img/gems-40px/S1.png" alt="S1.png" /> <span style="text-decoration:underline; text-decoration-style:dotted;">S1</span></span>, <span class="hint--large" aria-label="Gain Omegacharge on invuln."><img src="./img/gems-40px/R1.png" alt="R1.png" /> <span style="text-decoration:underline; text-decoration-style:dotted;">R1</span></span>, <span class="hint--large" aria-label="On 4th use, deal damage 10 times, sets 2.0s GCD and harsh -m/s on use."><img src="./img/gems-40px/E1.png" alt="E1.png" /> <span style="text-decoration:underline; text-decoration-style:dotted;">E1</span></span>, <span class="hint--large" aria-label="On any hit by other abilities, 25% to deal one hit's damage to all enemies."><img src="./img/gems-40px/G1.png" alt="G1.png" /> <span style="text-decoration:underline; text-decoration-style:dotted;">G1</span></span></dt><dd><span class="underline">Normal</span> and <span class="underline">gem</span> variants of Primary.</dd>
 <dt><span class="hint--large" aria-label="Gain Omegacharge on invuln."><img src="./img/gems-40px/R1.png" alt="R1.png" /> <span style="text-decoration:underline; text-decoration-style:dotted;">R1</span></span>, <span class="hint--large" aria-label="Deals 180. On leaps, trigger again in 600px radius."><img src="./img/gems-40px/R2.png" alt="R2.png" /> <span style="text-decoration:underline; text-decoration-style:dotted;">R2</span></span>, <span class="hint--large" aria-label="40% chance to Supercharge+reset itself."><img src="./img/gems-40px/R3.png" alt="R3.png" /> <span style="text-decoration:underline; text-decoration-style:dotted;">R3</span></span>, <span class="hint--large" aria-label="Deal &#x2193;300. Damage on other invuln effects. &#x2193;1400ms invuln."><img src="./img/gems-40px/R4.png" alt="R4.png" /> <span style="text-decoration:underline; text-decoration-style:dotted;">R4</span></span></dt><dd><span class="underline">Ruby</span> variants of each respectively: Primary, Secondary, Special and Defensive.</dd>
@@ -358,9 +363,9 @@ For community jargon:
 </dl>
 </div>
 </div>
-<div id="outline-container-orgfa1acaa" class="outline-3">
-<h3 id="orgfa1acaa"><span class="section-number-3">1.3.</span> Changelog (Releases)</h3>
-<div class="outline-text-3" id="text-1-3">
+<div id="outline-container-h:changelog" class="outline-3">
+<h3 id="h:changelog"><span class="section-number-3">1.3.</span> Changelog (Releases)</h3>
+<div class="outline-text-3" id="text-h:changelog">
 <dl class="org-dl">
 <dt>v0.1.x (2026-04-18)</dt><dd>release with ability synergies, gem tier list and ability tier list</dd>
 <dt>v0.2.0 (2026-04-21)</dt><dd>applied feedback changes to rotation, gems, items. Added Shadow section and todos.
@@ -370,14 +375,16 @@ For community jargon:
 <dt>v0.3.0 (2026-05-02)</dt><dd>added rotations, class summary, tooltips, other notes; moved gems again.
 <dl class="org-dl">
 <dt>v0.3.1 (2026-05-02)</dt><dd>fixed some grammar</dd>
+<dt>v0.3.2 (2026-05-14)</dt><dd>corrected bad macro in item table, modified CSS,
+added abbreviations in gem tier list, headers are &ldquo;fixed&rdquo;</dd>
 </dl></dd>
 </dl>
 </div>
 </div>
 </div>
-<div id="outline-container-org690cd61" class="outline-2">
-<h2 id="org690cd61"><span class="section-number-2">2.</span> Class Summary</h2>
-<div class="outline-text-2" id="text-2">
+<div id="outline-container-h:class_summary" class="outline-2">
+<h2 id="h:class_summary"><span class="section-number-2">2.</span> Class Summary</h2>
+<div class="outline-text-2" id="text-h:class_summary">
 <p>
 Shadow is a mobile close-quarters bunny with a potent versatility; she excels when playing flexibly, due to <span class="hint--large" aria-label="On ability use, an attack is disabled randomly."><img src="./img/other/Shackles.png" alt="Shackles.png" /> <span style="text-decoration:underline; text-decoration-style:dotted;">Shackles</span></span>.
 Many of her effects are unique or inspired from other classes and effects.
@@ -450,9 +457,9 @@ Shadow is best characterized by having:
 </tbody>
 </table>
 </div>
-<div id="outline-container-orgf998882" class="outline-3">
-<h3 id="orgf998882"><span class="section-number-3">2.1.</span> Shackles</h3>
-<div class="outline-text-3" id="text-2-1">
+<div id="outline-container-h:shackles" class="outline-3">
+<h3 id="h:shackles"><span class="section-number-3">2.1.</span> Shackles</h3>
+<div class="outline-text-3" id="text-h:shackles">
 <p>
 Shadow&rsquo;s <span class="hint--large" aria-label="On ability use, an attack is disabled randomly."><img src="./img/other/Shackles.png" alt="Shackles.png" /> <span style="text-decoration:underline; text-decoration-style:dotted;">Shackles</span></span> locks up one of her attacks<sup><a id="fnr.attacks" class="footref" href="#fn.attacks" role="doc-backlink">1</a></sup> from use on any ability usage.
 This is independent of any Magicklock trinket effects, cooldowns or item effects (e.g. <span class="hint--large" aria-label="Deal 40% more damage. Your Secondary becomes permanently unusable."><img src="./img/items/Lefthand-Cast.png" alt="Lefthand-Cast.png" /> <span style="text-decoration:underline; text-decoration-style:dotted;">Lefthand Cast</span></span>.)
@@ -466,9 +473,9 @@ attacks down.
 </blockquote>
 </div>
 </div>
-<div id="outline-container-org273f6fc" class="outline-3">
-<h3 id="org273f6fc"><span class="section-number-3">2.2.</span> Inspirations from other Classes and Loot</h3>
-<div class="outline-text-3" id="text-2-2">
+<div id="outline-container-h:inspirations" class="outline-3">
+<h3 id="h:inspirations"><span class="section-number-3">2.2.</span> Inspirations from other Classes and Loot</h3>
+<div class="outline-text-3" id="text-h:inspirations">
 <p>
 Shadow gains some distinct effects that appear in other classes, namely:
 </p>
@@ -480,9 +487,9 @@ Shadow gains some distinct effects that appear in other classes, namely:
 </ul>
 </div>
 </div>
-<div id="outline-container-org0016737" class="outline-3">
-<h3 id="org0016737"><span class="section-number-3">2.3.</span> Gacha ability</h3>
-<div class="outline-text-3" id="text-2-3">
+<div id="outline-container-h:gacha" class="outline-3">
+<h3 id="h:gacha"><span class="section-number-3">2.3.</span> Gacha ability</h3>
+<div class="outline-text-3" id="text-h:gacha">
 <p>
 <span class="hint--large" aria-label="Random effects."><img src="./img/gems-40px/E3.png" alt="E3.png" /> <span style="text-decoration:underline; text-decoration-style:dotted;">E3</span></span> grants Shadow common access to, often loot-only or class-exclusive, effects like Berserk, Sap and Blackstrike.
 This distinctly allows Shadow to build into debuffs, multi-hit (on Special); or support most Shadow builds.
@@ -493,16 +500,16 @@ This distinctly allows Shadow to build into debuffs, multi-hit (on Special); or 
 </div>
 </div>
 </div>
-<div id="outline-container-org596c7ce" class="outline-2">
-<h2 id="org596c7ce"><span class="section-number-2">3.</span> Move Priority (<i>Rotations</i>)</h2>
-<div class="outline-text-2" id="text-3">
+<div id="outline-container-h:rotation" class="outline-2">
+<h2 id="h:rotation"><span class="section-number-2">3.</span> Move Priority (<i>Rotations</i>)</h2>
+<div class="outline-text-2" id="text-h:rotation">
 <p>
 Shadow&rsquo;s abilities&rsquo; damage are more &ldquo;symmetrical&rdquo; at base kit.
 The base kit optimization below are in magnitudes of about &plusmn;20dps (10%) and only
 <span class="underline">only valid if attacks hit consistently</span>.
 </p>
 
-<table id="orgeef69e6" border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<table id="orgf9da84d" border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 <caption class="t-above"><span class="table-number">Table 2:</span> Common Move Priorities off Base Kit</caption>
 
 <colgroup>
@@ -572,9 +579,9 @@ For <b>Darkhouse Depths&rsquo;</b> Darkbeast Tauros, due to her zoning,
 use the late hit animations of <img src="./img/abilities-40px/N1.png" alt="N1.png" /> <b>Primary</b> and <img src="./img/abilities-40px/N4.png" alt="N4.png" /> <b>Defensive</b> to deal damage consistently.
 </p>
 </div>
-<div id="outline-container-org9ac90a9" class="outline-3">
-<h3 id="org9ac90a9"><span class="section-number-3">3.1.</span> Ruby Leap Archetypes - R2/R4</h3>
-<div class="outline-text-3" id="text-3-1">
+<div id="outline-container-h:ruby_leap" class="outline-3">
+<h3 id="h:ruby_leap"><span class="section-number-3">3.1.</span> Ruby Leap Archetypes - R2/R4</h3>
+<div class="outline-text-3" id="text-h:ruby_leap">
 <p>
 For normal-sized enemies, play near 3 Rabbitleaps away.
 </p>
@@ -597,15 +604,15 @@ Larger enemies like <b>Red Darkhouse</b> Ranalie P2 allow you to leap without lu
 </p>
 
 
-<div id="org98b69b6" class="figure">
+<div id="org38a9254" class="figure">
 <p><img src="./img/game/rabbitleap-inkscape2.svg" alt="rabbitleap-inkscape2.svg" class="org-svg" />
 </p>
 <p><span class="figure-number">Figure 1: </span>Distances in Rabbitleaps (lp) with Stella</p>
 </div>
 </div>
-<div id="outline-container-org14aeec5" class="outline-4">
-<h4 id="org14aeec5"><span class="section-number-4">3.1.1.</span> Alt: Omegacharge Ruby Primary (R1)</h4>
-<div class="outline-text-4" id="text-3-1-1">
+<div id="outline-container-h:r1" class="outline-4">
+<h4 id="h:r1"><span class="section-number-4">3.1.1.</span> Alt: Omegacharge Ruby Primary (R1)</h4>
+<div class="outline-text-4" id="text-h:r1">
 <p>
 Same principle to activate leap above:
 </p>
@@ -617,9 +624,9 @@ Same principle to activate leap above:
 </div>
 </div>
 </div>
-<div id="outline-container-org542383a" class="outline-3">
-<h3 id="org542383a"><span class="section-number-3">3.2.</span> Auto-proc + oGCD&rsquo;s (S1/G1/R4 + S3/S4)</h3>
-<div class="outline-text-3" id="text-3-2">
+<div id="outline-container-h:auto-proc" class="outline-3">
+<h3 id="h:auto-proc"><span class="section-number-3">3.2.</span> Auto-proc + oGCD&rsquo;s (S1/G1/R4 + S3/S4)</h3>
+<div class="outline-text-3" id="text-h:auto-proc">
 <p>
 Shadow, at base kit, is again somewhat GCD-limited.
 Any ability that gets that skips contesting every the usual <img src="./img/abilities-40px/N1.png" alt="N1.png" /> <b>Primary</b> and <img src="./img/abilities-40px/N2.png" alt="N2.png" /> <b>Secondary</b> is good.
@@ -632,9 +639,9 @@ Any ability that gets that skips contesting every the usual <img src="./img/abil
 </div>
 </div>
 </div>
-<div id="outline-container-org657cf6a" class="outline-2">
-<h2 id="org657cf6a"><span class="section-number-2">4.</span> Ability synergies</h2>
-<div class="outline-text-2" id="text-4">
+<div id="outline-container-h:ability_synergies" class="outline-2">
+<h2 id="h:ability_synergies"><span class="section-number-2">4.</span> Ability synergies</h2>
+<div class="outline-text-2" id="text-h:ability_synergies">
 <p>
 Unique or notable gem and item synergies are only presented.
 </p>
@@ -646,9 +653,9 @@ Generic item synergies or damage bonuses are assumed:
 <li>E.g. for uncontested primary core, pick items like <span class="hint--large" aria-label="Every 10s, when you use your Primary, gain Flow-Str"><img src="./img/items/Waterfall-Polearm.png" alt="Waterfall-Polearm.png" /> <span style="text-decoration:underline; text-decoration-style:dotted;">Waterfall Polearm</span></span>, <span class="hint--large" aria-label="Your Primary's damage increases by 40%. Your Special's cooldown increases by 4s."><img src="./img/items/Grandmaster-Spear.png" alt="Grandmaster-Spear.png" /> <span style="text-decoration:underline; text-decoration-style:dotted;">Grandmaster Spear</span></span> and <span class="hint--large" aria-label="All abilities, loot, and damaging debuffs deal 40 more damage. If a % chance succeeds, this effect ends until the end of battle."><img src="./img/items/Youkai-Bracelet.png" alt="Youkai-Bracelet.png" /> <span style="text-decoration:underline; text-decoration-style:dotted;">Youkai Bracelet</span></span></li>
 </ul>
 </div>
-<div id="outline-container-orgcd6e0fd" class="outline-3">
-<h3 id="orgcd6e0fd"><span class="section-number-3">4.1.</span> Primary</h3>
-<div class="outline-text-3" id="text-4-1">
+<div id="outline-container-h:primary" class="outline-3">
+<h3 id="h:primary"><span class="section-number-3">4.1.</span> Primary</h3>
+<div class="outline-text-3" id="text-h:primary">
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 
@@ -716,7 +723,7 @@ Generic item synergies or damage bonuses are assumed:
 
 <blockquote>
 <p>
-<span class="hint--large" aria-label="Hits once on Secondary use."><img src="./img/gems-40px/S1.png" alt="S1.png" /> <span style="text-decoration:underline; text-decoration-style:dotted;">S1</span></span> and <span class="hint--large" aria-label="On any hit by other abilities, 25% to deal one hit's damage to all enemies."><img src="./img/gems-40px/G1.png" alt="G1.png" /> <span style="text-decoration:underline; text-decoration-style:dotted;">G1</span></span> effects does not trigger &ldquo;use&rdquo; abilities like Black Wakizashi or Golden Katana, but can trigger Brightstorm Spear.
+<span class="hint--large" aria-label="Hits once on Secondary use."><img src="./img/gems-40px/S1.png" alt="S1.png" /> <span style="text-decoration:underline; text-decoration-style:dotted;">S1</span></span> and <span class="hint--large" aria-label="On any hit by other abilities, 25% to deal one hit's damage to all enemies."><img src="./img/gems-40px/G1.png" alt="G1.png" /> <span style="text-decoration:underline; text-decoration-style:dotted;">G1</span></span> effects does not trigger &ldquo;use&rdquo; abilities like <span class="hint--large" aria-label="Your Primary has a 30% chance of dealing an additional 3 blows, dealing 50 damage each, in a radius around your target enemy."><img src="./img/items/Black-Wakizashi.png" alt="Black-Wakizashi.png" /> <span style="text-decoration:underline; text-decoration-style:dotted;">Black Wakizashi</span></span> or <span class="hint--large" aria-label="Your Primary and Secondary have a 5% chance to deal 100 damage 5 times to a large radius around your targeted enemy when used."><img src="./img/items/Golden-Katana.png" alt="Golden-Katana.png" /> <span style="text-decoration:underline; text-decoration-style:dotted;">Golden Katana</span></span>, but can trigger <span class="hint--large" aria-label="Has a 30% chance of dealing 100 damage to all enemies when your Primary does damage."><img src="./img/items/Brightstorm-Spear.png" alt="Brightstorm-Spear.png" /> <span style="text-decoration:underline; text-decoration-style:dotted;">Brightstorm Spear</span></span>.
 </p>
 
 <p>
@@ -726,9 +733,9 @@ At base kit, the effect triggers <span class="hint--large" aria-label="Abilities
 </blockquote>
 </div>
 </div>
-<div id="outline-container-orga45937f" class="outline-3">
-<h3 id="orga45937f"><span class="section-number-3">4.2.</span> Secondary</h3>
-<div class="outline-text-3" id="text-4-2">
+<div id="outline-container-h:secondary" class="outline-3">
+<h3 id="h:secondary"><span class="section-number-3">4.2.</span> Secondary</h3>
+<div class="outline-text-3" id="text-h:secondary">
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 
@@ -810,9 +817,9 @@ Hitting multiple <span class="hint--large" aria-label="+30% damage and radius pe
 </blockquote>
 </div>
 </div>
-<div id="outline-container-orgc3caa2a" class="outline-3">
-<h3 id="orgc3caa2a"><span class="section-number-3">4.3.</span> Special</h3>
-<div class="outline-text-3" id="text-4-3">
+<div id="outline-container-h:special" class="outline-3">
+<h3 id="h:special"><span class="section-number-3">4.3.</span> Special</h3>
+<div class="outline-text-3" id="text-h:special">
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 
@@ -844,7 +851,7 @@ Hitting multiple <span class="hint--large" aria-label="+30% damage and radius pe
 <tr>
 <td class="org-left"><span class="hint--large" aria-label="(&#x2191;15s CD) Deals &#x2191;1000. Starts on CD. Disables % triggers."><img src="./img/gems-40px/O3.png" alt="O3.png" /> <span style="text-decoration:underline; text-decoration-style:dotted;">O3</span></span></td>
 <td class="org-left">&nbsp;</td>
-<td class="org-left">{{{o effects3i1}}} <span class="hint--large" aria-label="(Raindrop Earrings) Every 18s, when you stand still, gain Repeat."><img src="./img/items/Raindrop-Earrings.png" alt="Raindrop-Earrings.png" /></span> <span class="hint--large" aria-label="(Sun Pendant) Every 10 times you use an ability, reset your Special's cooldown and gain Flash-Int."><img src="./img/items/Sun-Pendant.png" alt="Sun-Pendant.png" /></span> <span class="hint--large" aria-label="(Heaven's Codex) Your Special deals 20% more damage and instantly resets upon use. Transforms into the Hell's Codex after you've used 3 abilities."><img src="./img/items/Heavens-Codex.png" alt="Heavens-Codex.png" /></span> <span class="hint--large" aria-label="(Staff of Sorrow) Every 30, using any attack will reset your Special and grant you Flash-Int. Cooldown is set to 7 seconds when you use your Primary. Starts fights on cooldown."><img src="./img/items/Staff-of-Sorrow.png" alt="Staff-of-Sorrow.png" /></span></td>
+<td class="org-left"><span class="hint--large" aria-label="(Miner's Headlamp) Every 6 seconds, reduce all other cooldowns by 2 seconds. Starts fights on cooldown."><img src="./img/items/Miners-Headlamp.png" alt="Miners-Headlamp.png" /></span> <span class="hint--large" aria-label="(Darkglass Spear) Your Primary's strength becomes your Special's cooldown, multiplied by 30, minus your Secondary's strength, divided by the times your Primary hits your target (Maximum of 500 total)."><img src="./img/items/Darkglass-Spear.png" alt="Darkglass-Spear.png" /></span> <span class="hint--large" aria-label="(Timespace Dagger) Your Secondary's strength becomes your Special and Defensive's cooldown added together, multiplied by 10, divided by the times your Secondary hits your target. (Maximum of 500 total)."><img src="./img/items/Timespace-Dagger.png" alt="Timespace-Dagger.png" /></span> <span class="hint--large" aria-label="(Raindrop Earrings) Every 18s, when you stand still, gain Repeat."><img src="./img/items/Raindrop-Earrings.png" alt="Raindrop-Earrings.png" /></span> <span class="hint--large" aria-label="(Sun Pendant) Every 10 times you use an ability, reset your Special's cooldown and gain Flash-Int."><img src="./img/items/Sun-Pendant.png" alt="Sun-Pendant.png" /></span> <span class="hint--large" aria-label="(Heaven's Codex) Your Special deals 20% more damage and instantly resets upon use. Transforms into the Hell's Codex after you've used 3 abilities."><img src="./img/items/Heavens-Codex.png" alt="Heavens-Codex.png" /></span> <span class="hint--large" aria-label="(Staff of Sorrow) Every 30, using any attack will reset your Special and grant you Flash-Int. Cooldown is set to 7 seconds when you use your Primary. Starts fights on cooldown."><img src="./img/items/Staff-of-Sorrow.png" alt="Staff-of-Sorrow.png" /></span></td>
 <td class="org-left">Disable universal %</td>
 </tr>
 
@@ -890,9 +897,9 @@ Note, additive bonuses like <span class="hint--large" aria-label="All your abili
 </blockquote>
 </div>
 </div>
-<div id="outline-container-orgd63688f" class="outline-3">
-<h3 id="orgd63688f"><span class="section-number-3">4.4.</span> Defensive</h3>
-<div class="outline-text-3" id="text-4-4">
+<div id="outline-container-h:defensive" class="outline-3">
+<h3 id="h:defensive"><span class="section-number-3">4.4.</span> Defensive</h3>
+<div class="outline-text-3" id="text-h:defensive">
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 
@@ -972,9 +979,9 @@ instead the one after.
 </div>
 </div>
 </div>
-<div id="outline-container-orgd843576" class="outline-2">
-<h2 id="orgd843576"><span class="section-number-2">5.</span> Gems Tier List</h2>
-<div class="outline-text-2" id="text-5">
+<div id="outline-container-h:gems_tier_list" class="outline-2">
+<h2 id="h:gems_tier_list"><span class="section-number-2">5.</span> Gems Tier List</h2>
+<div class="outline-text-2" id="text-h:gems_tier_list">
 <p>
 Tier placing prioritizes &ldquo;lines&rdquo; and WR consistency.
 Shadow, by design, should always buy a gem first shop; most gems are damage positive.
@@ -988,13 +995,13 @@ consider <span class="hint--large" aria-label="On any hit by other abilities, 25
 <li><span class="hint--large" aria-label="Inflicts +20% Shadowcurse debuff (5s.)"><img src="./img/gems-40px/O2.png" alt="O2.png" /> <span style="text-decoration:underline; text-decoration-style:dotted;">O2</span></span>, <span class="hint--large" aria-label="Deal &#x2191;280; grants all players +15% Shadowcry buff; and erase bullets by 250px radius."><img src="./img/gems-40px/G3.png" alt="G3.png" /> <span style="text-decoration:underline; text-decoration-style:dotted;">G3</span></span> is great for MP, they&rsquo;re practically SS&rsquo;s Superhex and Dancer&rsquo;s Warcry respectively.</li>
 </ul>
 </div>
-<div id="outline-container-org64bf060" class="outline-3">
-<h3 id="org64bf060"><span class="section-number-3">5.1.</span> S: Multipliers</h3>
-<div class="outline-text-3" id="text-5-1">
+<div id="outline-container-h:gems_s" class="outline-3">
+<h3 id="h:gems_s"><span class="section-number-3">5.1.</span> S: Multipliers</h3>
+<div class="outline-text-3" id="text-h:gems_s">
 <p>
-<span class="hint--large" aria-label="Deal &#x2193;300. Damage on other invuln effects. &#x2193;1400ms invuln."><img src="./img/gems/R4.png" alt="R4.png" /></span>
-<span class="hint--large" aria-label="Deals 180. On leaps, trigger again in 600px radius."><img src="./img/gems/R2.png" alt="R2.png" /></span>
-<span class="hint--large" aria-label="Gain Omegacharge on invuln."><img src="./img/gems/R1.png" alt="R1.png" /></span>
+<span class="hint--large" aria-label="(R4) Deal &#x2193;300. Damage on other invuln effects. &#x2193;1400ms invuln."><img src="./img/gems/R4.png" alt="R4.png" /></span>
+<span class="hint--large" aria-label="(R2) Deals 180. On leaps, trigger again in 600px radius."><img src="./img/gems/R2.png" alt="R2.png" /></span>
+<span class="hint--large" aria-label="(R1) Gain Omegacharge on invuln."><img src="./img/gems/R1.png" alt="R1.png" /></span>
 </p>
 
 <blockquote>
@@ -1005,16 +1012,16 @@ Scales well late.
 </blockquote>
 </div>
 </div>
-<div id="outline-container-org3a849ea" class="outline-3">
-<h3 id="org3a849ea"><span class="section-number-3">5.2.</span> A: Amazing</h3>
-<div class="outline-text-3" id="text-5-2">
+<div id="outline-container-h:gems_a" class="outline-3">
+<h3 id="h:gems_a"><span class="section-number-3">5.2.</span> A: Amazing</h3>
+<div class="outline-text-3" id="text-h:gems_a">
 <p>
-<span class="hint--large" aria-label="No GCD or slow."><img src="./img/gems/S3.png" alt="S3.png" /></span>
-<span class="hint--large" aria-label="Hits once on Secondary use."><img src="./img/gems/S1.png" alt="S1.png" /></span>
-<span class="hint--large" aria-label="Random effects."><img src="./img/gems/E3.png" alt="E3.png" /></span>
-<span class="hint--large" aria-label="On any hit by other abilities, 25% to deal one hit's damage to all enemies."><img src="./img/gems/G1.png" alt="G1.png" /></span>
-<span class="hint--large" aria-label="[&not;LEAP] Deal &#x2191;110x2 on ranged 400px radius; Charge on other ability use (max 1); invuln on Charge use."><img src="./img/gems/S2.png" alt="S2.png" /></span>
-<span class="hint--large" aria-label="(&#x2193;10s CD) No GCD."><img src="./img/gems/S4.png" alt="S4.png" /></span>
+<span class="hint--large" aria-label="(S3) No GCD or slow."><img src="./img/gems/S3.png" alt="S3.png" /></span>
+<span class="hint--large" aria-label="(S1) Hits once on Secondary use."><img src="./img/gems/S1.png" alt="S1.png" /></span>
+<span class="hint--large" aria-label="(E3) Random effects."><img src="./img/gems/E3.png" alt="E3.png" /></span>
+<span class="hint--large" aria-label="(G1) On any hit by other abilities, 25% to deal one hit's damage to all enemies."><img src="./img/gems/G1.png" alt="G1.png" /></span>
+<span class="hint--large" aria-label="(S2) [&not;LEAP] Deal &#x2191;110x2 on ranged 400px radius; Charge on other ability use (max 1); invuln on Charge use."><img src="./img/gems/S2.png" alt="S2.png" /></span>
+<span class="hint--large" aria-label="(S4) (&#x2193;10s CD) No GCD."><img src="./img/gems/S4.png" alt="S4.png" /></span>
 </p>
 
 <blockquote>
@@ -1045,14 +1052,14 @@ Amazing, but more limited, synergies as an oGCD on 10s and Defensive (non-attack
 </blockquote>
 </div>
 </div>
-<div id="outline-container-orgd59b6f4" class="outline-3">
-<h3 id="orgd59b6f4"><span class="section-number-3">5.3.</span> B: Good</h3>
-<div class="outline-text-3" id="text-5-3">
+<div id="outline-container-h:gems_b" class="outline-3">
+<h3 id="h:gems_b"><span class="section-number-3">5.3.</span> B: Good</h3>
+<div class="outline-text-3" id="text-h:gems_b">
 <p>
-<span class="hint--large" aria-label="Inflicts +20% Shadowcurse debuff (5s.)"><img src="./img/gems/O2.png" alt="O2.png" /></span>
-<span class="hint--large" aria-label="(&#x2191;20s CD) Deal &#x2191;90x10. Unresettable. &#x2191;1700ms invuln."><img src="./img/gems/E4.png" alt="E4.png" /></span>
-<span class="hint--large" aria-label="Deal &#x2191;280; grants all players +15% Shadowcry buff; and erase bullets by 250px radius."><img src="./img/gems/G3.png" alt="G3.png" /></span>
-<span class="hint--large" aria-label="(&#x2193;10s CD) [LEAP] Deal 90x3. Now always leaps. Grants 10s Ability Haste. 1000ms invuln."><img src="./img/gems/O4.png" alt="O4.png" /></span>
+<span class="hint--large" aria-label="(O2) Inflicts +20% Shadowcurse debuff (5s.)"><img src="./img/gems/O2.png" alt="O2.png" /></span>
+<span class="hint--large" aria-label="(E4) (&#x2191;20s CD) Deal &#x2191;90x10. Unresettable. &#x2191;1700ms invuln."><img src="./img/gems/E4.png" alt="E4.png" /></span>
+<span class="hint--large" aria-label="(G3) Deal &#x2191;280; grants all players +15% Shadowcry buff; and erase bullets by 250px radius."><img src="./img/gems/G3.png" alt="G3.png" /></span>
+<span class="hint--large" aria-label="(O4) (&#x2193;10s CD) [LEAP] Deal 90x3. Now always leaps. Grants 10s Ability Haste. 1000ms invuln."><img src="./img/gems/O4.png" alt="O4.png" /></span>
 </p>
 
 <blockquote>
@@ -1068,14 +1075,14 @@ The lack of reset isn&rsquo;t really &ldquo;felt&rdquo; in most games.
 </blockquote>
 </div>
 </div>
-<div id="outline-container-org5d127c7" class="outline-3">
-<h3 id="org5d127c7"><span class="section-number-3">5.4.</span> C: Viable</h3>
-<div class="outline-text-3" id="text-5-4">
+<div id="outline-container-h:gems_c" class="outline-3">
+<h3 id="h:gems_c"><span class="section-number-3">5.4.</span> C: Viable</h3>
+<div class="outline-text-3" id="text-h:gems_c">
 <p>
-<span class="hint--large" aria-label="[&not;LEAP] No damage, leap or invuln. +m/s. Individual 40% chances to Supercharge+reset Special or Def."><img src="./img/gems/G2.png" alt="G2.png" /></span>
-<span class="hint--large" aria-label="+30% damage and radius per consecutive use (max 9.)"><img src="./img/gems/E2.png" alt="E2.png" /></span>
-<span class="hint--large" aria-label="40% chance to Supercharge+reset itself."><img src="./img/gems/R3.png" alt="R3.png" /></span>
-<span class="hint--large" aria-label="Deal &#x2191;140x4 to all enemies; gain +10% luck."><img src="./img/gems/G4.png" alt="G4.png" /></span>
+<span class="hint--large" aria-label="(G2) [&not;LEAP] No damage, leap or invuln. +m/s. Individual 40% chances to Supercharge+reset Special or Def."><img src="./img/gems/G2.png" alt="G2.png" /></span>
+<span class="hint--large" aria-label="(E2) +30% damage and radius per consecutive use (max 9.)"><img src="./img/gems/E2.png" alt="E2.png" /></span>
+<span class="hint--large" aria-label="(R3) 40% chance to Supercharge+reset itself."><img src="./img/gems/R3.png" alt="R3.png" /></span>
+<span class="hint--large" aria-label="(G4) Deal &#x2191;140x4 to all enemies; gain +10% luck."><img src="./img/gems/G4.png" alt="G4.png" /></span>
 </p>
 
 <blockquote>
@@ -1090,13 +1097,13 @@ or item builds on spamming <img src="./img/abilities-40px/N3.png" alt="N3.png" /
 </blockquote>
 </div>
 </div>
-<div id="outline-container-org0963766" class="outline-3">
-<h3 id="org0963766"><span class="section-number-3">5.5.</span> D: Other (Viable, but&hellip;)</h3>
-<div class="outline-text-3" id="text-5-5">
+<div id="outline-container-h:gems_other" class="outline-3">
+<h3 id="h:gems_other"><span class="section-number-3">5.5.</span> <span class="underline">Other</span>: Viable, but&hellip;</h3>
+<div class="outline-text-3" id="text-h:gems_other">
 <p>
-<span class="hint--large" aria-label="(&#x2191;15s CD) Deals &#x2191;1000. Starts on CD. Disables % triggers."><img src="./img/gems/O3.png" alt="O3.png" /></span>
-<span class="hint--large" aria-label="On 4th use, deal damage 10 times, sets 2.0s GCD and harsh -m/s on use."><img src="./img/gems/E1.png" alt="E1.png" /></span>
-<span class="hint--large" aria-label="Reset cooldowns &le;4s."><img src="./img/gems/O1.png" alt="O1.png" /></span>
+<span class="hint--large" aria-label="(O3) (&#x2191;15s CD) Deals &#x2191;1000. Starts on CD. Disables % triggers."><img src="./img/gems/O3.png" alt="O3.png" /></span>
+<span class="hint--large" aria-label="(E1) On 4th use, deal damage 10 times, sets 2.0s GCD and harsh -m/s on use."><img src="./img/gems/E1.png" alt="E1.png" /></span>
+<span class="hint--large" aria-label="(O1) Reset cooldowns &le;4s."><img src="./img/gems/O1.png" alt="O1.png" /></span>
 </p>
 
 <blockquote>
@@ -1111,7 +1118,7 @@ Though it&rsquo;s, by-far, the best option for multihit synergies when supported
 </p>
 
 <p>
-<span class="hint--large" aria-label="Reset cooldowns &le;4s."><img src="./img/gems-40px/O1.png" alt="O1.png" /> <span style="text-decoration:underline; text-decoration-style:dotted;">O1</span></span> is an auto-take with <span class="hint--large" aria-label="No GCD or slow."><img src="./img/gems-40px/S3.png" alt="S3.png" /> <span style="text-decoration:underline; text-decoration-style:dotted;">S3</span></span>; but it doesn&rsquo;t end up scaling with most item CD&rsquo;s.
+<span class="hint--large" aria-label="Reset cooldowns &le;4s."><img src="./img/gems-40px/O1.png" alt="O1.png" /> <span style="text-decoration:underline; text-decoration-style:dotted;">O1</span></span> is an auto-take with <span class="hint--large" aria-label="No GCD or slow."><img src="./img/gems-40px/S3.png" alt="S3.png" /> <span style="text-decoration:underline; text-decoration-style:dotted;">S3</span></span> and fine for spamming Special; but it doesn&rsquo;t end up scaling with most item CD&rsquo;s.
 The effects of Dancer&rsquo;s O3 (-4s max CD) or Wizard&rsquo;s
 O1 (-2s CD/use) are significantly better.
 </p>
@@ -1119,9 +1126,9 @@ O1 (-2s CD/use) are significantly better.
 </div>
 </div>
 </div>
-<div id="outline-container-orgb639204" class="outline-2">
-<h2 id="orgb639204"><span class="section-number-2">6.</span> Item Tier List</h2>
-<div class="outline-text-2" id="text-6">
+<div id="outline-container-h:item_tier_list" class="outline-2">
+<h2 id="h:item_tier_list"><span class="section-number-2">6.</span> Item Tier List</h2>
+<div class="outline-text-2" id="text-h:item_tier_list">
 <p>
 Again, tier placing prioritizes &ldquo;lines&rdquo; and WR consistency.
 </p>
@@ -1139,8 +1146,8 @@ Again, tier placing prioritizes &ldquo;lines&rdquo; and WR consistency.
 </ul></li>
 </ul>
 </div>
-<div id="outline-container-org0a1ea59" class="outline-3">
-<h3 id="org0a1ea59"><span class="section-number-3">6.1.</span> <span class="underline">S: Perfect</span></h3>
+<div id="outline-container-org9eaa816" class="outline-3">
+<h3 id="org9eaa816"><span class="section-number-3">6.1.</span> <span class="underline">S: Perfect</span></h3>
 <div class="outline-text-3" id="text-6-1">
 <div class="org-center">
 <p>
@@ -1185,8 +1192,8 @@ Again, tier placing prioritizes &ldquo;lines&rdquo; and WR consistency.
 </div>
 </div>
 </div>
-<div id="outline-container-org78ab16c" class="outline-3">
-<h3 id="org78ab16c"><span class="section-number-3">6.2.</span> <span class="underline">A: Great</span></h3>
+<div id="outline-container-org07763da" class="outline-3">
+<h3 id="org07763da"><span class="section-number-3">6.2.</span> <span class="underline">A: Great</span></h3>
 <div class="outline-text-3" id="text-6-2">
 <div class="org-center">
 <p>
@@ -1248,8 +1255,8 @@ Again, tier placing prioritizes &ldquo;lines&rdquo; and WR consistency.
 </div>
 </div>
 </div>
-<div id="outline-container-org99504bf" class="outline-3">
-<h3 id="org99504bf"><span class="section-number-3">6.3.</span> <span class="underline">B: Good, often conditional</span></h3>
+<div id="outline-container-org7cace3a" class="outline-3">
+<h3 id="org7cace3a"><span class="section-number-3">6.3.</span> <span class="underline">B: Good, often conditional</span></h3>
 <div class="outline-text-3" id="text-6-3">
 <div class="org-center">
 <p>
@@ -1363,8 +1370,8 @@ Again, tier placing prioritizes &ldquo;lines&rdquo; and WR consistency.
 </p>
 </div>
 </div>
-<div id="outline-container-org3e7049d" class="outline-4">
-<h4 id="org3e7049d"><span class="section-number-4">6.3.1.</span> Gold (first shop only)</h4>
+<div id="outline-container-orge4d13f4" class="outline-4">
+<h4 id="orge4d13f4"><span class="section-number-4">6.3.1.</span> Gold (first shop only)</h4>
 <div class="outline-text-4" id="text-6-3-1">
 <div class="org-center">
 <p>
@@ -1376,8 +1383,8 @@ Again, tier placing prioritizes &ldquo;lines&rdquo; and WR consistency.
 </div>
 </div>
 </div>
-<div id="outline-container-org8aedd78" class="outline-3">
-<h3 id="org8aedd78"><span class="section-number-3">6.4.</span> <span class="underline">C: Need synergy, anti-synergy, uncommon</span></h3>
+<div id="outline-container-org3e1e7a9" class="outline-3">
+<h3 id="org3e1e7a9"><span class="section-number-3">6.4.</span> <span class="underline">C: Need synergy, anti-synergy, uncommon</span></h3>
 <div class="outline-text-3" id="text-6-4">
 <div class="org-center">
 <p>
@@ -1421,8 +1428,8 @@ Again, tier placing prioritizes &ldquo;lines&rdquo; and WR consistency.
 </div>
 </div>
 </div>
-<div id="outline-container-org2631446" class="outline-3">
-<h3 id="org2631446"><span class="section-number-3">6.5.</span> <span class="underline">D: Super-niche, rare</span></h3>
+<div id="outline-container-org476ac00" class="outline-3">
+<h3 id="org476ac00"><span class="section-number-3">6.5.</span> <span class="underline">D: Super-niche, rare</span></h3>
 <div class="outline-text-3" id="text-6-5">
 <div class="org-center">
 <p>
@@ -1438,8 +1445,8 @@ Again, tier placing prioritizes &ldquo;lines&rdquo; and WR consistency.
 </div>
 </div>
 </div>
-<div id="outline-container-org2570778" class="outline-3">
-<h3 id="org2570778"><span class="section-number-3">6.6.</span> <span class="underline">E: QoL/Unranked</span></h3>
+<div id="outline-container-org0ed13ef" class="outline-3">
+<h3 id="org0ed13ef"><span class="section-number-3">6.6.</span> <span class="underline">E: QoL/Unranked</span></h3>
 <div class="outline-text-3" id="text-6-6">
 <div class="org-center">
 <p>
@@ -1481,15 +1488,15 @@ Again, tier placing prioritizes &ldquo;lines&rdquo; and WR consistency.
 </div>
 </div>
 </div>
-<div id="outline-container-org5217efa" class="outline-2">
-<h2 id="org5217efa"><span class="section-number-2">7.</span> Other Notes</h2>
-<div class="outline-text-2" id="text-7">
+<div id="outline-container-h:other" class="outline-2">
+<h2 id="h:other"><span class="section-number-2">7.</span> Other Notes</h2>
+<div class="outline-text-2" id="text-h:other">
 </div>
-<div id="outline-container-orgf09345b" class="outline-3">
-<h3 id="orgf09345b"><span class="section-number-3">7.1.</span> Avoiding leap PVP</h3>
-<div class="outline-text-3" id="text-7-1">
+<div id="outline-container-h:leap_pvp" class="outline-3">
+<h3 id="h:leap_pvp"><span class="section-number-3">7.1.</span> Avoiding leap PVP</h3>
+<div class="outline-text-3" id="text-h:leap_pvp">
 <p>
-For damage/consistency, see <a href="#org9ac90a9">Ruby Leap Archetypes - R2/R4</a>. To repeat:
+For damage/consistency, see <a href="#h:ruby_leap">Ruby Leap Archetypes - R2/R4</a>. To repeat:
 </p>
 <ul class="org-ul">
 <li>For <span class="hint--large" aria-label="Gain Omegacharge on invuln."><img src="./img/gems-40px/R1.png" alt="R1.png" /> <span style="text-decoration:underline; text-decoration-style:dotted;">R1</span></span>/<span class="hint--large" aria-label="Deals 180. On leaps, trigger again in 600px radius."><img src="./img/gems-40px/R2.png" alt="R2.png" /> <span style="text-decoration:underline; text-decoration-style:dotted;">R2</span></span>/<span class="hint--large" aria-label="Deal &#x2193;300. Damage on other invuln effects. &#x2193;1400ms invuln."><img src="./img/gems-40px/R4.png" alt="R4.png" /> <span style="text-decoration:underline; text-decoration-style:dotted;">R4</span></span> leaps, leap near the leap distance when you can.</li>
@@ -1505,12 +1512,12 @@ Additionally,
 <ul class="org-ul">
 <li><img src="./img/abilities-40px/N4.png" alt="N4.png" /> <b>Defensive</b> &rarr; <img src="./img/abilities-40px/N2.png" alt="N2.png" /> <b>Leap Secondary</b> does provide back-to-back invuln, but <img src="./img/abilities-40px/N2.png" alt="N2.png" /> <b>Secondary</b> can roll <span class="hint--large" aria-label="On ability use, an attack is disabled randomly."><img src="./img/other/Shackles.png" alt="Shackles.png" /> <span style="text-decoration:underline; text-decoration-style:dotted;">Shackles</span></span>.</li>
 </ul></li>
-<li>Use your <a href="#org98ccfa5">mini hotbar</a> to check if leap is enabled.</li>
+<li>Use your <a href="#h:mini_hotbar">mini hotbar</a> to check if leap is enabled.</li>
 </ul>
 </div>
-<div id="outline-container-org98ccfa5" class="outline-4">
-<h4 id="org98ccfa5"><span class="section-number-4">7.1.1.</span> Turn on Mini Hotbar</h4>
-<div class="outline-text-4" id="text-7-1-1">
+<div id="outline-container-h:mini_hotbar" class="outline-4">
+<h4 id="h:mini_hotbar"><span class="section-number-4">7.1.1.</span> Turn on Mini Hotbar</h4>
+<div class="outline-text-4" id="text-h:mini_hotbar">
 <p>
 In <code>Options&gt;More Options</code>, you can toggle and customize your  <span style="font-size: small; border:2px darkcyan solid; padding: 1px;">Mini Hotbar</span>. This allows you to see
 your available abilities (and <span class="hint--large" aria-label="On ability use, an attack is disabled randomly."><img src="./img/other/Shackles.png" alt="Shackles.png" /> <span style="text-decoration:underline; text-decoration-style:dotted;">Shackles</span></span>) adjacent to your hitbox.
@@ -1522,16 +1529,16 @@ Shadow palette.
 </p>
 
 
-<div id="orgc43a4bc" class="figure">
+<div id="org80bc72a" class="figure">
 <p><img src="./img/game/options_hotbar.jpg" alt="options_hotbar.jpg" />
 </p>
 <p><span class="figure-number">Figure 2: </span>Mini Hotbar Settings</p>
 </div>
 </div>
 </div>
-<div id="outline-container-org030b306" class="outline-4">
-<h4 id="org030b306"><span class="section-number-4">7.1.2.</span> Practices on Targetting</h4>
-<div class="outline-text-4" id="text-7-1-2">
+<div id="outline-container-h:targetting" class="outline-4">
+<h4 id="h:targetting"><span class="section-number-4">7.1.2.</span> Practices on Targetting</h4>
+<div class="outline-text-4" id="text-h:targetting">
 <p>
 Regarding player controls  <span style="font-size: small; border:2px DarkSalmon solid; padding: 1px;">Nearest Target</span> and  <span style="font-size: small; border:2px DarkSeaGreen solid; padding: 1px;">Change Target</span>.
 </p>
@@ -1556,16 +1563,16 @@ If you&rsquo;re in a fight with multiple enemies, and you do <span class="underl
 </div>
 </div>
 </div>
-<div id="outline-container-org30af46f" class="outline-3">
-<h3 id="org30af46f"><span class="section-number-3">7.2.</span> Hidden Leap Disable Radius</h3>
-<div class="outline-text-3" id="text-7-2">
+<div id="outline-container-h:leap_buffer" class="outline-3">
+<h3 id="h:leap_buffer"><span class="section-number-3">7.2.</span> Hidden Leap Disable Radius</h3>
+<div class="outline-text-3" id="text-h:leap_buffer">
 <p>
 After enabling leap on Secondary, disabling leap uses an inner &ldquo;buffer&rdquo; distance
 (~2.94lp; ~2x size of Rabbit visible hitbox.)
 </p>
 
 
-<div id="org0dd0860" class="figure">
+<div id="org11740ce" class="figure">
 <p><img src="./img/game/rabbitleap-buffer-inkscape.svg" alt="rabbitleap-buffer-inkscape.svg" class="org-svg" />
 </p>
 <p><span class="figure-number">Figure 3: </span>Rabbitleap &ldquo;Buffer&rdquo; Disable Radius</p>
@@ -1583,9 +1590,9 @@ After enabling leap on Secondary, disabling leap uses an inner &ldquo;buffer&rdq
 </div>
 </div></div>
 <div id="postamble" class="status">
-<p class="date">Date: 2026-05-02</p>
+<p class="date">Date: 2026-05-14</p>
 <p class="author">Author: Quoise</p>
-<p class="date">Created: 2026-05-02 Sat 22:13</p>
+<p class="date">Created: 2026-05-14 Thu 17:59</p>
 </div>
 </body>
 </html>
