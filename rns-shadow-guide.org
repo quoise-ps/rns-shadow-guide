@@ -206,15 +206,14 @@ Shadow is best characterized by having:
 - {{{Shackles}}} status effect
 
 #+caption: Class Advantages Table
-| Pros                                           | Cons                                        |
-|------------------------------------------------+---------------------------------------------|
-| Unique, gacha-like effects                     | Defensive has GCD                           |
-| Versatile and variety between runs             | Attacks have {{{Shackles}}}                       |
-| Secondary invinciblity                         | Punishes for leaping or wrong targeting     |
-| Most gems are damage-viable and reqs           | Non-default rotations                       |
-| 4P Support line in {{{O2}}} {{{G3}}}                       | Weak Special builds                         |
-| Consistent without % effects or BiS items/gems | Almost 0 hacky Rabbitluck 8k+ damage builds |
-|                                                | [MP] Contests many of Sin's items           |
+| Pros                                                     | Cons                                        |
+|----------------------------------------------------------+---------------------------------------------|
+| Unique, gacha-like effects                               | Defensive has GCD                           |
+| Versatile and variety between runs                       | Complex rotations ({{{Shackles}}})                |
+| Secondary invulnerability                                | Watching distance  for leap                 |
+| 4P Support line in {{{O2}}} {{{G3}}}                                 | Weak Special builds                         |
+| Consistent without % effects and overall good items/gems | Almost 0 hacky Rabbitluck 8k+ damage builds |
+|                                                          | [MP] Contests many of Sin's items           |
 
 ** REVIEW Shackles
 :PROPERTIES:
@@ -345,26 +344,29 @@ Generic item synergies or damage bonuses are assumed:
 :CUSTOM_ID: h:primary
 :END:
 #+MACRO: N1i 
-#+MACRO: O1i short CD items;
-#+MACRO: S1i {{{i(Windbite-Dagger)}}}
-#+MACRO: R1i {{{i(Firststrike-Bracelet)}}}; Flash- Buff
-#+MACRO: G1i luck-boost; RL({{{i(Brightstorm-Spear)}}})
-#+MACRO: E1i {{{i(Firststrike-Bracelet)}}}; Flash- Buff; Bleed
+#+MACRO: O1i {{{i(Sand-Shovel)}}} {{{i(Miners-Headlamp)}}} {{{i(Large-Anchor)}}}
+#+MACRO: S1i {{{i(Windbite-Dagger)}}} {{{i(Giant-Stone-Club)}}}
+#+MACRO: R1i {{{i(Firststrike-Bracelet)}}}
+#+MACRO: G1i {{{i(Colorful-Earrings)}}} {{{i(Lightning-Bow)}}} {{{i(Crown-of-Storms)}}} {{{i(Usagi-Kamen)}}} {{{i(Giant-Stone-Club)}}}
+#+MACRO: E1i {{{i(Firststrike-Bracelet)}}} {{{i(Midsummer-Dress)}}}; {{{i(Abyss-Artifact)}}};
+#+MACRO: E1n "Needs" slow bypass, but best internal multi-hit and good snapshot buff synergy
 
-| Gem | Gem Synergies | Item Synergies | Notes                                                                          |
-|-----+---------------+----------------+--------------------------------------------------------------------------------|
-| {{{N1}}}  |               | {{{N1i}}}            | Good class N1                                                                  |
-| {{{O1}}}  | {{{S3s}}} {{{S4s}}}       | {{{O1i}}}            | Weaker {{{G2}}} variant for {{{S3}}} + {{{S4}}}                                                  |
-| {{{S1}}}  |               | {{{S1i}}}            | More consistent than {{{G1}}} for single enemies                                     |
-| {{{R1}}}  | Leap or {{{S2s}}}   | {{{R1i}}}            | _600dmg on only iframe req_; easiest with {{{S2}}}                                   |
-| {{{G1}}}  | {{{E3s}}} {{{G4s}}} {{{S4s}}}   | {{{G1i}}}            | Multiple-target version of {{{S1}}}, not limited to secondary                        |
-| {{{E1}}}  | {{{E3s}}}           | {{{E1i}}}            | Hardest-hitting primary in-game; Shadow's highest _best_ option for multi-hits |
+| Gem | Gem Synergies   | Item Synergies | Notes                                                                          |
+|-----+-----------------+----------------+--------------------------------------------------------------------------------|
+| {{{N1}}}  |                 | {{{N1i}}}            | Good class N1, main ability to click on base                                   |
+| {{{O1}}}  | {{{S3s}}} {{{S4s}}}         | {{{O1i}}}            | Weaker {{{G2}}} variant for {{{S3}}} + {{{S4}}}                                                  |
+| {{{S1}}}  |                 | {{{S1i}}}            | More consistent than {{{G1}}} for single enemies                                     |
+| {{{R1}}}  | {{{O2s}}} {{{S2s}}} {{{R2s}}} {{{E2s}}} | {{{R1i}}}            | _600dmg on only iframe req_; easiest with {{{S2}}}, good with snapshot buffs           |
+| {{{G1}}}  | All (-{{{G2}}})       | {{{G1i}}}            | Multiple-target version of {{{S1}}}; decent at triggering % procs without Rabbitluck |
+| {{{E1}}}  | {{{E3s}}} {{{O4s}}}         | {{{E1i}}}            | {{{E1n}}}                                                                            |
 
 #+begin_quote
 {{{S1}}} and {{{G1}}} effects does not trigger "use" abilities like {{{Black-Wakizashi}}} or {{{Golden-Katana}}}, but can trigger {{{Brightstorm-Spear}}}.
 
-{{{E1}}} 2s GCD effect can't be cheated via GCD items, Berserk, Quickdraw or other effects.
-At base kit, the effect triggers {{{Winter-Hat}}}, but not {{{Sacredstone-Charm}}}.
+{{{S1}}} and {{{G1}}} are fine with taking +GCD (includes {{{R1}}} to some extent.)
+
+{{{E1}}} 2s GCD effect can't be cheated via GCD items, Berserk, Quickdraw or even {{{Shinsoku Katana}}}.
+At base kit, the effect triggers {{{Pocketwatch}}}, but not {{{Sacredstone-Charm}}}.
 #+end_quote
 
 ** REVIEW Secondary
@@ -374,21 +376,20 @@ At base kit, the effect triggers {{{Winter-Hat}}}, but not {{{Sacredstone-Charm}
 #+MACRO: N2i {{{i(Butterfly-Hairpin)}}} {{{i(Cavers-Cloak)}}}
 #+MACRO: O2i
 #+MACRO: S2i
-#+MACRO: R2i +m/s;
-#+MACRO: G2i +luck; {{{i(Jesters-Hat)}}}
-#+MACRO: E2i
+#+MACRO: R2i {{{i(Reddragon-Blade)}}} {{{i(Greysteel-Shield)}}}
+#+MACRO: G2i {{{i(Jesters-Hat)}}} {{{i(Colorful-Earrings)}}} {{{i(Lightning-Bow)}}} {{{i(Crown-of-Storms)}}} {{{i(Usagi-Kamen)}}}
+#+MACRO: E2i 
 
-| Gem | Leap? | Gem Synergies | Item Synergies | Notes                                                |
-|-----+-------+---------------+----------------+------------------------------------------------------|
-| {{{N2}}}  | Yes   | {{{R4s}}}           | {{{N2i}}}            | Good class N2                                        |
-| {{{O2}}}  | Yes   | {{{R4s}}}           | {{{O2i}}}            | SS Superhex                                          |
-| {{{S2}}}  | No    | {{{R4s}}} {{{R1s}}} {{{S3s}}}   | {{{S2i}}}            | Dancer secondary, good uptime                        |
-| {{{R2}}}  | Yes   | {{{R4s}}} {{{S3s}}}       | {{{R2i}}}            | _360dmg for 1.0s GCD/0s CD_ with only leap req       |
-| {{{G2}}}  | No    | {{{S3s}}} {{{S4s}}} {{{G4s}}}   | {{{G2i}}}            | Good with oGCD gems; risky first-buy without synergy |
-| {{{E2}}}  | Yes   | {{{R4s}}} {{{S3s}}}       | {{{E2i}}}            | Uncheatable Shackles, easy req                       |
+| Gem | Leap | Gem Synergies | Item Synergies | Notes                                                 |
+|-----+------+---------------+----------------+-------------------------------------------------------|
+| {{{N2}}}  | Y    | {{{R4s}}}           | {{{N2i}}}            | Good class N2                                         |
+| {{{O2}}}  | Y    | {{{R4s}}}           | {{{O2i}}}            | SS superhex                                           |
+| {{{S2}}}  | -    | {{{R4s}}} {{{R1s}}} {{{S3s}}}   | {{{S2i}}}            | Ranged secondary and wide-hitbox, easy uptime         |
+| {{{R2}}}  | Y    | {{{R4s}}} {{{S3s}}}       | {{{R2i}}}            | _"Supercharge" double damage effect_ with only leap req |
+| {{{G2}}}  | -    | {{{S3s}}} {{{S4s}}} {{{G4s}}}   | {{{G2i}}}            | Good with oGCD gems; loses Secondary damage           |
+| {{{E2}}}  | Y    | {{{R4s}}} {{{S3s}}}       | {{{E2i}}}            | Average upgrade due to {{{Shackles}}}, easy effect req tho  |
 
 #+begin_quote
-Hitting multiple {{{E2}}} (33%) is similar to not hitting Special Reset on Dancer (30%). The effect +% is a multiplier after any percent or additive bonuses are calc'd though.
 #+end_quote
 
 ** REVIEW Special
@@ -397,28 +398,25 @@ Hitting multiple {{{E2}}} (33%) is similar to not hitting Special Reset on Dance
 :END:
 #+MACRO: N3i Debuff apply; {{{i(Hawkfeather-Fan)}}} {{{i(Spear-of-Winds)}}} {{{i(Bolt-Staff)}}}
 #+MACRO: O3i1 {{{i(Miners-Headlamp)}}} {{{i(Darkglass-Spear)}}} {{{i(Timespace-Dagger)}}}
-#+MACRO: O3i2 {{{o3i1}}} {{{i(Raindrop-Earrings)}}}
-#+MACRO: O3i {{{o3i2}}} {{{i(Sun-Pendant)}}} {{{i(Heavens-Codex)}}} {{{i(Staff-of-Sorrow)}}}
+#+MACRO: O3i2 {{{i(Raindrop-Earrings)}}} {{{i(Sun-Pendant)}}} {{{i(Heavens-Codex)}}} {{{i(Staff-of-Sorrow)}}} {{{i(Mountain-Staff)}}}
+#+MACRO: O3i {{{o3i1}}} {{{o3i2}}}
 #+MACRO: S3i N3 items; {{{i(Hawkfeather-Fan)}}} {{{i(Mountain-Staff)}}} {{{i(Obsidian-Rod)}}} {{{i(Garnet-Staff)}}}  {{{i(Lion-Charm)}}} {{{i(Obsidian-Hairpin)}}}
 #+MACRO: R3i N3 Items; {{{i(Hawkfeather-Fan)}}} {{{i(Obsidian-Rod)}}} {{{i(Garnet-Staff)}}}
 #+MACRO: G3i N3 Items; {{{i(Hawkfeather-Fan)}}} {{{i(Sacred-Bow)}}} {{{i(Shrinemaidens-Kosode)}}}
 #+MACRO: E3i N3 Items; +GCD/debuff items; {{{i(Hawkfeather-Fan)}}} {{{i(Sacred-Bow)}}} {{{i(Shrinemaidens-Kosode)}}}
-#+MACRO: S3n "Best" Spc., ~+60DPS at base; oGCD, no slow, loves CD reduction (including 1s \rightarrow 0s); 0.7s "cd" minimum
+#+MACRO: S3n Good base damage increase as oGCD; no slow, loves CD reduction (0.8s hidden CD minimum)
 
- | Gem | Gem Synergies | Item Synergies | Notes                                       |
- |-----+---------------+----------------+---------------------------------------------|
- | {{{N3}}}  |               | {{{N3i}}}            | Weaker class N3, hits all enemies though    |
- | {{{O3}}}  |               | {{{o3i}}}            | Disable universal %                         |
- | {{{S3}}}  | {{{G2s}}}           | {{{s3i}}}            | {{{s3n}}}                                         |
- | {{{R3}}}  |               | {{{R3i}}}            | Good if building special uncontested        |
- | {{{G3}}}  |               | {{{G3i}}}            | Dancer Warcry                               |
- | {{{E3}}}  |               | {{{E3i}}}            | More dmg on Special. Debuff/buff archetype. |
+ | Gem | Gem Synergies | Item Synergies | Notes                                                                 |
+ |-----+---------------+----------------+-----------------------------------------------------------------------|
+ | {{{N3}}}  |               | {{{N3i}}}            | Weaker class N3, but strong AoE (hits all) and decent debuff Spreader |
+ | {{{O3}}}  |               | {{{o3i}}}            | Huge hitting Special; unfortunately, disables universal %             |
+ | {{{S3}}}  | {{{G2s}}}           | {{{s3i}}}            | {{{s3n}}}                                                                   |
+ | {{{R3}}}  |               | {{{R3i}}}            | Good if item-building special Damage uncontested                      |
+ | {{{G3}}}  |               | {{{G3i}}}            | Dancer Warcry                                                         |
+ | {{{E3}}}  |               | {{{E3i}}}            | More dmg on Special; debuff/buff archetype; loses consistent AoE      |
 
 #+begin_quote
-[MP] Shadow has low prio on Special damage-boosting items without prior synergies (except {{{Garnet-Staff}}} or {{{Hawkfeather-Fan}}}.)
-
 {{{E3}}} is affected by {{{Obsidian-Rod}}}, {{{Cursed-Candlestaff}}}, {{{Old-Bonnet}}} / {{{Haunted-Gloves}}} and other special items changes.
-Note, additive bonuses like {{{Eaglewing-Charm}}} will not apply to debuffs.
 #+end_quote
  
 ** REVIEW Defensive
@@ -426,28 +424,27 @@ Note, additive bonuses like {{{Eaglewing-Charm}}} will not apply to debuffs.
 :CUSTOM_ID: h:defensive
 :END:
 #+MACRO: N4i {{{i(Gemini-Necklace)}}} {{{i(Firststrike-Bracelet)}}}
-#+MACRO: O4i N4 items; {{{i(Hermes-Bow)}}}  {{{i(Talon-Charm)}}}  {{{i(Sacred-Bow)}}}
-#+MACRO: S4i N4 items; {{{i(Coldsteel-Shield)}}}
-#+MACRO: R4i +m/s; {{{i(Garnet-Staff)}}} {{{i(Peridot-Rapier)}}} {{{i(Greysteel-Shield)}}} 
-#+MACRO: G4i N4 items; {{{i(Spark-of-Determination)}}}
-#+MACRO: E4i {{{i(Firststrike-Bracelet)}}} {{{i(Starry-Cloak)}}} {{{i(Timespace-Dagger)}}}
-#+MACRO: R4gs (Safety\rightarrow{{{S2s}}}; DPS\rightarrow{{{R2s}}})
+#+MACRO: O4i {{{N4i}}} {{{i(Hermes-Bow)}}}  {{{i(Talon-Charm)}}}  {{{i(Sacred-Bow)}}} {{{i(Coldsteel-Shield)}}}
+#+MACRO: S4i {{{N4i}}} {{{i(Coldsteel-Shield)}}}
+#+MACRO: R4i {{{i(Tiny-Wings)}}} {{{i(Garnet-Staff)}}} {{{i(Peridot-Rapier)}}} {{{i(Greysteel-Shield)}}} 
+#+MACRO: G4i {{{N4i}}} {{{i(Spark-of-Determination)}}}
+#+MACRO: E4i {{{i(Firststrike-Bracelet)}}} {{{i(Starry-Cloak)}}}(\rightarrow {{{i(Timemage-Cap)}}}) {{{i(Timespace-Dagger)}}} {{{Bloodhound-Greatsword}}}
 
-| Gem | Gem Synergies | Item Synergies | Notes                                                     |
-|-----+---------------+----------------+-----------------------------------------------------------|
-| {{{N4}}}  |               | {{{N4i}}}            | Harsh slow, good burst, doesn't consume Blackstrike       |
-| {{{O4}}}  |               | {{{O4i}}}            | *Leaps*; *+m/s*; allows to click Pri./Sec. 1.5 more times |
-| {{{S4}}}  | {{{G2s}}}           | {{{S4i}}}            | oGCD like {{{S3s}}} but longer CD                               |
-| {{{R4}}}  | {{{R4s}}} {{{R4gs}}}      | {{{R4i}}}            | 480 damage on leap is amazing                             |
-| {{{G4}}}  | {{{G1s}}} {{{G2s}}} {{{R3s}}}   | {{{G4i}}}            | Sanctum/Mice tech                                         |
-| {{{E4}}}  |               | {{{E4i}}}            | Amazing burst, useable twice in reg encounters            |
+| Gem | Leap | Gem Synergies   | Item Synergies | Notes                                                             |
+|-----+------+-----------------+----------------+-------------------------------------------------------------------|
+| {{{N4}}}  | -    |                 | {{{N4i}}}            | Has GCD; good burst for class N4 and universal reroll on Shackles |
+| {{{O4}}}  | Y    |                 | {{{O4i}}}            | *Leaps*; *+m/s*; allows to click Pri./Sec. 1.5 more times             |
+| {{{S4}}}  | -    | {{{G2s}}}             | {{{S4i}}}            | oGCD burst damage early-game; but oGCD on 10s is still long       |
+| {{{R4}}}  | -    | {{{O2s}}} {{{S2s}}} {{{R2s}}} {{{E2s}}} | {{{R4i}}}            | +300 on Leaps is amazing                                          |
+| {{{G4}}}  | -    | {{{G1s}}} {{{G2s}}} {{{R3s}}}     | {{{G4i}}}            | Sanctum/Mice tech;                                                |
+| {{{E4}}}  | -    | {{{G1s}}} {{{O2s}}} {{{E3s}}}     | {{{E4i}}}            | Amazing burst, useable twice in reg encounters                    |
 
 #+begin_quote
-{{{Firststrike-Bracelet}}} or Blackstrike source ({{{Book-of-Cheats}}}, {{{E3}}})
-is oddly quite good given it applies to Defensive damage without consuming it.
+Worth saving Defensive to reroll {{{Shackles}}}, to line up
+Wavestrike, Blacktrike, Flash-* and Vanish/Ghost effects, with for example, {{{E1}}}.
 
-Blackstrike on {{{R4}}} isn't affected by the Secondary leap that triggers {{{i(Firststrike-Bracelet)}}},
-instead the one after.
+{{{Firststrike-Bracelet}}} or Blackstrike buff ({{{Book-of-Cheats}}}, {{{E3}}})
+applies to Defensive damage without consuming it.
 #+end_quote
 
 * REVIEW Gems Tier List
@@ -455,14 +452,13 @@ instead the one after.
 :CUSTOM_ID: h:gems_tier_list
 :END:
 
-Tier placing prioritizes "lines" and WR consistency.
-Shadow, by design, should always buy a gem first shop; most gems are damage positive.
-
-- If avoiding leap, one can consider buying {{{S2}}} and {{{G2}}}; avoid {{{O4}}}.
-- Generally, Special damage gems, besides {{{S3}}}, are not a prio pick due to their GCD, CD and low base damage.
-- If on *Subterra Sanctum* or *Churchmouse Streets* first stage,
-  consider {{{G1}}}, {{{G4}}} or special gem. 
-- {{{O2}}}, {{{G3}}} is great for MP, they're practically SS's Superhex and Dancer's Warcry respectively.
+Tier placing prioritizes "lines" and WR by Lunar Shira/Witch of 900 DPS (~600 base DPS/level 1.)
+- In >99% of runs, buy a gem first shop (most gems are damage positive)
+  + If first stage is *Subterra Sanctum* or *Churchmouse Streets*, consider Special Gem, {{{G1}}}, {{{S2}}}, or {{{G4}}}.
+    + Optionally, *Darkhouse Depths*, viable for Tauros if you're unable to hit {{{pri}}}'s detached hitbox consistently.
+- [MP] {{{O2}}}, {{{G3}}} is A-S tier in 4P; roughly adding the damage of an extra player.
+- [MP] {{{R1}}}, {{{R4}}} is proccable from invulns like Druid Defensive and Gren R4.
+- [Rabbitluck] {{{G1}}} is S-tier; {{{G2}}} and {{{R3}}} are A-tier
 
 ** RENEW S: Multipliers
 :PROPERTIES:
@@ -474,8 +470,14 @@ Shadow, by design, should always buy a gem first shop; most gems are damage posi
 {{{R1g}}}
 
 #+begin_quote
-{{{R4}}}, {{{R2}}} and {{{R1}}}, each alone, can do +30-100% DPS without external support requiring only leap.
-Scales well late.
+High, consistent damage requiring only leap, accessible immediately through base kit.
+
+- {{{R4}}} :: Unless you {{{G2}}}, 580 base DPS on successive leaps is astounding.
+  + If triggered every <5s, still _out-damages all other Shadow Defensive_ on base.
+  + Leaps are free on Phase 2's of Witch and Shira (no leap movement at 3 Rabbitleaps.)
+- {{{R2}}} :: +180 double damage on leaps (360 DPS on successive leaps).
+  + Unlike {{{R4}}}, {{{R1}}} and {{{R2}}} typically have better item scaling
+- {{{R1}}} :: optimal $(2\rightarrow1)$ rotations yields 390 base DPS.
 #+end_quote
    
 ** REVIEW A: Amazing
@@ -483,28 +485,29 @@ Scales well late.
 :CUSTOM_ID: h:gems_a
 :END:
 
-{{{S3g}}}
 {{{S1g}}}
-{{{E3g}}}
 {{{G1g}}}
+{{{O4g}}}
+{{{E3g}}}
+{{{S3g}}}
 {{{S2g}}}
-{{{S4g}}}
     
 #+begin_quote
-{{{S3}}} is about +25% DPS off base as an oGCD.
-Alternatively, can be used to roll Shackles on Pri/Sec builds.
+- {{{S1}}} :: more consistent single-target DPS on non-leap Secondary builds.
+  + Similar to {{{G1}}} allowing extra damage 
+- {{{G1}}} :: in-class {{{Darkstorm-Knife}}} and amazing in Rabbitluck or when multiple enemies are present.
+  + Very decent % trigger without Rabbitluck.
 
-{{{E3}}} is a damage increase and, in prolonged fights, {{{E3}}} is usually carried by its buffs: e.g.
-Flow-Str/Dex, Blackstrike, Berserk and Warcry.
+- {{{O4}}} :: triggers leap; similar to {{{S4}}}, in the same 10s span, {{{O4}}} allows an extra attack (11 vs S4's 10);
+  + In 5s buffs like Smite, allows 2-3 extra attacks
+ 
+- {{{E3}}} :: Special dmg bump + single/group buffs + debuffs.
+  + Enables {{{E1}}} and unique item lines.
 
-{{{G1}}} is an in-class {{{Darkstorm-Knife}}}. For single target damage, it's about +25% DPS off base.
-{{{S1}}} is a much higher and consistent single target DPS and non-%.
+- {{{S3}}} :: upgrading 4s Special to a oGCD simplifies rotations and damage.
 
-{{{S2}}} is amazing for damage uptime via range anywhere.
-Just buy this if you struggle at damage.
-
-{{{S4}}} is the _comfy QoL_ {{{def}}}. Like {{{S3}}}, {{{S4}}} can be used to reroll Shackles. +15% off base.
-Amazing, but more limited, synergies as an oGCD on 10s and Defensive (non-attack).
+- {{{S2}}} :: amazing for damage uptime via ranged attacks, wider area
+  + Consistent trigger for {{{R1}}}.
 #+end_quote
 
 ** REVIEW B: Good
@@ -513,54 +516,66 @@ Amazing, but more limited, synergies as an oGCD on 10s and Defensive (non-attack
 :END:
 
 {{{O2g}}}
-{{{E4g}}}
 {{{G3g}}}
-{{{O4g}}}
+{{{E4g}}}
+{{{G4g}}}
+{{{S4g}}}
 
 #+begin_quote
-{{{E4}}} is unironically great for being able to deal 900 damage all at-once,
-twice in regular encounters (trigger at 0s+20s to kill at 22.5s; or save for ads.)
-The lack of reset isn't really "felt" in most games.
+- {{{O2}}} and {{{G3}}} :: good consistent multiplier in most Shadow builds.
 
-{{{O2}}} and {{{G3}}}, in 4P, practically add another team member's worth of damage off base.
+- {{{E4}}} :: high burst trivializing the first two fights in each midstage when used at t=0s+20s.
+  + Highest burst when used with {{{G1}}} and Blackstrike buff ({{{E3}}}, {{{i(Firststrike-Bracelet)}}})
+  + Good ad-clear option, do make sure to hit enemies when clustered
+
+- {{{G4}}} :: significant dmg increase that hits all enemies, good ads tech.
+  + The minor luck boost (10) is "insignificant" until you have at least three %-items/gems
+
+- {{{S4}}} :: is a comfy {{{def}}} oGCD with good early-game burst DPS. Falloffs late-game without synergies.
+  + Doesn't really excel at solving any particular encounter (10s for an oGCD is bad and item/{{{G2}}}-dependant)
+  + Reroll Shackles in an instant, making it easier to force snapshot effects.
 #+end_quote
 
-** REVIEW C: Viable
+** REVIEW C: Viable, but line-specific
 :PROPERTIES:
 :CUSTOM_ID: h:gems_c
 :END:
 
-{{{G2g}}}
+{{{O3g}}}
 {{{E2g}}}
 {{{R3g}}}
-{{{G4g}}}
+{{{G2g}}}
 
 #+begin_quote
-{{{G2}}} should be damage positive off base, just % is a risky early buy without {{{S3}}} and {{{S4}}} / {{{G4}}};
-or item builds on spamming {{{spe}}} and {{{def}}}.
+- {{{O3}}} :: highest base Special, good 15s CD ad-clear option at base
+  + [MP] {{{O3}}} is pickable given other class O3's are not high base
+  + Losing potential % procs is typically insignificant, e.g. if it solves Sanctum first area
 
-{{{R3}}} is the best option for spamming out Special damage out or loot effects like {{{Saltwater-Staff}}}.
+- {{{E2}}} :: okay DPS option,
+  but {{{Shackles}}} variance guarantees you're never outdamaging {{{R2}}} or {{{S2}}}
+
+- {{{R3}}} :: is the best option for spamming out Special damage and loot effects like {{{Saltwater-Staff}}}.
+  + 60% chance for it to whiff effect is super bad (it will happen.)
+
+- {{{G2}}} :: 0 dmg line-specific % gem, late-buy only (requires synergies), no leap or invuln
+  + Damage positive but high variance off base
+  + Without synergies, may kill runs if not clicking Primary
+  + Anti-synergistic Ruby leap-based builds
 #+end_quote
 
-** DONE _Other_: Viable, but...
+** DONE _Other_: Viable, but skippable...
 :PROPERTIES:
 :CUSTOM_ID: h:gems_other
 :END:
 
-{{{O3g}}}
 {{{E1g}}}
 {{{O1g}}}
 
 #+begin_quote
-{{{O3}}} can punish Shadow if using Special to reset Shackles or for damage uptime.
-Only triggers once per regular encounter. Limits % lines but eh.
- 
-{{{E1}}} is the worst "feels" gem in R&S' entirity.
-Though it's, by-far, the best option for multihit synergies when supported by {{{E3}}}.
+- {{{E1}}} :: Severely hampered by the harsh slow (lasting ~1.5s) but best damage for multihit/snapshot buffs.
 
-{{{O1}}} is an auto-take with {{{S3}}} and fine for spamming Special; but it doesn't end up scaling with most item CD's.
-The effects of Dancer's O3 (-4s max CD) or Wizard's
-O1 (-2s CD/use) are significantly better.
+- {{{O1}}} :: clicks Special and loot CD's more.
+  Most other gem picks scale better and bumps damage in >90% of lines.
 #+end_quote
 
 * REVIEW Item Tier List
@@ -568,11 +583,11 @@ O1 (-2s CD/use) are significantly better.
 :CUSTOM_ID: h:item_tier_list
 :END:
 
-Again, tier placing prioritizes "lines" and WR consistency.
+Again, tier placing prioritizes "lines" and WR by Lunar Shira/Witch of 900DPS (~600 base DPS/level 1.)
 
 - [4P] Shadow, _for AoE_, has higher prio on {{{spe}}} loots if:
   + Playing on Extra (guaranteed *Subterra Sanctum*)
-  + Shadow has {{{S3}}}
+  + Shadow has Special gem
   + Party has non-phenomenal total DPS and poor AoE
 - [4P] Shadow should prio {{{sec}}} damage items higher
   + Limited to typically Sin, Dancer and Druid
@@ -590,10 +605,10 @@ Again, tier placing prioritizes "lines" and WR consistency.
 :END:
 
 For damage/consistency, see [[*Ruby Leap Archetypes - R2/R4][Ruby Leap Archetypes - R2/R4]]. To repeat:
-- For {{{R1}}}/{{{R2}}}/{{{R4}}} leaps, leap near the leap distance when you can.
-- Position yourself in a way that allows you to hit either Secondary and another ability, if affected by {{{Shackles}}}.
+- For {{{R1}}}/{{{R2}}}/{{{R4}}} leaps, leap near the leap distance (position) whenever you can.
 
 Additionally,
+- If avoiding leap, you may prioritize: {{{O1}}}, {{{S2}}}, {{{G2}}} and {{{R3}}} (avoid {{{O4}}})
 - Spreads have a small end-window where you can leap without taking damage.
 - {{{secl}}} \rightarrow {{{def}}} does not provide back-to-back invuln.
   + {{{def}}} \rightarrow {{{secl}}} does provide back-to-back invuln, but {{{sec}}} can roll {{{Shackles}}}.
@@ -652,3 +667,5 @@ After enabling leap on Secondary, disabling leap uses an inner "buffer" distance
 :CUSTOM_ID: h:builds
 :END:
 
+
+#  LocalWords:  dmg synergize pickable

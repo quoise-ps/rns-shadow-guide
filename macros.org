@@ -875,17 +875,17 @@
 #+MACRO: tG1 On any hit by other abilities, 25% to deal one hit's damage to all enemies.
 #+MACRO: tE1 On 4th use, deal damage 10 times, sets 2.0s GCD and harsh -m/s on use.
 #+MACRO: tO2 Inflicts +20% Shadowcurse debuff (5s.)
-#+MACRO: tS2 [&not;LEAP] Deal &#x2191;110x2 on ranged 400px radius; Charge on other ability use (max 1); invuln on Charge use.
+#+MACRO: tS2 (-leap) Deal &#x2191;110x2 on ranged 400px radius; Charge on other ability use (max 1); 700ms invuln on Charge use.
 #+MACRO: tR2 Deals 180. On leaps, trigger again in 600px radius.
-#+MACRO: tG2 [&not;LEAP] No damage, leap or invuln. +m/s. Individual 40% chances to Supercharge+reset Special or Def.
+#+MACRO: tG2 (-leap, -dmg, -invuln) +m/s. 40% chances to Supercharge+reset Special or Def.
 #+MACRO: tE2 +30% damage and radius per consecutive use (max 9.)
 #+MACRO: tO3 (&#x2191;15s CD) Deals &#x2191;1000. Starts on CD. Disables % triggers.
-#+MACRO: tS3 No GCD or slow.
+#+MACRO: tS3 (-slow) oGCD
 #+MACRO: tR3 40% chance to Supercharge+reset itself.
 #+MACRO: tG3 Deal &#x2191;280; grants all players +15% Shadowcry buff; and erase bullets by 250px radius.
 #+MACRO: tE3 Random effects.
-#+MACRO: tO4 (&#x2193;10s CD) [LEAP] Deal 90x3. Now always leaps. Grants 10s Ability Haste. 1000ms invuln.
-#+MACRO: tS4 (&#x2193;10s CD) No GCD.
+#+MACRO: tO4 (&#x2193;10s CD) (+leap) Deal 90x3. Now always leaps. Grants 10s Ability Haste. 1000ms invuln.
+#+MACRO: tS4 (&#x2193;10s CD) oGCD
 #+MACRO: tR4 Deal &#x2193;300. Damage on other invuln effects. &#x2193;1400ms invuln.
 #+MACRO: tG4 Deal &#x2191;140x4 to all enemies; gain +10% luck.
 #+MACRO: tE4 (&#x2191;20s CD) Deal &#x2191;90x10. Unresettable. &#x2191;1700ms invuln.
