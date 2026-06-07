@@ -336,19 +336,20 @@ Any ability that gets that skips contesting every the usual {{{pri}}} and {{{sec
 
 Unique or notable gem and item synergies are only presented.
 
-Generic item synergies or damage bonuses are assumed:
-- E.g. for uncontested primary core, pick items like {{{Waterfall-Polearm}}}, {{{Grandmaster-Spear}}} and {{{Youkai-Bracelet}}}
+Generic item damage bonuses are assumed:
+- Most abilities/gems love multi-hits like {{{Shadow-Bracelet}}}, {{{Youkai-Bracelet}}}, Bleed items-, {{{Venom-Hood}}}, {{{Heavens-Codex}}}...
+- Certain items like {{{Witchs-Cloak}}} and {{{Darkcloud-Necklace}}} become viable when Shadow has sufficient damage in loot items.
 
 ** REVIEW Primary
 :PROPERTIES:
 :CUSTOM_ID: h:primary
 :END:
-#+MACRO: N1i 
-#+MACRO: O1i {{{i(Sand-Shovel)}}} {{{i(Miners-Headlamp)}}} {{{i(Large-Anchor)}}}
-#+MACRO: S1i {{{i(Windbite-Dagger)}}} {{{i(Giant-Stone-Club)}}}
-#+MACRO: R1i {{{i(Firststrike-Bracelet)}}} {{{i(Garnet-Staff)}}}(\rightarrow {{{i(Obsidian-Hairpin)}}})
-#+MACRO: G1i {{{i(Colorful-Earrings)}}} {{{i(Lightning-Bow)}}} {{{i(Crown-of-Storms)}}} {{{i(Usagi-Kamen)}}} {{{i(Giant-Stone-Club)}}}
-#+MACRO: E1i {{{i(Firststrike-Bracelet)}}} {{{i(Midsummer-Dress)}}}; {{{i(Abyss-Artifact)}}};
+#+MACRO: N1i {{{i(Waterfall-Polearm)}}} {{{i(Crane-Katana)}}}
+#+MACRO: O1i {{{i(Waterfall-Polearm)}}} {{{i(Sand-Shovel)}}} {{{i(Miners-Headlamp)}}} {{{i(Large-Anchor)}}} {{{i(Lefthand-Cast)}}}
+#+MACRO: S1i {{{i(Crane-Katana)}}} {{{i(Windbite-Dagger)}}} {{{i(Giant-Stone-Club)}}} {{{i(Hexed-Blindfold)}}}
+#+MACRO: R1i {{{N1i}}} {{{i(Firststrike-Bracelet)}}} {{{i(Garnet-Staff)}}}(\rightarrow {{{i(Obsidian-Hairpin)}}}) {{{i(Flamedancer-Dagger)}}}
+#+MACRO: G1i {{{i(Crane-Katana)}}} {{{i(Colorful-Earrings)}}} {{{i(Lightning-Bow)}}} {{{i(Crown-of-Storms)}}} {{{i(Usagi-Kamen)}}} {{{i(Giant-Stone-Club)}}} {{{i(Vega-Spear)}}} {{{i(Hexed-Blindfold)}}}
+#+MACRO: E1i {{{N1i}}} {{{i(Firststrike-Bracelet)}}} {{{i(Midsummer-Dress)}}} {{{i(Abyss-Artifact)}}} {{{i(Flamedancer-Dagger)}}} {{{i(Whiteflame-Staff)}}} {{{i(Hexed-Blindfold)}}}
 #+MACRO: E1n "Needs" slow bypass, but best internal multi-hit and good snapshot buff synergy
 
 | Gem | Gem Synergies   | Item Synergies | Notes                                                                                    |
@@ -373,12 +374,12 @@ At base kit, the effect triggers {{{Pocketwatch}}}, but not {{{Sacredstone-Charm
 :PROPERTIES:
 :CUSTOM_ID: h:secondary
 :END:
-#+MACRO: N2i {{{i(Butterfly-Hairpin)}}} {{{i(Cavers-Cloak)}}}
-#+MACRO: O2i
-#+MACRO: S2i
-#+MACRO: R2i {{{i(Reddragon-Blade)}}} {{{i(Greysteel-Shield)}}}
-#+MACRO: G2i {{{i(Jesters-Hat)}}} {{{i(Colorful-Earrings)}}} {{{i(Lightning-Bow)}}} {{{i(Crown-of-Storms)}}} {{{i(Usagi-Kamen)}}}
-#+MACRO: E2i 
+#+MACRO: N2i {{{i(Butterfly-Hairpin)}}} {{{i(Cavers-Cloak)}}} {{{i(Vorpal-Dao)}}} {{{i(Falconfeather-Dagger)}}}
+#+MACRO: O2i {{{n2i}}} {{{i(Artist-Smock)}}} {{{i(Redblack-Ribbon)}}}
+#+MACRO: S2i {{{n2i}}} {{{i(Sandpriestess-Spear)}}} {{{i(Marble-Clasp)}}} {{{i(Hexed-Blindfold)}}}
+#+MACRO: R2i {{{n2i}}} {{{i(Reddragon-Blade)}}} {{{i(Greysteel-Shield)}}} {{{i(Marble-Clasp)}}} 
+#+MACRO: G2i {{{i(Jesters-Hat)}}} {{{i(Colorful-Earrings)}}} {{{i(Lightning-Bow)}}} {{{i(Crown-of-Storms)}}} {{{i(Usagi-Kamen)}}} {{{i(Rosered-Leotard)}}}
+#+MACRO: E2i {{{n2i}}} {{{i(Hexed-Blindfold)}}}
 
 | Gem | Leap | Gem Synergies | Item Synergies | Notes                                                 |
 |-----+------+---------------+----------------+-------------------------------------------------------|
@@ -403,7 +404,7 @@ At base kit, the effect triggers {{{Pocketwatch}}}, but not {{{Sacredstone-Charm
 #+MACRO: S3i {{{n3i}}} {{{i(Hawkfeather-Fan)}}} {{{i(Mountain-Staff)}}} {{{i(Garnet-Staff)}}}  {{{i(Spear-of-Winds)}}} {{{i(Bolt-Staff)}}} {{{i(Mermaid-Scalemail)}}} {{{i(Firescale-Corset)}}}
 #+MACRO: R3i {{{i(Hawkfeather-Fan)}}} {{{i(Obsidian-Rod)}}} {{{i(Garnet-Staff)}}} {{{i(Spear-of-Winds)}}} {{{i(Bolt-Staff)}}} {{{i(Saltwater-Staff)}}} {{{i(Mermaid-Scalemail)}}} {{{i(Firescale-Corset)}}}
 #+MACRO: G3i {{{n3i}}} {{{i(Sacred-Bow)}}} {{{i(Shrinemaidens-Kosode)}}}
-#+MACRO: E3i {{{n3i}}} {{{i(Hawkfeather-Fan)}}}(\rightarrow {{{i(Redwhite-Ribbon)}}}) {{{i(Sacred-Bow)}}} {{{i(Shrinemaidens-Kosode)}}} {{{i(Mermaid-Scalemail)}}} {{{i(Firescale-Corset)}}}
+#+MACRO: E3i {{{n3i}}} {{{i(Hawkfeather-Fan)}}}(\rightarrow {{{i(Redwhite-Ribbon)}}}) {{{i(Sacred-Bow)}}} {{{i(Shrinemaidens-Kosode)}}} {{{i(Mermaid-Scalemail)}}} {{{i(Firescale-Corset)}}} {{{i(Artist-Smock)}}} {{{i(Witchs-Cloak)}}} {{{i(Venom-Hood)}}}
 #+MACRO: S3n Good early damage increase as oGCD; no slow, loves CD reduction (0.8s hidden CD minimum)
 
  | Gem | Gem Synergies | Item Synergies | Notes                                                                 |
@@ -423,12 +424,12 @@ At base kit, the effect triggers {{{Pocketwatch}}}, but not {{{Sacredstone-Charm
 :PROPERTIES:
 :CUSTOM_ID: h:defensive
 :END:
-#+MACRO: N4i 
+#+MACRO: N4i {{{i(Gladiator-Helmet)}}} {{{i(Battery-Shield)}}} {{{i(Shadow-Bracelet)}}}
 #+MACRO: O4i {{{N4i}}} {{{i(Beach-Sandals)}}} {{{i(Hermes-Bow)}}}  {{{i(Talon-Charm)}}}  {{{i(Sacred-Bow)}}} {{{i(Coldsteel-Shield)}}}
 #+MACRO: S4i {{{N4i}}} {{{i(Coldsteel-Shield)}}}
 #+MACRO: R4i {{{i(Tiny-Wings)}}} {{{i(Garnet-Staff)}}}(\rightarrow {{{i(Obsidian-Hairpin)}}}) {{{i(Peridot-Rapier)}}} {{{i(Greysteel-Shield)}}} 
 #+MACRO: G4i {{{N4i}}} {{{i(Spark-of-Determination)}}}
-#+MACRO: E4i {{{i(Firststrike-Bracelet)}}} {{{i(Starry-Cloak)}}}(\rightarrow {{{i(Timemage-Cap)}}}) {{{i(Timespace-Dagger)}}} {{{Bloodhound-Greatsword}}}
+#+MACRO: E4i {{{i(Firststrike-Bracelet)}}} {{{i(Starry-Cloak)}}}(\rightarrow {{{i(Timemage-Cap)}}}) {{{i(Timespace-Dagger)}}} {{{Bloodhound-Greatsword}}} {{{i(Lonesome-Pendant)}}}
 
 | Gem | Leap | Gem Synergies   | Item Synergies | Notes                                                             |
 |-----+------+-----------------+----------------+-------------------------------------------------------------------|
