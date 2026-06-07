@@ -35,7 +35,7 @@
 #+MACRO: Shackle [[./img/other/Shackles.png]]
 #+MACRO: Shackles {{{i1}}}{{{tShackles}}}{{{i2}}}{{{Shackle}}} {{{span_dot}}}Shackles{{{span_end}}}{{{i3}}}
 #+MACRO: gamever v2.0.2.7
-#+MACRO: guidever v0.3.2
+#+MACRO: guidever v0.4.0
 #+MACRO: WIP @@html:<span style="color:red;">@@WIP@@html:</span>@@
 :END:
 :MACROS_ABBREVIATIONS:
@@ -187,6 +187,7 @@ For community jargon:
   - v0.3.1 (2026-05-02) :: fixed some grammar 
   - v0.3.2 (2026-05-14) :: corrected bad macro in item table, modified CSS,
     added abbreviations in gem tier list, headers are "fixed"
+- v0.4.0 (2026-06-07) :: retyped and reordered gems and items again, fixed item synergies
 
 * REVIEW Class Summary
 :PROPERTIES:
@@ -366,7 +367,7 @@ Generic item damage bonuses are assumed:
 
 {{{S1}}} and {{{G1}}} are fine with taking +GCD (includes {{{R1}}} to some extent.)
 
-{{{E1}}} 2s GCD effect can't be cheated via GCD items, Berserk, Quickdraw or even {{{Shinsoku Katana}}}.
+{{{E1}}} 2s GCD effect can't be cheated via GCD items, Berserk, Quickdraw or even {{{Shinsoku-Katana}}}.
 At base kit, the effect triggers {{{Pocketwatch}}}, but not {{{Sacredstone-Charm}}}.
 #+end_quote
 
@@ -429,7 +430,7 @@ At base kit, the effect triggers {{{Pocketwatch}}}, but not {{{Sacredstone-Charm
 #+MACRO: S4i {{{N4i}}} {{{i(Coldsteel-Shield)}}}
 #+MACRO: R4i {{{i(Tiny-Wings)}}} {{{i(Garnet-Staff)}}}(\rightarrow {{{i(Obsidian-Hairpin)}}}) {{{i(Peridot-Rapier)}}} {{{i(Greysteel-Shield)}}} 
 #+MACRO: G4i {{{N4i}}} {{{i(Spark-of-Determination)}}}
-#+MACRO: E4i {{{i(Firststrike-Bracelet)}}} {{{i(Starry-Cloak)}}}(\rightarrow {{{i(Timemage-Cap)}}}) {{{i(Timespace-Dagger)}}} {{{Bloodhound-Greatsword}}} {{{i(Lonesome-Pendant)}}}
+#+MACRO: E4i {{{i(Firststrike-Bracelet)}}} {{{i(Starry-Cloak)}}}(\rightarrow {{{i(Timemage-Cap)}}}) {{{i(Timespace-Dagger)}}} {{{i(Bloodhound-Greatsword)}}} {{{i(Lonesome-Pendant)}}}
 
 | Gem | Leap | Gem Synergies   | Item Synergies | Notes                                                             |
 |-----+------+-----------------+----------------+-------------------------------------------------------------------|
@@ -589,6 +590,10 @@ Again, tier placing prioritizes "lines" and WR by Lunar Shira/Witch of 900DPS (~
   + Party has non-phenomenal total DPS and poor AoE
 - [4P] Shadow should prio {{{sec}}} damage items higher
   + Limited to typically Sin, Dancer and Druid
+
+#+begin_quote
+Items are sorted by their name alphabetically.
+#+end_quote
 
 #+include: items.org :minlevel 2
 
