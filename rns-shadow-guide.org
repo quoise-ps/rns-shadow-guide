@@ -417,7 +417,7 @@ At base kit, the effect triggers {{{Pocketwatch}}}, but not {{{Sacredstone-Charm
  | Gem | Gem Synergies              | Item Synergies | Notes                                                                 |
  |-----+----------------------------+----------------+-----------------------------------------------------------------------|
  | {{{N3}}}  | {{{O2s}}}                        | {{{N3i}}}            | Weaker class N3, but strong AoE (hits all) and decent debuff Spreader |
- | {{{O3}}}  | {{{O2s }}}(With item reset: {{{O1s}}}) | {{{O3i}}}            | Special damage scaling; huge hitting Special; disables universal %    |
+ | {{{O3}}}  | (With item reset: {{{O1s}}}) {{{O2s}}} | {{{O3i}}}            | Special damage scaling; huge hitting Special; disables universal %    |
  | {{{S3}}}  | {{{O1s}}} {{{G2s}}} {{{O2s}}}                | {{{S3i}}}            | {{{S3n}}}                                                                   |
  | {{{R3}}}  | {{{O1s}}} {{{G2s}}} {{{O2s}}}                | {{{R3i}}}            | Good for ads, Obsidian Rod or Special triggers                        |
  | {{{G3}}}  | All                        | {{{G3i}}}            | {{{G3n}}}                                                                   |
