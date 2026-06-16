@@ -13,12 +13,12 @@
 #+OPTIONS: ^:nil num:3 todo:nil
 #+EXPORT_FILE_NAME: index
 #+LATEX_HEADER: \usepackage[colorlinks=true,urlcolor=pink,linkcolor=blue]{hyperref}
-#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="https://gongzhitaao.org/orgcss/org.css"/>
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="./styles/gongzhitaao-org.css"/>
 #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="./styles/hint.base.css">
 #+HTML_HEAD_EXTRA: <style> p {line-height: 1.8em;} </style>
 #+HTML_HEAD_EXTRA: <style> html {background-color: #e7e7e7;} </style>
 #+HTML_HEAD_EXTRA: <style> body {max-width: 80em; margin: 0 auto 2em; padding: .5em 1.5em 1.5em 1.5em; border: .1em solid #c0c0c0;} </style>
-#+INFOJS_OPT: view:info sdepth:1 tdepth:1
+#+INFOJS_OPT: view:info sdepth:1 tdepth:1 path:'./js/org-info.js'
 :END:
 :TODOs:
 #+TODO: TODO(t) DRAFT(D) | REVIEW(r)
@@ -35,7 +35,7 @@
 #+MACRO: Shackle [[./img/other/Shackles.png]]
 #+MACRO: Shackles {{{i1}}}{{{tShackles}}}{{{i2}}}{{{Shackle}}} {{{span_dot}}}Shackles{{{span_end}}}{{{i3}}}
 #+MACRO: gamever v2.0.2.7
-#+MACRO: guidever v0.4.0
+#+MACRO: guidever v0.4.1
 #+MACRO: WIP @@html:<span style="color:red;">@@WIP@@html:</span>@@
 :END:
 :MACROS_ABBREVIATIONS:
@@ -187,7 +187,9 @@ For community jargon:
   - v0.3.1 (2026-05-02) :: fixed some grammar 
   - v0.3.2 (2026-05-14) :: corrected bad macro in item table, modified CSS,
     added abbreviations in gem tier list, headers are "fixed"
-- v0.4.0 (2026-06-07) :: retyped and reordered gems and items again, fixed item synergies
+- v0.4.0 (2026-06-07) :: retyped and reordered gems and items again, actually fill item synergies
+- v0.4.1 (2026-06-16) :: reordered some gems, review synergies, added o2/g3 as synergies, link repo's own JS/.css
+  to avoid failed site loading.
 
 * REVIEW Class Summary
 :PROPERTIES:
@@ -490,11 +492,11 @@ Non-DPS carry gems but universal damage multipliers into any line.
 - {{{R2}}} :: +180 double damage on leaps (360 DPS on successive leaps).
   + Unlike {{{R4}}}, {{{R1}}} and {{{R2}}} typically have better item scaling.
 - {{{R1}}} :: optimal $(2\rightarrow1)$ rotations yields 390 base DPS.
-  
+
 - {{{O2}}} and {{{G3}}} :: immediate and lategame universal damage multipliers on literally everything.
   + [4P] practically autobuy.
   + Excluding {{{R2}}} and {{{E3}}}, worth replacing other gems over,
-    especially once you have any loot damage source.
+    especially once you have any loot damage source or MP.
 #+end_quote
    
 ** REVIEW Great
@@ -550,7 +552,7 @@ Weaker gems that solve specific encounters exceedingly well, have certain downsi
     
 - {{{S3}}} :: 4s oGCD is pretty good; simplifies rotations and good early damage.
   + QoL {{{Shackles}}} reroll in an instant (e.g. clicking Primary in Flow-Str more.)
-  + Damage falloff with no synergies
+  + Damage falloff with no synergies.
 
 - {{{E1}}} :: best damage for multi-hit/snapshot buffs, but painful without slow bypass (Berserk/Super/Flutterstep/{{{E3}}}).
 #+end_quote
@@ -575,12 +577,12 @@ Gems that are average or build-altering with very narrow synergies.
 
 - {{{O3}}} :: highest base Special (exceptional for 1.0s GCD), good _ads tech_ option at base at 15s.
   + [MP] {{{O3}}} is pickable given other class O3's are not high base.
-  + Losing potential % procs is typically insignificant, especially if it solves stage
+  + Losing potential % procs is typically insignificant, especially e.g. it solves Sanctum first stage with no synergies.
     - Fewer items to cheat the CD without %, but super-viable once online.
-      
-- {{{R3}}} :: good option Special-trigger loot effects ({{{Saltwater-Staff}}}) and AoE (_ads tech_), but a *player trap* otherwise
-  + 60% chance for it to whiff effect (into 4s CD) and 250 base is _super bad_
-  + Besides {{{O2}}}, no internal gem synergies and may become anti-synergistic late-game
+
+- {{{R3}}} :: good option Special-trigger loot effects ({{{Saltwater-Staff}}}) and AoE (_ads tech_), but a *player trap* otherwise.
+  + 60% chance for it to whiff effect (into 4s CD) and 250 base is _super bad_.
+  + Besides {{{O2}}}, no internal gem synergies and may become anti-synergistic late-game.
     (i.e. _GCD is contested_; and 10% luck {{{G4}}} provides is too inconsequential.)
 
 - {{{E2}}} :: okay DPS option, but impossible to out-damage {{{R2}}} (and {{{S2}}} in most fights.) {{{O2}}} scales with itself and the rest of Shadow's kit.
@@ -590,7 +592,7 @@ Gems that are average or build-altering with very narrow synergies.
   + Without synergies, may kill runs if not clicking Primary.
 
 - {{{O1}}} :: clicks Special and loot CD's more.
-  + Effect ends up being awkward with 90% of loot items and Special's low base damage.
+  + Effect ends up being awkward with 80% of loot items and Special's low base damage.
   + Most other gem picks scale better and bumps damage in most lines though.
 #+end_quote
 
@@ -601,12 +603,12 @@ Gems that are average or build-altering with very narrow synergies.
 
 Again, tier placing prioritizes "lines" and WR by Lunar Shira/Witch of 900DPS (~600 base DPS/level 1.)
 
-- [4P] Shadow, _for AoE_, has higher prio on {{{spe}}} loots if:
-  + Playing on Extra (guaranteed *Subterra Sanctum*)
-  + Shadow has Special gem
-  + Party has non-phenomenal total DPS and poor AoE
-- [4P] Shadow should prio {{{sec}}} damage items higher
-  + Limited to typically Sin, Dancer and Druid
+- Shadow generally should be building {{{pri}}} and {{{sec}}} items.
+  - [4P] Shadow should prio {{{sec}}} damage items higher (unless typically Sin, Dancer and Druid)
+- Shadow, _for AoE_, may pick {{{spe}}} loots if:
+  + Playing on Extra (guaranteed *Subterra Sanctum*.)
+  + Shadow has Special gem.
+  + Party has non-phenomenal total DPS and poor AoE.
 
 #+begin_quote
 Items are sorted by their name alphabetically.

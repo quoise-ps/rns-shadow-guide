@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2026-06-14 Sun 20:42 -->
+<!-- 2026-06-16 Tue 11:44 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Something about Shadow</title>
@@ -195,12 +195,12 @@
     { background-color: #ffff00; color: #000000; font-weight: bold; }
   .org-svg { }
 </style>
-<link rel="stylesheet" type="text/css" href="https://gongzhitaao.org/orgcss/org.css"/>
+<link rel="stylesheet" type="text/css" href="./styles/gongzhitaao-org.css"/>
 <link rel="stylesheet" type="text/css" href="./styles/hint.base.css">
 <style> p {line-height: 1.8em;} </style>
 <style> html {background-color: #e7e7e7;} </style>
 <style> body {max-width: 80em; margin: 0 auto 2em; padding: .5em 1.5em 1.5em 1.5em; border: .1em solid #c0c0c0;} </style>
-<script src="https://orgmode.org/org-info.js">
+<script src="'./js/org-info.js'">
 // @license magnet:?xt=urn:btih:1f739d935676111cfff4b4693e3816e664797050&amp;dn=gpl-3.0.txt GPL-v3-or-Later
 // @license-end
 </script>
@@ -256,7 +256,7 @@ org_html_manager.setup();  // activate after the parameters are set
 <div id="content" class="content">
 <h1 class="title">Something about Shadow
 <br />
-<span class="subtitle">(v0.4.0)</span>
+<span class="subtitle">(v0.4.1)</span>
 </h1>
 <div id="table-of-contents" role="doc-toc">
 <h2>Table of Contents</h2>
@@ -378,7 +378,9 @@ For community jargon:
 <dt>v0.3.2 (2026-05-14)</dt><dd>corrected bad macro in item table, modified CSS,
 added abbreviations in gem tier list, headers are &ldquo;fixed&rdquo;</dd>
 </dl></dd>
-<dt>v0.4.0 (2026-06-07)</dt><dd>retyped and reordered gems and items again, fixed item synergies</dd>
+<dt>v0.4.0 (2026-06-07)</dt><dd>retyped and reordered gems and items again, actually fill item synergies</dd>
+<dt>v0.4.1 (2026-06-16)</dt><dd>reordered some gems, review synergies, added o2/g3 as synergies, link repo&rsquo;s own JS/.css
+to avoid failed site loading.</dd>
 </dl>
 </div>
 </div>
@@ -505,7 +507,7 @@ The base kit optimization below are in magnitudes of about &plusmn;20dps (10%) a
 <span class="underline">only valid if attacks hit consistently</span>.
 </p>
 
-<table id="org0ede30f" border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<table id="org9298ab3" border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 <caption class="t-above"><span class="table-number">Table 2:</span> Common Move Priorities off Base Kit</caption>
 
 <colgroup>
@@ -600,7 +602,7 @@ Larger enemies like <b>Red Darkhouse</b> Ranalie P2 allow you to leap without lu
 </p>
 
 
-<div id="org8a1acf0" class="figure">
+<div id="orgbd5a5ba" class="figure">
 <p><img src="./img/game/rabbitleap-inkscape2.svg" alt="rabbitleap-inkscape2.svg" class="org-svg" />
 </p>
 <p><span class="figure-number">Figure 1: </span>Distances in Rabbitleaps (lp) with Stella</p>
@@ -1045,7 +1047,7 @@ Non-DPS carry gems but universal damage multipliers into any line.
 <ul class="org-ul">
 <li>[4P] practically autobuy.</li>
 <li>Excluding <span class="hint--large" aria-label="Deals 180. On leaps, trigger again in 600px radius."><img src="./img/gems-40px/R2.png" alt="R2.png" /> <span style="text-decoration:underline; text-decoration-style:dotted;">R2</span></span> and <span class="hint--large" aria-label="Random effects."><img src="./img/gems-40px/E3.png" alt="E3.png" /> <span style="text-decoration:underline; text-decoration-style:dotted;">E3</span></span>, worth replacing other gems over,
-especially once you have any loot damage source.</li>
+especially once you have any loot damage source or MP.</li>
 </ul></dd>
 </dl>
 </blockquote>
@@ -1127,7 +1129,7 @@ Weaker gems that solve specific encounters exceedingly well, have certain downsi
 <dt><span class="hint--large" aria-label="(-slow) oGCD"><img src="./img/gems-40px/S3.png" alt="S3.png" /> <span style="text-decoration:underline; text-decoration-style:dotted;">S3</span></span></dt><dd>4s oGCD is pretty good; simplifies rotations and good early damage.
 <ul class="org-ul">
 <li>QoL <span class="hint--large" aria-label="On ability use, an attack is disabled randomly."><img src="./img/other/Shackles.png" alt="Shackles.png" /> <span style="text-decoration:underline; text-decoration-style:dotted;">Shackles</span></span> reroll in an instant (e.g. clicking Primary in Flow-Str more.)</li>
-<li>Damage falloff with no synergies</li>
+<li>Damage falloff with no synergies.</li>
 </ul></dd>
 
 <dt><span class="hint--large" aria-label="On 4th use, deal damage 10 times, sets 2.0s GCD and harsh -m/s on use."><img src="./img/gems-40px/E1.png" alt="E1.png" /> <span style="text-decoration:underline; text-decoration-style:dotted;">E1</span></span></dt><dd>best damage for multi-hit/snapshot buffs, but painful without slow bypass (Berserk/Super/Flutterstep/<span class="hint--large" aria-label="Random effects."><img src="./img/gems-40px/E3.png" alt="E3.png" /> <span style="text-decoration:underline; text-decoration-style:dotted;">E3</span></span>).</dd>
@@ -1162,16 +1164,16 @@ Gems that are average or build-altering with very narrow synergies.
 <dt><span class="hint--large" aria-label="(&#x2191;15s CD) Deals &#x2191;1000. Starts on CD. Disables % triggers."><img src="./img/gems-40px/O3.png" alt="O3.png" /> <span style="text-decoration:underline; text-decoration-style:dotted;">O3</span></span></dt><dd>highest base Special (exceptional for 1.0s GCD), good <span class="underline">ads tech</span> option at base at 15s.
 <ul class="org-ul">
 <li>[MP] <span class="hint--large" aria-label="(&#x2191;15s CD) Deals &#x2191;1000. Starts on CD. Disables % triggers."><img src="./img/gems-40px/O3.png" alt="O3.png" /> <span style="text-decoration:underline; text-decoration-style:dotted;">O3</span></span> is pickable given other class O3&rsquo;s are not high base.</li>
-<li>Losing potential % procs is typically insignificant, especially if it solves stage
+<li>Losing potential % procs is typically insignificant, especially e.g. it solves Sanctum first stage with no synergies.
 <ul class="org-ul">
 <li>Fewer items to cheat the CD without %, but super-viable once online.</li>
 </ul></li>
 </ul></dd>
 
-<dt><span class="hint--large" aria-label="40% chance to Supercharge+reset itself."><img src="./img/gems-40px/R3.png" alt="R3.png" /> <span style="text-decoration:underline; text-decoration-style:dotted;">R3</span></span></dt><dd>good option Special-trigger loot effects (<span class="hint--large" aria-label="Your Special grants Flash-Chr to nearby allies."><img src="./img/items/Saltwater-Staff.png" alt="Saltwater-Staff.png" /> <span style="text-decoration:underline; text-decoration-style:dotted;">Saltwater Staff</span></span>) and AoE (<span class="underline">ads tech</span>), but a <b>player trap</b> otherwise
+<dt><span class="hint--large" aria-label="40% chance to Supercharge+reset itself."><img src="./img/gems-40px/R3.png" alt="R3.png" /> <span style="text-decoration:underline; text-decoration-style:dotted;">R3</span></span></dt><dd>good option Special-trigger loot effects (<span class="hint--large" aria-label="Your Special grants Flash-Chr to nearby allies."><img src="./img/items/Saltwater-Staff.png" alt="Saltwater-Staff.png" /> <span style="text-decoration:underline; text-decoration-style:dotted;">Saltwater Staff</span></span>) and AoE (<span class="underline">ads tech</span>), but a <b>player trap</b> otherwise.
 <ul class="org-ul">
-<li>60% chance for it to whiff effect (into 4s CD) and 250 base is <span class="underline">super bad</span></li>
-<li>Besides <span class="hint--large" aria-label="Inflicts +20% Shadowcurse debuff (5s.)"><img src="./img/gems-40px/O2.png" alt="O2.png" /> <span style="text-decoration:underline; text-decoration-style:dotted;">O2</span></span>, no internal gem synergies and may become anti-synergistic late-game
+<li>60% chance for it to whiff effect (into 4s CD) and 250 base is <span class="underline">super bad</span>.</li>
+<li>Besides <span class="hint--large" aria-label="Inflicts +20% Shadowcurse debuff (5s.)"><img src="./img/gems-40px/O2.png" alt="O2.png" /> <span style="text-decoration:underline; text-decoration-style:dotted;">O2</span></span>, no internal gem synergies and may become anti-synergistic late-game.
 (i.e. <span class="underline">GCD is contested</span>; and 10% luck <span class="hint--large" aria-label="Deal &#x2191;140x4 to all enemies; gain +10% luck."><img src="./img/gems-40px/G4.png" alt="G4.png" /> <span style="text-decoration:underline; text-decoration-style:dotted;">G4</span></span> provides is too inconsequential.)</li>
 </ul></dd>
 
@@ -1185,7 +1187,7 @@ Gems that are average or build-altering with very narrow synergies.
 
 <dt><span class="hint--large" aria-label="Reset cooldowns &le;4s."><img src="./img/gems-40px/O1.png" alt="O1.png" /> <span style="text-decoration:underline; text-decoration-style:dotted;">O1</span></span></dt><dd>clicks Special and loot CD&rsquo;s more.
 <ul class="org-ul">
-<li>Effect ends up being awkward with 90% of loot items and Special&rsquo;s low base damage.</li>
+<li>Effect ends up being awkward with 80% of loot items and Special&rsquo;s low base damage.</li>
 <li>Most other gem picks scale better and bumps damage in most lines though.</li>
 </ul></dd>
 </dl>
@@ -1201,15 +1203,15 @@ Again, tier placing prioritizes &ldquo;lines&rdquo; and WR by Lunar Shira/Witch 
 </p>
 
 <ul class="org-ul">
-<li>[4P] Shadow, <span class="underline">for AoE</span>, has higher prio on <img src="./img/abilities-40px/N3.png" alt="N3.png" /> <b>Special</b> loots if:
+<li>Shadow generally should be building <img src="./img/abilities-40px/N1.png" alt="N1.png" /> <b>Primary</b> and <img src="./img/abilities-40px/N2.png" alt="N2.png" /> <b>Secondary</b> items.
 <ul class="org-ul">
-<li>Playing on Extra (guaranteed <b>Subterra Sanctum</b>)</li>
-<li>Shadow has Special gem</li>
-<li>Party has non-phenomenal total DPS and poor AoE</li>
+<li>[4P] Shadow should prio <img src="./img/abilities-40px/N2.png" alt="N2.png" /> <b>Secondary</b> damage items higher (unless typically Sin, Dancer and Druid)</li>
 </ul></li>
-<li>[4P] Shadow should prio <img src="./img/abilities-40px/N2.png" alt="N2.png" /> <b>Secondary</b> damage items higher
+<li>Shadow, <span class="underline">for AoE</span>, may pick <img src="./img/abilities-40px/N3.png" alt="N3.png" /> <b>Special</b> loots if:
 <ul class="org-ul">
-<li>Limited to typically Sin, Dancer and Druid</li>
+<li>Playing on Extra (guaranteed <b>Subterra Sanctum</b>.)</li>
+<li>Shadow has Special gem.</li>
+<li>Party has non-phenomenal total DPS and poor AoE.</li>
 </ul></li>
 </ul>
 
@@ -1219,8 +1221,8 @@ Items are sorted by their name alphabetically.
 </p>
 </blockquote>
 </div>
-<div id="outline-container-org06459ab" class="outline-3">
-<h3 id="org06459ab"><span class="section-number-3">6.1.</span> <span class="underline">S: Perfect</span></h3>
+<div id="outline-container-org4cfb858" class="outline-3">
+<h3 id="org4cfb858"><span class="section-number-3">6.1.</span> <span class="underline">S: Perfect</span></h3>
 <div class="outline-text-3" id="text-6-1">
 <div class="org-center">
 <p>
@@ -1271,8 +1273,8 @@ Items are sorted by their name alphabetically.
 </div>
 </div>
 </div>
-<div id="outline-container-org65374e0" class="outline-3">
-<h3 id="org65374e0"><span class="section-number-3">6.2.</span> <span class="underline">A: Great</span></h3>
+<div id="outline-container-org5cca0d6" class="outline-3">
+<h3 id="org5cca0d6"><span class="section-number-3">6.2.</span> <span class="underline">A: Great</span></h3>
 <div class="outline-text-3" id="text-6-2">
 <div class="org-center">
 <p>
@@ -1329,12 +1331,12 @@ Items are sorted by their name alphabetically.
 </div>
 </div>
 </div>
-<div id="outline-container-orgf79d1a8" class="outline-3">
-<h3 id="orgf79d1a8"><span class="section-number-3">6.3.</span> <span class="underline">B: Good, often conditional</span></h3>
+<div id="outline-container-org96b5d52" class="outline-3">
+<h3 id="org96b5d52"><span class="section-number-3">6.3.</span> <span class="underline">B: Good, often conditional</span></h3>
 <div class="outline-text-3" id="text-6-3">
 </div>
-<div id="outline-container-orga1e04c8" class="outline-4">
-<h4 id="orga1e04c8"><span class="section-number-4">6.3.1.</span> General</h4>
+<div id="outline-container-orgffcf58c" class="outline-4">
+<h4 id="orgffcf58c"><span class="section-number-4">6.3.1.</span> General</h4>
 <div class="outline-text-4" id="text-6-3-1">
 <div class="org-center">
 <p>
@@ -1419,8 +1421,8 @@ Items are sorted by their name alphabetically.
 </div>
 </div>
 </div>
-<div id="outline-container-org7d8fb26" class="outline-4">
-<h4 id="org7d8fb26"><span class="section-number-4">6.3.2.</span> Soft Conditional</h4>
+<div id="outline-container-orgb6b8ba8" class="outline-4">
+<h4 id="orgb6b8ba8"><span class="section-number-4">6.3.2.</span> Soft Conditional</h4>
 <div class="outline-text-4" id="text-6-3-2">
 <div class="org-center">
 <p>
@@ -1453,8 +1455,8 @@ Items are sorted by their name alphabetically.
 </div>
 </div>
 </div>
-<div id="outline-container-orgf7bf712" class="outline-4">
-<h4 id="orgf7bf712"><span class="section-number-4">6.3.3.</span> Gold</h4>
+<div id="outline-container-orgf766d64" class="outline-4">
+<h4 id="orgf766d64"><span class="section-number-4">6.3.3.</span> Gold</h4>
 <div class="outline-text-4" id="text-6-3-3">
 <div class="org-center">
 <p>
@@ -1470,8 +1472,8 @@ Items are sorted by their name alphabetically.
 </div>
 </div>
 </div>
-<div id="outline-container-orgb260aed" class="outline-3">
-<h3 id="orgb260aed"><span class="section-number-3">6.4.</span> <span class="underline">C: Very conditional, uncommon</span></h3>
+<div id="outline-container-org2edd29c" class="outline-3">
+<h3 id="org2edd29c"><span class="section-number-3">6.4.</span> <span class="underline">C: Very conditional, uncommon</span></h3>
 <div class="outline-text-3" id="text-6-4">
 <div class="org-center">
 <p>
@@ -1520,8 +1522,8 @@ Items are sorted by their name alphabetically.
 </div>
 </div>
 </div>
-<div id="outline-container-org99f6574" class="outline-3">
-<h3 id="org99f6574"><span class="section-number-3">6.5.</span> <span class="underline">D: Super-niche, rare</span></h3>
+<div id="outline-container-orgd93b64c" class="outline-3">
+<h3 id="orgd93b64c"><span class="section-number-3">6.5.</span> <span class="underline">D: Super-niche, rare</span></h3>
 <div class="outline-text-3" id="text-6-5">
 <div class="org-center">
 <p>
@@ -1535,8 +1537,8 @@ Items are sorted by their name alphabetically.
 </div>
 </div>
 </div>
-<div id="outline-container-org2155f1a" class="outline-3">
-<h3 id="org2155f1a"><span class="section-number-3">6.6.</span> <span class="underline">Unranked</span></h3>
+<div id="outline-container-orga36254b" class="outline-3">
+<h3 id="orga36254b"><span class="section-number-3">6.6.</span> <span class="underline">Unranked</span></h3>
 <div class="outline-text-3" id="text-6-6">
 <div class="org-center">
 <p>
@@ -1620,7 +1622,7 @@ Shadow palette.
 </p>
 
 
-<div id="orgc42059b" class="figure">
+<div id="orgec20efd" class="figure">
 <p><img src="./img/game/options_hotbar.jpg" alt="options_hotbar.jpg" />
 </p>
 <p><span class="figure-number">Figure 2: </span>Mini Hotbar Settings</p>
@@ -1663,7 +1665,7 @@ After enabling leap on Secondary, disabling leap uses an inner &ldquo;buffer&rdq
 </p>
 
 
-<div id="org41a1a99" class="figure">
+<div id="orgf40e7f4" class="figure">
 <p><img src="./img/game/rabbitleap-buffer-inkscape.svg" alt="rabbitleap-buffer-inkscape.svg" class="org-svg" />
 </p>
 <p><span class="figure-number">Figure 3: </span>Rabbitleap &ldquo;Buffer&rdquo; Disable Radius</p>
@@ -1681,9 +1683,9 @@ After enabling leap on Secondary, disabling leap uses an inner &ldquo;buffer&rdq
 </div>
 </div></div>
 <div id="postamble" class="status">
-<p class="date">Date: 2026-06-14</p>
+<p class="date">Date: 2026-06-16</p>
 <p class="author">Author: Quoise</p>
-<p class="date">Created: 2026-06-14 Sun 20:42</p>
+<p class="date">Created: 2026-06-16 Tue 11:44</p>
 </div>
 </body>
 </html>
