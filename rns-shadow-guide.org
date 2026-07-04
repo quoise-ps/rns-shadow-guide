@@ -35,7 +35,7 @@
 #+MACRO: Shackle [[./img/other/Shackles.png]]
 #+MACRO: Shackles {{{i1}}}{{{tShackles}}}{{{i2}}}{{{Shackle}}} {{{span_dot}}}Shackles{{{span_end}}}{{{i3}}}
 #+MACRO: gamever v2.0.2.7
-#+MACRO: guidever v0.4.1
+#+MACRO: guidever v0.5.0
 #+MACRO: WIP @@html:<span style="color:red;">@@WIP@@html:</span>@@
 :END:
 :MACROS_ABBREVIATIONS:
@@ -177,22 +177,6 @@ For community jargon:
 - slam :: a forced gem-item pick to solve the immediate stage/encounter.
   + Often this pick is not necessarily optimal for the current build or will be replaced later.
 
-** RENEW Changelog (Releases)
-:PROPERTIES:
-:CUSTOM_ID: h:changelog
-:END:
-
-- v0.1.x (2026-04-18) :: release with ability synergies, gem tier list and ability tier list
-- v0.2.0 (2026-04-21) :: applied feedback changes to rotation, gems, items. Added Shadow section and todos.
-  - v0.2.1 (2026-04-21) :: fixed versioning and added dating
-- v0.3.0 (2026-05-02) :: added rotations, class summary, tooltips, other notes; moved gems again.
-  - v0.3.1 (2026-05-02) :: fixed some grammar 
-  - v0.3.2 (2026-05-14) :: corrected bad macro in item table, modified CSS,
-    added abbreviations in gem tier list, headers are "fixed"
-- v0.4.0 (2026-06-07) :: retyped and reordered gems and items again, actually fill item synergies
-- v0.4.1 (2026-06-16) :: reordered some gems, review synergies, added o2/g3 as synergies, link repo's own JS/.css
-  to avoid failed site loading.
-
 * REVIEW Class Summary
 :PROPERTIES:
 :CUSTOM_ID: h:class_summary
@@ -226,12 +210,12 @@ Shadow is best characterized by having:
 :CUSTOM_ID: h:gameplan
 :END:
 
-Shadow typically should either be playing up close or near leap activation range.
+Shadow typically should either be playing up close.
 In more optimal play with {{{R1}}} / {{{R2}}} / {{{R4}}},
-you should be playing close to 3 Rabbitleaps to enable leap when you need it.
+you should be playing just under 3 Rabbitleaps and enable leap when you need it.
 
-In MP, Shadow adjusts for teammates, like Sin, shares _fastest base speed with Assassin_ and,
-like Heavyblade, has _no slow on their Primary or Secondary_. 
+In MP, Shadow adjusts by walking for teammates as she shares _fastest base speed with Assassin_ and, like Sin or Heavy,
+has no slows on two of their three attacks.
 
 *** REVIEW Multiplayer Item Conflicts
 :PROPERTIES:
@@ -242,6 +226,7 @@ Most item conflicts do and _should occur with Sin, Dancer and Druid._
 - 1P: Shadow build towards _Primary or Secondary builds_, multihit or _low GCD._
 - 4P: Shadow omits Primary typically, but same pattern.
 
+# # Way too complicated to keep, better to diagram?
 # Here's the overlying archetypes that Shadow typically should build for Secondary and multihit.
 # - Multihit and Bleed :: _Assassin_, _Dancer_, _Druid_, _Spellsword_, _Sniper_, Grenadier
 # - Secondary :: _Assassin_, _Dancer_, _Druid_, Sniper, Ancient, Grenadier
@@ -453,9 +438,11 @@ At base kit, the effect triggers {{{Pocketwatch}}}, but not {{{Sacredstone-Charm
 :PROPERTIES:
 :CUSTOM_ID: h:special
 :END:
+Shadow should _not force Special damage to work in most runs._
+so typically you pick up Special for utility (e.g. {{{G3}}}, {{{E3}}} or {{{S3}}}) or AoE damage slam (Sanctum.)
 
-_Late-game 250 Special-damage scaling sucks_ without {{{E3}}}, {{{O3}}} or {{{Obsidian-Rod}}}+{{{R3}}} and synergies.
-Otherwise, Shadow {{{spe}}} damage is perfect for ads (Mice/Sanctum).
+Special scaling sucks on Shadow (due to 250 base),
+thus Special-only is heavily dependant on {{{E3}}}, {{{O3}}} or {{{Obsidian-Rod}}}\land{{{R3}}} and synergies.
 
 #+MACRO: N3i {{{i(Deathcap-Tome)}}} {{{i(Cursed-Candlestaff)}}} {{{i(Shockwave-Tome)}}}
 #+MACRO: O3i1 {{{i(Miners-Headlamp)}}} {{{i(Darkglass-Spear)}}} {{{i(Timespace-Dagger)}}} {{{i(Firststrike-Bracelet)}}} {{{i(Necronomicon)}}} {{{i(Nova-Crown)}}} {{{i(Battlemaiden-Armor)}}}
@@ -465,7 +452,7 @@ Otherwise, Shadow {{{spe}}} damage is perfect for ads (Mice/Sanctum).
 #+MACRO: R3i {{{i(Obsidian-Rod)}}} {{{i(Garnet-Staff)}}} {{{i(Spear-of-Winds)}}} {{{i(Bolt-Staff)}}} {{{i(Saltwater-Staff)}}}
 #+MACRO: G3i {{{n3i}}} {{{i(Sacred-Bow)}}} {{{i(Shrinemaidens-Kosode)}}} {{{i(Reflection-Shield)}}} {{{i(Spiked-Shield)}}} (Loot/debuff damage items)
 #+MACRO: E3i [{{{i(Mermaid-Scalemail)}}}/{{{i(Firescale-Corset)}}}/{{{i(Hawkfeather-Fan)}}}(\rightarrow {{{i(Redwhite-Ribbon)}}})] {{{i(Sacred-Bow)}}} {{{i(Shrinemaidens-Kosode)}}} {{{i(Artist-Smock)}}} {{{i(Witchs-Cloak)}}} {{{i(Venom-Hood)}}} {{{i(Miners-Headlamp)}}}
-#+MACRO: S3n Good early oGCD damage; no slow (and removes {{{E1}}}/{{{def}}} slow), but terrible base damage.
+#+MACRO: S3n Good early oGCD damage; no slow (and removes {{{E1}}}/{{{def}}} slow), but terrible damage scaling.
 #+MACRO: G3n Dancer Warcry (universal damage mult.); scales loot and team damage consistently (alt: {{{E3}}})
 
  | Gem | Gem Synergies              | Item Synergies | Notes                                                                 |
@@ -475,7 +462,7 @@ Otherwise, Shadow {{{spe}}} damage is perfect for ads (Mice/Sanctum).
  | {{{S3}}}  | {{{E1s}}} {{{O1s}}} {{{G2s}}} {{{O2s}}}            | {{{S3i}}}            | {{{S3n}}}                                                                   |
  | {{{R3}}}  | {{{O1s}}} {{{G2s}}} {{{O2s}}}                | {{{R3i}}}            | Only good for ads, Obsidian Rod or Special triggers                   |
  | {{{G3}}}  | All                        | {{{G3i}}}            | {{{G3n}}}                                                                   |
- | {{{E3}}}  | {{{E1s}}} {{{O1s}}} {{{G2s}}} {{{O2s}}}            | {{{E3i}}}            | ~+33% on Special;[fn:e3] debuff/buff archetype; inconsistent AoE.         |
+ | {{{E3}}}  | {{{E1s}}} {{{O1s}}} {{{G2s}}} {{{O2s}}}            | {{{E3i}}}            | +~33% on Special;[fn:e3] debuff/buff archetype; inconsistent AoE.         |
 
 #+begin_quote
 {{{E3}}} is affected by {{{Obsidian-Rod}}}, {{{Cursed-Candlestaff}}}, {{{Old-Bonnet}}} / {{{Haunted-Gloves}}}, {{{Mountain-Staff}}} and other special items changes.
@@ -516,7 +503,7 @@ applies to Defensive damage without consuming it.
 
 Tier placing prioritizes "lines" and WR by Lunar Shira/Witch of 900 DPS (~600 base DPS/level 1.)
 - In >99% of runs, buy a gem first shop:
-  + On *Subterra Sanctum* or *Churchmouse Streets*, slam Special Gem, {{{G1}}}, {{{E2}}}, {{{S2}}}, {{{G4}}}, {{{E4}}} or Longarm Potion.
+  + On *Subterra Sanctum* or *Churchmouse Streets*, slam Special Gem, {{{E1}}}, {{{G1}}}, {{{E2}}}, {{{S2}}}, {{{G4}}}, {{{E4}}} or Longarm Potion.
   + Optionally on *Darkhouse Depths*, for Tauros, slam Special Gem, {{{R2}}}, {{{E2,}}} {{{S2}}}, {{{E4}}} or Longarm Potion.
 - [4P MP] auto-buy {{{O2}}} and {{{G3}}}.
 - [Player Trap] Special-damage lines are not viable late-game usually (see [[#h:special][Special]].)
@@ -562,7 +549,7 @@ Weaker damage throughputs, but nonetheless safer and great options throughout th
 {{{G1g}}}
 {{{O4g}}}
 {{{E3g}}}
-{{{E1g}}}
+{{{S2g}}}
     
 #+begin_quote
 - {{{S1}}} :: more consistent single-target DPS on non-leap _Secondary_ builds.
@@ -581,9 +568,8 @@ Weaker damage throughputs, but nonetheless safer and great options throughout th
   + _Inconsistent AoE_, but otherwise, ~+51% mean damage/Special from base.
     [fn:e3:{{{E3}}} average mean does not factor in damage buffs or Sap, code available (https://gist.github.com/quoise-ps/82ce0dcc0ff5f5c8222e90b51bd9c4b0.)]
 
-- {{{E1}}} :: best non-leap damage slam with decent snapshot buff and multihit scaling.
-  + Strongly hindered by movement slow on use (especially on Extra.)
-  + Average 4 Primaries/7.0s (100*16 damage + 3 other abilities.)
+- {{{S2}}} :: amazing for damage uptime via ranged attacks, charge and wider area.
+  + Consistent trigger for {{{R1}}}.
 #+end_quote
 
 ** REVIEW Good
@@ -592,28 +578,29 @@ Weaker damage throughputs, but nonetheless safer and great options throughout th
 :END:
 Weaker gems that solve specific encounters exceedingly well, have certain downsides or broad synergies.
 
-{{{S2g}}}
+{{{E1g}}}
 {{{E4g}}}
 {{{G4g}}}
 {{{S3g}}}
 {{{O3g}}}
 
 #+begin_quote
-- {{{S2}}} :: amazing for damage uptime via ranged attacks, charge and wider area.
-  + Consistent trigger for {{{R1}}}.
-
+- {{{E1}}} :: best non-leap damage slam with decent snapshot buff and multihit scaling.
+  + Strongly hindered by movement slow on use (bad for /Extra/ mechs.)
+  + Average 4 Primaries/7.0s (100*16 damage + 2 other abilities.)
+    
 - {{{E4}}} :: high burst trivializing the first two fights in each midstage when used at t=0s+20s.
   + Highest burst when used with {{{G1}}} and Blackstrike buff ({{{E3}}}, {{{Firststrike-Bracelet}}}.)
   + Good _ads tech_ when timed.
 
 - {{{G4}}} :: significant dmg increase that hits all AoE (good _ads tech_.)
   + The 10% luck is mediocre until you have a % and %-proc (e.g. {{{G1}}} and {{{Lightning-Bow}}}.)
-    
+
 - {{{S3}}} :: 4s oGCD is pretty good; simplifies rotations and good early damage.
   + QoL {{{Shackles}}} reroll in an instant (e.g. clicking Primary in Flow-Str more.)
   + Damage falloff with no synergies.
   + Enables {{{E1}}} by bypassing its slow (2/3rds of the time.)
-  
+
 - {{{O3}}} :: highest base Special (exceptional for 1.0s GCD), good _ads tech_ and slam option at base on 15s CD.
   + [MP] {{{O3}}} is pickable given other class O3 gems are not high base damage.
   + {{{O3}}} may be the second-most consistent Special damage dealer next to {{{E3.}}}
@@ -663,9 +650,6 @@ Gems that are average, build-altering or have very narrow synergies for low yiel
 
 Again, tier placing prioritizes "lines" for final 900DPS (~600 base DPS.)
 
-- [1P] \rightarrow prioritize low GCD, multihit, {{{pri}}} and {{{sec}}} items.
-  + [4P] \rightarrow skip {{{pri}}} if contested.
-
 #+begin_quote
 Items are sorted by their name alphabetically.
 #+end_quote
@@ -683,7 +667,7 @@ Items are sorted by their name alphabetically.
 :END:
 
 For damage/consistency, see [[*Ruby Leap Archetypes - R2/R4][Ruby Leap Archetypes - R2/R4]]. To repeat:
-- For {{{R1}}}/{{{R2}}}/{{{R4}}} leaps, leap near the leap distance (position) whenever you can.
+- For {{{R1}}}/{{{R2}}}/{{{R4}}} leaps, leap just outside the minimum leap distance whenever you can.
 
 Additionally,
 - If avoiding leap, you may prioritize: {{{O1}}}, {{{S2}}}, {{{G2}}} and {{{R3}}} (avoid {{{O4}}})
@@ -708,6 +692,11 @@ Shadow palette.
 #+caption: Mini Hotbar Settings
 [[./img/game/options_hotbar.jpg]]
 
+#+begin_quote
+[Author] I suggest using green Shadow palettes,
+they're light in contrast and are visible during either final boss fights.
+#+end_quote
+
 *** REVIEW Practices on Targetting
 :PROPERTIES:
 :CUSTOM_ID: h:targetting
@@ -715,26 +704,56 @@ Shadow palette.
 #+MACRO: nt @@html: <span style="font-size: small; border:2px DarkSalmon solid; padding: 1px;">@@Nearest Target@@html:</span>@@
 #+MACRO: ct @@html: <span style="font-size: small; border:2px DarkSeaGreen solid; padding: 1px;">@@Change Target@@html:</span>@@
 
-# reminder to check default binds
-Regarding player controls {{{nt}}} and {{{ct}}}.
+Targetting goes based on /enemy ID order/. Once you determine it for e.g. Tassha, it's typically fixed for that pattern.
+# need to verify this.
+
+Regarding player controls {{{nt}}} and {{{ct}}} (ignoring shielded enemies.)
+- {{{nt}}} :: changes enemy target to _nearest enemy_.
+- {{{ct}}} :: /two functions:/
+  a. While held, targets _center between enemies_ and slows your character.
+  b. When released, _advances targetting_ in queue.
+- {{{nt}}} press \land {{{ct}}} released :: _resets to frontmost enemy_ in queue.
+  # Technically, once per nt "press and hold" or "press" while ct gets released, it will reset.
+  # - Regardless of whether nt was active before (and held) or during (click or held) CT being held.
+  # - nt does not refresh without being clicked again (nor affect proceeding ct's)
+
+  #+begin_quote
+[Advanced] For reset to frontmost enemy in queue---
+- As long as a "new" {{{nt}}} buffer can be used for {{{ct}}}
+  #+end_quote
+
+**** Untargettables
+
+Some enemy status effects are untargettable.
+
+1. Certain Butterflies with Bubble Shields spawned in *Subterra Sanctum*
+   - Plee in *Geode*
+   - Eternal Bloom during ads spawns
+2. Matti, during ads spawns, in *Churchmouse Streets*
+
+**** Tips: Avoiding Leap
 
 If you're in a fight with multiple enemies, and you do _not want to leap_:
 - identify your current target (and if they're low health)
 - pressing {{{nt}}} prior to {{{sec}}}
-- pressing {{{nt}}} after pressing {{{ct}}}
+- if using {{{ct}}} to slow down, pressing {{{nt}}} afterwards
+- if enemies are opposite of each other (e.g. Meg and Varo in Churchmouse), you can position center and hold {{{ct}}}.
 
-{{{ct}}} also allows to slow your character or attack the "centre" (in-between) of targets:
-- alternatively, "tapping" movement keys for micromovements
-- slowing or pausing down your rotation
-- make practice to not hold Secondary.
+#+begin_quote
+Vice versa, I may refresh and force leap by pressing {{{nt}}} \rightarrow {{{ct}}} (or {{{nt}}} + {{{ct}}}) rather than scrolling the targets.
+ #+end_quote
+
+**** Tips: Alternate forms of movement
+
+- alternatively, "tapping" movement keys (*streaming*) for micromovements
+- using {{{spe}}} or {{{def}}} to slow movement temporarily
   
 ** REVIEW Hidden Leap Disable Radius
 :PROPERTIES:
 :CUSTOM_ID: h:leap_buffer
 :END:
 
-After enabling leap on Secondary, disabling leap uses a smaller "buffer" distance
-(~2.94lp; ~2x size of Rabbit visible hitbox.)
+After enabling leap on Secondary, disabling leap uses a smaller "buffer" distance.
 
 #+begin_quote
 When your leap is disabled, for most enemies[fn:small_enemy:Excludes small enemies like butterflies, dummy and mice spawns in Matti.]:
@@ -753,5 +772,20 @@ Due to this, I typically play with my leap disabled and move (just) outside the 
 :CUSTOM_ID: h:builds
 :END:
 
+* RENEW Changelog (Releases)
+:PROPERTIES:
+:CUSTOM_ID: h:changelog
+:END:
+
+- v0.1.x (2026-04-18) :: release with ability synergies, gem tier list and ability tier list
+- v0.2.0 (2026-04-21) :: applied feedback changes to rotation, gems, items.
+  - v0.2.1 (2026-04-21) :: fixed versioning and added dating.
+- v0.3.0 (2026-05-02) :: added rotations, class summary, tooltips, other notes; moved gems again.
+  - v0.3.1 (2026-05-02) :: grammar.
+  - v0.3.2 (2026-05-14) :: bad macro in item table, modified CSS; added abbreviations in gem tier list, headers are "fixed".
+- v0.4.0 (2026-06-07) :: gem-item retiers; actually fill item synergies.
+  - v0.4.1 (2026-06-16) :: reordered some gems, review synergies, added o2/g3 as synergies, link repo's own JS/.css
+    to avoid failed site loading.
+- v0.5.0 (2026-07-04) :: major item tiering rework. Added gameplan, multiplayer conflicts.
 
 #  LocalWords:  dmg synergize pickable Hammermaid
