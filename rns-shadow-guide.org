@@ -230,30 +230,26 @@ Shadow typically should either be playing up close or near leap activation range
 In more optimal play with {{{R1}}} / {{{R2}}} / {{{R4}}},
 you should be playing close to 3 Rabbitleaps to enable leap when you need it.
 
-In Solo (1P), Shadow should build towards _Primary or Secondary builds_, multihit or low GCD.
-pecial is typically for AoE and is generally not viable without {{{Obsidian-Rod}}}, {{{E3}}} or {{{O3}}} with fast resets.
+In MP, Shadow adjusts for teammates, like Sin, shares _fastest base speed with Assassin_ and,
+like Heavyblade, has _no slow on their Primary or Secondary_. 
 
-In MP, Shadow adjusts for teammates, like Sin, shares _fastest base speed with Assassin_ and, like Heavyblade, has _no slow on their Primary or Secondary_.
-  
-*** REVIEW Multiplayer Build Conflicts
+*** REVIEW Multiplayer Item Conflicts
 :PROPERTIES:
 :CUSTOM_ID: h:conflict
 :END:
 
-In multiplayer, most times you will be building _multihit and Secondary_.
-
 Most item conflicts do and _should occur with Sin, Dancer and Druid._
-Avoid playing with at least two of these if you can.
+- 1P: Shadow build towards _Primary or Secondary builds_, multihit or _low GCD._
+- 4P: Shadow omits Primary typically, but same pattern.
 
-Here's the overlying archetypes that Shadow typically should build for Secondary and multihit.
-- Multihit and Bleed :: _Assassin_, _Dancer_, _Druid_, _Spellsword_, _Sniper_, Grenadier
-- Secondary :: _Assassin_, _Dancer_, _Druid_, Sniper, Ancient, Grenadier
-- Primary :: Assassin, _Heavyblade_, Sniper, _Bruiser_, _Hammermaid_, _Grenadier_
-- Low GCD :: _Assassin_ (S2/O2), _Bruiser_, _Spellsword_, (pubs) Grenadier
+# Here's the overlying archetypes that Shadow typically should build for Secondary and multihit.
+# - Multihit and Bleed :: _Assassin_, _Dancer_, _Druid_, _Spellsword_, _Sniper_, Grenadier
+# - Secondary :: _Assassin_, _Dancer_, _Druid_, Sniper, Ancient, Grenadier
+# - Primary :: Assassin, _Heavyblade_, Sniper, _Bruiser_, _Hammermaid_, _Grenadier_
+# - Low GCD :: _Assassin_ (S2/O2), _Bruiser_, _Spellsword_, (pubs) Grenadier
 
 #+begin_quote
-In public lobbies, I see Grenadiers also contesting these items,
-forcing themselves from building half their gem lines.
+In public lobbies, you may take priority over Grenadiers on low GCD items: they have alternate lines and GCD cancel.
 #+end_quote
 
 *** TODO First Shop Buys and Slams :noexport:
@@ -261,18 +257,15 @@ forcing themselves from building half their gem lines.
 :CUSTOM_ID: h:shop
 :END:
 
-*** Scaling Ability Damage
+*** DRAFT Scaling Ability Damage
 :PROPERTIES:
 :CUSTOM_ID: h:ability_damage
 :END:
 
 Most of the time on Shadow, your damage will come from abilities, so you often want a mix of:
 
-1. High base abilities ({{{R1s}}}, {{{R2s}}}, {{{O3s}}})
-   + Typically you want a high damage ability for the 1.0s GCD you cast.
-   + Low base abilities like {{{O1}}} and {{{R3}}} often do not scale well late-game.
+1. High base damage abilities ({{{R1s}}}, {{{R2s}}}, {{{O3s}}})
 2. Autocast abilities and oGCD ({{{R4s}}} \ggg {{{S1s}}}, {{{G1s}}}, {{{S3s}}})
-   + {{{R4}}} for example, adds 300 base damage for the 1.0s GCD you cast leaping.
 3. Additive or percent damage ({{{i(Pocketwatch)}}}, {{{i(Shadow-Bracelet)}}})
    + Additionally, Bleed and sap effects ({{{i(Leech-Staff)}}}, {{{i(Blood-Vial)}}})
 4. Curse ({{{O2s}}}, {{{i(Curse-Talon)}}}, {{{i(Darkmagic-Blade)}}})
@@ -411,14 +404,14 @@ Also most gems here are universally good with {{{O2}}}, {{{G3}}} and {{{O4}}}.
 #+MACRO: E1i {{{N1i}}} {{{i(Firststrike-Bracelet)}}} {{{i(Midsummer-Dress)}}} {{{i(Abyss-Artifact)}}} {{{i(Flamedancer-Dagger)}}} {{{i(Whiteflame-Staff)}}} {{{i(Hexed-Blindfold)}}}
 #+MACRO: E1n "Needs" slow bypass, but best internal multi-hit and good snapshot buff synergy
 
-| Gem | Gem Synergies           | Item Synergies | Notes                                                                                    |
-|-----+-------------------------+----------------+------------------------------------------------------------------------------------------|
-| {{{N1}}}  | {{{O2s}}} {{{G3s}}}                 | {{{N1i}}}            | Good class N1, main ability to click on base                                             |
-| {{{O1}}}  | {{{O2s}}} {{{E3s}}} {{{S3s}}}             | {{{O1i}}}            | Weaker {{{G2}}} variant for {{{S3}}} + {{{S4}}} or {{{E3}}}                                                      |
-| {{{S1}}}  | {{{O2s}}} {{{G3s}}}                 | {{{S1i}}}            | +100 on Secondary, more consistent than {{{G1}}} for single enemies                            |
-| {{{R1}}}  | {{{O2s}}} {{{S2s}}} {{{R2s}}} {{{E2s}}} {{{O4s}}} {{{G3s}}} | {{{R1i}}}            | _600dmg on only iframe req_; easiest with {{{S2}}}, good with snapshot buffs                     |
-| {{{G1}}}  | All (-{{{G2s}}}/-{{{R3s}}})         | {{{G1i}}}            | Avg +25 dmg on other ability hits, decent AoE and best % proc trigger without Rabbitluck |
-| {{{E1}}}  | {{{S3s}}} {{{O2s}}} {{{E3s}}} {{{O4s}}}         | {{{E1i}}}            | {{{E1n}}}                                                                                      |
+| Gem | Gem Synergies           | Item Synergies | Notes                                                                  |
+|-----+-------------------------+----------------+------------------------------------------------------------------------|
+| {{{N1}}}  | {{{O2s}}} {{{G3s}}}                 | {{{N1i}}}            | Good class N1, main ability to click on base                           |
+| {{{O1}}}  | {{{O2s}}} {{{E3s\ggg}}}{{{S3s}}}             | {{{O1i}}}            | {{{G2}}} variant for {{{E3}}}, Special and loot CD—generally bad though.          |
+| {{{S1}}}  | {{{O2s}}} {{{G3s}}} {{{O4s}}}             | {{{S1i}}}            | +100 on Secondary, more consistent than {{{G1}}} for single enemies          |
+| {{{R1}}}  | {{{O2s}}} {{{S2s}}} {{{R2s}}} {{{E2s}}} {{{O4s}}} {{{G3s}}} | {{{R1i}}}            | _600dmg on only iframe req_; easiest with {{{S2}}}, good with snapshot buffs   |
+| {{{G1}}}  | All (-{{{G2s}}}/-{{{R3s}}})         | {{{G1i}}}            | Avg +25 dmg on other ability hits, decent AoE and best % proc trigger. |
+| {{{E1}}}  | {{{S3s}}} {{{O2s}}} {{{E3s}}} {{{O4s}}}         | {{{E1i}}}            | {{{E1n}}}                                                                    |
 
 #+begin_quote
 {{{S1}}} and {{{G1}}} effects does not trigger "use" abilities like {{{Black-Wakizashi}}} or {{{Golden-Katana}}}, but can trigger {{{Brightstorm-Spear}}}.
@@ -450,7 +443,7 @@ At base kit, the effect triggers {{{Pocketwatch}}}, but not {{{Sacredstone-Charm
 | {{{O2}}}  | Y    | All             | {{{O2i}}}            | {{{O2n}}}                                                   |
 | {{{S2}}}  | -    | {{{R4s}}} {{{R1s}}} {{{S3s}}} {{{G3s}}} | {{{S2i}}}            | Ranged secondary and wide-hitbox, easy uptime         |
 | {{{R2}}}  | Y    | {{{R4s}}} {{{O4s}}} {{{S3s}}} {{{G3s}}} | {{{R2i}}}            | _"Supercharge" double damage effect_ with only leap req |
-| {{{G2}}}  | -    | {{{E3s}}} {{{S3s}}} {{{S4s}}} {{{G4s}}} | {{{G2i}}}            | Good with oGCD gems; loses Secondary damage           |
+| {{{G2}}}  | -    | {{{E3s}}} {{{G4s\ggg}}}{{{S4s}}}     | {{{G2i}}}            | Good with oGCD gems; loses Secondary damage           |
 | {{{E2}}}  | Y    | {{{R4s}}} {{{G3s}}} {{{S3s}}}     | {{{E2i}}}            | Average upgrade due to {{{Shackles}}}                       |
 
 #+begin_quote
@@ -461,7 +454,7 @@ At base kit, the effect triggers {{{Pocketwatch}}}, but not {{{Sacredstone-Charm
 :CUSTOM_ID: h:special
 :END:
 
-_Late-game Special-damage scaling sucks_ without {{{E3}}}, {{{O3}}} or {{{Obsidian-Rod}}}+{{{R3}}} and synergies.
+_Late-game 250 Special-damage scaling sucks_ without {{{E3}}}, {{{O3}}} or {{{Obsidian-Rod}}}+{{{R3}}} and synergies.
 Otherwise, Shadow {{{spe}}} damage is perfect for ads (Mice/Sanctum).
 
 #+MACRO: N3i {{{i(Deathcap-Tome)}}} {{{i(Cursed-Candlestaff)}}} {{{i(Shockwave-Tome)}}}
@@ -472,7 +465,7 @@ Otherwise, Shadow {{{spe}}} damage is perfect for ads (Mice/Sanctum).
 #+MACRO: R3i {{{i(Obsidian-Rod)}}} {{{i(Garnet-Staff)}}} {{{i(Spear-of-Winds)}}} {{{i(Bolt-Staff)}}} {{{i(Saltwater-Staff)}}}
 #+MACRO: G3i {{{n3i}}} {{{i(Sacred-Bow)}}} {{{i(Shrinemaidens-Kosode)}}} {{{i(Reflection-Shield)}}} {{{i(Spiked-Shield)}}} (Loot/debuff damage items)
 #+MACRO: E3i [{{{i(Mermaid-Scalemail)}}}/{{{i(Firescale-Corset)}}}/{{{i(Hawkfeather-Fan)}}}(\rightarrow {{{i(Redwhite-Ribbon)}}})] {{{i(Sacred-Bow)}}} {{{i(Shrinemaidens-Kosode)}}} {{{i(Artist-Smock)}}} {{{i(Witchs-Cloak)}}} {{{i(Venom-Hood)}}} {{{i(Miners-Headlamp)}}}
-#+MACRO: S3n Good early damage increase as oGCD; no slow (and removes {{{E1}}}/{{{def}}} slow), loves CD reduction (0.8s hidden CD minimum)
+#+MACRO: S3n Good early oGCD damage; no slow (and removes {{{E1}}}/{{{def}}} slow), but terrible base damage.
 #+MACRO: G3n Dancer Warcry (universal damage mult.); scales loot and team damage consistently (alt: {{{E3}}})
 
  | Gem | Gem Synergies              | Item Synergies | Notes                                                                 |
@@ -480,9 +473,9 @@ Otherwise, Shadow {{{spe}}} damage is perfect for ads (Mice/Sanctum).
  | {{{N3}}}  | {{{O2s}}}                        | {{{N3i}}}            | Weaker class N3, but strong AoE (hits all) and decent debuff Spreader |
  | {{{O3}}}  | (With item reset: {{{O1s}}}) {{{O2s}}} | {{{O3i}}}            | Special damage scaling; huge hitting Special; disables universal %    |
  | {{{S3}}}  | {{{E1s}}} {{{O1s}}} {{{G2s}}} {{{O2s}}}            | {{{S3i}}}            | {{{S3n}}}                                                                   |
- | {{{R3}}}  | {{{O1s}}} {{{G2s}}} {{{O2s}}}                | {{{R3i}}}            | Good for ads, Obsidian Rod or Special triggers                        |
+ | {{{R3}}}  | {{{O1s}}} {{{G2s}}} {{{O2s}}}                | {{{R3i}}}            | Only good for ads, Obsidian Rod or Special triggers                   |
  | {{{G3}}}  | All                        | {{{G3i}}}            | {{{G3n}}}                                                                   |
- | {{{E3}}}  | {{{E1s}}} {{{O1s}}} {{{G2s}}} {{{O2s}}}            | {{{E3i}}}            | ~+51% on Special;[fn:e3] debuff/buff archetype; inconsistent AoE.         |
+ | {{{E3}}}  | {{{E1s}}} {{{O1s}}} {{{G2s}}} {{{O2s}}}            | {{{E3i}}}            | ~+33% on Special;[fn:e3] debuff/buff archetype; inconsistent AoE.         |
 
 #+begin_quote
 {{{E3}}} is affected by {{{Obsidian-Rod}}}, {{{Cursed-Candlestaff}}}, {{{Old-Bonnet}}} / {{{Haunted-Gloves}}}, {{{Mountain-Staff}}} and other special items changes.
@@ -499,18 +492,18 @@ Otherwise, Shadow {{{spe}}} damage is perfect for ads (Mice/Sanctum).
 #+MACRO: G4i {{{N4i}}} {{{i(Spark-of-Determination)}}}
 #+MACRO: E4i {{{i(Firststrike-Bracelet)}}} {{{i(Starry-Cloak)}}}(\rightarrow {{{i(Timemage-Cap)}}}) {{{i(Timespace-Dagger)}}} {{{i(Bloodhound-Greatsword)}}} {{{i(Lonesome-Pendant)}}}
 
-| Gem | Leap | Gem Synergies            | Item Synergies | Notes                                                    |
-|-----+------+--------------------------+----------------+----------------------------------------------------------|
-| {{{N4}}}  | -    | {{{O2s}}} {{{G3s}}}                  | {{{N4i}}}            | Has GCD; good burst for class N4 and Shackles reroll     |
-| {{{O4}}}  | Y    | {{{R1s}}} {{{R2s}}} {{{O2s}}} {{{G3s}}}          | {{{O4i}}}            | *Leaps*; *+m/s*; allows clicking attacks most times          |
-| {{{S4}}}  | -    | {{{O1s}}} {{{G1s}}} {{{R1s}}} {{{G2s}}} {{{O2s}}} {{{G3s}}}  | {{{S4i}}}            | oGCD burst damage early-game; but oGCD on 10s is bad     |
-| {{{R4}}}  | -    | {{{O2s}}} {{{S2s}}} {{{R2s}}} {{{E2s}}} {{{G3s}}}      | {{{R4i}}}            | +300 on Leaps is amazing                                 |
-| {{{G4}}}  | -    | {{{G1s}}} {{{G2s}}} {{{R3s}}} {{{O2s}}} {{{G3s}}}      | {{{G4i}}}            | Good Sanctum/Mice tech;                                  |
-| {{{E4}}}  | -    | {{{G1s}}} {{{O2s}}} {{{E3s}}} {{{G3s}}}          | {{{E4i}}}            | Amazing burst, trivializes first two fights of midstages |
+| Gem | Leap | Gem Synergies           | Item Synergies | Notes                                                    |
+|-----+------+-------------------------+----------------+----------------------------------------------------------|
+| {{{N4}}}  | -    | {{{O2s}}} {{{G3s}}}                 | {{{N4i}}}            | Has GCD; good burst for class N4 and Shackles reroll     |
+| {{{O4}}}  | Y    | {{{R1s}}} {{{R2s}}} {{{O2s}}} {{{G3s}}}         | {{{O4i}}}            | *Leaps*; *+m/s*; allows clicking attacks most times          |
+| {{{S4}}}  | -    | {{{O1s}}} {{{G1s}}} {{{R1s}}} {{{G2s}}} {{{O2s}}} {{{G3s}}} | {{{S4i}}}            | oGCD burst damage early-game; but oGCD on 10s is bad     |
+| {{{R4}}}  | -    | {{{O2s}}} {{{S2s}}} {{{R2s}}} {{{E2s}}} {{{G3s}}}     | {{{R4i}}}            | +300 on Leaps is amazing                                 |
+| {{{G4}}}  | -    | {{{G1s}}} {{{G2s}}} {{{R3s}}} {{{O2s}}} {{{G3s}}}     | {{{G4i}}}            | Good Sanctum/Mice tech, best {{{G2}}} option                   |
+| {{{E4}}}  | -    | {{{G1s}}} {{{O2s}}} {{{E3s}}} {{{G3s}}}         | {{{E4i}}}            | Amazing burst, trivializes first two fights of midstages |
 
 #+begin_quote
 Worth saving Defensive to reroll {{{Shackles}}}, to line up
-Wavestrike, Blacktrike, Flash-* and Vanish/Ghost effects, with for example, {{{E1}}}.
+Wavestrike, Blacktrike, Flash-* and Counter/Vanish/Ghost effects, with for example, {{{E1}}}.
 
 {{{Firststrike-Bracelet}}} or Blackstrike buff ({{{Book-of-Cheats}}}, {{{E3}}})
 applies to Defensive damage without consuming it.
@@ -553,10 +546,10 @@ Non-DPS carry gems but universal damage multipliers into any line.
   + Unlike {{{R4}}}, {{{R1}}} and {{{R2}}} typically have better item scaling.
 - {{{R1}}} :: optimal $(2\rightarrow1)$ rotations yields 390 base DPS.
 
-- {{{O2}}} and {{{G3}}} :: immediate and lategame universal damage multipliers on literally everything.
+- {{{O2}}} and {{{G3}}} :: immediate and lategame _universal damage multipliers_.
   + [4P] practically autobuy.
   + Excluding {{{R2}}} and {{{E3}}}, worth replacing other gems over,
-    especially once you have any loot damage source or teammates.
+    especially once you have any teammates or loot damage source.
 #+end_quote
    
 ** REVIEW Great
@@ -568,8 +561,8 @@ Weaker damage throughputs, but nonetheless safer and great options throughout th
 {{{S1g}}}
 {{{G1g}}}
 {{{O4g}}}
-{{{S2g}}}
 {{{E3g}}}
+{{{E1g}}}
     
 #+begin_quote
 - {{{S1}}} :: more consistent single-target DPS on non-leap _Secondary_ builds.
@@ -582,14 +575,15 @@ Weaker damage throughputs, but nonetheless safer and great options throughout th
   + In 5s buffs like Smite, allows 2-3 extra attacks.
   + Only internal "perma" speed for Shadow.
 
-- {{{S2}}} :: amazing for damage uptime via ranged attacks, charge and wider area.
-  + Consistent trigger for {{{R1}}}.
-
 - {{{E3}}} :: good damage bump and utility tool (single/group buffs + debuffs.)
   + Enables {{{E1}}} and buff/debuff item lines.
   + Needs {{{O1}}}, {{{G2}}} or CD reduction for consistent triggers (but good on base.)
   + _Inconsistent AoE_, but otherwise, ~+51% mean damage/Special from base.
     [fn:e3:{{{E3}}} average mean does not factor in damage buffs or Sap, code available (https://gist.github.com/quoise-ps/82ce0dcc0ff5f5c8222e90b51bd9c4b0.)]
+
+- {{{E1}}} :: best non-leap damage slam with decent snapshot buff and multihit scaling.
+  + Strongly hindered by movement slow on use (especially on Extra.)
+  + Average 4 Primaries/7.0s (100*16 damage + 3 other abilities.)
 #+end_quote
 
 ** REVIEW Good
@@ -598,32 +592,33 @@ Weaker damage throughputs, but nonetheless safer and great options throughout th
 :END:
 Weaker gems that solve specific encounters exceedingly well, have certain downsides or broad synergies.
 
+{{{S2g}}}
 {{{E4g}}}
 {{{G4g}}}
 {{{S3g}}}
-{{{E1g}}}
 {{{O3g}}}
 
 #+begin_quote
+- {{{S2}}} :: amazing for damage uptime via ranged attacks, charge and wider area.
+  + Consistent trigger for {{{R1}}}.
+
 - {{{E4}}} :: high burst trivializing the first two fights in each midstage when used at t=0s+20s.
   + Highest burst when used with {{{G1}}} and Blackstrike buff ({{{E3}}}, {{{Firststrike-Bracelet}}}.)
   + Good _ads tech_ when timed.
 
 - {{{G4}}} :: significant dmg increase that hits all AoE (good _ads tech_.)
-  + The 10% luck is mediocre until at least three % synergies.
+  + The 10% luck is mediocre until you have a % and %-proc (e.g. {{{G1}}} and {{{Lightning-Bow}}}.)
     
 - {{{S3}}} :: 4s oGCD is pretty good; simplifies rotations and good early damage.
   + QoL {{{Shackles}}} reroll in an instant (e.g. clicking Primary in Flow-Str more.)
   + Damage falloff with no synergies.
   + Enables {{{E1}}} by bypassing its slow (2/3rds of the time.)
-
-- {{{E1}}} :: best damage for multi-hit/snapshot buffs, but difficult to slam without slow bypass.
   
 - {{{O3}}} :: highest base Special (exceptional for 1.0s GCD), good _ads tech_ and slam option at base on 15s CD.
   + [MP] {{{O3}}} is pickable given other class O3 gems are not high base damage.
-  + {{{O3}}} may be the second-most consistent Special damage scaler.
-    - Note, most {{{O3}}} items are mediocre with other Specials, so _typically I only pick {{{O3}}}-items if I have {{{O3}}} first._
-  + Losing potential % procs is typically insignificant; given on base, it's solved Sanctum first stage with no synergies.
+  + {{{O3}}} may be the second-most consistent Special damage dealer next to {{{E3.}}}
+    - Note, most {{{O3}}} items are mediocre with other Specials, such that _you may find yourself picking {{{O3}}}-items only if you have {{{O3}}} first._
+  + Losing potential % procs is typically insignificant for its use.
 #+end_quote
 
 ** REVIEW Conditionally good
@@ -640,13 +635,13 @@ Gems that are average, build-altering or have very narrow synergies for low yiel
 
 #+begin_quote
 - {{{S4}}} :: QoL 10s oGCD with good early DPS. Falloffs harshly with no synergies.
-  + 10s for an oGCD is bad, thus item/{{{G2}}}-dependant for scaling.
-  + {{{Shackles}}} reroll in an instant, making it "quicker" to snapshot effects.
+  + 10s for an oGCD is bad, thus item/{{{G2}}}-dependant for damage scaling.
+  + {{{Shackles}}} reroll in an instant, making it "quicker" to snapshot effects or spam attack.
 
 - {{{R3}}} :: good option Special-trigger for loot ({{{Saltwater-Staff}}}) and AoE (_ads tech_), but a *player trap* otherwise.
   + 60% chance for it to whiff (into 4s CD) and 250 base is _super bad_ in late-game.
     - Weakest % trigger for loot effects like {{{Lightning-Bow}}}.
-  + Besides {{{O2}}}, no internal gem synergies and may become anti-synergistic late-game.
+  + Besides {{{O2}}}, no internal gem synergies and may become anti-synergistic late-game
     (i.e. _GCD is contested_; and 10% luck {{{G4}}} provides is too inconsequential.)
   + {{{R3}}}-only damage builds strictly require {{{Obsidian-Rod}}} or >50% Rabbitluck uptime for Witch DPS.
 
