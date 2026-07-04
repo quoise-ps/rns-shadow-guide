@@ -1,8 +1,14 @@
-# insert thanks for Obi's tiering suggestions in intro section
 * Perfect
-Generally autopicks early, archetypical is a lot for circumstantial later on.
-
+:PROPERTIES:
+:CUSTOM_ID: h:it_perfect
+:END:
 ** General
+:PROPERTIES:
+:CUSTOM_ID: h:it_perfect_general
+:END:
+Both this and [[#h:it_perfect_arch][More Archetypical]] are good early picks.
+[[#h:it_perfect_general][General]] is more well-rounded.
+
 #+begin_center
 {{{i(Amethyst-Bracelet)}}}
 {{{i(Angels-Halo)}}}
@@ -39,6 +45,10 @@ Generally autopicks early, archetypical is a lot for circumstantial later on.
 #+end_center
 
 ** More Archetypical
+:PROPERTIES:
+:CUSTOM_ID: h:it_perfect_arch
+:END:
+Good now and influences build direction later.
 #+begin_center
 {{{i(Battery-Shield)}}}
 {{{i(Brightstorm-Spear)}}}
@@ -59,6 +69,10 @@ Generally autopicks early, archetypical is a lot for circumstantial later on.
 #+end_center
 
 ** Conditional
+:PROPERTIES:
+:CUSTOM_ID: h:it_perfect_cond
+:END:
+Requires specific gem or item before substantial effect.
 #+BEGIN_CENTER
 {{{i(Colorful-Earrings)}}}
 {{{i(Crown-of-Storms)}}}
@@ -89,6 +103,9 @@ Generally autopicks early, archetypical is a lot for circumstantial later on.
 
 * Great
 ** General
+:PROPERTIES:
+:CUSTOM_ID: h:it_great_general
+:END:
 #+begin_center
 {{{i(Aquamarine-Bracelet)}}}
 {{{i(Assassins-Knife)}}}
@@ -101,7 +118,6 @@ Generally autopicks early, archetypical is a lot for circumstantial later on.
 {{{i(Divine-Mirror)}}}
 {{{i(Flamedancer-Dagger)}}}
 {{{i(Gladiator-Helmet)}}}
-{{{i(Hawkfeather-Fan)}}}
 {{{i(Hermes-Bow)}}}
 {{{i(Hidden-Blade)}}}
 {{{i(Holy-Greatsword)}}}
@@ -131,28 +147,32 @@ Generally autopicks early, archetypical is a lot for circumstantial later on.
 #+end_center
 
 ** Scaling / Team-Focused
-
+:PROPERTIES:
+:CUSTOM_ID: h:it_great_scale
+:END:
 #+begin_center
 Curse:
 {{{i(Blackwing-Staff)}}}
 {{{i(Curse-Talon)}}}
-{{{i(Darkmagic-Blade)}}}
 {{{i(Raven-Grimoire)}}}
 {{{i(Opal-Necklace)}}}
+{{{i(Darkmagic-Blade)}}}
 
 Buff:
-{{{i(Glittering-Trumpet)}}}
 {{{i(Eternity-Flute)}}}
+{{{i(Glittering-Trumpet)}}}
 {{{i(Lullaby-Harp)}}}
 {{{i(Ornamental-Bell)}}}
 {{{i(Redwhite-Ribbon)}}}
 {{{i(Sapphire-Violin)}}}
-{{{i(Shield-of-Smiles)}}}
-
+{{{i(Shield-of-Smiles)}}} \\
 /Universal/attack damage multipliers \rightarrow good too by 1P final stage./
 #+end_center
 
 ** Other Debuffs
+:PROPERTIES:
+:CUSTOM_ID: h:it_great_debuff
+:END:
 #+begin_center
 {{{i(Bluebolt-Staff)}}}
 {{{i(Lapis-Sword)}}}
@@ -161,8 +181,8 @@ Buff:
 {{{i(Ivy-Staff)}}}
 {{{i(Snakefang-Dagger)}}}
 {{{i(Deathcap-Tome)}}}
-{{{i(Spiderbite-Bow)}}}
 {{{i(Chemists-Coat)}}}
+{{{i(Spiderbite-Bow)}}}
 {{{i(Poisonfrog-Charm)}}}
 {{{i(Compound-Gloves)}}}
 
@@ -184,6 +204,9 @@ Buff:
 # They're good, but may block ability damage scaling.
 
 ** Conditional
+:PROPERTIES:
+:CUSTOM_ID: h:it_great_cond
+:END:
 #+begin_center
 {{{i(Obsidian-Rod)}}} \ggg
 {{{i(Timespace-Dagger)}}} \gg
@@ -197,33 +220,41 @@ Buff:
 {{{i(Vega-Spear)}}} \\
 /High GCD is very synergistic with snapshot buffs like {{{Beach-Sandals}}}, Ancient G3 or SS G4./
 
+{{{i(Ballroom-Gown)}}}
+{{{i(Mimick-Rabbitfoot)}}}
+{{{i(Straw-Hat)}}} \\
+/30 luck is good; 10/15 luck needs percent trigger AND percent proc loot./
+
 {{{i(Altair-Dagger)}}}
 {{{i(Artist-Smock)}}}
-{{{i(Ballroom-Gown)}}}
 {{{i(Battlemaiden-Armor)}}}
 {{{i(Crown-of-Love)}}}
 {{{i(Crown-of-Swords)}}}
 {{{i(Garnet-Staff)}}}[fn:garnet-staff:{{{Garnet-Staff}}} is a good alternate invuln proc for {{{R1}}} and {{{R4}}}.]
 {{{i(Jesters-Hat)}}}
-{{{i(Kappa-Shield)}}}
 {{{i(Lonesome-Pendant)}}}
 {{{i(Lost-Pendant)}}}
-{{{i(Mimick-Rabbitfoot)}}}
 {{{i(Miners-Headlamp)}}}
 {{{i(Nightingale-Gown)}}}
 {{{i(Ninja-Robe)}}}
-{{{i(Painters-Beret)}}}
 {{{i(Queens-Crown)}}}
 {{{i(Snipers-Eyeglasses)}}}
+{{{i(Spark-of-Determination)}}}
 {{{i(Starry-Cloak)}}}
-{{{i(Straw-Hat)}}}
 {{{i(Sun-Pendant)}}}
 {{{i(Tornado-Staff)}}}
-{{{i(Trick-Shield)}}}
+{{{i(Trick-Shield)}}} \\
+/Other super-niche conditionals here./
 #+end_center
 
 * Average-good
+:PROPERTIES:
+:CUSTOM_ID: h:it_good
+:END:
 ** General
+:PROPERTIES:
+:CUSTOM_ID: h:it_good_general
+:END:
 #+begin_center
 {{{i(Blackhole-Charm)}}}
 {{{i(Bolt-Staff)}}}
@@ -244,10 +275,10 @@ Buff:
 {{{i(Hydrous-Blob)}}}
 {{{i(Iron-Greaves)}}}
 {{{i(Iron-Pickaxe)}}}
+{{{i(Kappa-Shield)}}}
 {{{i(Killing-Note)}}}
 {{{i(Lion-Charm)}}}
 {{{i(Moon-Pendant)}}}
-{{{i(Mountain-Staff)}}}
 {{{i(Nightgleam-Sword)}}}
 {{{i(Nightguard-Gloves)}}}
 {{{i(Nightstar-Grimoire)}}}
@@ -262,7 +293,6 @@ Buff:
 {{{i(Sharpedged-Shield)}}}
 {{{i(Shinobi-Tabi)}}}
 {{{i(Sleeping-Greatbow)}}}
-{{{i(Spark-of-Determination)}}}
 {{{i(Spear-of-Rains)}}}
 {{{i(Spear-of-Winds)}}}
 {{{i(Stonebreaker-Staff)}}}
@@ -276,20 +306,28 @@ Buff:
 #+end_center
 
 ** Special CD
+:PROPERTIES:
+:CUSTOM_ID: h:it_good_special
+:END:
 #+begin_center
 {{{i(Dark-Wings)}}}
 {{{i(Firescale-Corset)}}}
+{{{i(Hawkfeather-Fan)}}}
 {{{i(Mermaid-Scalemail)}}}
 {{{i(Quartz-Shield)}}}
-{{{i(Staff-of-Sorrow)}}}[fn:staff-of-sorrow:{{{Staff-of-Sorrow}}}, no, it doesn't work with {{{O1}}}'s effect.]
+{{{i(Staff-of-Sorrow)}}}[fn:staff-of-sorrow:{{{Staff-of-Sorrow}}}, no, it doesn't work with {{{O1}}}'s effect.] \\
+/Be wary of poor {{{spe}}} lategame scaling, see [[#h:special][Special]] for suggestions./
 #+end_center
 
 ** Gold
+:PROPERTIES:
+:CUSTOM_ID: h:it_good_gold
+:END:
 #+begin_center
 {{{i(Silver-Coin)}}}
 {{{i(Topaz-Charm)}}}
 {{{i(Vanilla-Wafers)}}} \\
-Strictly pre-first shops only due to high gem viability.
+/Strictly pre-first shops only due to high gem viability./
 
 {{{i(Caramel-Tea)}}}
 {{{i(Sweet-Taffy)}}} \\
@@ -297,7 +335,13 @@ Strictly pre-first shops only due to high gem viability.
 #+end_center
 
 * "Dead or bad!"
+:PROPERTIES:
+:CUSTOM_ID: h:it_dead
+:END:
 ** Damage
+:PROPERTIES:
+:CUSTOM_ID: h:it_dead_damage
+:END:
 #+begin_center
 {{{i(Apple-Plate)}}}
 {{{i(Crowfeather-Hairpin)}}}
@@ -306,9 +350,11 @@ Strictly pre-first shops only due to high gem viability.
 {{{i(Golden-Katana)}}}
 {{{i(Haunted-Gloves)}}}
 {{{i(Hooked-Staff)}}}
+{{{i(Mountain-Staff)}}}
 {{{i(Obsidian-Hairpin)}}}
 {{{i(Old-Bonnet)}}}
 {{{i(Oni-Staff)}}}
+{{{i(Painters-Beret)}}}
 {{{i(Pajama-Hat)}}}
 {{{i(Raindrop-Earrings)}}}
 {{{i(Sacred-Shield)}}}
@@ -335,6 +381,9 @@ Strictly pre-first shops only due to high gem viability.
 #+end_center
 
 ** QoL
+:PROPERTIES:
+:CUSTOM_ID: h:it_dead_qol
+:END:
 #+begin_center
 {{{i(Abyss-Artifact)}}}
 {{{i(Blue-Rose)}}}

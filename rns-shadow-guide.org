@@ -135,8 +135,10 @@ Primarily, the recommendations here are targetted as a carry at 4P Lunar
 and high WR consistency and with tactless author bias.
 
 #+begin_quote
-[Author] I come from maining Dancer after 200 MP Lunar games.
-On Shadow, currently, have 23 MP Lunar wins and 37 Hard wins.
+[Author] I'm primarily a Dancer main first with 260 Lunar Wins; some of these come from
+4P nohits, 4P 1.5x (Game Speed) DT and 4P Touhou wins.
+
+On Shadow, I currently have 72 MP Lunar wins and 62 Total Hard wins.
 #+end_quote
 
 This guide could not be made possible without the help of other players in mino_dev Discord.
@@ -171,11 +173,12 @@ For community jargon:
   + {{{secl}}} ($2'$) is drastically favoured and clicked whenever available;
   + Followed by Special, Primary, Defensive and (non-leap) Secondary.
 - AoE :: Area-of-Effect; typically used in context of hitting multiple enemies, e.g. fights in Churchouse or Sanctum.
-# - BiS :: Best in Slot; universal best upgrade.
 - oGCD :: Shadow's S3, S4; these can be used without sacrificing GCD time spent on other
 - prio :: priority; typically what item/gems should be picked and by whom
+  + BiS :: Best in Slot; universal best upgrade.
+  + line :: if buying a gem, typically how broad or strong its item-gem synergies are.
 - slam :: a forced gem-item pick to solve the immediate stage/encounter.
-  + Often this pick is not necessarily optimal for the current build or will be replaced later.
+  + In R&S, often this does expand your item lines off base, even if not BiS.
 
 * REVIEW Class Summary
 :PROPERTIES:
@@ -210,20 +213,20 @@ Shadow is best characterized by having:
 :CUSTOM_ID: h:gameplan
 :END:
 
-Shadow typically should either be playing up close.
+Shadow typically should be playing up close.
 In more optimal play with {{{R1}}} / {{{R2}}} / {{{R4}}},
-you should be playing just under 3 Rabbitleaps and enable leap when you need it.
+you should be playing just under 3 Rabbitleaps, then moving out enable leap when you need it.
 
-In MP, Shadow adjusts by walking for teammates as she shares _fastest base speed with Assassin_ and, like Sin or Heavy,
-has no slows on two of their three attacks.
+In MP, Shadow adjusts by walking for teammates as she shares _fastest base speed with Assassin_ and, like Sin,
+has no slows on two of three attacks.
 
 *** REVIEW Multiplayer Item Conflicts
 :PROPERTIES:
-:CUSTOM_ID: h:conflict
+:CUSTOM_ID: h:mp_conflict
 :END:
 
-Most item conflicts do and _should occur with Sin, Dancer and Druid._
-- 1P: Shadow build towards _Primary or Secondary builds_, multihit or _low GCD._
+Most item conflicts do and _should occur with Sin, Dancer, SS and Druid._
+- 1P: Shadow build towards Primary, Secondary builds, multihit or low GCD.
 - 4P: Shadow omits Primary typically, but same pattern.
 
 # # Way too complicated to keep, better to diagram?
@@ -234,7 +237,7 @@ Most item conflicts do and _should occur with Sin, Dancer and Druid._
 # - Low GCD :: _Assassin_ (S2/O2), _Bruiser_, _Spellsword_, (pubs) Grenadier
 
 #+begin_quote
-In public lobbies, you may take priority over Grenadiers on low GCD items: they have alternate lines and GCD cancel.
+Pubs Grens may also contest low GCD/trigger items, though they have alternate lines and GCD cancel.
 #+end_quote
 
 *** TODO First Shop Buys and Slams :noexport:
@@ -244,10 +247,10 @@ In public lobbies, you may take priority over Grenadiers on low GCD items: they 
 
 *** DRAFT Scaling Ability Damage
 :PROPERTIES:
-:CUSTOM_ID: h:ability_damage
+:CUSTOM_ID: h:scale_ability
 :END:
 
-Most of the time on Shadow, your damage will come from abilities, so you often want a mix of:
+Most of the time on Shadow, your damage will come from abilities, so you often want a mix of (non-exhaustive):
 
 1. High base damage abilities ({{{R1s}}}, {{{R2s}}}, {{{O3s}}})
 2. Autocast abilities and oGCD ({{{R4s}}} \ggg {{{S1s}}}, {{{G1s}}}, {{{S3s}}})
@@ -372,8 +375,8 @@ Same principle to activate leap above:
 Unique or notable gem and item synergies are only presented.
 
 Generic item damage bonuses are assumed:
-- Most abilities/gems love multi-hits like {{{Shadow-Bracelet}}}, {{{Youkai-Bracelet}}}, Bleed items-, {{{Venom-Hood}}}, {{{Heavens-Codex}}}...
-- Certain items like {{{Witchs-Cloak}}} and {{{Darkcloud-Necklace}}} become viable when Shadow has sufficient damage in loot items.
+- Most abilities/gems love multi-hits like {{{Shadow-Bracelet}}}, {{{Youkai-Bracelet}}}, Bleed items-...
+- Certain items like {{{Lefthand-Cast}}}, {{{Witchs-Cloak}}} and {{{Darkcloud-Necklace}}} become viable when Shadow has sufficient damage in loot items.
 
 Also most gems here are universally good with {{{O2}}}, {{{G3}}} and {{{O4}}}.
 
@@ -392,7 +395,7 @@ Also most gems here are universally good with {{{O2}}}, {{{G3}}} and {{{O4}}}.
 | Gem | Gem Synergies           | Item Synergies | Notes                                                                  |
 |-----+-------------------------+----------------+------------------------------------------------------------------------|
 | {{{N1}}}  | {{{O2s}}} {{{G3s}}}                 | {{{N1i}}}            | Good class N1, main ability to click on base                           |
-| {{{O1}}}  | {{{O2s}}} {{{E3s\ggg}}}{{{S3s}}}             | {{{O1i}}}            | {{{G2}}} variant for {{{E3}}}, Special and loot CD—generally bad though.          |
+| {{{O1}}}  | {{{O2s}}} {{{E3s}}} \ggg {{{S3s}}}           | {{{O1i}}}            | {{{G2}}} variant for {{{E3}}}, Special and loot CD—generally bad though.          |
 | {{{S1}}}  | {{{O2s}}} {{{G3s}}} {{{O4s}}}             | {{{S1i}}}            | +100 on Secondary, more consistent than {{{G1}}} for single enemies          |
 | {{{R1}}}  | {{{O2s}}} {{{S2s}}} {{{R2s}}} {{{E2s}}} {{{O4s}}} {{{G3s}}} | {{{R1i}}}            | _600dmg on only iframe req_; easiest with {{{S2}}}, good with snapshot buffs   |
 | {{{G1}}}  | All (-{{{G2s}}}/-{{{R3s}}})         | {{{G1i}}}            | Avg +25 dmg on other ability hits, decent AoE and best % proc trigger. |
@@ -428,7 +431,7 @@ At base kit, the effect triggers {{{Pocketwatch}}}, but not {{{Sacredstone-Charm
 | {{{O2}}}  | Y    | All             | {{{O2i}}}            | {{{O2n}}}                                                   |
 | {{{S2}}}  | -    | {{{R4s}}} {{{R1s}}} {{{S3s}}} {{{G3s}}} | {{{S2i}}}            | Ranged secondary and wide-hitbox, easy uptime         |
 | {{{R2}}}  | Y    | {{{R4s}}} {{{O4s}}} {{{S3s}}} {{{G3s}}} | {{{R2i}}}            | _"Supercharge" double damage effect_ with only leap req |
-| {{{G2}}}  | -    | {{{E3s}}} {{{G4s\ggg}}}{{{S4s}}}     | {{{G2i}}}            | Good with oGCD gems; loses Secondary damage           |
+| {{{G2}}}  | -    | {{{E3s}}} {{{G4}}} \ggg {{{S4s}}}    | {{{G2i}}}            | Good with oGCD gems; loses Secondary damage           |
 | {{{E2}}}  | Y    | {{{R4s}}} {{{G3s}}} {{{S3s}}}     | {{{E2i}}}            | Average upgrade due to {{{Shackles}}}                       |
 
 #+begin_quote
@@ -504,7 +507,7 @@ applies to Defensive damage without consuming it.
 Tier placing prioritizes "lines" and WR by Lunar Shira/Witch of 900 DPS (~600 base DPS/level 1.)
 - In >99% of runs, buy a gem first shop:
   + On *Subterra Sanctum* or *Churchmouse Streets*, slam Special Gem, {{{E1}}}, {{{G1}}}, {{{E2}}}, {{{S2}}}, {{{G4}}}, {{{E4}}} or Longarm Potion.
-  + Optionally on *Darkhouse Depths*, for Tauros, slam Special Gem, {{{R2}}}, {{{E2,}}} {{{S2}}}, {{{E4}}} or Longarm Potion.
+  + Optionally on *Darkhouse Depths*, for Tauros, slam Special Gem, {{{R2}}}, {{{E2}}}, {{{S2}}}, {{{E4}}} or Longarm Potion.
 - [4P MP] auto-buy {{{O2}}} and {{{G3}}}.
 - [Player Trap] Special-damage lines are not viable late-game usually (see [[#h:special][Special]].)
 
@@ -603,9 +606,9 @@ Weaker gems that solve specific encounters exceedingly well, have certain downsi
 
 - {{{O3}}} :: highest base Special (exceptional for 1.0s GCD), good _ads tech_ and slam option at base on 15s CD.
   + [MP] {{{O3}}} is pickable given other class O3 gems are not high base damage.
-  + {{{O3}}} may be the second-most consistent Special damage dealer next to {{{E3.}}}
-    - Note, most {{{O3}}} items are mediocre with other Specials, such that _you may find yourself picking {{{O3}}}-items only if you have {{{O3}}} first._
-  + Losing potential % procs is typically insignificant for its use.
+  + {{{O3}}} may be the second-most consistent Special damage dealer next to {{{E3}}}.
+    - Note, most {{{O3}}} items are mediocre with other Specials.
+  + _Losing potential % procs is typically insignificant_ for its use.
 #+end_quote
 
 ** REVIEW Conditionally good
@@ -661,22 +664,86 @@ Items are sorted by their name alphabetically.
 :CUSTOM_ID: h:other
 :END:
 
-** REVIEW Avoiding leap PVP
+This section is a mosaic of Shadow and general gameplay advice I've followed in the past.
+
+If you have not yet, please toggle [[*Turn on Mini Hotbar][mini hotbar]] to monitor leap toggle better.
+
+** REVIEW Practices on Targetting
 :PROPERTIES:
-:CUSTOM_ID: h:leap_pvp
+:CUSTOM_ID: h:targetting
+:END:
+#+MACRO: nt @@html: <span style="font-size: small; border:2px DarkSalmon solid; padding: 1px;">@@Nearest Target@@html:</span>@@
+#+MACRO: ct @@html: <span style="font-size: small; border:2px DarkSeaGreen solid; padding: 1px;">@@Change Target@@html:</span>@@
+
+Targetting goes based on *enemy ID order*. Once you determine it for e.g. Tassha, it's typically fixed for that pattern.
+# need to verify this.
+
+Regarding player controls {{{nt}}} and {{{ct}}} (ignoring shielded enemies.)
+- {{{nt}}} :: changes enemy target to _nearest enemy_.
+- {{{ct}}} :: /two functions:/
+  a. While held, targets _center between enemies_ and slows your character.
+  b. When released, _advances targetting_ in queue.
+- {{{nt}}} press \land {{{ct}}} released :: _resets to frontmost enemy_ in queue.
+
+#+begin_quote
+[Advanced] For reset to frontmost enemy in queue, as long as a "new" {{{nt}}} starts or ends during {{{ct}}}, releasing {{{ct}}} will reset targetting.
+
+Let's say you held this {{{nt}}} past the target reset, it is now consumed.
+Holding a consumed held {{{nt}}} like this will not affect proceeding {{{ct}}}'s,
+such that further target resets require {{{nt}}} to be refreshed (released and reclicked.)
+#+end_quote
+
+*** Untargettables
+:PROPERTIES:
+:CUSTOM_ID: h:untarget
+:END:
+
+Some enemy status effects are untargettable (non-exhaustive):
+
+1. Certain Butterflies with Bubble Shields spawned in *Subterra Sanctum*, as well:
+   - Plee's butterflies may be shielded in *Geode*.
+   - Eternal Bloom herself during ads spawns.
+2. Matti, during ads spawns, in *Churchmouse Streets*.
+
+*** Tips: Avoiding Leap
+:PROPERTIES:
+:CUSTOM_ID: h:avoid_leap
+:END:
+
+If you're in a fight with multiple enemies, and you do _not want to leap_:
+- Identify your current target (and if they're low health).
+- Pressing {{{nt}}} prior to {{{sec}}}.
+- If using {{{ct}}} to slow down, pressing {{{nt}}} afterwards.
+- If enemies are opposite of each other (e.g. Meg and Varo in Churchmouse), you can position center and hold {{{ct}}}.
+
+#+begin_quote
+Vice versa, I may refresh and force leap by pressing {{{nt}}} \rightarrow {{{ct}}} (or {{{nt}}} + {{{ct}}}) rather than scrolling the targets.
+#+end_quote
+
+*** Tips: Alternate forms of movement
+:PROPERTIES:
+:CUSTOM_ID: h:alt_movement
+:END:
+
+- Alternatively, use "tapping" movement keys (*streaming*) for micromovements.
+- Using {{{spe}}} or {{{def}}} to slow movement temporarily.
+  
+** REVIEW Invuln Chaining
+:PROPERTIES:
+:CUSTOM_ID: h:leap_chain
 :END:
 
 For damage/consistency, see [[*Ruby Leap Archetypes - R2/R4][Ruby Leap Archetypes - R2/R4]]. To repeat:
 - For {{{R1}}}/{{{R2}}}/{{{R4}}} leaps, leap just outside the minimum leap distance whenever you can.
 
-Additionally,
-- If avoiding leap, you may prioritize: {{{O1}}}, {{{S2}}}, {{{G2}}} and {{{R3}}} (avoid {{{O4}}})
+Additionally:
 - Spreads have a small end-window where you can leap without taking damage.
-- {{{secl}}} \rightarrow {{{def}}} does not provide back-to-back invuln.
-  + {{{def}}} \rightarrow {{{secl}}} does provide back-to-back invuln, but {{{sec}}} can roll {{{Shackles}}}.
-- Use your [[*Turn on Mini Hotbar][mini hotbar]] to check if leap is enabled.
 
-*** DONE Turn on Mini Hotbar
+Additionally,
+- {{{def}}} \rightarrow {{{secl}}} does provide back-to-back invuln, but (2/3) {{{sec}}} can roll {{{Shackles}}}.
+- {{{secl}}} \rightarrow {{{secl}}} / {{{def}}} only chain invulns if <0.7s GCD or {{{Greysteel-Shield}}}.
+
+** DONE Turn on Mini Hotbar
 :PROPERTIES:
 :CUSTOM_ID: h:mini_hotbar
 :END:
@@ -697,57 +764,6 @@ Shadow palette.
 they're light in contrast and are visible during either final boss fights.
 #+end_quote
 
-*** REVIEW Practices on Targetting
-:PROPERTIES:
-:CUSTOM_ID: h:targetting
-:END:
-#+MACRO: nt @@html: <span style="font-size: small; border:2px DarkSalmon solid; padding: 1px;">@@Nearest Target@@html:</span>@@
-#+MACRO: ct @@html: <span style="font-size: small; border:2px DarkSeaGreen solid; padding: 1px;">@@Change Target@@html:</span>@@
-
-Targetting goes based on /enemy ID order/. Once you determine it for e.g. Tassha, it's typically fixed for that pattern.
-# need to verify this.
-
-Regarding player controls {{{nt}}} and {{{ct}}} (ignoring shielded enemies.)
-- {{{nt}}} :: changes enemy target to _nearest enemy_.
-- {{{ct}}} :: /two functions:/
-  a. While held, targets _center between enemies_ and slows your character.
-  b. When released, _advances targetting_ in queue.
-- {{{nt}}} press \land {{{ct}}} released :: _resets to frontmost enemy_ in queue.
-  # Technically, once per nt "press and hold" or "press" while ct gets released, it will reset.
-  # - Regardless of whether nt was active before (and held) or during (click or held) CT being held.
-  # - nt does not refresh without being clicked again (nor affect proceeding ct's)
-
-  #+begin_quote
-[Advanced] For reset to frontmost enemy in queue---
-- As long as a "new" {{{nt}}} buffer can be used for {{{ct}}}
-  #+end_quote
-
-**** Untargettables
-
-Some enemy status effects are untargettable.
-
-1. Certain Butterflies with Bubble Shields spawned in *Subterra Sanctum*
-   - Plee in *Geode*
-   - Eternal Bloom during ads spawns
-2. Matti, during ads spawns, in *Churchmouse Streets*
-
-**** Tips: Avoiding Leap
-
-If you're in a fight with multiple enemies, and you do _not want to leap_:
-- identify your current target (and if they're low health)
-- pressing {{{nt}}} prior to {{{sec}}}
-- if using {{{ct}}} to slow down, pressing {{{nt}}} afterwards
-- if enemies are opposite of each other (e.g. Meg and Varo in Churchmouse), you can position center and hold {{{ct}}}.
-
-#+begin_quote
-Vice versa, I may refresh and force leap by pressing {{{nt}}} \rightarrow {{{ct}}} (or {{{nt}}} + {{{ct}}}) rather than scrolling the targets.
- #+end_quote
-
-**** Tips: Alternate forms of movement
-
-- alternatively, "tapping" movement keys (*streaming*) for micromovements
-- using {{{spe}}} or {{{def}}} to slow movement temporarily
-  
 ** REVIEW Hidden Leap Disable Radius
 :PROPERTIES:
 :CUSTOM_ID: h:leap_buffer
@@ -786,6 +802,6 @@ Due to this, I typically play with my leap disabled and move (just) outside the 
 - v0.4.0 (2026-06-07) :: gem-item retiers; actually fill item synergies.
   - v0.4.1 (2026-06-16) :: reordered some gems, review synergies, added o2/g3 as synergies, link repo's own JS/.css
     to avoid failed site loading.
-- v0.5.0 (2026-07-04) :: major item tiering rework. Added gameplan, multiplayer conflicts.
+- v0.5.0 (2026-07-04) :: major item tiering rework. Added gameplan, multiplayer conflicts and targetting.
 
-#  LocalWords:  dmg synergize pickable Hammermaid
+#  LocalWords:  dmg synergize pickable Hammermaid BiS
