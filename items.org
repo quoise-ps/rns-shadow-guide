@@ -1,5 +1,8 @@
 # insert thanks for Obi's tiering suggestions in intro section
-* _S: Perfect_
+* Perfect
+Generally autopicks early, archetypical is a lot for circumstantial later on.
+
+** General
 #+begin_center
 {{{i(Amethyst-Bracelet)}}}
 {{{i(Angels-Halo)}}}
@@ -10,297 +13,347 @@
 {{{i(Bloody-Bandage)}}}
 {{{i(Butterfly-Hairpin)}}}
 {{{i(Chrome-Shield)}}}
-{{{i(Crane-Katana)}}}
-{{{i(Divine-Mirror)}}}
+{{{i(Cursed-Candlestaff)}}}[fn:cursed-candlestaff:{{{Cursed-Candlestaff}}} is unironically really good on Shadow's hitall. You should not be skipping this in MP unless you have {{{O3}}}.]
+{{{i(Demon-Horns)}}}
 {{{i(Eaglewing-Charm)}}}
-{{{i(Eternity-Flute)}}}
-{{{i(Falconfeather-Dagger)}}}
-{{{i(Firststrike-Bracelet)}}}
-{{{i(Grandmaster-Spear)}}}
 {{{i(Heavens-Codex)}}}
-{{{i(Hells-Codex)}}}
-{{{i(Hermes-Bow)}}}
-{{{i(Hexed-Blindfold)}}}
+{{{i(Hells-Codex)}}}[fn:darkstorm:[4P] {{{Hells-Codex}}} +30 is godly and coveted for multihit, though loses prio to Druid/Defender/Gren for {{{Heavens-Codex}}}'s resets.]
 {{{i(Kunoichi-Hood)}}}
-{{{i(Kyou-No-Omikuji)}}}
 {{{i(Large-Umbrella)}}}
 {{{i(Leech-Staff)}}}
+{{{i(Maid-Outfit)}}}
 {{{i(Pocketwatch)}}}
 {{{i(Pointed-Ring)}}}
 {{{i(Polar-Coat)}}}
+{{{i(Rainbow-Cape)}}}
 {{{i(Rusted-Greatsword)}}}
-{{{i(Saltwater-Staff)}}}
 {{{i(Sand-Shovel)}}}
 {{{i(Shadow-Bracelet)}}}
 {{{i(Springloaded-Scythe)}}}
-{{{i(Stirring-Spoon)}}}
+{{{i(Staticshock-Earrings)}}}
 {{{i(Storm-Petticoat)}}}
-{{{i(Talon-Charm)}}}
-{{{i(Teacher-Knife)}}}
 {{{i(Timewarp-Wand)}}}
-{{{i(Tiny-Fork)}}}
 {{{i(Vampiric-Dagger)}}}
+{{{i(Venom-Hood)}}}[fn:venom:[4P] {{{Venom-Hood}}} has higher priority for Sniper and Grenadier.]
+{{{i(Whitewing-Bracelet)}}}
+#+end_center
+
+** More Archetypical
+#+begin_center
+{{{i(Battery-Shield)}}}
+{{{i(Brightstorm-Spear)}}}
+{{{i(Coldsteel-Shield)}}}
+{{{i(Crane-Katana)}}}
+{{{i(Darkstorm-Knife)}}}[fn:darkstorm:[4P] {{{Darkstorm-Knife}}} loses prio to Dancer/Sin/Pyro due to {{{Shackles}}}.]
+{{{i(Falconfeather-Dagger)}}}
+{{{i(Firststrike-Bracelet)}}}[fn:firstrike:[4P] {{{Firststrike-Bracelet}}} loses prio to anyone with high base and Omegacharge.]
+{{{i(Grandmaster-Spear)}}}
+{{{i(Hexed-Blindfold)}}}
+{{{i(Saltwater-Staff)}}}
+{{{i(Stirring-Spoon)}}}
+{{{i(Teacher-Knife)}}}
+{{{i(Tiny-Fork)}}}
 {{{i(Vorpal-Dao)}}}
 {{{i(Waterfall-Polearm)}}}
-{{{i(Whitewing-Bracelet)}}}
 {{{i(Youkai-Bracelet)}}}
 #+end_center
-* _A: Great_
+
+** Conditional
+#+BEGIN_CENTER
+{{{i(Colorful-Earrings)}}}
+{{{i(Crown-of-Storms)}}}
+{{{i(Icicle-Earrings)}}}
+{{{i(Lightning-Bow)}}}
+{{{i(Onepiece-Swimsuit)}}}
+{{{i(Usagi-Kamen)}}} \\
+/About 48.8% chance to find one of three % gems (BiS: {{{G1}}}) next shop./
+
+{{{i(Lancer-Gauntlets)}}}
+{{{i(Lefthand-Cast)}}}
+{{{i(Righthand-Cast)}}} \\
+/Good when enabled with CD reduction, {{{R3}}}, {{{O1}}} or loot/debuff damage source./
+
+{{{i(Robe-of-Dark)}}}
+{{{i(Robe-of-Light)}}}
+{{{i(Flamewalker-Boots)}}} \\
+/Stack GCD and loot triggers together./
+
+{{{i(Darkcloud-Necklace)}}}
+{{{i(Desert-Earrings)}}}[fn:desert:{{{Desert-Earrings}}} good for rolling Flow-Str/Dex or Haste when you meet req.]
+{{{i(Greysteel-Shield)}}}[fn:greysteel:{{{Greysteel-Shield}}} allows better leap uptime, diving into moons and beams for much longer safely.]
+{{{i(Reflection-Shield)}}}
+{{{i(Sacred-Bow)}}}
+{{{i(Spiked-Shield)}}} \\
+/Other reqs.../
+#+END_CENTER
+
+* Great
+** General
 #+begin_center
+{{{i(Aquamarine-Bracelet)}}}
 {{{i(Assassins-Knife)}}}
 {{{i(Black-Wakizashi)}}}
 {{{i(Blackbolt-Ribbon)}}}
 {{{i(Blacksteel-Buckler)}}}
 {{{i(Bladed-Cloak)}}}
-{{{i(Brightstorm-Spear)}}}
+{{{i(Canary-Charm)}}}
 {{{i(Cavers-Cloak)}}}
-{{{i(Coldsteel-Shield)}}}
-{{{i(Cursed-Candlestaff)}}}
-{{{i(Darkstorm-Knife)}}}
-{{{i(Daylight-Sword)}}}
-{{{i(Demon-Horns)}}}
+{{{i(Divine-Mirror)}}}
 {{{i(Flamedancer-Dagger)}}}
-{{{i(Flamewalker-Boots)}}}
-{{{i(Garnet-Staff)}}}
-{{{i(Giant-Stone-Club)}}}
-{{{i(Glacier-Spear)}}}
 {{{i(Gladiator-Helmet)}}}
-{{{i(Greysteel-Shield)}}}
 {{{i(Hawkfeather-Fan)}}}
+{{{i(Hermes-Bow)}}}
 {{{i(Hidden-Blade)}}}
+{{{i(Holy-Greatsword)}}}
+{{{i(Kyou-No-Omikuji)}}}
 {{{i(Large-Anchor)}}}
-{{{i(Lion-Charm)}}}
-{{{i(Maid-Outfit)}}}
 {{{i(Marble-Clasp)}}}
-{{{i(Mermaid-Scalemail)}}}
 {{{i(Meteor-Staff)}}}
 {{{i(Moss-Shield)}}}
 {{{i(Necronomicon)}}}
-{{{i(Nightgleam-Sword)}}}
-{{{i(Ninjutsu-Scroll)}}}
 {{{i(Peridot-Rapier)}}}
-{{{i(Pyrite-Earrings)}}}
-{{{i(Quartz-Shield)}}}
+{{{i(Ravens-Dagger)}}}
 {{{i(Reaper-Cloak)}}}
-{{{i(Ribboned-Staff)}}}
+{{{i(Reddragon-Blade)}}}
 {{{i(Rosered-Leotard)}}}
 {{{i(Ruby-Circlet)}}}
 {{{i(Sandpriestess-Spear)}}}
+{{{i(Sawtooth-Cleaver)}}}
+{{{i(Shrinemaidens-Kosode)}}}
 {{{i(Sparrow-Feather)}}}
 {{{i(Spinning-Chakram)}}}
-{{{i(Staticshock-Earrings)}}}
-{{{i(Strongmans-Bar)}}}
-{{{i(Throwing-Dagger)}}}
+{{{i(Strawberry-Cake)}}}
+{{{i(Talon-Charm)}}}
 {{{i(Thunderclap-Gloves)}}}
-{{{i(Venom-Hood)}}}
 {{{i(Whiteflame-Staff)}}}
 {{{i(Winter-Hat)}}}
 {{{i(Wolf-Hood)}}}
 #+end_center
-* _B: Good, often conditional_
+
+** Scaling / Team-Focused
+
+#+begin_center
+Curse:
+{{{i(Blackwing-Staff)}}}
+{{{i(Curse-Talon)}}}
+{{{i(Darkmagic-Blade)}}}
+{{{i(Raven-Grimoire)}}}
+{{{i(Opal-Necklace)}}}
+
+Buff:
+{{{i(Glittering-Trumpet)}}}
+{{{i(Eternity-Flute)}}}
+{{{i(Lullaby-Harp)}}}
+{{{i(Ornamental-Bell)}}}
+{{{i(Redwhite-Ribbon)}}}
+{{{i(Sapphire-Violin)}}}
+{{{i(Shield-of-Smiles)}}}
+
+/Universal/attack damage multipliers \rightarrow good too by 1P final stage./
+#+end_center
+
+** Other Debuffs
+#+begin_center
+{{{i(Bluebolt-Staff)}}}
+{{{i(Lapis-Sword)}}}
+{{{i(Shockwave-Tome)}}}
+{{{i(Raiju-Crown)}}}
+{{{i(Ivy-Staff)}}}
+{{{i(Snakefang-Dagger)}}}
+{{{i(Deathcap-Tome)}}}
+{{{i(Spiderbite-Bow)}}}
+{{{i(Chemists-Coat)}}}
+{{{i(Poisonfrog-Charm)}}}
+{{{i(Compound-Gloves)}}}
+
+{{{i(Ghost-Spear)}}}
+{{{i(Phantom-Dagger)}}}
+{{{i(Calling-Bell)}}}
+{{{i(Frost-Dagger)}}}
+{{{i(Snow-Boots)}}}
+{{{i(Giant-Paintbrush)}}}
+{{{i(Sewing-Sword)}}}
+{{{i(Sketchbook)}}}
+{{{i(Palette-Shield)}}}
+{{{i(Handmade-Charm)}}}
+{{{i(Book-of-Cheats)}}}
+{{{i(Pyrite-Earrings)}}} \\
+/Shadow has quite decent hitboxes for debuffs, plus internal multipliers./
+#+end_center
+# Note, {{{Ghost-Spear}}} and {{{Phantom-Dagger}}} should be treated more like {{{Lefthand-Cast}}} and etc.
+# They're good, but may block ability damage scaling.
+
+** Conditional
+#+begin_center
+{{{i(Obsidian-Rod)}}} \ggg
+{{{i(Timespace-Dagger)}}} \gg
+{{{i(Darkglass-Spear)}}} \\
+/High base is always good if eligible or have snapshot buffs./
+
+{{{i(Giant-Stone-Club)}}} 
+{{{i(Occult-Dagger)}}}
+{{{i(Ruins-Sword)}}}
+{{{i(Tough-Gauntlet)}}}
+{{{i(Vega-Spear)}}} \\
+/High GCD is very synergistic with snapshot buffs like {{{Beach-Sandals}}}, Ancient G3 or SS G4./
+
+{{{i(Altair-Dagger)}}}
+{{{i(Artist-Smock)}}}
+{{{i(Ballroom-Gown)}}}
+{{{i(Battlemaiden-Armor)}}}
+{{{i(Crown-of-Love)}}}
+{{{i(Crown-of-Swords)}}}
+{{{i(Garnet-Staff)}}}[fn:garnet-staff:{{{Garnet-Staff}}} is a good alternate invuln proc for {{{R1}}} and {{{R4}}}.]
+{{{i(Jesters-Hat)}}}
+{{{i(Kappa-Shield)}}}
+{{{i(Lonesome-Pendant)}}}
+{{{i(Lost-Pendant)}}}
+{{{i(Mimick-Rabbitfoot)}}}
+{{{i(Miners-Headlamp)}}}
+{{{i(Nightingale-Gown)}}}
+{{{i(Ninja-Robe)}}}
+{{{i(Painters-Beret)}}}
+{{{i(Queens-Crown)}}}
+{{{i(Snipers-Eyeglasses)}}}
+{{{i(Starry-Cloak)}}}
+{{{i(Straw-Hat)}}}
+{{{i(Sun-Pendant)}}}
+{{{i(Tornado-Staff)}}}
+{{{i(Trick-Shield)}}}
+#+end_center
+
+* Average-good
 ** General
 #+begin_center
-{{{i(Battery-Shield)}}}
-{{{i(Blackwing-Staff)}}}
-{{{i(Bluebolt-Staff)}}}
+{{{i(Blackhole-Charm)}}}
 {{{i(Bolt-Staff)}}}
-{{{i(Book-of-Cheats)}}}
-{{{i(Calling-Bell)}}}
-{{{i(Chemists-Coat)}}}
 {{{i(Clockwork-Tome)}}}
-{{{i(Cloud-Guard)}}}
 {{{i(Comforting-Coat)}}}
-{{{i(Compound-Gloves)}}}
 {{{i(Crescentmoon-Dagger)}}}
-{{{i(Crown-of-Love)}}}
-{{{i(Curse-Talon)}}}
-{{{i(Darkcloud-Necklace)}}}
-{{{i(Darkmagic-Blade)}}}
-{{{i(Deathcap-Tome)}}}
+{{{i(Daylight-Sword)}}}
 {{{i(Drill-Shield)}}}
 {{{i(Dynamite-Staff)}}}
-{{{i(Feathered-Overcoat)}}}
 {{{i(Flame-Bow)}}}
 {{{i(Floral-Bow)}}}
 {{{i(Fossil-Dagger)}}}
-{{{i(Frost-Dagger)}}}
-{{{i(Frozen-Staff)}}}
 {{{i(Gemini-Necklace)}}}
-{{{i(Ghost-Spear)}}}
-{{{i(Giant-Paintbrush)}}}
 {{{i(Golden-Chime)}}}
 {{{i(Granite-Greatsword)}}}
 {{{i(Grasswoven-Bracelet)}}}
 {{{i(Greatsword-Pendant)}}}
-{{{i(Handmade-Charm)}}}
-{{{i(Holy-Greatsword)}}}
 {{{i(Hydrous-Blob)}}}
 {{{i(Iron-Greaves)}}}
 {{{i(Iron-Pickaxe)}}}
-{{{i(Ivy-Staff)}}}
 {{{i(Killing-Note)}}}
-{{{i(Lapis-Sword)}}}
-{{{i(Lullaby-Harp)}}}
+{{{i(Lion-Charm)}}}
 {{{i(Moon-Pendant)}}}
 {{{i(Mountain-Staff)}}}
+{{{i(Nightgleam-Sword)}}}
 {{{i(Nightguard-Gloves)}}}
 {{{i(Nightstar-Grimoire)}}}
-{{{i(Opal-Necklace)}}}
-{{{i(Ornamental-Bell)}}}
-{{{i(Palette-Shield)}}}
+{{{i(Ninjutsu-Scroll)}}}
+{{{i(Nova-Crown)}}}
 {{{i(Performers-Shoes)}}}
-{{{i(Poisonfrog-Charm)}}}
 {{{i(Purification-Rod)}}}
-{{{i(Raiju-Crown)}}}
-{{{i(Ravens-Dagger)}}}
 {{{i(Redblack-Ribbon)}}}
+{{{i(Ribboned-Staff)}}}
 {{{i(Royal-Staff)}}}
-{{{i(Sacred-Bow)}}}
-{{{i(Sawtooth-Cleaver)}}}
 {{{i(Seashell-Shield)}}}
-{{{i(Sewing-Sword)}}}
 {{{i(Sharpedged-Shield)}}}
-{{{i(Shield-of-Smiles)}}}
 {{{i(Shinobi-Tabi)}}}
-{{{i(Shockwave-Tome)}}}
-{{{i(Sketchbook)}}}
 {{{i(Sleeping-Greatbow)}}}
-{{{i(Snakefang-Dagger)}}}
-{{{i(Snow-Boots)}}}
 {{{i(Spark-of-Determination)}}}
 {{{i(Spear-of-Rains)}}}
 {{{i(Spear-of-Winds)}}}
-{{{i(Spiderbite-Bow)}}}
-{{{i(Spiked-Shield)}}}
+{{{i(Stonebreaker-Staff)}}}
+{{{i(Strongmans-Bar)}}}
 {{{i(Stuffed-Rabbit)}}}
-{{{i(Thiefs-Coat)}}}
+{{{i(Throwing-Dagger)}}}
 {{{i(Tidal-Greatsword)}}}
-{{{i(Tiny-Wings)}}}
-{{{i(Winged-Cap)}}}
+{{{i(Tiny-Hourglass)}}}
+{{{i(Unsacred-Pendant)}}}
+{{{i(Volcano-Spear)}}}
 #+end_center
-** Soft Conditional
-#+BEGIN_CENTER
-{{{i(Altair-Dagger)}}}
-{{{i(Canary-Charm)}}}
-{{{i(Colorful-Earrings)}}}
-{{{i(Crown-of-Storms)}}}
-{{{i(Desert-Earrings)}}}
-{{{i(Dragonhead-Spear)}}}
-{{{i(Fanciful-Book)}}}
+
+** Special CD
+#+begin_center
+{{{i(Dark-Wings)}}}
 {{{i(Firescale-Corset)}}}
-{{{i(Kappa-Shield)}}}
-{{{i(Lightning-Bow)}}}
-{{{i(Miners-Headlamp)}}}
-{{{i(Obsidian-Rod)}}}
-{{{i(Onepiece-Swimsuit)}}}
-{{{i(Oni-Staff)}}}
-{{{i(Reflection-Shield)}}}
-{{{i(Robe-of-Dark)}}}
-{{{i(Robe-of-Light)}}}
-{{{i(Sacred-Shield)}}}
-{{{i(Snipers-Eyeglasses)}}}
-{{{i(Staff-of-Sorrow)}}}
-{{{i(Sun-Pendant)}}}
-{{{i(Tough-Gauntlet)}}}
-{{{i(Trick-Shield)}}}
-{{{i(Usagi-Kamen)}}}
-{{{i(Vega-Spear)}}}
-#+END_CENTER
+{{{i(Mermaid-Scalemail)}}}
+{{{i(Quartz-Shield)}}}
+{{{i(Staff-of-Sorrow)}}}[fn:staff-of-sorrow:{{{Staff-of-Sorrow}}}, no, it doesn't work with {{{O1}}}'s effect.]
+#+end_center
+
 ** Gold
 #+begin_center
-/Strictly first-second shops only due to high gem viability./
-
 {{{i(Silver-Coin)}}}
 {{{i(Topaz-Charm)}}}
-{{{i(Vanilla-Wafers)}}}
+{{{i(Vanilla-Wafers)}}} \\
+Strictly pre-first shops only due to high gem viability.
+
+{{{i(Caramel-Tea)}}}
+{{{i(Sweet-Taffy)}}} \\
+/Good immediate damage slam to solve next few fights./
 #+end_center
-* _C: Very conditional, uncommon_
+
+* "Dead or bad!"
+** Damage
 #+begin_center
 {{{i(Apple-Plate)}}}
-{{{i(Aquamarine-Bracelet)}}}
-{{{i(Artist-Smock)}}}
-{{{i(Ballroom-Gown)}}}
-{{{i(Battlemaiden-Armor)}}}
-{{{i(Blackhole-Charm)}}}
 {{{i(Crowfeather-Hairpin)}}}
-{{{i(Crown-of-Swords)}}}
-{{{i(Darkglass-Spear)}}}
 {{{i(Darkmage-Charm)}}}
-{{{i(Glittering-Trumpet)}}}
+{{{i(Fanciful-Book)}}}
 {{{i(Golden-Katana)}}}
+{{{i(Haunted-Gloves)}}}
 {{{i(Hooked-Staff)}}}
-{{{i(Icicle-Earrings)}}}
-{{{i(Jesters-Hat)}}}
-{{{i(Lancer-Gauntlets)}}}
-{{{i(Lefthand-Cast)}}}
-{{{i(Lost-Pendant)}}}
-{{{i(Memory-Greatsword)}}}
-{{{i(Mimick-Rabbitfoot)}}}
-{{{i(Nightingale-Gown)}}}
-{{{i(Ninja-Robe)}}}
 {{{i(Obsidian-Hairpin)}}}
-{{{i(Painters-Beret)}}}
+{{{i(Old-Bonnet)}}}
+{{{i(Oni-Staff)}}}
 {{{i(Pajama-Hat)}}}
-{{{i(Phantom-Dagger)}}}
-{{{i(Queens-Crown)}}}
 {{{i(Raindrop-Earrings)}}}
-{{{i(Reddragon-Blade)}}}
-{{{i(Righthand-Cast)}}}
+{{{i(Sacred-Shield)}}}
 {{{i(Shinsoku-Katana)}}}
-{{{i(Shrinemaidens-Kosode)}}}
-{{{i(Spear-of-Remorse)}}}
-{{{i(Stonebreaker-Staff)}}}
-{{{i(Straw-Hat)}}}
-{{{i(Tactician-Rod)}}}
-{{{i(Tornado-Staff)}}}
-{{{i(Volcano-Spear)}}}
+{{{i(Smoke-Shield)}}}
+{{{i(Timemage-Cap)}}}
 {{{i(Watermage-Pendant)}}}
-{{{i(Windbite-Dagger)}}}
-{{{i(Witchs-Cloak)}}}
-#+end_center
-* _D: Super-niche, rare_
-#+begin_center
+{{{i(Windbite-Dagger)}}} \\
+/Typically requires item-item synergies before being sufficiently useful, situational or early damage slam./
+
+{{{i(Dragonhead-Spear)}}}
+{{{i(Fairy-Spear)}}}
+{{{i(Golems-Claymore)}}}
+{{{i(Memory-Greatsword)}}}
 {{{i(Metronome-Boots)}}}
-{{{i(Nova-Crown)}}}
 {{{i(Pidgeon-Bow)}}}
-{{{i(Starry-Cloak)}}}
-{{{i(Tiny-Hourglass)}}}
+{{{i(Sacredstone-Charm)}}}
+{{{i(Spear-of-Remorse)}}}
+{{{i(Tactician-Rod)}}}
+{{{i(Thiefs-Coat)}}}
 {{{i(Twinstar-Earrings)}}}
+{{{i(Winged-Cap)}}} \\
+/Items that are too passive or potentially harmful to be worth considering./
 #+end_center
-* _Unranked_
+
+** QoL
 #+begin_center
 {{{i(Abyss-Artifact)}}}
 {{{i(Blue-Rose)}}}
 {{{i(Boulder-Shield)}}}
 {{{i(Butterfly-Ocarina)}}}
-{{{i(Caramel-Tea)}}}
 {{{i(Clay-Rabbit)}}}
-{{{i(Dark-Wings)}}}
+{{{i(Cloud-Guard)}}}
 {{{i(Darkcrystal-Rose)}}}
 {{{i(Diamond-Shield)}}}
 {{{i(Emerald-Chestplate)}}}
-{{{i(Fairy-Spear)}}}
-{{{i(Golems-Claymore)}}}
-{{{i(Haunted-Gloves)}}}
+{{{i(Feathered-Overcoat)}}}
+{{{i(Frozen-Staff)}}}
 {{{i(Jade-Staff)}}}
-{{{i(Lonesome-Pendant)}}}
-{{{i(Midsummer-Dress)}}}
-{{{i(Occult-Dagger)}}}
-{{{i(Old-Bonnet)}}}
+{{{i(Midsummer-Dress)}}}[fn:Midsummer-Dress:{{{Midsummer-Dress}}} can slow bypass {{{E1}}} or {{{G2}}}-Spc/Def-spam builds.]
 {{{i(Phoenix-Charm)}}}
-{{{i(Rainbow-Cape)}}}
 {{{i(Red-Tanzaku)}}}
-{{{i(Redwhite-Ribbon)}}}
 {{{i(Rockdragon-Mail)}}}
-{{{i(Ruins-Sword)}}}
-{{{i(Sacredstone-Charm)}}}
-{{{i(Smoke-Shield)}}}
 {{{i(Stoneplate-Armor)}}}
 {{{i(Stormdance-Gown)}}}
-{{{i(Strawberry-Cake)}}}
 {{{i(Sunflower-Crown)}}}
-{{{i(Sweet-Taffy)}}}
-{{{i(Timemage-Cap)}}}
-{{{i(Timespace-Dagger)}}}
-{{{i(Unsacred-Pendant)}}}
+{{{i(Tiny-Wings)}}}
 #+end_center
