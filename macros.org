@@ -1,3 +1,5 @@
+# Literally a bunch of macros
+:GENERAL:
 #+MACRO: span_dot @@html:<span style="text-decoration:underline; text-decoration-style:dotted;">@@
 #+MACRO: span_end @@html:</span>@@
 #+MACRO: itm_link [[./img/items/$1.png]] {{{span_dot}}}{{{n$1}}}{{{span_end}}}
@@ -10,9 +12,8 @@
 # version without name showing for item tier list
 #+MACRO: i {{{i1}}}{{{i_aria($1)}}}{{{i2}}}[[./img/items/$1.png]]{{{i3}}}
 #+MACRO: i_aria ({{{n$1}}}) {{{t$1}}}
-# -----
-# Item Names Macros
-# -----
+:END:
+:ITEM_NAMES:
 #+MACRO: nAbyss-Artifact Abyss Artifact
 #+MACRO: nAltair-Dagger Altair Dagger
 #+MACRO: nAmethyst-Bracelet Amethyst Bracelet
@@ -293,9 +294,8 @@
 #+MACRO: nWitchs-Cloak Witch's Cloak
 #+MACRO: nWolf-Hood Wolf Hood
 #+MACRO: nYoukai-Bracelet Youkai Bracelet
-# -----
-# Item Abbreviation Macros
-# -----
+:END:
+:ITEM-ABBREVIATIONS:
 #+MACRO: Abyss-Artifact {{{itm(Abyss-Artifact)}}}
 #+MACRO: Altair-Dagger {{{itm(Altair-Dagger)}}}
 #+MACRO: Amethyst-Bracelet {{{itm(Amethyst-Bracelet)}}}
@@ -576,9 +576,8 @@
 #+MACRO: Witchs-Cloak {{{itm(Witchs-Cloak)}}}
 #+MACRO: Wolf-Hood {{{itm(Wolf-Hood)}}}
 #+MACRO: Youkai-Bracelet {{{itm(Youkai-Bracelet)}}}
-# -----
-# Item Tooltip Description Macros
-# -----
+:END:
+:ITEM_TOOLTIP:
 #+MACRO: tRaven-Grimoire Your Special applies Curse.
 #+MACRO: tBlackwing-Staff Your Primary applies Curse.
 #+MACRO: tCurse-Talon Your Secondary applies Curse.
@@ -859,9 +858,8 @@
 #+MACRO: tCaramel-Tea Grants Elegy for 45 seconds at the beginning of each fight. Works for 6 fights.
 #+MACRO: tStrawberry-Cake Heals you for 1, and starts with 2 charges on pickup. When you take damage, 1 charge will be expended to heal you. All damage is increased by 10% for each charge still remaining.
 #+MACRO: tSweet-Taffy For the next 6 fights, heal for 1 and deal 2500 damage to all enemies at the beginning of the fight. This loot cannot hit for critical damage.
-# -----
-# Ability Tooltip Description Macros
-# -----
+:END:
+:ABILITY_TOOLTIP:
 # Regexps to replace up/downarrows
 # '<,'>s/\\uparrow/\&#x2191;/g
 # '<,'>s/\\downarrow/\&#x2193;/g
@@ -889,7 +887,7 @@
 #+MACRO: tR4 Deal &#x2193;300. Damage on other invuln effects. &#x2193;1400ms invuln.
 #+MACRO: tG4 Deal &#x2191;140x4 to all enemies; gain +10% luck.
 #+MACRO: tE4 (&#x2191;20s CD) Deal &#x2191;90x10. Unresettable. &#x2191;1700ms invuln.
-# -----
-# Other Description Macros
-# -----
+:END:
+:OTHER_TOOLTIPS:
 #+MACRO: tShackles On ability use, an attack is disabled randomly.
+:END:
