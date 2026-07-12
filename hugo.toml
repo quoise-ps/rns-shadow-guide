@@ -1,0 +1,178 @@
+# [Quoise.PS] This is a modified config.toml from Kaushal Modi's own ox-hugo
+# baseURL = "https://quoise-ps.github.io/rns-shadow-guide"
+locale = 'en-us'
+title = "Something about Shadow"
+
+[markup.goldmark.renderer]
+  unsafe = true
+
+[module]
+  [[module.imports]]
+    path = "github.com/alex-shpak/hugo-book"
+
+# Specific Hugo Book Configuration
+[params]
+  # Color theme: 'light', 'dark' or 'auto'
+  # Auto switches based on OS/browser preference
+  BookTheme = 'light'
+
+  # Show table of contents on right side of pages
+  # Can also be set per-page via frontmatter
+  BookToC = true
+
+  # Path to favicon file relative to 'static' directory
+  BookFavicon = 'favicon.png'
+
+  # Path to logo image file relative to 'static' directory
+  BookLogo = 'logo.png'
+
+  # Root section to render as sidebar menu
+  # Default: 'docs'
+  BookSection = '*'
+
+  # Repository URL, used for edit and commit links
+  # BookRepo = 'https://github.com/user/repo'
+
+  # Template for "Last Modified" commit link in page footer
+  # Requires enableGitInfo = true in site config
+  # Available context: .Site, .Page, .GitInfo
+  BookLastChangeLink = '{{ .Site.Params.BookRepo }}/commit/{{ .GitInfo.Hash }}'
+
+  # Template for "Edit this page" link in page footer
+  # Available context: .Site, .Page, .Path
+  BookEditLink = '{{ .Site.Params.BookRepo }}/edit/main/{{ .Path }}'
+
+  # Date format used in git info and blog posts
+  BookDateFormat = 'January 2, 2006'
+
+  # Enable full-text search with fuse.js
+  BookSearch = true
+
+  # Enable comments template on pages
+  # By default uses Disqus; override partials/docs/comments.html for others
+  BookComments = true
+
+  # /!\ Experimental, may change or be removed.
+  # Enable portable markdown links to resolve relative .md links to Hugo URLs.
+  # Lets you write [text](./other.md) instead of Hugo's relref shortcode.
+  #   false     - disabled, relative .md links not resolved
+  #   'warning' - enabled, prints a build warning if linked page doesn't exist
+  #   'error'   - enabled, fails the build if linked page doesn't exist
+  BookPortableLinks = false
+
+  # /!\ Experimental, may change or be removed.
+  # Register a service worker for offline access to visited pages.
+  #   false      - disabled (default)
+  #   true       - caches pages as you visit them
+  #   'precache' - pre-populates cache with all site pages on first load
+  BookServiceWorker = false
+
+  # Only show languages that have translations for current page
+  BookTranslatedOnly = false
+
+# contentdir = "content"
+# layoutdir = "layouts"
+# publishdir = "public"
+
+# # Remove files from destination not found in static directories
+# # cleandestinationdir = true
+
+# # Mon Mar 05 17:17:44 EST 2018 - kmodi
+# # Do not enable GitInfo. As I am not committing the Markdown files to
+# # git repo, enabling GitInfo would cause the Lastmod dates for those
+# # files to be the date when I deleted them from this repo.. sigh.
+# # enableGitInfo = true
+
+# enableEmoji = true
+
+# LanguageCode = "en-us" # Used in RSS generation
+
+# disableFastRender = true        # Hugo 0.30
+
+# disableKinds = ["taxonomy", "taxonomyTerm"]
+
+# # Continue building the doc site even if the getJSON calls (for
+# # fetching the last_update date for Real World Examples) fail due to
+# # GitHub's API rate limiting.
+# ignoreErrors = ["error-remote-getjson"]
+
+# [module]
+#   [[module.imports]]
+#     path = "github.com/kaushalmodi/hugo-onyx-theme"
+#   [[module.imports]]
+#     path = "github.com/kaushalmodi/hugo-debugprint"
+
+# [markup]
+#   [markup.highlight]
+#     codeFences = true # default = true
+#     noClasses = false # default = true
+
+#   [markup.goldmark]
+#     [markup.goldmark.renderer]
+#       unsafe = true # This is *necessary* for ox-hugo to work well with Hugo 0.60.0+
+
+# [caches]
+#   [caches.getjson]
+#     dir = ":cacheDir/:project"
+#     maxAge = "1m" # Disable caching getJSON data
+
+# [Permalinks]
+#   # post = "/:year/:month/:title/"
+#   # Below, we have
+#   #   foo = "bar"
+#   # where foo = section name without double quotes for which we want to have
+#   # the custom permalinks. If foo is 'posts', it will apply to content in
+#   # content/posts/ dir. The "bar" portion is how you want the links to look.
+#   # https://gohugo.io/content-management/urls/#permalink-configuration-values
+#   doc = "/doc/:filename/"
+#   test = "/test/:slug/"
+
+# [Params]
+#   name = "Shadow Guide"
+#   description = "Shadow Class Guide for Rabbit & Steel Game<br />How to not leap into your teammates."
+
+#   # Go date formats: https://golang.org/pkg/time/#pkg-constants
+#   dateform = "Mon Jan 2, 2006"
+
+#   github_user = "quoise-ps"
+#   github_repo = "rns-shadow-guide"
+#   github_workflow_file = "test.yml"
+#   github_banner = true
+
+#   # images = ["/favicon-196x196.png"] # Used in twitter_cards.html partial
+
+#   custom_css = []
+#   # custom_css = [ # Chroma Trac theme
+#   #                # "css/trac_chroma.css" # Needs markup.highlight.noClasses to be false
+#   #                # Chroma GitHub theme
+#   #                "css/github_chroma.css" # Needs markup.highlight.noClasses to be false
+#   #                , "css/style.css"
+#   #              ]
+#   # custom_css_absolute = [ # Iosevka fonts
+#   #                         "https://cdn.jsdelivr.net/gh/kaushalmodi/iosevka-mirror@v1.14.5/iosevka.css"
+#   #                       ]
+#   custom_js  = []
+
+#   # favicon = "favicon.ico"
+
+#   [Params.source]
+#     url = "https://github.com/quoise-ps/rns-shadow-guide/"
+#     default_branch = "main"
+#     org_dir = "."
+#     org_file = "doc/rns-shadow-guide.org"
+
+#   [Params.sidebar]
+#     # logo = "favicon.ico"
+
+#     # github_button  = true
+#     # gha_button  = true
+#     # codecov_button = false
+#     # gratipay = ""
+
+#     # Mon Sep 04 23:55:36 EDT 2017 - kmodi
+#     # Disable this option for now.. but seems to be useful in future
+#     # show_relations = false
+
+#   [Params.footer]
+#     copyright = ""
+#     show_powered_by = true
