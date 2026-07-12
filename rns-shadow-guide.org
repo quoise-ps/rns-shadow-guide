@@ -1,121 +1,1007 @@
-#+HUGO_BASE_DIR: .
-#+HUGO_SECTION: doc
-
 #+title: Something about Shadow
-#+subtitle: ({{{guidever}}})
-#+description: Unofficial Shadow Class guide for the Rabbit & Steel game.
 #+author: Quoise
-#+date: {{{modification-time(%Y-%m-%d)}}}
-#+include: macros.org
+# #+subtitle: ({{{guidever}}})
+# #+description: Unofficial Shadow Class guide for the Rabbit & Steel game.
+# #+date: {{{modification-time(%Y-%m-%d)}}}
+
+# #+setup_file: macros.org
 :PREFERENCES:
-#+startup: inlineimages
-#+bind: org-latex-image-default-width "1.8em"
-#+bind: org-latex-images-centered nil
-#+bind: org-footnote-section nil
-#+bind: org-hide-macro-markers t
-#+OPTIONS: ^:nil num:3 todo:nil
-#+EXPORT_FILE_NAME: index
-#+LATEX_HEADER: \usepackage[colorlinks=true,urlcolor=pink,linkcolor=blue]{hyperref}
-#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="./styles/gongzhitaao-org.css"/>
-#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="./styles/hint.base.css">
-#+HTML_HEAD_EXTRA: <style> p {line-height: 1.8em;} </style>
-#+HTML_HEAD_EXTRA: <style> html {background-color: #e7e7e7;} </style>
-#+HTML_HEAD_EXTRA: <style> body {max-width: 80em; margin: 0 auto 2em; padding: .5em 1.5em 1.5em 1.5em; border: .1em solid #c0c0c0;} </style>
-#+INFOJS_OPT: view:info sdepth:1 tdepth:1 path:'./js/org-info.js'
+# #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="./styles/gongzhitaao-org.css"/>
+# #+html_head: <link rel="stylesheet" type="text/css" href="./styles/hint.base.css">
+# #+html_head_extra: <style> p {line-height: 1.8em;} </style>
+# #+html_head_extra: <style> html {background-color: #e7e7e7;} </style>
+# #+html_head_extra: <style> body {max-width: 80em; margin: 0 auto 2em; padding: .5em 1.5em 1.5em 1.5em; border: .1em solid #c0c0c0;} </style>
+# #+INFOJS_OPT: view:info sdepth:1 tdepth:1 path:'./js/org-info.js'
 :END:
 :TODOs:
-#+TODO: TODO(t) DRAFT(D) | REVIEW(r)
-#+TODO: | DONE(d)
-#+TODO: | RENEW(R)
-#+TODO: | CANCELLED(c)
+#+todo: TODO(t) DRAFT(D) | REVIEW(r)
+#+todo: | DONE(d)
+#+todo: | RENEW(R)
+#+todo: | CANCELLED(c)
 :END:
 :MACROS:
-#+MACRO: gem [[./img/gems/$1.png]]
-#+MACRO: gems [[./img/gems-40px/$1.png]]
-#+MACRO: gemss [[./img/gems-40px/$1.png]]
-#+MACRO: abl [[./img/abilities-40px/$1.png]]
-#+MACRO: abls [[./img/abilities-40px/$1.png]]
-#+MACRO: Shackle [[./img/other/Shackles.png]]
-#+MACRO: Shackles {{{i1}}}{{{tShackles}}}{{{i2}}}{{{Shackle}}} {{{span_dot}}}Shackles{{{span_end}}}{{{i3}}}
-#+MACRO: gamever v2.0.2.7
-#+MACRO: guidever v0.5.0
-#+MACRO: WIP @@html:<span style="color:red;">@@WIP@@html:</span>@@
+#+macro: gem [[./img/gems/$1.png]]
+#+macro: gems [[./img/gems-40px/$1.png]]
+#+macro: gemss [[./img/gems-40px/$1.png]]
+#+macro: abl [[./img/abilities-40px/$1.png]]
+#+macro: abls [[./img/abilities-40px/$1.png]]
+#+macro: Shackle [[./img/other/Shackles.png]]
+#+macro: Shackles {{{i1}}}{{{tShackles}}}{{{i2}}}{{{Shackle}}} {{{span_dot}}}Shackles{{{span_end}}}{{{i3}}}
+#+macro: gamever v2.0.2.7
+#+macro: guidever v0.5.0
+#+macro: WIP @@html:<span style="color:red;">@@WIP@@html:</span>@@
 :END:
 :MACROS_ABBREVIATIONS:
-#+MACRO: pri {{{abl(N1)}}} *Primary*
-#+MACRO: sec {{{abl(N2)}}} *Secondary*
-#+MACRO: secl {{{abl(N2)}}} *Leap Secondary*
-#+MACRO: spe {{{abl(N3)}}} *Special*
-#+MACRO: def {{{abl(N4)}}} *Defensive*
-#+MACRO: N1 {{{i1}}}{{{tN1}}}{{{i2}}}{{{abls(N1)}}} {{{span_dot}}}N1{{{span_end}}}{{{i3}}}
-#+MACRO: N2 {{{i1}}}{{{tN2}}}{{{i2}}}{{{abls(N2)}}} {{{span_dot}}}N2{{{span_end}}}{{{i3}}}
-#+MACRO: N3 {{{i1}}}{{{tN3}}}{{{i2}}}{{{abls(N3)}}} {{{span_dot}}}N3{{{span_end}}}{{{i3}}}
-#+MACRO: N4 {{{i1}}}{{{tN4}}}{{{i2}}}{{{abls(N4)}}} {{{span_dot}}}N4{{{span_end}}}{{{i3}}}
-#+MACRO: O1 {{{i1}}}{{{tO1}}}{{{i2}}}{{{gems(O1)}}} {{{span_dot}}}O1{{{span_end}}}{{{i3}}}
-#+MACRO: O2 {{{i1}}}{{{tO2}}}{{{i2}}}{{{gems(O2)}}} {{{span_dot}}}O2{{{span_end}}}{{{i3}}}
-#+MACRO: O3 {{{i1}}}{{{tO3}}}{{{i2}}}{{{gems(O3)}}} {{{span_dot}}}O3{{{span_end}}}{{{i3}}}
-#+MACRO: O4 {{{i1}}}{{{tO4}}}{{{i2}}}{{{gems(O4)}}} {{{span_dot}}}O4{{{span_end}}}{{{i3}}}
-#+MACRO: S1 {{{i1}}}{{{tS1}}}{{{i2}}}{{{gems(S1)}}} {{{span_dot}}}S1{{{span_end}}}{{{i3}}}
-#+MACRO: S2 {{{i1}}}{{{tS2}}}{{{i2}}}{{{gems(S2)}}} {{{span_dot}}}S2{{{span_end}}}{{{i3}}}
-#+MACRO: S3 {{{i1}}}{{{tS3}}}{{{i2}}}{{{gems(S3)}}} {{{span_dot}}}S3{{{span_end}}}{{{i3}}}
-#+MACRO: S4 {{{i1}}}{{{tS4}}}{{{i2}}}{{{gems(S4)}}} {{{span_dot}}}S4{{{span_end}}}{{{i3}}}
-#+MACRO: R1 {{{i1}}}{{{tR1}}}{{{i2}}}{{{gems(R1)}}} {{{span_dot}}}R1{{{span_end}}}{{{i3}}}
-#+MACRO: R2 {{{i1}}}{{{tR2}}}{{{i2}}}{{{gems(R2)}}} {{{span_dot}}}R2{{{span_end}}}{{{i3}}}
-#+MACRO: R3 {{{i1}}}{{{tR3}}}{{{i2}}}{{{gems(R3)}}} {{{span_dot}}}R3{{{span_end}}}{{{i3}}}
-#+MACRO: R4 {{{i1}}}{{{tR4}}}{{{i2}}}{{{gems(R4)}}} {{{span_dot}}}R4{{{span_end}}}{{{i3}}}
-#+MACRO: G1 {{{i1}}}{{{tG1}}}{{{i2}}}{{{gems(G1)}}} {{{span_dot}}}G1{{{span_end}}}{{{i3}}}
-#+MACRO: G2 {{{i1}}}{{{tG2}}}{{{i2}}}{{{gems(G2)}}} {{{span_dot}}}G2{{{span_end}}}{{{i3}}}
-#+MACRO: G3 {{{i1}}}{{{tG3}}}{{{i2}}}{{{gems(G3)}}} {{{span_dot}}}G3{{{span_end}}}{{{i3}}}
-#+MACRO: G4 {{{i1}}}{{{tG4}}}{{{i2}}}{{{gems(G4)}}} {{{span_dot}}}G4{{{span_end}}}{{{i3}}}
-#+MACRO: E1 {{{i1}}}{{{tE1}}}{{{i2}}}{{{gems(E1)}}} {{{span_dot}}}E1{{{span_end}}}{{{i3}}}
-#+MACRO: E2 {{{i1}}}{{{tE2}}}{{{i2}}}{{{gems(E2)}}} {{{span_dot}}}E2{{{span_end}}}{{{i3}}}
-#+MACRO: E3 {{{i1}}}{{{tE3}}}{{{i2}}}{{{gems(E3)}}} {{{span_dot}}}E3{{{span_end}}}{{{i3}}}
-#+MACRO: E4 {{{i1}}}{{{tE4}}}{{{i2}}}{{{gems(E4)}}} {{{span_dot}}}E4{{{span_end}}}{{{i3}}}
-#+MACRO: O1s {{{i1}}}{{{tO1}}}{{{i2}}}{{{gemss(O1)}}}{{{i3}}}
-#+MACRO: O2s {{{i1}}}{{{tO2}}}{{{i2}}}{{{gemss(O2)}}}{{{i3}}}
-#+MACRO: O3s {{{i1}}}{{{tO3}}}{{{i2}}}{{{gemss(O3)}}}{{{i3}}}
-#+MACRO: O4s {{{i1}}}{{{tO4}}}{{{i2}}}{{{gemss(O4)}}}{{{i3}}}
-#+MACRO: S1s {{{i1}}}{{{tS1}}}{{{i2}}}{{{gemss(S1)}}}{{{i3}}}
-#+MACRO: S2s {{{i1}}}{{{tS2}}}{{{i2}}}{{{gemss(S2)}}}{{{i3}}}
-#+MACRO: S3s {{{i1}}}{{{tS3}}}{{{i2}}}{{{gemss(S3)}}}{{{i3}}}
-#+MACRO: S4s {{{i1}}}{{{tS4}}}{{{i2}}}{{{gemss(S4)}}}{{{i3}}}
-#+MACRO: R1s {{{i1}}}{{{tR1}}}{{{i2}}}{{{gemss(R1)}}}{{{i3}}}
-#+MACRO: R2s {{{i1}}}{{{tR2}}}{{{i2}}}{{{gemss(R2)}}}{{{i3}}}
-#+MACRO: R3s {{{i1}}}{{{tR3}}}{{{i2}}}{{{gemss(R3)}}}{{{i3}}}
-#+MACRO: R4s {{{i1}}}{{{tR4}}}{{{i2}}}{{{gemss(R4)}}}{{{i3}}}
-#+MACRO: G1s {{{i1}}}{{{tG1}}}{{{i2}}}{{{gemss(G1)}}}{{{i3}}}
-#+MACRO: G2s {{{i1}}}{{{tG2}}}{{{i2}}}{{{gemss(G2)}}}{{{i3}}}
-#+MACRO: G3s {{{i1}}}{{{tG3}}}{{{i2}}}{{{gemss(G3)}}}{{{i3}}}
-#+MACRO: G4s {{{i1}}}{{{tG4}}}{{{i2}}}{{{gemss(G4)}}}{{{i3}}}
-#+MACRO: E1s {{{i1}}}{{{tE1}}}{{{i2}}}{{{gemss(E1)}}}{{{i3}}}
-#+MACRO: E2s {{{i1}}}{{{tE2}}}{{{i2}}}{{{gemss(E2)}}}{{{i3}}}
-#+MACRO: E3s {{{i1}}}{{{tE3}}}{{{i2}}}{{{gemss(E3)}}}{{{i3}}}
-#+MACRO: E4s {{{i1}}}{{{tE4}}}{{{i2}}}{{{gemss(E4)}}}{{{i3}}}
-#+MACRO: O1g {{{i1}}}(O1) {{{tO1}}}{{{i2}}}{{{gem(O1)}}}{{{i3}}}
-#+MACRO: O2g {{{i1}}}(O2) {{{tO2}}}{{{i2}}}{{{gem(O2)}}}{{{i3}}}
-#+MACRO: O3g {{{i1}}}(O3) {{{tO3}}}{{{i2}}}{{{gem(O3)}}}{{{i3}}}
-#+MACRO: O4g {{{i1}}}(O4) {{{tO4}}}{{{i2}}}{{{gem(O4)}}}{{{i3}}}
-#+MACRO: S1g {{{i1}}}(S1) {{{tS1}}}{{{i2}}}{{{gem(S1)}}}{{{i3}}}
-#+MACRO: S2g {{{i1}}}(S2) {{{tS2}}}{{{i2}}}{{{gem(S2)}}}{{{i3}}}
-#+MACRO: S3g {{{i1}}}(S3) {{{tS3}}}{{{i2}}}{{{gem(S3)}}}{{{i3}}}
-#+MACRO: S4g {{{i1}}}(S4) {{{tS4}}}{{{i2}}}{{{gem(S4)}}}{{{i3}}}
-#+MACRO: R1g {{{i1}}}(R1) {{{tR1}}}{{{i2}}}{{{gem(R1)}}}{{{i3}}}
-#+MACRO: R2g {{{i1}}}(R2) {{{tR2}}}{{{i2}}}{{{gem(R2)}}}{{{i3}}}
-#+MACRO: R3g {{{i1}}}(R3) {{{tR3}}}{{{i2}}}{{{gem(R3)}}}{{{i3}}}
-#+MACRO: R4g {{{i1}}}(R4) {{{tR4}}}{{{i2}}}{{{gem(R4)}}}{{{i3}}}
-#+MACRO: G1g {{{i1}}}(G1) {{{tG1}}}{{{i2}}}{{{gem(G1)}}}{{{i3}}}
-#+MACRO: G2g {{{i1}}}(G2) {{{tG2}}}{{{i2}}}{{{gem(G2)}}}{{{i3}}}
-#+MACRO: G3g {{{i1}}}(G3) {{{tG3}}}{{{i2}}}{{{gem(G3)}}}{{{i3}}}
-#+MACRO: G4g {{{i1}}}(G4) {{{tG4}}}{{{i2}}}{{{gem(G4)}}}{{{i3}}}
-#+MACRO: E1g {{{i1}}}(E1) {{{tE1}}}{{{i2}}}{{{gem(E1)}}}{{{i3}}}
-#+MACRO: E2g {{{i1}}}(E2) {{{tE2}}}{{{i2}}}{{{gem(E2)}}}{{{i3}}}
-#+MACRO: E3g {{{i1}}}(E3) {{{tE3}}}{{{i2}}}{{{gem(E3)}}}{{{i3}}}
-#+MACRO: E4g {{{i1}}}(E4) {{{tE4}}}{{{i2}}}{{{gem(E4)}}}{{{i3}}}
+#+macro: pri {{{abl(N1)}}} *Primary*
+#+macro: sec {{{abl(N2)}}} *Secondary*
+#+macro: secl {{{abl(N2)}}} *Leap Secondary*
+#+macro: spe {{{abl(N3)}}} *Special*
+#+macro: def {{{abl(N4)}}} *Defensive*
+#+macro: N1 {{{i1}}}{{{tN1}}}{{{i2}}}{{{abls(N1)}}} {{{span_dot}}}N1{{{span_end}}}{{{i3}}}
+#+macro: N2 {{{i1}}}{{{tN2}}}{{{i2}}}{{{abls(N2)}}} {{{span_dot}}}N2{{{span_end}}}{{{i3}}}
+#+macro: N3 {{{i1}}}{{{tN3}}}{{{i2}}}{{{abls(N3)}}} {{{span_dot}}}N3{{{span_end}}}{{{i3}}}
+#+macro: N4 {{{i1}}}{{{tN4}}}{{{i2}}}{{{abls(N4)}}} {{{span_dot}}}N4{{{span_end}}}{{{i3}}}
+#+macro: O1 {{{i1}}}{{{tO1}}}{{{i2}}}{{{gems(O1)}}} {{{span_dot}}}O1{{{span_end}}}{{{i3}}}
+#+macro: O2 {{{i1}}}{{{tO2}}}{{{i2}}}{{{gems(O2)}}} {{{span_dot}}}O2{{{span_end}}}{{{i3}}}
+#+macro: O3 {{{i1}}}{{{tO3}}}{{{i2}}}{{{gems(O3)}}} {{{span_dot}}}O3{{{span_end}}}{{{i3}}}
+#+macro: O4 {{{i1}}}{{{tO4}}}{{{i2}}}{{{gems(O4)}}} {{{span_dot}}}O4{{{span_end}}}{{{i3}}}
+#+macro: S1 {{{i1}}}{{{tS1}}}{{{i2}}}{{{gems(S1)}}} {{{span_dot}}}S1{{{span_end}}}{{{i3}}}
+#+macro: S2 {{{i1}}}{{{tS2}}}{{{i2}}}{{{gems(S2)}}} {{{span_dot}}}S2{{{span_end}}}{{{i3}}}
+#+macro: S3 {{{i1}}}{{{tS3}}}{{{i2}}}{{{gems(S3)}}} {{{span_dot}}}S3{{{span_end}}}{{{i3}}}
+#+macro: S4 {{{i1}}}{{{tS4}}}{{{i2}}}{{{gems(S4)}}} {{{span_dot}}}S4{{{span_end}}}{{{i3}}}
+#+macro: R1 {{{i1}}}{{{tR1}}}{{{i2}}}{{{gems(R1)}}} {{{span_dot}}}R1{{{span_end}}}{{{i3}}}
+#+macro: R2 {{{i1}}}{{{tR2}}}{{{i2}}}{{{gems(R2)}}} {{{span_dot}}}R2{{{span_end}}}{{{i3}}}
+#+macro: R3 {{{i1}}}{{{tR3}}}{{{i2}}}{{{gems(R3)}}} {{{span_dot}}}R3{{{span_end}}}{{{i3}}}
+#+macro: R4 {{{i1}}}{{{tR4}}}{{{i2}}}{{{gems(R4)}}} {{{span_dot}}}R4{{{span_end}}}{{{i3}}}
+#+macro: G1 {{{i1}}}{{{tG1}}}{{{i2}}}{{{gems(G1)}}} {{{span_dot}}}G1{{{span_end}}}{{{i3}}}
+#+macro: G2 {{{i1}}}{{{tG2}}}{{{i2}}}{{{gems(G2)}}} {{{span_dot}}}G2{{{span_end}}}{{{i3}}}
+#+macro: G3 {{{i1}}}{{{tG3}}}{{{i2}}}{{{gems(G3)}}} {{{span_dot}}}G3{{{span_end}}}{{{i3}}}
+#+macro: G4 {{{i1}}}{{{tG4}}}{{{i2}}}{{{gems(G4)}}} {{{span_dot}}}G4{{{span_end}}}{{{i3}}}
+#+macro: E1 {{{i1}}}{{{tE1}}}{{{i2}}}{{{gems(E1)}}} {{{span_dot}}}E1{{{span_end}}}{{{i3}}}
+#+macro: E2 {{{i1}}}{{{tE2}}}{{{i2}}}{{{gems(E2)}}} {{{span_dot}}}E2{{{span_end}}}{{{i3}}}
+#+macro: E3 {{{i1}}}{{{tE3}}}{{{i2}}}{{{gems(E3)}}} {{{span_dot}}}E3{{{span_end}}}{{{i3}}}
+#+macro: E4 {{{i1}}}{{{tE4}}}{{{i2}}}{{{gems(E4)}}} {{{span_dot}}}E4{{{span_end}}}{{{i3}}}
+#+macro: O1s {{{i1}}}{{{tO1}}}{{{i2}}}{{{gemss(O1)}}}{{{i3}}}
+#+macro: O2s {{{i1}}}{{{tO2}}}{{{i2}}}{{{gemss(O2)}}}{{{i3}}}
+#+macro: O3s {{{i1}}}{{{tO3}}}{{{i2}}}{{{gemss(O3)}}}{{{i3}}}
+#+macro: O4s {{{i1}}}{{{tO4}}}{{{i2}}}{{{gemss(O4)}}}{{{i3}}}
+#+macro: S1s {{{i1}}}{{{tS1}}}{{{i2}}}{{{gemss(S1)}}}{{{i3}}}
+#+macro: S2s {{{i1}}}{{{tS2}}}{{{i2}}}{{{gemss(S2)}}}{{{i3}}}
+#+macro: S3s {{{i1}}}{{{tS3}}}{{{i2}}}{{{gemss(S3)}}}{{{i3}}}
+#+macro: S4s {{{i1}}}{{{tS4}}}{{{i2}}}{{{gemss(S4)}}}{{{i3}}}
+#+macro: R1s {{{i1}}}{{{tR1}}}{{{i2}}}{{{gemss(R1)}}}{{{i3}}}
+#+macro: R2s {{{i1}}}{{{tR2}}}{{{i2}}}{{{gemss(R2)}}}{{{i3}}}
+#+macro: R3s {{{i1}}}{{{tR3}}}{{{i2}}}{{{gemss(R3)}}}{{{i3}}}
+#+macro: R4s {{{i1}}}{{{tR4}}}{{{i2}}}{{{gemss(R4)}}}{{{i3}}}
+#+macro: G1s {{{i1}}}{{{tG1}}}{{{i2}}}{{{gemss(G1)}}}{{{i3}}}
+#+macro: G2s {{{i1}}}{{{tG2}}}{{{i2}}}{{{gemss(G2)}}}{{{i3}}}
+#+macro: G3s {{{i1}}}{{{tG3}}}{{{i2}}}{{{gemss(G3)}}}{{{i3}}}
+#+macro: G4s {{{i1}}}{{{tG4}}}{{{i2}}}{{{gemss(G4)}}}{{{i3}}}
+#+macro: E1s {{{i1}}}{{{tE1}}}{{{i2}}}{{{gemss(E1)}}}{{{i3}}}
+#+macro: E2s {{{i1}}}{{{tE2}}}{{{i2}}}{{{gemss(E2)}}}{{{i3}}}
+#+macro: E3s {{{i1}}}{{{tE3}}}{{{i2}}}{{{gemss(E3)}}}{{{i3}}}
+#+macro: E4s {{{i1}}}{{{tE4}}}{{{i2}}}{{{gemss(E4)}}}{{{i3}}}
+#+macro: O1g {{{i1}}}(O1) {{{tO1}}}{{{i2}}}{{{gem(O1)}}}{{{i3}}}
+#+macro: O2g {{{i1}}}(O2) {{{tO2}}}{{{i2}}}{{{gem(O2)}}}{{{i3}}}
+#+macro: O3g {{{i1}}}(O3) {{{tO3}}}{{{i2}}}{{{gem(O3)}}}{{{i3}}}
+#+macro: O4g {{{i1}}}(O4) {{{tO4}}}{{{i2}}}{{{gem(O4)}}}{{{i3}}}
+#+macro: S1g {{{i1}}}(S1) {{{tS1}}}{{{i2}}}{{{gem(S1)}}}{{{i3}}}
+#+macro: S2g {{{i1}}}(S2) {{{tS2}}}{{{i2}}}{{{gem(S2)}}}{{{i3}}}
+#+macro: S3g {{{i1}}}(S3) {{{tS3}}}{{{i2}}}{{{gem(S3)}}}{{{i3}}}
+#+macro: S4g {{{i1}}}(S4) {{{tS4}}}{{{i2}}}{{{gem(S4)}}}{{{i3}}}
+#+macro: R1g {{{i1}}}(R1) {{{tR1}}}{{{i2}}}{{{gem(R1)}}}{{{i3}}}
+#+macro: R2g {{{i1}}}(R2) {{{tR2}}}{{{i2}}}{{{gem(R2)}}}{{{i3}}}
+#+macro: R3g {{{i1}}}(R3) {{{tR3}}}{{{i2}}}{{{gem(R3)}}}{{{i3}}}
+#+macro: R4g {{{i1}}}(R4) {{{tR4}}}{{{i2}}}{{{gem(R4)}}}{{{i3}}}
+#+macro: G1g {{{i1}}}(G1) {{{tG1}}}{{{i2}}}{{{gem(G1)}}}{{{i3}}}
+#+macro: G2g {{{i1}}}(G2) {{{tG2}}}{{{i2}}}{{{gem(G2)}}}{{{i3}}}
+#+macro: G3g {{{i1}}}(G3) {{{tG3}}}{{{i2}}}{{{gem(G3)}}}{{{i3}}}
+#+macro: G4g {{{i1}}}(G4) {{{tG4}}}{{{i2}}}{{{gem(G4)}}}{{{i3}}}
+#+macro: E1g {{{i1}}}(E1) {{{tE1}}}{{{i2}}}{{{gem(E1)}}}{{{i3}}}
+#+macro: E2g {{{i1}}}(E2) {{{tE2}}}{{{i2}}}{{{gem(E2)}}}{{{i3}}}
+#+macro: E3g {{{i1}}}(E3) {{{tE3}}}{{{i2}}}{{{gem(E3)}}}{{{i3}}}
+#+macro: E4g {{{i1}}}(E4) {{{tE4}}}{{{i2}}}{{{gem(E4)}}}{{{i3}}}
+:END:
+:GENERAL:
+#+MACRO: span_dot @@html:<span style="text-decoration:underline; text-decoration-style:dotted;">@@
+#+MACRO: span_end @@html:</span>@@
+#+MACRO: itm_link [[file:./img/items/$1.png]] {{{span_dot}}}{{{n$1}}}{{{span_end}}}
+#+MACRO: itm_aria {{{t$1}}}
+# html + tooltip + html + image and name + html
+#+MACRO: i1 @@html:<span class="hint--large" aria-label="
+#+MACRO: i2 ">@@
+#+MACRO: i3 @@html:</span>@@
+#+MACRO: itm {{{i1}}}{{{itm_aria($1)}}}{{{i2}}}{{{itm_link($1)}}}{{{i3}}}
+# version without name showing for item tier list
+#+MACRO: i {{{i1}}}{{{i_aria($1)}}}{{{i2}}}[[file:./img/items/$1.png]]{{{i3}}}
+#+MACRO: i_aria ({{{n$1}}}) {{{t$1}}}
+:END:
+:ITEM_NAMES:
+#+MACRO: nAbyss-Artifact Abyss Artifact
+#+MACRO: nAltair-Dagger Altair Dagger
+#+MACRO: nAmethyst-Bracelet Amethyst Bracelet
+#+MACRO: nAngels-Halo Angel's Halo
+#+MACRO: nApple-Plate Apple Plate
+#+MACRO: nAquamarine-Bracelet Aquamarine Bracelet
+#+MACRO: nArtist-Smock Artist Smock
+#+MACRO: nAssassins-Knife Assassin's Knife
+#+MACRO: nBallroom-Gown Ballroom Gown
+#+MACRO: nBattery-Shield Battery Shield
+#+MACRO: nBattlemaiden-Armor Battlemaiden Armor
+#+MACRO: nBeach-Sandals Beach Sandals
+#+MACRO: nBlack-Wakizashi Black Wakizashi
+#+MACRO: nBlackbolt-Ribbon Blackbolt Ribbon
+#+MACRO: nBlackhole-Charm Blackhole Charm
+#+MACRO: nBlacksteel-Buckler Blacksteel Buckler
+#+MACRO: nBlackwing-Staff Blackwing Staff
+#+MACRO: nBladed-Cloak Bladed Cloak
+#+MACRO: nBlood-Vial Blood Vial
+#+MACRO: nBloodflower-Brooch Bloodflower Brooch
+#+MACRO: nBloodhound-Greatsword Bloodhound Greatsword
+#+MACRO: nBloody-Bandage Bloody Bandage
+#+MACRO: nBlue-Rose Blue Rose
+#+MACRO: nBluebolt-Staff Bluebolt Staff
+#+MACRO: nBolt-Staff Bolt Staff
+#+MACRO: nBook-of-Cheats Book of Cheats
+#+MACRO: nBoulder-Shield Boulder Shield
+#+MACRO: nBrightstorm-Spear Brightstorm Spear
+#+MACRO: nButterfly-Hairpin Butterfly Hairpin
+#+MACRO: nButterfly-Ocarina Butterfly Ocarina
+#+MACRO: nCalling-Bell Calling Bell
+#+MACRO: nCanary-Charm Canary Charm
+#+MACRO: nCaramel-Tea Caramel Tea
+#+MACRO: nCavers-Cloak Caver's Cloak
+#+MACRO: nChemists-Coat Chemist's Coat
+#+MACRO: nChrome-Shield Chrome Shield
+#+MACRO: nClay-Rabbit Clay Rabbit
+#+MACRO: nClockwork-Tome Clockwork Tome
+#+MACRO: nCloud-Guard Cloud Guard
+#+MACRO: nColdsteel-Shield Coldsteel Shield
+#+MACRO: nColorful-Earrings Colorful Earrings
+#+MACRO: nComforting-Coat Comforting Coat
+#+MACRO: nCompound-Gloves Compound Gloves
+#+MACRO: nCrane-Katana Crane Katana
+#+MACRO: nCrescentmoon-Dagger Crescentmoon Dagger
+#+MACRO: nCrowfeather-Hairpin Crowfeather Hairpin
+#+MACRO: nCrown-of-Love Crown of Love
+#+MACRO: nCrown-of-Storms Crown of Storms
+#+MACRO: nCrown-of-Swords Crown of Swords
+#+MACRO: nCurse-Talon Curse Talon
+#+MACRO: nCursed-Candlestaff Cursed Candlestaff
+#+MACRO: nDark-Wings Dark Wings
+#+MACRO: nDarkcloud-Necklace Darkcloud Necklace
+#+MACRO: nDarkcrystal-Rose Darkcrystal Rose
+#+MACRO: nDarkglass-Spear Darkglass Spear
+#+MACRO: nDarkmage-Charm Darkmage Charm
+#+MACRO: nDarkmagic-Blade Darkmagic Blade
+#+MACRO: nDarkstorm-Knife Darkstorm Knife
+#+MACRO: nDaylight-Sword Daylight Sword
+#+MACRO: nDeathcap-Tome Deathcap Tome
+#+MACRO: nDemon-Horns Demon Horns
+#+MACRO: nDesert-Earrings Desert Earrings
+#+MACRO: nDiamond-Shield Diamond Shield
+#+MACRO: nDivine-Mirror Divine Mirror
+#+MACRO: nDragonhead-Spear Dragonhead Spear
+#+MACRO: nDrill-Shield Drill Shield
+#+MACRO: nDynamite-Staff Dynamite Staff
+#+MACRO: nEaglewing-Charm Eaglewing Charm
+#+MACRO: nEmerald-Chestplate Emerald Chestplate
+#+MACRO: nEternity-Flute Eternity Flute
+#+MACRO: nFairy-Spear Fairy Spear
+#+MACRO: nFalconfeather-Dagger Falconfeather Dagger
+#+MACRO: nFanciful-Book Fanciful Book
+#+MACRO: nFeathered-Overcoat Feathered Overcoat
+#+MACRO: nFirescale-Corset Firescale Corset
+#+MACRO: nFirststrike-Bracelet Firststrike Bracelet
+#+MACRO: nFlame-Bow Flame Bow
+#+MACRO: nFlamedancer-Dagger Flamedancer Dagger
+#+MACRO: nFlamewalker-Boots Flamewalker Boots
+#+MACRO: nFloral-Bow Floral Bow
+#+MACRO: nFossil-Dagger Fossil Dagger
+#+MACRO: nFrost-Dagger Frost Dagger
+#+MACRO: nFrozen-Staff Frozen Staff
+#+MACRO: nGarnet-Staff Garnet Staff
+#+MACRO: nGemini-Necklace Gemini Necklace
+#+MACRO: nGhost-Spear Ghost Spear
+#+MACRO: nGiant-Paintbrush Giant Paintbrush
+#+MACRO: nGiant-Stone-Club Giant Stone Club
+#+MACRO: nGlacier-Spear Glacier Spear
+#+MACRO: nGladiator-Helmet Gladiator Helmet
+#+MACRO: nGlittering-Trumpet Glittering Trumpet
+#+MACRO: nGolden-Chime Golden Chime
+#+MACRO: nGolden-Katana Golden Katana
+#+MACRO: nGolems-Claymore Golem's Claymore
+#+MACRO: nGrandmaster-Spear Grandmaster Spear
+#+MACRO: nGranite-Greatsword Granite Greatsword
+#+MACRO: nGrasswoven-Bracelet Grasswoven Bracelet
+#+MACRO: nGreatsword-Pendant Greatsword Pendant
+#+MACRO: nGreysteel-Shield Greysteel Shield
+#+MACRO: nHandmade-Charm Handmade Charm
+#+MACRO: nHaunted-Gloves Haunted Gloves
+#+MACRO: nHawkfeather-Fan Hawkfeather Fan
+#+MACRO: nHeavens-Codex Heaven's Codex
+#+MACRO: nHells-Codex Hell's Codex
+#+MACRO: nHermes-Bow Hermes Bow
+#+MACRO: nHexed-Blindfold Hexed Blindfold
+#+MACRO: nHidden-Blade Hidden Blade
+#+MACRO: nHoly-Greatsword Holy Greatsword
+#+MACRO: nHooked-Staff Hooked Staff
+#+MACRO: nHydrous-Blob Hydrous Blob
+#+MACRO: nIcicle-Earrings Icicle Earrings
+#+MACRO: nIron-Greaves Iron Greaves
+#+MACRO: nIron-Pickaxe Iron Pickaxe
+#+MACRO: nIvy-Staff Ivy Staff
+#+MACRO: nJade-Staff Jade Staff
+#+MACRO: nJesters-Hat Jester's Hat
+#+MACRO: nKappa-Shield Kappa Shield
+#+MACRO: nKilling-Note Killing Note
+#+MACRO: nKunoichi-Hood Kunoichi Hood
+#+MACRO: nKyou-No-Omikuji Kyou No Omikuji
+#+MACRO: nLancer-Gauntlets Lancer Gauntlets
+#+MACRO: nLapis-Sword Lapis Sword
+#+MACRO: nLarge-Anchor Large Anchor
+#+MACRO: nLarge-Umbrella Large Umbrella
+#+MACRO: nLeech-Staff Leech Staff
+#+MACRO: nLefthand-Cast Lefthand Cast
+#+MACRO: nLightning-Bow Lightning Bow
+#+MACRO: nLion-Charm Lion Charm
+#+MACRO: nLonesome-Pendant Lonesome Pendant
+#+MACRO: nLost-Pendant Lost Pendant
+#+MACRO: nLullaby-Harp Lullaby Harp
+#+MACRO: nMaid-Outfit Maid Outfit
+#+MACRO: nMarble-Clasp Marble Clasp
+#+MACRO: nMemory-Greatsword Memory Greatsword
+#+MACRO: nMermaid-Scalemail Mermaid Scalemail
+#+MACRO: nMeteor-Staff Meteor Staff
+#+MACRO: nMetronome-Boots Metronome Boots
+#+MACRO: nMidsummer-Dress Midsummer Dress
+#+MACRO: nMimick-Rabbitfoot Mimick Rabbitfoot
+#+MACRO: nMiners-Headlamp Miner's Headlamp
+#+MACRO: nMoon-Pendant Moon Pendant
+#+MACRO: nMoss-Shield Moss Shield
+#+MACRO: nMountain-Staff Mountain Staff
+#+MACRO: nNecronomicon Necronomicon 
+#+MACRO: nNightgleam-Sword Nightgleam Sword
+#+MACRO: nNightguard-Gloves Nightguard Gloves
+#+MACRO: nNightingale-Gown Nightingale Gown
+#+MACRO: nNightstar-Grimoire Nightstar Grimoire
+#+MACRO: nNinja-Robe Ninja Robe
+#+MACRO: nNinjutsu-Scroll Ninjutsu Scroll
+#+MACRO: nNova-Crown Nova Crown
+#+MACRO: nObsidian-Hairpin Obsidian Hairpin
+#+MACRO: nObsidian-Rod Obsidian Rod
+#+MACRO: nOccult-Dagger Occult Dagger
+#+MACRO: nOld-Bonnet Old Bonnet
+#+MACRO: nOnepiece-Swimsuit Onepiece Swimsuit
+#+MACRO: nOni-Staff Oni Staff
+#+MACRO: nOpal-Necklace Opal Necklace
+#+MACRO: nOrnamental-Bell Ornamental Bell
+#+MACRO: nPainters-Beret Painter's Beret
+#+MACRO: nPajama-Hat Pajama Hat
+#+MACRO: nPalette-Shield Palette Shield
+#+MACRO: nPerformers-Shoes Performer's Shoes
+#+MACRO: nPeridot-Rapier Peridot Rapier
+#+MACRO: nPhantom-Dagger Phantom Dagger
+#+MACRO: nPhoenix-Charm Phoenix Charm
+#+MACRO: nPidgeon-Bow Pidgeon Bow
+#+MACRO: nPocketwatch Pocketwatch 
+#+MACRO: nPointed-Ring Pointed Ring
+#+MACRO: nPoisonfrog-Charm Poisonfrog Charm
+#+MACRO: nPolar-Coat Polar Coat
+#+MACRO: nPurification-Rod Purification Rod
+#+MACRO: nPyrite-Earrings Pyrite Earrings
+#+MACRO: nQuartz-Shield Quartz Shield
+#+MACRO: nQueens-Crown Queen's Crown
+#+MACRO: nRaiju-Crown Raiju Crown
+#+MACRO: nRainbow-Cape Rainbow Cape
+#+MACRO: nRaindrop-Earrings Raindrop Earrings
+#+MACRO: nRavens-Dagger Raven's Dagger
+#+MACRO: nRaven-Grimoire Raven Grimoire
+#+MACRO: nReaper-Cloak Reaper Cloak
+#+MACRO: nRed-Tanzaku Red Tanzaku
+#+MACRO: nRedblack-Ribbon Redblack Ribbon
+#+MACRO: nReddragon-Blade Reddragon Blade
+#+MACRO: nRedwhite-Ribbon Redwhite Ribbon
+#+MACRO: nReflection-Shield Reflection Shield
+#+MACRO: nRibboned-Staff Ribboned Staff
+#+MACRO: nRighthand-Cast Righthand Cast
+#+MACRO: nRobe-of-Dark Robe of Dark
+#+MACRO: nRobe-of-Light Robe of Light
+#+MACRO: nRockdragon-Mail Rockdragon Mail
+#+MACRO: nRosered-Leotard Rosered Leotard
+#+MACRO: nRoyal-Staff Royal Staff
+#+MACRO: nRuby-Circlet Ruby Circlet
+#+MACRO: nRuins-Sword Ruins Sword
+#+MACRO: nRusted-Greatsword Rusted Greatsword
+#+MACRO: nSacred-Bow Sacred Bow
+#+MACRO: nSacred-Shield Sacred Shield
+#+MACRO: nSacredstone-Charm Sacredstone Charm
+#+MACRO: nSaltwater-Staff Saltwater Staff
+#+MACRO: nSand-Shovel Sand Shovel
+#+MACRO: nSandpriestess-Spear Sandpriestess Spear
+#+MACRO: nSapphire-Violin Sapphire Violin
+#+MACRO: nSawtooth-Cleaver Sawtooth Cleaver
+#+MACRO: nSeashell-Shield Seashell Shield
+#+MACRO: nSewing-Sword Sewing Sword
+#+MACRO: nShadow-Bracelet Shadow Bracelet
+#+MACRO: nSharpedged-Shield Sharpedged Shield
+#+MACRO: nShield-of-Smiles Shield of Smiles
+#+MACRO: nShinobi-Tabi Shinobi Tabi
+#+MACRO: nShinsoku-Katana Shinsoku Katana
+#+MACRO: nShockwave-Tome Shockwave Tome
+#+MACRO: nShrinemaidens-Kosode Shrinemaiden's Kosode
+#+MACRO: nSilver-Coin Silver Coin
+#+MACRO: nSketchbook Sketchbook 
+#+MACRO: nSleeping-Greatbow Sleeping Greatbow
+#+MACRO: nSmoke-Shield Smoke Shield
+#+MACRO: nSnakefang-Dagger Snakefang Dagger
+#+MACRO: nSnipers-Eyeglasses Sniper's Eyeglasses
+#+MACRO: nSnow-Boots Snow Boots
+#+MACRO: nSpark-of-Determination Spark of Determination
+#+MACRO: nSparrow-Feather Sparrow Feather
+#+MACRO: nSpear-of-Rains Spear of Rains
+#+MACRO: nSpear-of-Remorse Spear of Remorse
+#+MACRO: nSpear-of-Winds Spear of Winds
+#+MACRO: nSpiderbite-Bow Spiderbite Bow
+#+MACRO: nSpiked-Shield Spiked Shield
+#+MACRO: nSpinning-Chakram Spinning Chakram
+#+MACRO: nSpringloaded-Scythe Springloaded Scythe
+#+MACRO: nStaff-of-Sorrow Staff of Sorrow
+#+MACRO: nStarry-Cloak Starry Cloak
+#+MACRO: nStaticshock-Earrings Staticshock Earrings
+#+MACRO: nStirring-Spoon Stirring Spoon
+#+MACRO: nStonebreaker-Staff Stonebreaker Staff
+#+MACRO: nStoneplate-Armor Stoneplate Armor
+#+MACRO: nStorm-Petticoat Storm Petticoat
+#+MACRO: nStormdance-Gown Stormdance Gown
+#+MACRO: nStraw-Hat Straw Hat
+#+MACRO: nStrawberry-Cake Strawberry Cake
+#+MACRO: nStrongmans-Bar Strongman's Bar
+#+MACRO: nStuffed-Rabbit Stuffed Rabbit
+#+MACRO: nSun-Pendant Sun Pendant
+#+MACRO: nSunflower-Crown Sunflower Crown
+#+MACRO: nSweet-Taffy Sweet Taffy
+#+MACRO: nTactician-Rod Tactician Rod
+#+MACRO: nTalon-Charm Talon Charm
+#+MACRO: nTeacher-Knife Teacher Knife
+#+MACRO: nThiefs-Coat Thief's Coat
+#+MACRO: nThrowing-Dagger Throwing Dagger
+#+MACRO: nThunderclap-Gloves Thunderclap Gloves
+#+MACRO: nTidal-Greatsword Tidal Greatsword
+#+MACRO: nTimemage-Cap Timemage Cap
+#+MACRO: nTimespace-Dagger Timespace Dagger
+#+MACRO: nTimewarp-Wand Timewarp Wand
+#+MACRO: nTiny-Fork Tiny Fork
+#+MACRO: nTiny-Hourglass Tiny Hourglass
+#+MACRO: nTiny-Wings Tiny Wings
+#+MACRO: nTopaz-Charm Topaz Charm
+#+MACRO: nTornado-Staff Tornado Staff
+#+MACRO: nTough-Gauntlet Tough Gauntlet
+#+MACRO: nTrick-Shield Trick Shield
+#+MACRO: nTwinstar-Earrings Twinstar Earrings
+#+MACRO: nUnsacred-Pendant Unsacred Pendant
+#+MACRO: nUsagi-Kamen Usagi Kamen
+#+MACRO: nVampiric-Dagger Vampiric Dagger
+#+MACRO: nVanilla-Wafers Vanilla Wafers
+#+MACRO: nVega-Spear Vega Spear
+#+MACRO: nVenom-Hood Venom Hood
+#+MACRO: nVolcano-Spear Volcano Spear
+#+MACRO: nVorpal-Dao Vorpal Dao
+#+MACRO: nWaterfall-Polearm Waterfall Polearm
+#+MACRO: nWatermage-Pendant Watermage Pendant
+#+MACRO: nWhiteflame-Staff Whiteflame Staff
+#+MACRO: nWhitewing-Bracelet Whitewing Bracelet
+#+MACRO: nWindbite-Dagger Windbite Dagger
+#+MACRO: nWinged-Cap Winged Cap
+#+MACRO: nWinter-Hat Winter Hat
+#+MACRO: nWitchs-Cloak Witch's Cloak
+#+MACRO: nWolf-Hood Wolf Hood
+#+MACRO: nYoukai-Bracelet Youkai Bracelet
+:END:
+:ITEM-ABBREVIATIONS:
+#+MACRO: Abyss-Artifact {{{itm(Abyss-Artifact)}}}
+#+MACRO: Altair-Dagger {{{itm(Altair-Dagger)}}}
+#+MACRO: Amethyst-Bracelet {{{itm(Amethyst-Bracelet)}}}
+#+MACRO: Angels-Halo {{{itm(Angels-Halo)}}}
+#+MACRO: Apple-Plate {{{itm(Apple-Plate)}}}
+#+MACRO: Aquamarine-Bracelet {{{itm(Aquamarine-Bracelet)}}}
+#+MACRO: Artist-Smock {{{itm(Artist-Smock)}}}
+#+MACRO: Assassins-Knife {{{itm(Assassins-Knife)}}}
+#+MACRO: Ballroom-Gown {{{itm(Ballroom-Gown)}}}
+#+MACRO: Battery-Shield {{{itm(Battery-Shield)}}}
+#+MACRO: Battlemaiden-Armor {{{itm(Battlemaiden-Armor)}}}
+#+MACRO: Beach-Sandals {{{itm(Beach-Sandals)}}}
+#+MACRO: Black-Wakizashi {{{itm(Black-Wakizashi)}}}
+#+MACRO: Blackbolt-Ribbon {{{itm(Blackbolt-Ribbon)}}}
+#+MACRO: Blackhole-Charm {{{itm(Blackhole-Charm)}}}
+#+MACRO: Blacksteel-Buckler {{{itm(Blacksteel-Buckler)}}}
+#+MACRO: Blackwing-Staff {{{itm(Blackwing-Staff)}}}
+#+MACRO: Bladed-Cloak {{{itm(Bladed-Cloak)}}}
+#+MACRO: Blood-Vial {{{itm(Blood-Vial)}}}
+#+MACRO: Bloodflower-Brooch {{{itm(Bloodflower-Brooch)}}}
+#+MACRO: Bloodhound-Greatsword {{{itm(Bloodhound-Greatsword)}}}
+#+MACRO: Bloody-Bandage {{{itm(Bloody-Bandage)}}}
+#+MACRO: Blue-Rose {{{itm(Blue-Rose)}}}
+#+MACRO: Bluebolt-Staff {{{itm(Bluebolt-Staff)}}}
+#+MACRO: Bolt-Staff {{{itm(Bolt-Staff)}}}
+#+MACRO: Book-of-Cheats {{{itm(Book-of-Cheats)}}}
+#+MACRO: Boulder-Shield {{{itm(Boulder-Shield)}}}
+#+MACRO: Brightstorm-Spear {{{itm(Brightstorm-Spear)}}}
+#+MACRO: Butterfly-Hairpin {{{itm(Butterfly-Hairpin)}}}
+#+MACRO: Butterfly-Ocarina {{{itm(Butterfly-Ocarina)}}}
+#+MACRO: Calling-Bell {{{itm(Calling-Bell)}}}
+#+MACRO: Canary-Charm {{{itm(Canary-Charm)}}}
+#+MACRO: Caramel-Tea {{{itm(Caramel-Tea)}}}
+#+MACRO: Cavers-Cloak {{{itm(Cavers-Cloak)}}}
+#+MACRO: Chemists-Coat {{{itm(Chemists-Coat)}}}
+#+MACRO: Chrome-Shield {{{itm(Chrome-Shield)}}}
+#+MACRO: Clay-Rabbit {{{itm(Clay-Rabbit)}}}
+#+MACRO: Clockwork-Tome {{{itm(Clockwork-Tome)}}}
+#+MACRO: Cloud-Guard {{{itm(Cloud-Guard)}}}
+#+MACRO: Coldsteel-Shield {{{itm(Coldsteel-Shield)}}}
+#+MACRO: Colorful-Earrings {{{itm(Colorful-Earrings)}}}
+#+MACRO: Comforting-Coat {{{itm(Comforting-Coat)}}}
+#+MACRO: Compound-Gloves {{{itm(Compound-Gloves)}}}
+#+MACRO: Crane-Katana {{{itm(Crane-Katana)}}}
+#+MACRO: Crescentmoon-Dagger {{{itm(Crescentmoon-Dagger)}}}
+#+MACRO: Crowfeather-Hairpin {{{itm(Crowfeather-Hairpin)}}}
+#+MACRO: Crown-of-Love {{{itm(Crown-of-Love)}}}
+#+MACRO: Crown-of-Storms {{{itm(Crown-of-Storms)}}}
+#+MACRO: Crown-of-Swords {{{itm(Crown-of-Swords)}}}
+#+MACRO: Curse-Talon {{{itm(Curse-Talon)}}}
+#+MACRO: Cursed-Candlestaff {{{itm(Cursed-Candlestaff)}}}
+#+MACRO: Dark-Wings {{{itm(Dark-Wings)}}}
+#+MACRO: Darkcloud-Necklace {{{itm(Darkcloud-Necklace)}}}
+#+MACRO: Darkcrystal-Rose {{{itm(Darkcrystal-Rose)}}}
+#+MACRO: Darkglass-Spear {{{itm(Darkglass-Spear)}}}
+#+MACRO: Darkmage-Charm {{{itm(Darkmage-Charm)}}}
+#+MACRO: Darkmagic-Blade {{{itm(Darkmagic-Blade)}}}
+#+MACRO: Darkstorm-Knife {{{itm(Darkstorm-Knife)}}}
+#+MACRO: Daylight-Sword {{{itm(Daylight-Sword)}}}
+#+MACRO: Deathcap-Tome {{{itm(Deathcap-Tome)}}}
+#+MACRO: Demon-Horns {{{itm(Demon-Horns)}}}
+#+MACRO: Desert-Earrings {{{itm(Desert-Earrings)}}}
+#+MACRO: Diamond-Shield {{{itm(Diamond-Shield)}}}
+#+MACRO: Divine-Mirror {{{itm(Divine-Mirror)}}}
+#+MACRO: Dragonhead-Spear {{{itm(Dragonhead-Spear)}}}
+#+MACRO: Drill-Shield {{{itm(Drill-Shield)}}}
+#+MACRO: Dynamite-Staff {{{itm(Dynamite-Staff)}}}
+#+MACRO: Eaglewing-Charm {{{itm(Eaglewing-Charm)}}}
+#+MACRO: Emerald-Chestplate {{{itm(Emerald-Chestplate)}}}
+#+MACRO: Eternity-Flute {{{itm(Eternity-Flute)}}}
+#+MACRO: Fairy-Spear {{{itm(Fairy-Spear)}}}
+#+MACRO: Falconfeather-Dagger {{{itm(Falconfeather-Dagger)}}}
+#+MACRO: Fanciful-Book {{{itm(Fanciful-Book)}}}
+#+MACRO: Feathered-Overcoat {{{itm(Feathered-Overcoat)}}}
+#+MACRO: Firescale-Corset {{{itm(Firescale-Corset)}}}
+#+MACRO: Firststrike-Bracelet {{{itm(Firststrike-Bracelet)}}}
+#+MACRO: Flame-Bow {{{itm(Flame-Bow)}}}
+#+MACRO: Flamedancer-Dagger {{{itm(Flamedancer-Dagger)}}}
+#+MACRO: Flamewalker-Boots {{{itm(Flamewalker-Boots)}}}
+#+MACRO: Floral-Bow {{{itm(Floral-Bow)}}}
+#+MACRO: Fossil-Dagger {{{itm(Fossil-Dagger)}}}
+#+MACRO: Frost-Dagger {{{itm(Frost-Dagger)}}}
+#+MACRO: Frozen-Staff {{{itm(Frozen-Staff)}}}
+#+MACRO: Garnet-Staff {{{itm(Garnet-Staff)}}}
+#+MACRO: Gemini-Necklace {{{itm(Gemini-Necklace)}}}
+#+MACRO: Ghost-Spear {{{itm(Ghost-Spear)}}}
+#+MACRO: Giant-Paintbrush {{{itm(Giant-Paintbrush)}}}
+#+MACRO: Giant-Stone-Club {{{itm(Giant-Stone-Club)}}}
+#+MACRO: Glacier-Spear {{{itm(Glacier-Spear)}}}
+#+MACRO: Gladiator-Helmet {{{itm(Gladiator-Helmet)}}}
+#+MACRO: Glittering-Trumpet {{{itm(Glittering-Trumpet)}}}
+#+MACRO: Golden-Chime {{{itm(Golden-Chime)}}}
+#+MACRO: Golden-Katana {{{itm(Golden-Katana)}}}
+#+MACRO: Golems-Claymore {{{itm(Golems-Claymore)}}}
+#+MACRO: Grandmaster-Spear {{{itm(Grandmaster-Spear)}}}
+#+MACRO: Granite-Greatsword {{{itm(Granite-Greatsword)}}}
+#+MACRO: Grasswoven-Bracelet {{{itm(Grasswoven-Bracelet)}}}
+#+MACRO: Greatsword-Pendant {{{itm(Greatsword-Pendant)}}}
+#+MACRO: Greysteel-Shield {{{itm(Greysteel-Shield)}}}
+#+MACRO: Handmade-Charm {{{itm(Handmade-Charm)}}}
+#+MACRO: Haunted-Gloves {{{itm(Haunted-Gloves)}}}
+#+MACRO: Hawkfeather-Fan {{{itm(Hawkfeather-Fan)}}}
+#+MACRO: Heavens-Codex {{{itm(Heavens-Codex)}}}
+#+MACRO: Hells-Codex {{{itm(Hells-Codex)}}}
+#+MACRO: Hermes-Bow {{{itm(Hermes-Bow)}}}
+#+MACRO: Hexed-Blindfold {{{itm(Hexed-Blindfold)}}}
+#+MACRO: Hidden-Blade {{{itm(Hidden-Blade)}}}
+#+MACRO: Holy-Greatsword {{{itm(Holy-Greatsword)}}}
+#+MACRO: Hooked-Staff {{{itm(Hooked-Staff)}}}
+#+MACRO: Hydrous-Blob {{{itm(Hydrous-Blob)}}}
+#+MACRO: Icicle-Earrings {{{itm(Icicle-Earrings)}}}
+#+MACRO: Iron-Greaves {{{itm(Iron-Greaves)}}}
+#+MACRO: Iron-Pickaxe {{{itm(Iron-Pickaxe)}}}
+#+MACRO: Ivy-Staff {{{itm(Ivy-Staff)}}}
+#+MACRO: Jade-Staff {{{itm(Jade-Staff)}}}
+#+MACRO: Jesters-Hat {{{itm(Jesters-Hat)}}}
+#+MACRO: Kappa-Shield {{{itm(Kappa-Shield)}}}
+#+MACRO: Killing-Note {{{itm(Killing-Note)}}}
+#+MACRO: Kunoichi-Hood {{{itm(Kunoichi-Hood)}}}
+#+MACRO: Kyou-No-Omikuji {{{itm(Kyou-No-Omikuji)}}}
+#+MACRO: Lancer-Gauntlets {{{itm(Lancer-Gauntlets)}}}
+#+MACRO: Lapis-Sword {{{itm(Lapis-Sword)}}}
+#+MACRO: Large-Anchor {{{itm(Large-Anchor)}}}
+#+MACRO: Large-Umbrella {{{itm(Large-Umbrella)}}}
+#+MACRO: Leech-Staff {{{itm(Leech-Staff)}}}
+#+MACRO: Lefthand-Cast {{{itm(Lefthand-Cast)}}}
+#+MACRO: Lightning-Bow {{{itm(Lightning-Bow)}}}
+#+MACRO: Lion-Charm {{{itm(Lion-Charm)}}}
+#+MACRO: Lonesome-Pendant {{{itm(Lonesome-Pendant)}}}
+#+MACRO: Lost-Pendant {{{itm(Lost-Pendant)}}}
+#+MACRO: Lullaby-Harp {{{itm(Lullaby-Harp)}}}
+#+MACRO: Maid-Outfit {{{itm(Maid-Outfit)}}}
+#+MACRO: Marble-Clasp {{{itm(Marble-Clasp)}}}
+#+MACRO: Memory-Greatsword {{{itm(Memory-Greatsword)}}}
+#+MACRO: Mermaid-Scalemail {{{itm(Mermaid-Scalemail)}}}
+#+MACRO: Meteor-Staff {{{itm(Meteor-Staff)}}}
+#+MACRO: Metronome-Boots {{{itm(Metronome-Boots)}}}
+#+MACRO: Midsummer-Dress {{{itm(Midsummer-Dress)}}}
+#+MACRO: Mimick-Rabbitfoot {{{itm(Mimick-Rabbitfoot)}}}
+#+MACRO: Miners-Headlamp {{{itm(Miners-Headlamp)}}}
+#+MACRO: Moon-Pendant {{{itm(Moon-Pendant)}}}
+#+MACRO: Moss-Shield {{{itm(Moss-Shield)}}}
+#+MACRO: Mountain-Staff {{{itm(Mountain-Staff)}}}
+#+MACRO: Necronomicon {{{itm(Necronomicon)}}}
+#+MACRO: Nightgleam-Sword {{{itm(Nightgleam-Sword)}}}
+#+MACRO: Nightguard-Gloves {{{itm(Nightguard-Gloves)}}}
+#+MACRO: Nightingale-Gown {{{itm(Nightingale-Gown)}}}
+#+MACRO: Nightstar-Grimoire {{{itm(Nightstar-Grimoire)}}}
+#+MACRO: Ninja-Robe {{{itm(Ninja-Robe)}}}
+#+MACRO: Ninjutsu-Scroll {{{itm(Ninjutsu-Scroll)}}}
+#+MACRO: Nova-Crown {{{itm(Nova-Crown)}}}
+#+MACRO: Obsidian-Hairpin {{{itm(Obsidian-Hairpin)}}}
+#+MACRO: Obsidian-Rod {{{itm(Obsidian-Rod)}}}
+#+MACRO: Occult-Dagger {{{itm(Occult-Dagger)}}}
+#+MACRO: Old-Bonnet {{{itm(Old-Bonnet)}}}
+#+MACRO: Onepiece-Swimsuit {{{itm(Onepiece-Swimsuit)}}}
+#+MACRO: Oni-Staff {{{itm(Oni-Staff)}}}
+#+MACRO: Opal-Necklace {{{itm(Opal-Necklace)}}}
+#+MACRO: Ornamental-Bell {{{itm(Ornamental-Bell)}}}
+#+MACRO: Painters-Beret {{{itm(Painters-Beret)}}}
+#+MACRO: Pajama-Hat {{{itm(Pajama-Hat)}}}
+#+MACRO: Palette-Shield {{{itm(Palette-Shield)}}}
+#+MACRO: Performers-Shoes {{{itm(Performers-Shoes)}}}
+#+MACRO: Peridot-Rapier {{{itm(Peridot-Rapier)}}}
+#+MACRO: Phantom-Dagger {{{itm(Phantom-Dagger)}}}
+#+MACRO: Phoenix-Charm {{{itm(Phoenix-Charm)}}}
+#+MACRO: Pidgeon-Bow {{{itm(Pidgeon-Bow)}}}
+#+MACRO: Pocketwatch {{{itm(Pocketwatch)}}}
+#+MACRO: Pointed-Ring {{{itm(Pointed-Ring)}}}
+#+MACRO: Poisonfrog-Charm {{{itm(Poisonfrog-Charm)}}}
+#+MACRO: Polar-Coat {{{itm(Polar-Coat)}}}
+#+MACRO: Purification-Rod {{{itm(Purification-Rod)}}}
+#+MACRO: Pyrite-Earrings {{{itm(Pyrite-Earrings)}}}
+#+MACRO: Quartz-Shield {{{itm(Quartz-Shield)}}}
+#+MACRO: Queens-Crown {{{itm(Queens-Crown)}}}
+#+MACRO: Raiju-Crown {{{itm(Raiju-Crown)}}}
+#+MACRO: Rainbow-Cape {{{itm(Rainbow-Cape)}}}
+#+MACRO: Raindrop-Earrings {{{itm(Raindrop-Earrings)}}}
+#+MACRO: Ravens-Dagger {{{itm(Ravens-Dagger)}}}
+#+MACRO: Raven-Grimoire {{{itm(Raven-Grimoire)}}}
+#+MACRO: Reaper-Cloak {{{itm(Reaper-Cloak)}}}
+#+MACRO: Red-Tanzaku {{{itm(Red-Tanzaku)}}}
+#+MACRO: Redblack-Ribbon {{{itm(Redblack-Ribbon)}}}
+#+MACRO: Reddragon-Blade {{{itm(Reddragon-Blade)}}}
+#+MACRO: Redwhite-Ribbon {{{itm(Redwhite-Ribbon)}}}
+#+MACRO: Reflection-Shield {{{itm(Reflection-Shield)}}}
+#+MACRO: Ribboned-Staff {{{itm(Ribboned-Staff)}}}
+#+MACRO: Righthand-Cast {{{itm(Righthand-Cast)}}}
+#+MACRO: Robe-of-Dark {{{itm(Robe-of-Dark)}}}
+#+MACRO: Robe-of-Light {{{itm(Robe-of-Light)}}}
+#+MACRO: Rockdragon-Mail {{{itm(Rockdragon-Mail)}}}
+#+MACRO: Rosered-Leotard {{{itm(Rosered-Leotard)}}}
+#+MACRO: Royal-Staff {{{itm(Royal-Staff)}}}
+#+MACRO: Ruby-Circlet {{{itm(Ruby-Circlet)}}}
+#+MACRO: Ruins-Sword {{{itm(Ruins-Sword)}}}
+#+MACRO: Rusted-Greatsword {{{itm(Rusted-Greatsword)}}}
+#+MACRO: Sacred-Bow {{{itm(Sacred-Bow)}}}
+#+MACRO: Sacred-Shield {{{itm(Sacred-Shield)}}}
+#+MACRO: Sacredstone-Charm {{{itm(Sacredstone-Charm)}}}
+#+MACRO: Saltwater-Staff {{{itm(Saltwater-Staff)}}}
+#+MACRO: Sand-Shovel {{{itm(Sand-Shovel)}}}
+#+MACRO: Sandpriestess-Spear {{{itm(Sandpriestess-Spear)}}}
+#+MACRO: Sapphire-Violin {{{itm(Sapphire-Violin)}}}
+#+MACRO: Sawtooth-Cleaver {{{itm(Sawtooth-Cleaver)}}}
+#+MACRO: Seashell-Shield {{{itm(Seashell-Shield)}}}
+#+MACRO: Sewing-Sword {{{itm(Sewing-Sword)}}}
+#+MACRO: Shadow-Bracelet {{{itm(Shadow-Bracelet)}}}
+#+MACRO: Sharpedged-Shield {{{itm(Sharpedged-Shield)}}}
+#+MACRO: Shield-of-Smiles {{{itm(Shield-of-Smiles)}}}
+#+MACRO: Shinobi-Tabi {{{itm(Shinobi-Tabi)}}}
+#+MACRO: Shinsoku-Katana {{{itm(Shinsoku-Katana)}}}
+#+MACRO: Shockwave-Tome {{{itm(Shockwave-Tome)}}}
+#+MACRO: Shrinemaidens-Kosode {{{itm(Shrinemaidens-Kosode)}}}
+#+MACRO: Silver-Coin {{{itm(Silver-Coin)}}}
+#+MACRO: Sketchbook {{{itm(Sketchbook)}}}
+#+MACRO: Sleeping-Greatbow {{{itm(Sleeping-Greatbow)}}}
+#+MACRO: Smoke-Shield {{{itm(Smoke-Shield)}}}
+#+MACRO: Snakefang-Dagger {{{itm(Snakefang-Dagger)}}}
+#+MACRO: Snipers-Eyeglasses {{{itm(Snipers-Eyeglasses)}}}
+#+MACRO: Snow-Boots {{{itm(Snow-Boots)}}}
+#+MACRO: Spark-of-Determination {{{itm(Spark-of-Determination)}}}
+#+MACRO: Sparrow-Feather {{{itm(Sparrow-Feather)}}}
+#+MACRO: Spear-of-Rains {{{itm(Spear-of-Rains)}}}
+#+MACRO: Spear-of-Remorse {{{itm(Spear-of-Remorse)}}}
+#+MACRO: Spear-of-Winds {{{itm(Spear-of-Winds)}}}
+#+MACRO: Spiderbite-Bow {{{itm(Spiderbite-Bow)}}}
+#+MACRO: Spiked-Shield {{{itm(Spiked-Shield)}}}
+#+MACRO: Spinning-Chakram {{{itm(Spinning-Chakram)}}}
+#+MACRO: Springloaded-Scythe {{{itm(Springloaded-Scythe)}}}
+#+MACRO: Staff-of-Sorrow {{{itm(Staff-of-Sorrow)}}}
+#+MACRO: Starry-Cloak {{{itm(Starry-Cloak)}}}
+#+MACRO: Staticshock-Earrings {{{itm(Staticshock-Earrings)}}}
+#+MACRO: Stirring-Spoon {{{itm(Stirring-Spoon)}}}
+#+MACRO: Stonebreaker-Staff {{{itm(Stonebreaker-Staff)}}}
+#+MACRO: Stoneplate-Armor {{{itm(Stoneplate-Armor)}}}
+#+MACRO: Storm-Petticoat {{{itm(Storm-Petticoat)}}}
+#+MACRO: Stormdance-Gown {{{itm(Stormdance-Gown)}}}
+#+MACRO: Straw-Hat {{{itm(Straw-Hat)}}}
+#+MACRO: Strawberry-Cake {{{itm(Strawberry-Cake)}}}
+#+MACRO: Strongmans-Bar {{{itm(Strongmans-Bar)}}}
+#+MACRO: Stuffed-Rabbit {{{itm(Stuffed-Rabbit)}}}
+#+MACRO: Sun-Pendant {{{itm(Sun-Pendant)}}}
+#+MACRO: Sunflower-Crown {{{itm(Sunflower-Crown)}}}
+#+MACRO: Sweet-Taffy {{{itm(Sweet-Taffy)}}}
+#+MACRO: Tactician-Rod {{{itm(Tactician-Rod)}}}
+#+MACRO: Talon-Charm {{{itm(Talon-Charm)}}}
+#+MACRO: Teacher-Knife {{{itm(Teacher-Knife)}}}
+#+MACRO: Thiefs-Coat {{{itm(Thiefs-Coat)}}}
+#+MACRO: Throwing-Dagger {{{itm(Throwing-Dagger)}}}
+#+MACRO: Thunderclap-Gloves {{{itm(Thunderclap-Gloves)}}}
+#+MACRO: Tidal-Greatsword {{{itm(Tidal-Greatsword)}}}
+#+MACRO: Timemage-Cap {{{itm(Timemage-Cap)}}}
+#+MACRO: Timespace-Dagger {{{itm(Timespace-Dagger)}}}
+#+MACRO: Timewarp-Wand {{{itm(Timewarp-Wand)}}}
+#+MACRO: Tiny-Fork {{{itm(Tiny-Fork)}}}
+#+MACRO: Tiny-Hourglass {{{itm(Tiny-Hourglass)}}}
+#+MACRO: Tiny-Wings {{{itm(Tiny-Wings)}}}
+#+MACRO: Topaz-Charm {{{itm(Topaz-Charm)}}}
+#+MACRO: Tornado-Staff {{{itm(Tornado-Staff)}}}
+#+MACRO: Tough-Gauntlet {{{itm(Tough-Gauntlet)}}}
+#+MACRO: Trick-Shield {{{itm(Trick-Shield)}}}
+#+MACRO: Twinstar-Earrings {{{itm(Twinstar-Earrings)}}}
+#+MACRO: Unsacred-Pendant {{{itm(Unsacred-Pendant)}}}
+#+MACRO: Usagi-Kamen {{{itm(Usagi-Kamen)}}}
+#+MACRO: Vampiric-Dagger {{{itm(Vampiric-Dagger)}}}
+#+MACRO: Vanilla-Wafers {{{itm(Vanilla-Wafers)}}}
+#+MACRO: Vega-Spear {{{itm(Vega-Spear)}}}
+#+MACRO: Venom-Hood {{{itm(Venom-Hood)}}}
+#+MACRO: Volcano-Spear {{{itm(Volcano-Spear)}}}
+#+MACRO: Vorpal-Dao {{{itm(Vorpal-Dao)}}}
+#+MACRO: Waterfall-Polearm {{{itm(Waterfall-Polearm)}}}
+#+MACRO: Watermage-Pendant {{{itm(Watermage-Pendant)}}}
+#+MACRO: Whiteflame-Staff {{{itm(Whiteflame-Staff)}}}
+#+MACRO: Whitewing-Bracelet {{{itm(Whitewing-Bracelet)}}}
+#+MACRO: Windbite-Dagger {{{itm(Windbite-Dagger)}}}
+#+MACRO: Winged-Cap {{{itm(Winged-Cap)}}}
+#+MACRO: Winter-Hat {{{itm(Winter-Hat)}}}
+#+MACRO: Witchs-Cloak {{{itm(Witchs-Cloak)}}}
+#+MACRO: Wolf-Hood {{{itm(Wolf-Hood)}}}
+#+MACRO: Youkai-Bracelet {{{itm(Youkai-Bracelet)}}}
+:END:
+:ITEM_TOOLTIP:
+#+MACRO: tRaven-Grimoire Your Special applies Curse.
+#+MACRO: tBlackwing-Staff Your Primary applies Curse.
+#+MACRO: tCurse-Talon Your Secondary applies Curse.
+#+MACRO: tDarkmagic-Blade Every 10s, slices the air around you dealing 300 damage and applying Curse to nearby enemies.
+#+MACRO: tWitchs-Cloak Your Secondary deals 10% more damage. Debuffs you place deal 70% more damage. Slightly increases movement speed.
+#+MACRO: tCrowfeather-Hairpin Increases Special damage by 20%. When you place a debuff on an opponent, your Special has a 50% chance of resetting.
+#+MACRO: tRedblack-Ribbon You deal 5% more damage. When you place a debuff on an opponent, your Defensive has a 50% chance of resetting.
+#+MACRO: tOpal-Necklace When you use your Defensive, apply Curse to all enemies.
+#+MACRO: tSleeping-Greatbow Every 6s, fires a slow-moving projectile at your targeted enemy that deals 200 damage.
+#+MACRO: tCrescentmoon-Dagger Every 10s, your Secondary will deal an additional 400 damage on hit.
+#+MACRO: tLullaby-Harp Every 10s, resets Defensive cooldowns for you and all allies.
+#+MACRO: tNightstar-Grimoire Every 25s, deal 900 damage to all enemies.
+#+MACRO: tMoon-Pendant Every 12s, using your Special will deal 400 damage to enemies in a moderate radius around you.
+#+MACRO: tPajama-Hat Defensive and loot cooldowns are shortened by 2s.
+#+MACRO: tStuffed-Rabbit Increases Special damage by 20%. Every 12s, using your Special will grant you invulnerability for 3s. Starts battle on cooldown.
+#+MACRO: tNightingale-Gown Every 15s, Omegacharge your Special.
+#+MACRO: tEternity-Flute Every 12s, grants Haste to all allies.
+#+MACRO: tTimewarp-Wand Your Secondary has a 40% chance of giving you Haste.
+#+MACRO: tChrome-Shield Using your Defensive will grant you Haste.
+#+MACRO: tClockwork-Tome Your Special has a 50% chance of giving you Haste.
+#+MACRO: tMetronome-Boots Your GCDs become 1.1s. Also moderately increases movement speed.
+#+MACRO: tTimemage-Cap Cooldowns less than or equal to 10s become 5s.
+#+MACRO: tStarry-Cloak Your Defensive's cooldown becomes 10s. Slightly increases movement speed.
+#+MACRO: tGemini-Necklace Your Special and Defensive have a 30% chance of instantly resetting when used.
+#+MACRO: tHawkfeather-Fan Reduces your Special's cooldown by 2s.
+#+MACRO: tWindbite-Dagger Your Secondary's GCD becomes 0.5s, but its damage is reduced by 60%.
+#+MACRO: tPidgeon-Bow Every 3s, fires a projectile at your targeted enemy that deals 70 damage.
+#+MACRO: tShinsoku-Katana Your Primary's GCD has a 50% chance to be 0.8s instead of its normal amount.
+#+MACRO: tEaglewing-Charm All your abilities deal 20 more damage. Significantly increases movement speed.
+#+MACRO: tSparrow-Feather Deals 50 damage to all enemies when your Primary or Secondary is used.
+#+MACRO: tWinged-Cap Grants a brief speed boost when your Secondary is used. Moderately increases movement speed.
+#+MACRO: tThiefs-Coat Every 10s, Gain Vanish and gain a brief speed boost when you use your Special. Moderately increases movement speed.
+#+MACRO: tVampiric-Dagger Your Secondary inflicts Bleed.
+#+MACRO: tBloody-Bandage When you use your Defensive, apply Bleed to all enemies.
+#+MACRO: tLeech-Staff Your Primary inflicts Bleed.
+#+MACRO: tBloodhound-Greatsword Every 12s, slices the air around you dealing 380 damage and applying Bleed to nearby enemies.
+#+MACRO: tReaper-Cloak Your Defensive additionally deals 100 damage 3 times to enemies facing away from you. Slightly increases movement speed.
+#+MACRO: tBloodflower-Brooch All abilities deal 40 damage 2 times to the 2 closest enemies facing away from you.
+#+MACRO: tWolf-Hood Every 6 seconds when you use your Primary, deal 250 damage to enemies facing away from you. Moderately increases movement speed.
+#+MACRO: tBlood-Vial At the start of each fight, inflict all enemies with Sap.
+#+MACRO: tBlack-Wakizashi Your Primary has a 30% chance of dealing an additional 3 blows, dealing 50 damage each, in a radius around your target enemy.
+#+MACRO: tThrowing-Dagger Every 5s, fires a projectile at your targeted enemy that deals 120 damage. Cooldown resets every time you use your Special.
+#+MACRO: tAssassins-Knife Your Secondary has a 30% chance of dealing an additional 2 blows, dealing 50 damage each, in a radius around your target enemy.
+#+MACRO: tNinjutsu-Scroll Your Special has a 30% chance of dealing an additional 3 blows, dealing 150 damage each, in a radius around your target enemy.
+#+MACRO: tShadow-Bracelet Abilities and loot that hit more than once deal 30 more damage.
+#+MACRO: tNinja-Robe When a % chance succeeds, erase projectiles around you and Vanish. Slightly increases movement speed.
+#+MACRO: tKunoichi-Hood Your abilities do 15 more damage. Your loot does 50 more damage. Slightly increases movement speed.
+#+MACRO: tShinobi-Tabi Standing still will cause you to Vanish and resets your Special. Available every 8s. Starts battle on cooldown. Slightly increases movement speed.
+#+MACRO: tDragonhead-Spear Your Primary is 40% more powerful, but gains a cooldown of 3s. Also slightly reduces movement speed.
+#+MACRO: tGranite-Greatsword Every 16s, slices a large radius around you dealing 700 damage.
+#+MACRO: tGreysteel-Shield Your Defensive has a 30% larger radius. Invulnerability effects last 1s longer.
+#+MACRO: tStonebreaker-Staff Your Special's cooldown is increased by 2s, but deals 40% more damage.
+#+MACRO: tTough-Gauntlet Your abilities and loot all deal 30% more damage, but all GCDs are 0.2s longer.
+#+MACRO: tRockdragon-Mail Your movement speed is slightly reduced. Every 30 seconds, your Defensive will grant you Dragonskin. Cooldown cannot be reset by ability or loot effects.
+#+MACRO: tObsidian-Hairpin Increases Special damage by 20%. Whenever you gain invulnerability, your Special has a 50% chance of resetting.
+#+MACRO: tIron-Greaves Every 12s, standing still will grant brief invulnerability and reset your Defensive. Movement speed is slightly reduced. Starts battle on cooldown.
+#+MACRO: tVolcano-Spear Your Primary inflicts Burn.
+#+MACRO: tReddragon-Blade Your Secondary inflicts Burn.
+#+MACRO: tFlame-Bow Every 10s, fires a projectile at your targeted enemy that deals 180 damage and applies Burn.
+#+MACRO: tMeteor-Staff Your Special inflicts Burn.
+#+MACRO: tPhoenix-Charm If you perish in battle, restore to full HP instead. Only works once.
+#+MACRO: tFirescale-Corset All of your cooldowns are reduced by 3s. If you use your Defensive, this effect ends until the end of battle.
+#+MACRO: tDemon-Horns All your abilities and loot deal 30% more damage. If you use your Defensive, this effect ends until the end of battle.
+#+MACRO: tFlamewalker-Boots All GCDs are shortened by 0.2 seconds and your movement speed is increased significantly. If you use your Defensive, this effect ends until the end of battle.
+#+MACRO: tDiamond-Shield When a % chance succeeds, place down a small field for 2 seconds that erases projectiles. While standing in the field, allies don't take damage. This effect has a cooldown of 10 seconds, and can't be reset by ability or loot effects.
+#+MACRO: tPeridot-Rapier Increases Secondary damage by 20%. Every 8s, using your Secondary will grant you brief invulnerability and erase projectiles in a large radius around you.
+#+MACRO: tGarnet-Staff Increases Special damage by 20%. Your Special will erase projectiles in a radius around you and grant brief invulnerability.
+#+MACRO: tSapphire-Violin Every 18s, grants Elegy to all allies. Breaks if you take damage 2 times. Starts battle on cooldown.
+#+MACRO: tEmerald-Chestplate The counter on this item will decrease instead of you taking damage. The counter starts at 3 on pickup.
+#+MACRO: tAmethyst-Bracelet Deal 30% more damage. Breaks if you take damage 3 times.
+#+MACRO: tTopaz-Charm Gain 8 extra Gold at the end of each fight. Breaks if you take damage 3 times.
+#+MACRO: tRuby-Circlet Your Special deals 80% more damage. Breaks if you take damage once.
+#+MACRO: tBrightstorm-Spear Has a 30% chance of dealing 100 damage to all enemies when your Primary does damage.
+#+MACRO: tBolt-Staff Deals 150 damage to all enemies when you use your Special.
+#+MACRO: tLightning-Bow Every 12s, fires a projectile at your targeted enemy that deals 300 damage. Cooldown instantly resets when a % chance succeeds.
+#+MACRO: tDarkstorm-Knife Has a 30% chance of dealing 100 damage to all enemies when your Secondary does damage.
+#+MACRO: tDarkcloud-Necklace Damage from loot is increased 50%.
+#+MACRO: tCrown-of-Storms When a % chance succeeds, deal 200 damage to all enemies.
+#+MACRO: tThunderclap-Gloves All abilities have a 20% chance of dealing 200 damage to all enemies when used.
+#+MACRO: tStorm-Petticoat Do 250 damage to all enemies when you gain invulnerability.
+#+MACRO: tHoly-Greatsword Every 10s, grants you Smite and then slices the air around you, dealing 200 damage to nearby enemies.
+#+MACRO: tSacred-Bow Every 10s, fires a projectile at your targeted enemy that deals 250 damage. Cooldown instantly resets when you gain a buff.
+#+MACRO: tPurification-Rod Every 18s, using your Primary will give you Elegy.
+#+MACRO: tOrnamental-Bell Every 15s, grants Smite to all allies.
+#+MACRO: tShrinemaidens-Kosode When you have a buff, your movement speed increases significantly and you deal 25% more damage.
+#+MACRO: tRedwhite-Ribbon You deal 5% more damage. Buffs you place last 50% longer.
+#+MACRO: tDivine-Mirror Every 10 times you use an ability, deal 500 damage to all enemies.
+#+MACRO: tGolden-Chime Every 2 times you use your Defensive, gain Elegy.
+#+MACRO: tBook-of-Cheats Your Special will have random, chaotic effects.
+#+MACRO: tGolden-Katana Your Primary and Secondary have a 5% chance to deal 100 damage 5 times to a large radius around your targeted enemy when used.
+#+MACRO: tGlittering-Trumpet Every 20s, grant Rabbitluck to all allies. Cooldown cannot be reset by ability or loot effects.
+#+MACRO: tRoyal-Staff Your Special deals extra damage based on how much gold you have (1% for every 1 gold).
+#+MACRO: tBallroom-Gown Makes you slightly luckier and slightly increases your movement speed.
+#+MACRO: tSilver-Coin On pickup, gain 30 gold.
+#+MACRO: tQueens-Crown When you have at least 20 gold, become slightly luckier. When you have at least 50 gold, become dramatically luckier.
+#+MACRO: tMimick-Rabbitfoot Makes you significantly luckier. Not a real rabbit's foot.
+#+MACRO: tButterfly-Ocarina On pickup, heal all allies for 1. Heals all allies for 1 HP every 2 fights.
+#+MACRO: tFairy-Spear Your Primary has a 30% larger radius and deals 40% more damage, but stops movement when used.
+#+MACRO: tMoss-Shield Every 12s, using your Defensive will reset its cooldown instantly.
+#+MACRO: tFloral-Bow Every 6s, fires a projectile at your targeted enemy that deals 250 damage. Only activates while standing still.
+#+MACRO: tBlue-Rose Your max HP is increased by 1. Has a 50% chance of healing you for 1 and granting you 100 XP at the end of each fight.
+#+MACRO: tSunflower-Crown Your max HP is increased by 1. You become able to graze slightly into a projectile without taking damage. Slightly increases movement speed.
+#+MACRO: tMidsummer-Dress Your max HP is increased by 1. Ability or loot effects that temporarily slow your movement no longer affect you. Slightly increases movement speed.
+#+MACRO: tGrasswoven-Bracelet Your max HP is increased by 1. All abilities and loot's hitboxes are 30% larger. Slightly increases movement speed.
+#+MACRO: tSnakefang-Dagger Your Secondary applies Poison.
+#+MACRO: tIvy-Staff Your Primary applies Poison.
+#+MACRO: tDeathcap-Tome Your Special applies Poison.
+#+MACRO: tSpiderbite-Bow Every 10s, fires a projectile at your targeted enemy that deals 50 damage and applies Poison.
+#+MACRO: tCompound-Gloves When you deal damage, has a 20% chance to apply Decay.
+#+MACRO: tPoisonfrog-Charm At the start of each fight, inflict all enemies with Poison for 99 seconds.
+#+MACRO: tVenom-Hood Your abilities do 15 more damage. Debuffs you place deal 50 more damage.
+#+MACRO: tChemists-Coat Your Defensive applies Poison to nearby enemies. Slightly increases movement speed.
+#+MACRO: tSeashell-Shield Your Defensive has a random cooldown between 1s and 15s every time you use it.
+#+MACRO: tNecronomicon Every 8s, using your Special will reset its cooldown instantly and gains Charge.
+#+MACRO: tTidal-Greatsword Each cooldown, slices a large radius around you dealing 450 damage. Cooldown is equal to the longest cooldown among your other loot and abilities.
+#+MACRO: tOccult-Dagger Your Secondary is 80% more powerful. 5s of cooldown is added to your Secondary.
+#+MACRO: tMermaid-Scalemail All cooldowns are reduced by 2s. All loot and abilities with cooldowns start battles on a 8s cooldown.
+#+MACRO: tHydrous-Blob Every 8s, using your Secondary will fire an eldritch beast towards your target, dealing 300 damage. Starts battles on cooldown.
+#+MACRO: tAbyss-Artifact Every 30s, using your Defensive will grant you Super. Starts on a 15s cooldown.
+#+MACRO: tLost-Pendant When a % chance succeeds, apply Decay to all enemies for 10 seconds.
+#+MACRO: tSawtooth-Cleaver Increases your Primary's damage by 30%, but decreases its radius by 20%.
+#+MACRO: tRavens-Dagger Increases your Secondary's damage by 50%, but decreases its radius by 40%.
+#+MACRO: tKilling-Note Increases your Special's damage by 30%, but decreases its radius by 20%.
+#+MACRO: tBlacksteel-Buckler Your Defensive's range decreases by 30%, but now has a 2s shorter cooldown and grants Counter.
+#+MACRO: tNightguard-Gloves Whichever ability has the highest base damage value deals 20% more damage.
+#+MACRO: tSnipers-Eyeglasses You deal 30% more damage when you are separated from your target by at least 3 rabbitleaps.
+#+MACRO: tDarkmage-Charm When you've been standing still for 1s, your Special deals 40% more damage.
+#+MACRO: tFirststrike-Bracelet Every 15s, gain Blackstrike when you use your Secondary.
+#+MACRO: tObsidian-Rod Your Special's strength becomes the total cooldown time of all your abilities and loot, in seconds, multiplied by 10, divided by the times it hits your target (Maximum of 1000 total).
+#+MACRO: tDarkglass-Spear Your Primary's strength becomes your Special's cooldown, multiplied by 30, minus your Secondary's strength, divided by the times your Primary hits your target (Maximum of 500 total).
+#+MACRO: tTimespace-Dagger Your Secondary's strength becomes your Special and Defensive's cooldown added together, multiplied by 10, divided by the times your Secondary hits your target. (Maximum of 500 total).
+#+MACRO: tQuartz-Shield Your Defensive's cooldown becomes 2 seconds longer. All other cooldowns become 2 seconds shorter.
+#+MACRO: tPocketwatch Abilities with a GCD less than or equal to 1.1s deal 30% more damage.
+#+MACRO: tNova-Crown Your Special's cooldown becomes 30s. Every 8s, this loot item resets your Special and Charge it.
+#+MACRO: tBlackhole-Charm Deal 200 damage to all enemies when you use an ability or loot item with a cooldown of 10s or more. Hits one extra time for every 10s longer the cooldown is than that, up to 5 times.
+#+MACRO: tTwinstar-Earrings Your Primary and Secondary now have a 2s GCD, and deal 70% more damage.
+#+MACRO: tKyou-No-Omikuji All damage you deal increases by 20%. % chance triggers no longer happen.
+#+MACRO: tYoukai-Bracelet All abilities, loot, and damaging debuffs deal 40 more damage. If a % chance succeeds, this effect ends until the end of battle.
+#+MACRO: tOni-Staff Your Special deals 30% more damage. When a % chance succeeds, your Special goes on an 8s cooldown.
+#+MACRO: tKappa-Shield Your Defensive has a 3s shorter cooldown, but can no longer be reset by ability or loot effects.
+#+MACRO: tUsagi-Kamen When a % chance succeeds, gain a random buff for 5s.
+#+MACRO: tRed-Tanzaku Miracles occasionally happen.
+#+MACRO: tVega-Spear Your Primary deals 70% more damage, but gains a 7s cooldown. When a % chance succeeds, its cooldown resets.
+#+MACRO: tAltair-Dagger Whenever you use your Secondary, has a 70% chance to additionally slice to your left and right, dealing 80 damage. Damage and radius increase by 30% for every time in a row this effect succeeds, up to 9 times.
+#+MACRO: tGhost-Spear Your Primary now only deals 10 damage, and applies Ghostflame.
+#+MACRO: tPhantom-Dagger Your Secondary now only deals 10 damage, and applies Ghostflame.
+#+MACRO: tCursed-Candlestaff Your Special now only deals 10 damage, and applies Ghostflame.
+#+MACRO: tHaunted-Gloves Abilities and loot that hit for 100 damage or less now hit for 100 damage, regardless of other loot effects.
+#+MACRO: tOld-Bonnet Abilities and loot that hit once now deal 250 damage, regardless of other loot effects or ability effects.
+#+MACRO: tMaid-Outfit Afflicts surrounding enemies with Ghostflame when you gain invulnerability. Slightly increases movement speed.
+#+MACRO: tCalling-Bell Every 12s, afflicts surrounding enemies with Ghostflame.
+#+MACRO: tSmoke-Shield Every 15s, your Defensive now grants Ghost. Your Secondary no longer breaks Vanish or Ghost. Starts battle on a 5 second cooldown.
+#+MACRO: tGrandmaster-Spear Your Primary's damage increases by 40%. Your Special's cooldown increases by 4s.
+#+MACRO: tTeacher-Knife Your Secondary's damage increases by 40%. 2s of cooldown is added to your Primary.
+#+MACRO: tTactician-Rod Your Special's damage increases by 30%. 2s of cooldown is added to your Secondary.
+#+MACRO: tSpiked-Shield When an ability or loot effect erases projectiles in a radius around you, deal 300 damage to that radius as well.
+#+MACRO: tBattlemaiden-Armor Using your Defensive will reset loot and ability cooldowns with less than 8s left on their timer.
+#+MACRO: tGladiator-Helmet Abilities and loot that have cooldowns deal 20% more damage.
+#+MACRO: tLancer-Gauntlets All damage is increased by 30%. Your Primary and Secondary gain cooldowns of 2s.
+#+MACRO: tLion-Charm Deal 180 damage to nearby enemies when an ability or loot with a cooldown is activated.
+#+MACRO: tBluebolt-Staff Your Primary applies Spark.
+#+MACRO: tLapis-Sword Your Secondary applies Spark.
+#+MACRO: tShockwave-Tome Your Special applies Spark.
+#+MACRO: tBattery-Shield Every 30 times you or debuffs you apply deal damage to an enemy, your Defensive's cooldown resets.
+#+MACRO: tRaiju-Crown Every 20 times you or debuffs you apply deal damage to an enemy, apply Spark. to all enemies.
+#+MACRO: tStaticshock-Earrings Every 10 times you or debuffs you apply deal damage to an enemy, deal 200 damage to all enemies.
+#+MACRO: tStormdance-Gown Every 40 times you or debuffs you apply deal damage to an enemy, gain invulnerability for 5s.
+#+MACRO: tBlackbolt-Ribbon Every 50 times you or debuffs you apply deal damage to an enemy, deal 1200 damage to all enemies.
+#+MACRO: tCrane-Katana Gain Flow-Str every time you move 15 rabbitleaps.
+#+MACRO: tFalconfeather-Dagger Gain Flow-Dex every time you move 15 rabbitleaps.
+#+MACRO: tTornado-Staff Gain Flow-Int every time you move 15 rabbitleaps.
+#+MACRO: tCloud-Guard Gain invulnerability for 1 second every time you move 10 rabbitleaps.
+#+MACRO: tHermes-Bow Every 10s, fires a projectile at your targeted enemy that deals 250 damage. Cooldown resets every time you move 10 rabbitleaps.
+#+MACRO: tTalon-Charm Deals 150 damage to all enemies every time you move 5 rabbitleaps.
+#+MACRO: tTiny-Wings Dramatically increases movement speed.
+#+MACRO: tFeathered-Overcoat Start each battle with Feathercoat.
+#+MACRO: tSandpriestess-Spear Your Primary has a 40% chance to grant you Flash-Dex.
+#+MACRO: tFlamedancer-Dagger Your Secondary has a 40% chance to grant you Flash-Str.
+#+MACRO: tWhiteflame-Staff Every 2 times you use your Special, gain Flash-Str.
+#+MACRO: tSacred-Shield Every 2 times you use your Defensive, gain Flash-Int.
+#+MACRO: tMarble-Clasp Every 5 times you use an ability, gain Flash-Dex.
+#+MACRO: tSun-Pendant Every 10 times you use an ability, reset your Special's cooldown and gain Flash-Int.
+#+MACRO: tTiny-Hourglass Every 12s, deal 120 damage to all enemies. Damage increase by 120 each time it activates. This loot cannot hit for critical damage.
+#+MACRO: tDesert-Earrings Every time you gain a buff, gain another random buff for 5s.
+#+MACRO: tGiant-Stone-Club Your Primary deals 70% more damage. Its GCD is increased by 0.6s. Your movement speed is also moderately reduced.
+#+MACRO: tRuins-Sword Your Secondary deals 100% more damage. Its GCD is increased by 0.8s. Your movement speed is also slightly reduced.
+#+MACRO: tMountain-Staff Your Special deals 200% more damage. Its GCD is increased by 2.5s. Your movement speed is also moderately reduced.
+#+MACRO: tBoulder-Shield Every 30s, using your Defensive will grant all allies Stoneskin. Starts battle off cooldown. Reduces your movement speed slightly.
+#+MACRO: tGolems-Claymore Every 20s, grants you Stoneskin and then slices the air around you, dealing 500 damage to nearby enemies. Also slows your movement speed slightly.
+#+MACRO: tStoneplate-Armor Start each battle with Graniteskin.
+#+MACRO: tSacredstone-Charm Abilities with a GCD equal to or higher than 1.5s deal 50% more damage.
+#+MACRO: tClay-Rabbit Every 16 seconds, standing still will grant you Tranquility.
+#+MACRO: tWaterfall-Polearm Every 10s, when you use your Primary, gain Flow-Str
+#+MACRO: tVorpal-Dao Every 10s, when you use your Secondary, gain Flow-Dex.
+#+MACRO: tJade-Staff Every 16 seconds, when you use your Special, gain Tranquility.
+#+MACRO: tReflection-Shield When you erase projectiles in a radius around you, gain Counter
+#+MACRO: tButterfly-Hairpin When you gain invincibility, gain a random buff for 5s.
+#+MACRO: tWatermage-Pendant Every 12s, when you stand still, gain Flow-Int.
+#+MACRO: tRaindrop-Earrings Every 18s, when you stand still, gain Repeat.
+#+MACRO: tAquamarine-Bracelet Every 12s, gain a random buff for 10s.
+#+MACRO: tGlacier-Spear Your Primary applies Freeze.
+#+MACRO: tFrost-Dagger Your Secondary applies Freeze.
+#+MACRO: tFrozen-Staff Your Special applies Freeze.
+#+MACRO: tColdsteel-Shield When you use your Defensive, deal 70 damage 3 times in a radius around you, applying Freeze.
+#+MACRO: tPolar-Coat Slightly increases movement speed. When you gain invincibility, apply Deepfreeze to all enemies.
+#+MACRO: tIcicle-Earrings When a % chance succeeds, apply Deepfreeze to all enemies.
+#+MACRO: tWinter-Hat Abilities with a GCD less than or equal to 1.10 seconds apply Freeze on hit.
+#+MACRO: tSnow-Boots Slightly increases movement speed. When you stand still for 1 second, apply Freeze to all enemies once per second.
+#+MACRO: tSpear-of-Remorse Every 7 seconds, using any attack will grant you Flash-Str. Cooldown is set to 20 seconds when you use your Defensive. Starts fights on cooldown.
+#+MACRO: tMemory-Greatsword Deals 280 damage in a radius around you every 30 seconds. Cooldown is set to 6 seconds when you use your Secondary. Starts fights on cooldown.
+#+MACRO: tStaff-of-Sorrow Every 30, using any attack will reset your Special and grant you Flash-Int. Cooldown is set to 7 seconds when you use your Primary. Starts fights on cooldown.
+#+MACRO: tShield-of-Smiles Grants yourself and nearby allies a random buff for 8 seconds every 30 seconds. Cooldown is set to 5 seconds when you use your Defensive. Starts fights on cooldown.
+#+MACRO: tLonesome-Pendant All cooldowns equal to or over 15 seconds are reduced to 12 seconds.
+#+MACRO: tSpark-of-Determination Every time you use an ability, has a 15% chance to reset the cooldown with the most time remaining.
+#+MACRO: tCrown-of-Love Whenever you activate the longest cooldown among your abilities and loot, deal 400 damage in a large radius around you.
+#+MACRO: tComforting-Coat When you use your Defensive, deals 80 damage in a radius around you once for every ability or loot that has a cooldown.
+#+MACRO: tRighthand-Cast Deal 40% more damage. Your Primary becomes permanently unusable.
+#+MACRO: tLefthand-Cast Deal 40% more damage. Your Secondary becomes permanently unusable.
+#+MACRO: tHexed-Blindfold All GCDs are reduced by 0.40 seconds. Your Special becomes permanently unusable.
+#+MACRO: tAngels-Halo Deal 40% more damage. Your Defensive becomes permanently unusable.
+#+MACRO: tUnsacred-Pendant Deal 20% more damage. When you use an ability, that ability is disabled until you use another ability.
+#+MACRO: tWhitewing-Bracelet The first attack you use each fight will deal 40 more damage (per hit) for the rest of the fight.
+#+MACRO: tDarkcrystal-Rose Your max HP is increased by 1. If you win a fight without using your Defensive, heals you for 1 and grants you 100 XP.
+#+MACRO: tDark-Wings All of your cooldowns are reduced by 2 seconds and movement speed is dramatically increased. If you use the same ability twice in a row, this effect ends until the end of battle.
+#+MACRO: tGiant-Paintbrush Your Primary applies Paint.
+#+MACRO: tSewing-Sword Your Secondary applies Paint.
+#+MACRO: tSketchbook Your Special applies Paint.
+#+MACRO: tPalette-Shield Deals 100 damage and applies Paint to all enemies when you use your Defensive.
+#+MACRO: tHandmade-Charm Every 8 seconds, deal 70 damage and apply a random debuff to all enemies for 5 seconds.
+#+MACRO: tPainters-Beret Deal 5% more damage. When a debuff you applied wears off, deal 120 damage in an explosion around that enemy.
+#+MACRO: tArtist-Smock Moderately increases movement speed. When a debuff you applied wears off, has a 50% chance to deal 120 damage and apply a copy of that debuff.
+#+MACRO: tColorful-Earrings When a % chance succeeds, deal 50 damage and apply a random debuff to all enemies for 5 seconds.
+#+MACRO: tDaylight-Sword Every 18 seconds, deals 300 damage to a radius around you. Cooldown is reduced by 3 seconds when you use your Primary. Transforms into the Nightgleam Sword after it activates. Starts fights on cooldown.
+#+MACRO: tNightgleam-Sword Every 18 seconds, deals 100 damage 3 times to a radius around you. Cooldown is reduced by 3 seconds when you use your Secondary. Transforms into the Daylight Sword after it activates. Starts fights on cooldown.
+#+MACRO: tSpear-of-Winds When you use your Primary, reduce the cooldown of your Special by 2 seconds. Transforms into the Spear of Rains after you've used 5 abilities.
+#+MACRO: tSpear-of-Rains Deals 150 damage to all enemies when you use your Special. Transforms into the Spear of Winds after you've used 5 abilities.
+#+MACRO: tHeavens-Codex Your Special deals 20% more damage and instantly resets upon use. Transforms into the Hell's Codex after you've used 3 abilities.
+#+MACRO: tHells-Codex Disables your Special. Your abilities deal 30 more damage. Transforms into the Heaven's Codex after you've used 8 abilities.
+#+MACRO: tRobe-of-Light You become significantly luckier. Transforms into the Robe of Dark when you use your Defensive.
+#+MACRO: tRobe-of-Dark All GCDs are reduced by 0.2 seconds. % chance triggers no longer happen. Transforms into the Robe of Light when you use your Defensive.
+#+MACRO: tHooked-Staff When you have a buff, your Special will always hit for critical damage.
+#+MACRO: tSpringloaded-Scythe Whenever you use any ability other than your Primary, your next Primary will always hit for critical damage.
+#+MACRO: tHidden-Blade Whenever you use any ability other than your Secondary, your next Secondary will always hit for critical damage.
+#+MACRO: tSharpedged-Shield Critical hits deal 20% more damage. When you use your Defensive, deal 40 damage 3 times to a large radius around you. This attack will always deal critical damage.
+#+MACRO: tPointed-Ring Critical hits deal 100% more damage.
+#+MACRO: tCrown-of-Swords Every 6 times abilities or loot items other than this one deal critical damage, deal 250 damage to all enemies.
+#+MACRO: tBladed-Cloak Critical hits deal 30% more damage. Moderately increases movement speed.
+#+MACRO: tGreatsword-Pendant Critical hits deal 20% more damage. Loot will always deal critical damage.
+#+MACRO: tRusted-Greatsword Every 12 seconds, deal 150 damage to a radius around you and grant self and nearby allies Wavestrike.
+#+MACRO: tSand-Shovel Every 6 seconds, your Secondary grants Flash-Chr to nearby allies.
+#+MACRO: tSaltwater-Staff Your Special grants Flash-Chr to nearby allies.
+#+MACRO: tLarge-Umbrella Every 14 seconds, your Defensive grants Wavestrike to nearby allies, and its radius is significantly increased.
+#+MACRO: tOnepiece-Swimsuit When a % chance succeeds, grants Flash-Chr to nearby allies. Moderately increases movement speed.
+#+MACRO: tStraw-Hat Become dramatically luckier when you have at least one buff.
+#+MACRO: tLarge-Anchor Every 7 seconds, using your Primary grants you Wavestrike. Moderately reduces movement speed.
+#+MACRO: tBeach-Sandals Moderately increases movement speed. Every time you move 8 rabbitleaps, grant Flash-Chr to nearby allies.
+#+MACRO: tStrongmans-Bar Whenever you use your Primary directly after your Secondary, deal 200 damage in a radius around you.
+#+MACRO: tSpinning-Chakram Every 3 times you use an ability, deal 80 damage twice to your left and right.
+#+MACRO: tRibboned-Staff Whenever you use your Special directly after your Secondary, deal 350 damage in a large radius around you.
+#+MACRO: tTrick-Shield Whenever you use your Defensive directly after your Secondary, deal 350 damage in a large radius around you.
+#+MACRO: tRosered-Leotard Gain Quickdraw when you use your Defensive.
+#+MACRO: tJesters-Hat When you use an ability that doesn't deal damage, deal 200 damage in a radius around you.
+#+MACRO: tRainbow-Cape Gives you a copy of the loot item you picked up last.
+#+MACRO: tPerformers-Shoes Significantly increases movement speed. Every 10 times you use an ability, gain Quickdraw.
+#+MACRO: tIron-Pickaxe When your Primary deals damage, it has a 20% chance to deal 300 damage in an explosion at the point of impact. This effect has a 5 second cooldown.
+#+MACRO: tDynamite-Staff Every 15 seconds, using your Special additionally throws a bomb a fixed distance in front of you, dealing 700 damage. Starts fights on cooldown.
+#+MACRO: tFossil-Dagger Every 4 seconds, using your Secondary additionally slices to your left and right, dealing 150 damage.
+#+MACRO: tDrill-Shield Every 10 seconds, using your Defensive additionally fires a projectile that explodes upon impact, dealing 400 damage to a large area. Starts fights on cooldown.
+#+MACRO: tCanary-Charm Increases your damage by 5%. Every 15 seconds, increases damage by an additional 5%, to a maximum of 50%.
+#+MACRO: tPyrite-Earrings Increases your damage by 5%, and by an additional 10% for every piece of loot that deals damage (including those that apply damaging status effects).
+#+MACRO: tCavers-Cloak When you gain invulnerability, reduce all cooldowns by 2 seconds.
+#+MACRO: tMiners-Headlamp Every 6 seconds, reduce all other cooldowns by 2 seconds. Starts fights on cooldown.
+#+MACRO: tTiny-Fork While active, your Primary deals 120% more damage. Starts fights inactive, and switches between active and inactive every 6 seconds.
+#+MACRO: tStirring-Spoon While active, your Secondary deals 120% more damage. Starts fights active, and switches between active and inactive every 6 seconds.
+#+MACRO: tFanciful-Book Your Special deals 20% more damage. For every loot that is "spent" (greyed out with no effect), your Special deals 40% more damage.
+#+MACRO: tApple-Plate Reduces your Defensive's cooldown by 2 seconds. For every loot that is "spent" (greyed out with no effect), ALL cooldowns are reduced by 1 second.
+#+MACRO: tVanilla-Wafers Heals you for 1 and gives you 5 gold when you pick this item, then again at the end of the next 5 fights.
+#+MACRO: tCaramel-Tea Grants Elegy for 45 seconds at the beginning of each fight. Works for 6 fights.
+#+MACRO: tStrawberry-Cake Heals you for 1, and starts with 2 charges on pickup. When you take damage, 1 charge will be expended to heal you. All damage is increased by 10% for each charge still remaining.
+#+MACRO: tSweet-Taffy For the next 6 fights, heal for 1 and deal 2500 damage to all enemies at the beginning of the fight. This loot cannot hit for critical damage.
+:END:
+:ABILITY_TOOLTIP:
+# Regexps to replace up/downarrows
+# '<,'>s/\\uparrow/\&#x2191;/g
+# '<,'>s/\\downarrow/\&#x2193;/g
+#+MACRO: tN1 Deal 100x2 by 420px radius.
+#+MACRO: tN2 Deal 100x2 by 400px-wide box; leaps if >3 rabbitleaps (0.7s invuln.)
+#+MACRO: tN3 Deal 250 to all enemies. -m/s on use.
+#+MACRO: tN4 Deal 90x4 by 420px radius; 1450ms invuln; -m/s on use.
+#+MACRO: tO1 Reset cooldowns &le;4s.
+#+MACRO: tS1 Hits once on Secondary use.
+#+MACRO: tR1 Gain Omegacharge on invuln.
+#+MACRO: tG1 On any hit by other abilities, 25% to deal one hit's damage to all enemies.
+#+MACRO: tE1 On 4th use, deal damage 10 times, sets 2.0s GCD and harsh -m/s on use.
+#+MACRO: tO2 Inflicts +20% Shadowcurse debuff (5s.)
+#+MACRO: tS2 (-leap) Deal &#x2191;110x2 on ranged 400px radius; Charge on other ability use (max 1); 700ms invuln on Charge use.
+#+MACRO: tR2 Deals 180. On leaps, trigger again in 600px radius.
+#+MACRO: tG2 (-leap, -dmg, -invuln) +m/s. 40% chances to Supercharge+reset Special or Def.
+#+MACRO: tE2 +30% damage and radius per consecutive use (max 9.)
+#+MACRO: tO3 (&#x2191;15s CD) Deals &#x2191;1000. Starts on CD. Disables % triggers.
+#+MACRO: tS3 (-slow) oGCD
+#+MACRO: tR3 40% chance to Supercharge+reset itself.
+#+MACRO: tG3 Deal &#x2191;280; grants all players +15% Shadowcry buff; and erase bullets by 250px radius.
+#+MACRO: tE3 Random effects.
+#+MACRO: tO4 (&#x2193;10s CD) (+leap) Deal 90x3. Now always leaps. Grants 10s Ability Haste. 1000ms invuln.
+#+MACRO: tS4 (&#x2193;10s CD) oGCD
+#+MACRO: tR4 Deal &#x2193;300. Damage on other invuln effects. &#x2193;1400ms invuln.
+#+MACRO: tG4 Deal &#x2191;140x4 to all enemies; gain +10% luck.
+#+MACRO: tE4 (&#x2191;20s CD) Deal &#x2191;90x10. Unresettable. &#x2191;1700ms invuln.
+:END:
+:OTHER_TOOLTIPS:
+#+MACRO: tShackles On ability use, an attack is disabled randomly.
 :END:
 
-* RENEW Intro
+* RENEW Homepage
 :PROPERTIES:
-:CUSTOM_ID: h:intro
+:EXPORT_FILE_NAME: _index
+:EXPORT_HUGO_TYPE: homepage
+:EXPORT_HUGO_SECTION: /
+:EXPORT_HUGO_MENU: :menu "1.main" :title "Homepage"
+:CUSTOM_ID: main
 :END:
 
 #+begin_center
@@ -151,73 +1037,73 @@ Special thanks to Obi Rod, Ins'Ania and Kero for early help.
 
 ** DONE Related Resources
 :PROPERTIES:
-:CUSTOM_ID: h:related_resources
+:CUSTOM_ID: related_resources
 :END:
 
 Details of Shadow's kit can be found in:
 - [[https://rns.miraheze.org/wiki/Shadow][Shadow | Rabbit & Steel Wiki (rns.miraheze.org)]]
-  
+
 For latest available guides:
 - [[https://discord.com/channels/496640298844422149/1238375581486288916][Guides Catalogue maintained by Stagz | mino_dev Discord (discord.com)]]
 
 For community jargon:
-- [[https://docs.google.com/document/d/1rrSEIEstdKtajTY1xkXWoQKw3BIz4eENyJBHiyqCKcU/edit?tab=t.0][Rabbit & Steel Community Jargon by tomeking (docs.google.com)]] 
+- [[https://docs.google.com/document/d/1rrSEIEstdKtajTY1xkXWoQKw3BIz4eENyJBHiyqCKcU/edit?tab=t.0][Rabbit & Steel Community Jargon by tomeking (docs.google.com)]]
 
 # attributions and claims to not own used images of R&S Loot + Gems
 
 ** DONE Sample Definitions
 :PROPERTIES:
-:CUSTOM_ID: h:sample_definitions
+:CUSTOM_ID: sample_definitions
 :END:
 
-- {{{N1}}}, {{{O1}}}, {{{S1}}}, {{{R1}}}, {{{E1}}}, {{{G1}}} :: _Normal_ and _gem_ variants of Primary.
-- {{{R1}}}, {{{R2}}}, {{{R3}}}, {{{R4}}} :: _Ruby_ variants of each respectively: Primary, Secondary, Special and Defensive.
-- $2' \ggg 3 > 1 > 4 > 2$ :: move priority for {{{R2}}}
-  + {{{secl}}} ($2'$) is drastically favoured and clicked whenever available;
-  + Followed by Special, Primary, Defensive and (non-leap) Secondary.
+- {{{n1}}}, {{{o1}}}, {{{s1}}}, {{{r1}}}, {{{e1}}}, {{{g1}}} :: _Normal_ and _gem_ variants of Primary.
+- {{{r1}}}, {{{r2}}}, {{{r3}}}, {{{r4}}} :: _Ruby_ variants of each respectively: Primary, Secondary, Special and Defensive.
+- \( 2' \ggg 3 > 1 > 4 > 2 \) :: move priority for {{{r2}}}
+  - {{{secl}}} (\( 2' \)) is drastically favoured and clicked whenever available;
+  - Followed by Special, Primary, Defensive and (non-leap) Secondary.
 - AoE :: Area-of-Effect; typically used in context of hitting multiple enemies, e.g. fights in Churchouse or Sanctum.
 - oGCD :: Shadow's S3, S4; these can be used without sacrificing GCD time spent on other
 - prio :: priority; typically what item/gems should be picked and by whom
-  + BiS :: Best in Slot; universal best upgrade.
-  + line :: if buying a gem, typically how broad or strong its item-gem synergies are.
+  - BiS :: Best in Slot; universal best upgrade.
+  - line :: if buying a gem, typically how broad or strong its item-gem synergies are.
 - slam :: a forced gem-item pick to solve the immediate stage/encounter.
-  + In R&S, often this does expand your item lines off base, even if not BiS.
+  - In R&S, often this does expand your item lines off base, even if not BiS.
 
 * REVIEW Class Summary
 :PROPERTIES:
-:CUSTOM_ID: h:class_summary
+:CUSTOM_ID: class_summary
 :END:
 
-Shadow is a mobile close-quarters bunny with a potent versatility; she excels when playing flexibly, due to {{{Shackles}}}.
+Shadow is a mobile close-quarters bunny with a potent versatility; she excels when playing flexibly, due to {{{shackles}}}.
 Many of her effects are unique or inspired from other classes and effects.
 
 Shadow is best characterized by having:
 - Decent-damage and short GCD (1.0s) abilities.
-  + Close-Range multi-hit {{{abl(N1)}}} *Primary* and {{{abl(N2)}}} *Secondary* abilities.
-    + No slows on these abilities.
-  + {{{abl(N2)}}} *Secondary* having a leap, similar to Heavyblade's (HB) Special.
-  + {{{abl(N3)}}} *Special* that hits all enemies on short CD.
-  + {{{abl(N4)}}} *Defensives* with damage and GCD.
+  - Close-Range multi-hit {{{abl(N1)}}} *Primary* and {{{abl(N2)}}} *Secondary* abilities.
+    - No slows on these abilities.
+  - {{{abl(N2)}}} *Secondary* having a leap, similar to Heavyblade's (HB) Special.
+  - {{{abl(N3)}}} *Special* that hits all enemies on short CD.
+  - {{{abl(N4)}}} *Defensives* with damage and GCD.
 - Shares the fastest base movement speed (m/s) with Assassin (Sin).
-- {{{Shackles}}} status effect.
+- {{{shackles}}} status effect.
 
 #+caption: Class Advantages Table
-| Pros                                   | Cons                                        |
-|----------------------------------------+---------------------------------------------|
-| Unique, gacha-like effects             | Defensive has GCD                           |
-| Higher APM                             | Complex rotations ({{{Shackles}}})                |
-| Secondary invulnerability              | Punishes bad targetting and leaps           |
-| Global+4P damage multipliers ({{{O2s}}} {{{G3s}}}) | Weak Special-only builds                    |
-| Consistent damage and AoE solves       | Almost 0 hacky Rabbitluck 8k+ damage builds |
-|                                        | Contests most items of Sin                  |
+| Pros                                               | Cons                                        |
+|----------------------------------------------------+---------------------------------------------|
+| Unique, gacha-like effects                         | Defensive has GCD                           |
+| Higher APM                                         | Complex rotations ({{{shackles}}})          |
+| Secondary invulnerability                          | Punishes bad targetting and leaps           |
+| Global+4P damage multipliers ({{{o2s}}} {{{g3s}}}) | Weak Special-only builds                    |
+| Consistent damage and AoE solves                   | Almost 0 hacky Rabbitluck 8k+ damage builds |
+|                                                    | Contests most items of Sin                  |
 
 ** REVIEW General Gameplan
 :PROPERTIES:
-:CUSTOM_ID: h:gameplan
+:CUSTOM_ID: gameplan
 :END:
 
 Shadow typically should be playing up close.
-In more optimal play with {{{R1}}} / {{{R2}}} / {{{R4}}},
+In more optimal play with {{{r1}}} / {{{r2}}} / {{{r4}}},
 you should be playing just under 3 Rabbitleaps, then moving out enable leap when you need it.
 
 In MP, Shadow adjusts by walking for teammates as she shares _fastest base speed with Assassin_ and, like Sin,
@@ -225,7 +1111,7 @@ has no slows on two of three attacks.
 
 *** REVIEW Multiplayer Item Conflicts
 :PROPERTIES:
-:CUSTOM_ID: h:mp_conflict
+:CUSTOM_ID: mp_conflict
 :END:
 
 Most item conflicts do and _should occur with Sin, Dancer, SS and Druid._
@@ -245,35 +1131,36 @@ Pubs Grens may also contest low GCD/trigger items, though they have alternate li
 
 *** TODO First Shop Buys and Slams :noexport:
 :PROPERTIES:
-:CUSTOM_ID: h:shop
+:CUSTOM_ID: shop
 :END:
 
-*** DRAFT Scaling Ability Damage
+*** DRAFT Scaling Ability Damage :noexport:
 :PROPERTIES:
-:CUSTOM_ID: h:scale_ability
+:CUSTOM_ID: scale_ability
 :END:
+# honestly this section is already dipping to general how-to
 
 Most of the time on Shadow, your damage will come from abilities, so you often want a mix of (non-exhaustive):
 
-1. High base damage abilities ({{{R1s}}}, {{{R2s}}}, {{{O3s}}})
-2. Autocast abilities and oGCD ({{{R4s}}} \ggg {{{S1s}}}, {{{G1s}}}, {{{S3s}}})
+1. High base damage abilities ({{{r1s}}}, {{{r2s}}}, {{{o3s}}})
+2. Autocast abilities and oGCD ({{{r4s}}} \ggg {{{s1s}}}, {{{g1s}}}, {{{s3s}}})
 3. Additive or percent damage ({{{i(Pocketwatch)}}}, {{{i(Shadow-Bracelet)}}})
-   + Additionally, Bleed and sap effects ({{{i(Leech-Staff)}}}, {{{i(Blood-Vial)}}})
-4. Curse ({{{O2s}}}, {{{i(Curse-Talon)}}}, {{{i(Darkmagic-Blade)}}})
-5. Buffs ({{{G3}}}, {{{i(Butterfly-Hairpin)}}})
-   + Multihit focus ({{{O4s}}},  {{{i(Crane-Katana)}}} / {{{i(Falconfeather-Dagger)}}})
-   + Large base focus ({{{i(Beach-Sandals)}}} / {{{i(Flamedancer-Dagger)}}})
+   - Additionally, Bleed and sap effects ({{{i(Leech-Staff)}}}, {{{i(Blood-Vial)}}})
+4. Curse ({{{o2s}}}, {{{i(Curse-Talon)}}}, {{{i(Darkmagic-Blade)}}})
+5. Buffs ({{{g3}}}, {{{i(Butterfly-Hairpin)}}})
+   - Multihit focus ({{{o4s}}},  {{{i(Crane-Katana)}}} / {{{i(Falconfeather-Dagger)}}})
+   - Large base focus ({{{i(Beach-Sandals)}}} / {{{i(Flamedancer-Dagger)}}})
 6. Critical hit items ({{{i(Pointed-Ring)}}})
 
-See [[#h:ability_synergies][Ability synergies]] for specific synergies.
+See [[#ability_synergies][Ability synergies]] for specific synergies.
 
 ** REVIEW Shackles
 :PROPERTIES:
-:CUSTOM_ID: h:shackles
+:CUSTOM_ID: shackles
 :END:
 
-Shadow's {{{Shackles}}} locks up one of her attacks[fn:attacks:Attacks include {{{pri}}}, {{{sec}}}, {{{spe}}}.] from use on any ability usage.
-This is independent of any Magicklock trinket effects, cooldowns or item effects (e.g. {{{Lefthand-Cast}}}.)
+Shadow's {{{shackles}}} locks up one of her attacks[fn:attacks:Attacks include {{{pri}}}, {{{sec}}}, {{{spe}}}.] from use on any ability usage.
+This is independent of any Magicklock trinket effects, cooldowns or item effects (e.g. {{{lefthand-cast}}}.)
 
 # This doesn't feel as relevant, but I'll quote it.
 #+begin_quote
@@ -283,30 +1170,30 @@ you could hold down {{{sec}}} and {{{spe}}}.
 
 ** REVIEW Inspirations from other Classes and Loot
 :PROPERTIES:
-:CUSTOM_ID: h:inspirations
+:CUSTOM_ID: inspirations
 :END:
 
 Shadow gains some distinct effects that appear in other classes, namely:
-- {{{S2}}}'s range and charge effect like Dancer's Secondary.
-- {{{G3}}} granting the Shadowcry buff, similar to Dancer's Defensive and better uptime.
-- {{{O2}}} granting Shadowcurse debuff, similar to Spellsword's (SS) Opal Defensive and better uptime.
-- {{{G1}}} granting 100 damage 25% of the time to all enemies, is practically a {{{Brightstorm-Spear}}} and {{{Darkstorm-Knife}}}.
+- {{{s2}}}'s range and charge effect like Dancer's Secondary.
+- {{{g3}}} granting the Shadowcry buff, similar to Dancer's Defensive and better uptime.
+- {{{o2}}} granting Shadowcurse debuff, similar to Spellsword's (SS) Opal Defensive and better uptime.
+- {{{g1}}} granting 100 damage 25% of the time to all enemies, is practically a {{{brightstorm-spear}}} and {{{darkstorm-knife}}}.
 # too exhaustive?
 # - {{{S1}}}, {{{S4}}} oGCD's
 # - {{{S1}}}, {{{G1}}} and {{{R4}}} automatic abilities (do not trigger items that require /use/, i.e. {{{Black-Wakizashi}}})
 
 ** REVIEW Gacha ability
 :PROPERTIES:
-:CUSTOM_ID: h:gacha
+:CUSTOM_ID: gacha
 :END:
 
-{{{E3}}} grants Shadow common access to, often loot-only or class-exclusive, effects like Berserk, Sap and Blackstrike.
+{{{e3}}} grants Shadow common access to, often loot-only or class-exclusive, effects like Berserk, Sap and Blackstrike.
 This distinctly allows Shadow to build into debuffs, multi-hit (on Special); or support most Shadow builds.
 - See [[https://rns.miraheze.org/wiki/Shadow][Shadow (rns.miraheze.org)]] for exhaustive list of effects.
 
 * REVIEW Move Priority (/Rotations/)
 :PROPERTIES:
-:CUSTOM_ID: h:rotation
+:CUSTOM_ID: rotation
 :END:
 
 Shadow's abilities' damage are more "symmetrical" at base kit.
@@ -315,15 +1202,15 @@ _only valid if attacks hit consistently_.
 
 #+name: rotations
 #+caption: Common Move Priorities off Base Kit
-| Base*   | $3 > 1 > 4 > 2$                              |
-| {{{R2}}} \lor {{{R4}}} | $2' \ggg 3 > 4 > 1 > 2$                         |
-| {{{E2}}}      | $2 \ggg 3 > 4 > 1$                              |
-| {{{S1}}} \lor {{{G1}}} | $2 > 3 > 4 > 1$                              |
-| {{{R1}}}      | $\text{Repeat}(1'' \rightarrow 2' \lor 4) \gg \text{Base}$ |
-| {{{S4}}} \lor {{{O4}}} | $4 > 3 > 1 > 2$                              |
-| {{{E4}}}      | $4 > 1 > 3 > 2$                              |
+| Base*                  | $3 > 1 > 4 > 2$                                            |
+| {{{r2}}} \lor {{{r4}}} | $2' \ggg 3 > 4 > 1 > 2$                                    |
+| {{{e2}}}               | $2 \ggg 3 > 4 > 1$                                         |
+| {{{s1}}} \lor {{{g1}}} | $2 > 3 > 4 > 1$                                            |
+| {{{r1}}}               | $\text{Repeat}(1'' \rightarrow 2' \lor 4) \gg \text{Base}$ |
+| {{{s4}}} \lor {{{o4}}} | $4 > 3 > 1 > 2$                                            |
+| {{{e4}}}               | $4 > 1 > 3 > 2$                                            |
 @@html:<div style="padding-left:20%; padding-right:20%;">@@
-*Based on MDP; in Outskirts, force {{{N4}}} by 6s and 21s (twice),
+*Based on MDP; in Outskirts, force {{{n4}}} by 6s and 21s (twice),
 can reach 9 gold easier if the enemy is beaten by 22.5s.
 
 Leaps are designated by $2'$; charge by $2''$.
@@ -339,319 +1226,319 @@ use the late hit animations of {{{pri}}} and {{{def}}} to deal damage consistent
 
 ** REVIEW Ruby Leap Archetypes - R2/R4
 :PROPERTIES:
-:CUSTOM_ID: h:ruby_leap
+:CUSTOM_ID: ruby_leap
 :END:
-#+MACRO: pb @@html: <b><span style="color:purple;">@@$1@@html: </b></span>@@
+#+macro: pb @@html: <b><span style="color:purple;">@@$1@@html: </b></span>@@
 
 # link to short YT clip displaying this
 For normal-sized enemies, play near 3 Rabbitleaps away.
 1. Position near {{{pb(leap)}}} border;
 2. If {{{sec}}} is--
-   a. Available \rightarrow move outside (leap enables) and use {{{sec}}};
-   b. {{{Shackles}}} \rightarrow Either--
-      + Move inside to hit Primary/Defensive;
-      + Special;
+   1. Available \rightarrow move outside (leap enables) and use {{{sec}}};
+   2. {{{shackles}}} \rightarrow Either--
+      - Move inside to hit Primary/Defensive;
+      - Special;
 3. Repeat.
 
 Larger enemies like *Red Darkhouse* Ranalie P2 allow you to leap without lunging forward.
 
 #+name: fig:rabbitleap
-#+CAPTION: Distances in Rabbitleaps (lp) with Stella
-[[./img/game/rabbitleap-inkscape2.svg]]
+#+caption: Distances in Rabbitleaps (lp) with Stella
+[[file:img/game/rabbitleap-inkscape2.svg]]
 
 *** REVIEW Alt: Omegacharge Ruby Primary (R1)
 :PROPERTIES:
-:CUSTOM_ID: h:r1
+:CUSTOM_ID: r1
 :END:
 
 # unnecessary to include?
 Same principle to activate leap above:
-1. One of {{{secl}}} / {{{S2}}} / {{{def}}};
-2. {{{R1}}};
+1. One of {{{secl}}} / {{{s2}}} / {{{def}}};
+2. {{{r1}}};
 3. Repeat.
 
 * REVIEW Ability synergies
 :PROPERTIES:
-:CUSTOM_ID: h:ability_synergies
+:CUSTOM_ID: ability_synergies
 :END:
 
 Unique or notable gem and item synergies are only presented.
 
 Generic item damage bonuses are assumed:
-- Most abilities/gems love multi-hits like {{{Shadow-Bracelet}}}, {{{Youkai-Bracelet}}}, Bleed items-...
-- Certain items like {{{Lefthand-Cast}}}, {{{Witchs-Cloak}}} and {{{Darkcloud-Necklace}}} become viable when Shadow has sufficient damage in loot items.
+- Most abilities/gems love multi-hits like {{{shadow-bracelet}}}, {{{youkai-bracelet}}}, Bleed items-...
+- Certain items like {{{lefthand-cast}}}, {{{witchs-cloak}}} and {{{darkcloud-necklace}}} become viable when Shadow has sufficient damage in loot items.
 
-Also most gems here are universally good with {{{O2}}}, {{{G3}}} and {{{O4}}}.
+Also most gems here are universally good with {{{o2}}}, {{{g3}}} and {{{o4}}}.
 
 ** REVIEW Primary
 :PROPERTIES:
-:CUSTOM_ID: h:primary
+:CUSTOM_ID: primary
 :END:
-#+MACRO: N1i {{{i(Waterfall-Polearm)}}} {{{i(Crane-Katana)}}}
-#+MACRO: O1i {{{i(Sand-Shovel)}}} {{{i(Miners-Headlamp)}}} {{{i(Large-Anchor)}}} {{{i(Lefthand-Cast)}}}
-#+MACRO: S1i {{{i(Crane-Katana)}}} {{{i(Windbite-Dagger)}}} {{{i(Giant-Stone-Club)}}} {{{i(Hexed-Blindfold)}}}
-#+MACRO: R1i {{{N1i}}} {{{i(Firststrike-Bracelet)}}} {{{i(Garnet-Staff)}}}(\rightarrow {{{i(Obsidian-Hairpin)}}}) {{{i(Flamedancer-Dagger)}}}
-#+MACRO: G1i {{{i(Crane-Katana)}}} {{{i(Colorful-Earrings)}}} {{{i(Lightning-Bow)}}} {{{i(Crown-of-Storms)}}} {{{i(Usagi-Kamen)}}} {{{i(Giant-Stone-Club)}}} {{{i(Vega-Spear)}}} {{{i(Hexed-Blindfold)}}}
-#+MACRO: E1i {{{N1i}}} {{{i(Firststrike-Bracelet)}}} {{{i(Midsummer-Dress)}}} {{{i(Abyss-Artifact)}}} {{{i(Flamedancer-Dagger)}}} {{{i(Whiteflame-Staff)}}} {{{i(Hexed-Blindfold)}}}
-#+MACRO: E1n "Needs" slow bypass, but best internal multi-hit and good snapshot buff synergy
+#+macro: N1i {{{i(Waterfall-Polearm)}}} {{{i(Crane-Katana)}}}
+#+macro: O1i {{{i(Sand-Shovel)}}} {{{i(Miners-Headlamp)}}} {{{i(Large-Anchor)}}} {{{i(Lefthand-Cast)}}}
+#+macro: S1i {{{i(Crane-Katana)}}} {{{i(Windbite-Dagger)}}} {{{i(Giant-Stone-Club)}}} {{{i(Hexed-Blindfold)}}}
+#+macro: R1i {{{N1i}}} {{{i(Firststrike-Bracelet)}}} {{{i(Garnet-Staff)}}}(\rightarrow {{{i(Obsidian-Hairpin)}}}) {{{i(Flamedancer-Dagger)}}}
+#+macro: G1i {{{i(Crane-Katana)}}} {{{i(Colorful-Earrings)}}} {{{i(Lightning-Bow)}}} {{{i(Crown-of-Storms)}}} {{{i(Usagi-Kamen)}}} {{{i(Giant-Stone-Club)}}} {{{i(Vega-Spear)}}} {{{i(Hexed-Blindfold)}}}
+#+macro: E1i {{{N1i}}} {{{i(Firststrike-Bracelet)}}} {{{i(Midsummer-Dress)}}} {{{i(Abyss-Artifact)}}} {{{i(Flamedancer-Dagger)}}} {{{i(Whiteflame-Staff)}}} {{{i(Hexed-Blindfold)}}}
+#+macro: E1n "Needs" slow bypass, but best internal multi-hit and good snapshot buff synergy
 
-| Gem | Gem Synergies           | Item Synergies | Notes                                                                  |
-|-----+-------------------------+----------------+------------------------------------------------------------------------|
-| {{{N1}}}  | {{{O2s}}} {{{G3s}}}                 | {{{N1i}}}            | Good class N1, main ability to click on base                           |
-| {{{O1}}}  | {{{O2s}}} {{{E3s}}} \ggg {{{S3s}}}           | {{{O1i}}}            | {{{G2}}} variant for {{{E3}}}, Special and loot CD—generally bad though.          |
-| {{{S1}}}  | {{{O2s}}} {{{G3s}}} {{{O4s}}}             | {{{S1i}}}            | +100 on Secondary, more consistent than {{{G1}}} for single enemies          |
-| {{{R1}}}  | {{{O2s}}} {{{S2s}}} {{{R2s}}} {{{E2s}}} {{{O4s}}} {{{G3s}}} | {{{R1i}}}            | _600dmg on only iframe req_; easiest with {{{S2}}}, good with snapshot buffs   |
-| {{{G1}}}  | All (-{{{G2s}}}/-{{{R3s}}})         | {{{G1i}}}            | Avg +25 dmg on other ability hits, decent AoE and best % proc trigger. |
-| {{{E1}}}  | {{{S3s}}} {{{O2s}}} {{{E3s}}} {{{O4s}}}         | {{{E1i}}}            | {{{E1n}}}                                                                    |
+| Gem      | Gem Synergies                                               | Item Synergies | Notes                                                                        |
+|----------+-------------------------------------------------------------+----------------+------------------------------------------------------------------------------|
+| {{{n1}}} | {{{o2s}}} {{{g3s}}}                                         | {{{n1i}}}      | Good class N1, main ability to click on base                                 |
+| {{{o1}}} | {{{o2s}}} {{{e3s}}} \ggg {{{s3s}}}                          | {{{o1i}}}      | {{{g2}}} variant for {{{e3}}}, Special and loot CD—generally bad though.    |
+| {{{s1}}} | {{{o2s}}} {{{g3s}}} {{{o4s}}}                               | {{{s1i}}}      | +100 on Secondary, more consistent than {{{g1}}} for single enemies          |
+| {{{r1}}} | {{{o2s}}} {{{s2s}}} {{{r2s}}} {{{e2s}}} {{{o4s}}} {{{g3s}}} | {{{r1i}}}      | _600dmg on only iframe req_; easiest with {{{s2}}}, good with snapshot buffs |
+| {{{g1}}} | All (-{{{g2s}}}/-{{{r3s}}})                                 | {{{g1i}}}      | Avg +25 dmg on other ability hits, decent AoE and best % proc trigger.       |
+| {{{e1}}} | {{{s3s}}} {{{o2s}}} {{{e3s}}} {{{o4s}}}                     | {{{e1i}}}      | {{{e1n}}}                                                                    |
 
 #+begin_quote
-{{{S1}}} and {{{G1}}} effects does not trigger "use" abilities like {{{Black-Wakizashi}}} or {{{Golden-Katana}}}, but can trigger {{{Brightstorm-Spear}}}.
+{{{s1}}} and {{{g1}}} effects does not trigger "use" abilities like {{{black-wakizashi}}} or {{{golden-katana}}}, but can trigger {{{brightstorm-spear}}}.
 
-{{{S1}}} and {{{G1}}} are fine with taking +GCD (includes {{{R1}}} to some extent.)
+{{{s1}}} and {{{g1}}} are fine with taking +GCD (includes {{{r1}}} to some extent.)
 
-{{{E1}}} 2s GCD effect can't be cheated via GCD items, Berserk, Quickdraw or even {{{Shinsoku-Katana}}}.
-At base kit, the effect triggers {{{Pocketwatch}}}, but not {{{Sacredstone-Charm}}}.
+{{{e1}}} 2s GCD effect can't be cheated via GCD items, Berserk, Quickdraw or even {{{shinsoku-katana}}}.
+At base kit, the effect triggers {{{pocketwatch}}}, but not {{{sacredstone-charm}}}.
 
-{{{E1}}} ~1.5s slow on effect can be bypassed with Berserk, Super, Flutterstep, {{{E3}}}, and {{{Midsummer-Dress}}}.
-{{{S3}}} cancels this slow when used immediately after.
+{{{e1}}} ~1.5s slow on effect can be bypassed with Berserk, Super, Flutterstep, {{{e3}}}, and {{{midsummer-dress}}}.
+{{{s3}}} cancels this slow when used immediately after.
 #+end_quote
 
 ** REVIEW Secondary
 :PROPERTIES:
-:CUSTOM_ID: h:secondary
+:CUSTOM_ID: secondary
 :END:
-#+MACRO: N2i {{{i(Butterfly-Hairpin)}}} {{{i(Cavers-Cloak)}}} {{{i(Vorpal-Dao)}}} {{{i(Falconfeather-Dagger)}}}
-#+MACRO: O2i {{{n2i}}} {{{i(Artist-Smock)}}} {{{i(Redblack-Ribbon)}}} (Loot/debuff damage items)
-#+MACRO: S2i {{{n2i}}} {{{i(Sandpriestess-Spear)}}} {{{i(Marble-Clasp)}}} {{{i(Hexed-Blindfold)}}}
-#+MACRO: R2i {{{n2i}}} {{{i(Reddragon-Blade)}}} {{{i(Greysteel-Shield)}}} {{{i(Marble-Clasp)}}} 
-#+MACRO: G2i {{{i(Jesters-Hat)}}} {{{i(Colorful-Earrings)}}} {{{i(Lightning-Bow)}}} {{{i(Crown-of-Storms)}}} {{{i(Usagi-Kamen)}}} {{{i(Rosered-Leotard)}}}
-#+MACRO: E2i {{{n2i}}} {{{i(Hexed-Blindfold)}}}
-#+MACRO: O2n SS superhex (universal damage mult.); scales loot and team damage, unlike others
+#+macro: N2i {{{i(Butterfly-Hairpin)}}} {{{i(Cavers-Cloak)}}} {{{i(Vorpal-Dao)}}} {{{i(Falconfeather-Dagger)}}}
+#+macro: O2i {{{n2i}}} {{{i(Artist-Smock)}}} {{{i(Redblack-Ribbon)}}} (Loot/debuff damage items)
+#+macro: S2i {{{n2i}}} {{{i(Sandpriestess-Spear)}}} {{{i(Marble-Clasp)}}} {{{i(Hexed-Blindfold)}}}
+#+macro: R2i {{{n2i}}} {{{i(Reddragon-Blade)}}} {{{i(Greysteel-Shield)}}} {{{i(Marble-Clasp)}}}
+#+macro: G2i {{{i(Jesters-Hat)}}} {{{i(Colorful-Earrings)}}} {{{i(Lightning-Bow)}}} {{{i(Crown-of-Storms)}}} {{{i(Usagi-Kamen)}}} {{{i(Rosered-Leotard)}}}
+#+macro: E2i {{{n2i}}} {{{i(Hexed-Blindfold)}}}
+#+macro: O2n SS superhex (universal damage mult.); scales loot and team damage, unlike others
 
-| Gem | Leap | Gem Synergies   | Item Synergies | Notes                                                 |
-|-----+------+-----------------+----------------+-------------------------------------------------------|
-| {{{N2}}}  | Y    | {{{R4s}}} {{{G3s}}}         | {{{N2i}}}            | Good class N2                                         |
-| {{{O2}}}  | Y    | All             | {{{O2i}}}            | {{{O2n}}}                                                   |
-| {{{S2}}}  | -    | {{{R4s}}} {{{R1s}}} {{{S3s}}} {{{G3s}}} | {{{S2i}}}            | Ranged secondary and wide-hitbox, easy uptime         |
-| {{{R2}}}  | Y    | {{{R4s}}} {{{O4s}}} {{{S3s}}} {{{G3s}}} | {{{R2i}}}            | _"Supercharge" double damage effect_ with only leap req |
-| {{{G2}}}  | -    | {{{E3s}}} {{{G4}}} \ggg {{{S4s}}}    | {{{G2i}}}            | Good with oGCD gems; loses Secondary damage           |
-| {{{E2}}}  | Y    | {{{R4s}}} {{{G3s}}} {{{S3s}}}     | {{{E2i}}}            | Average upgrade due to {{{Shackles}}}                       |
+| Gem      | Leap | Gem Synergies                           | Item Synergies | Notes                                                   |
+|----------+------+-----------------------------------------+----------------+---------------------------------------------------------|
+| {{{n2}}} | Y    | {{{r4s}}} {{{g3s}}}                     | {{{n2i}}}      | Good class N2                                           |
+| {{{o2}}} | Y    | All                                     | {{{o2i}}}      | {{{o2n}}}                                               |
+| {{{s2}}} | -    | {{{r4s}}} {{{r1s}}} {{{s3s}}} {{{g3s}}} | {{{s2i}}}      | Ranged secondary and wide-hitbox, easy uptime           |
+| {{{r2}}} | Y    | {{{r4s}}} {{{o4s}}} {{{s3s}}} {{{g3s}}} | {{{r2i}}}      | _"Supercharge" double damage effect_ with only leap req |
+| {{{g2}}} | -    | {{{e3s}}} {{{g4}}} \ggg {{{s4s}}}       | {{{g2i}}}      | Good with oGCD gems; loses Secondary damage             |
+| {{{e2}}} | Y    | {{{r4s}}} {{{g3s}}} {{{s3s}}}           | {{{e2i}}}      | Average upgrade due to {{{shackles}}}                   |
 
 #+begin_quote
-#+end_quote
+nil#+end_quote
 
 ** REVIEW Special
 :PROPERTIES:
-:CUSTOM_ID: h:special
+:CUSTOM_ID: special
 :END:
 Shadow should _not force Special damage to work in most runs._
-so typically you pick up Special for utility (e.g. {{{G3}}}, {{{E3}}} or {{{S3}}}) or AoE damage slam (Sanctum.)
+so typically you pick up Special for utility (e.g. {{{g3}}}, {{{e3}}} or {{{s3}}}) or AoE damage slam (Sanctum.)
 
 Special scaling sucks on Shadow (due to 250 base),
-thus Special-only is heavily dependant on {{{E3}}}, {{{O3}}} or {{{Obsidian-Rod}}}\land{{{R3}}} and synergies.
+thus Special-only is heavily dependant on {{{e3}}}, {{{o3}}} or {{{obsidian-rod}}}\land{{{r3}}} and synergies.
 
-#+MACRO: N3i {{{i(Deathcap-Tome)}}} {{{i(Cursed-Candlestaff)}}} {{{i(Shockwave-Tome)}}}
-#+MACRO: O3i1 {{{i(Miners-Headlamp)}}} {{{i(Darkglass-Spear)}}} {{{i(Timespace-Dagger)}}} {{{i(Firststrike-Bracelet)}}} {{{i(Necronomicon)}}} {{{i(Nova-Crown)}}} {{{i(Battlemaiden-Armor)}}}
-#+MACRO: O3i2  {{{i(Raindrop-Earrings)}}} {{{i(Sun-Pendant)}}} {{{i(Heavens-Codex)}}} {{{i(Staff-of-Sorrow)}}} {{{i(Mountain-Staff)}}}
-#+MACRO: O3i {{{o3i1}}} {{{o3i2}}}
-#+MACRO: S3i {{{n3i}}} {{{i(Hawkfeather-Fan)}}}{{{i(Mermaid-Scalemail)}}}{{{i(Firescale-Corset)}}}{{{i(Mountain-Staff)}}} {{{i(Garnet-Staff)}}}  {{{i(Spear-of-Winds)}}} {{{i(Bolt-Staff)}}}
-#+MACRO: R3i {{{i(Obsidian-Rod)}}} {{{i(Garnet-Staff)}}} {{{i(Spear-of-Winds)}}} {{{i(Bolt-Staff)}}} {{{i(Saltwater-Staff)}}}
-#+MACRO: G3i {{{n3i}}} {{{i(Sacred-Bow)}}} {{{i(Shrinemaidens-Kosode)}}} {{{i(Reflection-Shield)}}} {{{i(Spiked-Shield)}}} (Loot/debuff damage items)
-#+MACRO: E3i [{{{i(Mermaid-Scalemail)}}}/{{{i(Firescale-Corset)}}}/{{{i(Hawkfeather-Fan)}}}(\rightarrow {{{i(Redwhite-Ribbon)}}})] {{{i(Sacred-Bow)}}} {{{i(Shrinemaidens-Kosode)}}} {{{i(Artist-Smock)}}} {{{i(Witchs-Cloak)}}} {{{i(Venom-Hood)}}} {{{i(Miners-Headlamp)}}}
-#+MACRO: S3n Good early oGCD damage; no slow (and removes {{{E1}}}/{{{def}}} slow), but terrible damage scaling.
-#+MACRO: G3n Dancer Warcry (universal damage mult.); scales loot and team damage consistently (alt: {{{E3}}})
+#+macro: N3i {{{i(Deathcap-Tome)}}} {{{i(Cursed-Candlestaff)}}} {{{i(Shockwave-Tome)}}}
+#+macro: O3i1 {{{i(Miners-Headlamp)}}} {{{i(Darkglass-Spear)}}} {{{i(Timespace-Dagger)}}} {{{i(Firststrike-Bracelet)}}} {{{i(Necronomicon)}}} {{{i(Nova-Crown)}}} {{{i(Battlemaiden-Armor)}}}
+#+macro: O3i2  {{{i(Raindrop-Earrings)}}} {{{i(Sun-Pendant)}}} {{{i(Heavens-Codex)}}} {{{i(Staff-of-Sorrow)}}} {{{i(Mountain-Staff)}}}
+#+macro: O3i {{{o3i1}}} {{{o3i2}}}
+#+macro: S3i {{{n3i}}} {{{i(Hawkfeather-Fan)}}}{{{i(Mermaid-Scalemail)}}}{{{i(Firescale-Corset)}}}{{{i(Mountain-Staff)}}} {{{i(Garnet-Staff)}}}  {{{i(Spear-of-Winds)}}} {{{i(Bolt-Staff)}}}
+#+macro: R3i {{{i(Obsidian-Rod)}}} {{{i(Garnet-Staff)}}} {{{i(Spear-of-Winds)}}} {{{i(Bolt-Staff)}}} {{{i(Saltwater-Staff)}}}
+#+macro: G3i {{{n3i}}} {{{i(Sacred-Bow)}}} {{{i(Shrinemaidens-Kosode)}}} {{{i(Reflection-Shield)}}} {{{i(Spiked-Shield)}}} (Loot/debuff damage items)
+#+macro: E3i [{{{i(Mermaid-Scalemail)}}}/{{{i(Firescale-Corset)}}}/{{{i(Hawkfeather-Fan)}}}(\rightarrow {{{i(Redwhite-Ribbon)}}})] {{{i(Sacred-Bow)}}} {{{i(Shrinemaidens-Kosode)}}} {{{i(Artist-Smock)}}} {{{i(Witchs-Cloak)}}} {{{i(Venom-Hood)}}} {{{i(Miners-Headlamp)}}}
+#+macro: S3n Good early oGCD damage; no slow (and removes {{{E1}}}/{{{def}}} slow), but terrible damage scaling.
+#+macro: G3n Dancer Warcry (universal damage mult.); scales loot and team damage consistently (alt: {{{E3}}})
 
- | Gem | Gem Synergies              | Item Synergies | Notes                                                                 |
- |-----+----------------------------+----------------+-----------------------------------------------------------------------|
- | {{{N3}}}  | {{{O2s}}}                        | {{{N3i}}}            | Weaker class N3, but strong AoE (hits all) and decent debuff Spreader |
- | {{{O3}}}  | (With item reset: {{{O1s}}}) {{{O2s}}} | {{{O3i}}}            | Special damage scaling; huge hitting Special; disables universal %    |
- | {{{S3}}}  | {{{E1s}}} {{{O1s}}} {{{G2s}}} {{{O2s}}}            | {{{S3i}}}            | {{{S3n}}}                                                                   |
- | {{{R3}}}  | {{{O1s}}} {{{G2s}}} {{{O2s}}}                | {{{R3i}}}            | Only good for ads, Obsidian Rod or Special triggers                   |
- | {{{G3}}}  | All                        | {{{G3i}}}            | {{{G3n}}}                                                                   |
- | {{{E3}}}  | {{{E1s}}} {{{O1s}}} {{{G2s}}} {{{O2s}}}            | {{{E3i}}}            | +~33% on Special;[fn:e3] debuff/buff archetype; inconsistent AoE.         |
+| Gem      | Gem Synergies                           | Item Synergies | Notes                                                                 |
+|----------+-----------------------------------------+----------------+-----------------------------------------------------------------------|
+| {{{n3}}} | {{{o2s}}}                               | {{{n3i}}}      | Weaker class N3, but strong AoE (hits all) and decent debuff Spreader |
+| {{{o3}}} | (With item reset: {{{o1s}}}) {{{o2s}}}  | {{{o3i}}}      | Special damage scaling; huge hitting Special; disables universal %    |
+| {{{s3}}} | {{{e1s}}} {{{o1s}}} {{{g2s}}} {{{o2s}}} | {{{s3i}}}      | {{{s3n}}}                                                             |
+| {{{r3}}} | {{{o1s}}} {{{g2s}}} {{{o2s}}}           | {{{r3i}}}      | Only good for ads, Obsidian Rod or Special triggers                   |
+| {{{g3}}} | All                                     | {{{g3i}}}      | {{{g3n}}}                                                             |
+| {{{e3}}} | {{{e1s}}} {{{o1s}}} {{{g2s}}} {{{o2s}}} | {{{e3i}}}      | +~33% on Special;[fn:e3] debuff/buff archetype; inconsistent AoE.     |
 
 #+begin_quote
-{{{E3}}} is affected by {{{Obsidian-Rod}}}, {{{Cursed-Candlestaff}}}, {{{Old-Bonnet}}} / {{{Haunted-Gloves}}}, {{{Mountain-Staff}}} and other special items changes.
+{{{e3}}} is affected by {{{obsidian-rod}}}, {{{cursed-candlestaff}}}, {{{old-bonnet}}} / {{{haunted-gloves}}}, {{{mountain-staff}}} and other special items changes.
 #+end_quote
- 
+
 ** REVIEW Defensive
 :PROPERTIES:
-:CUSTOM_ID: h:defensive
+:CUSTOM_ID: defensive
 :END:
-#+MACRO: N4i {{{i(Gladiator-Helmet)}}} {{{i(Battery-Shield)}}} {{{i(Shadow-Bracelet)}}}
-#+MACRO: O4i {{{N4i}}} {{{i(Beach-Sandals)}}} {{{i(Hermes-Bow)}}}  {{{i(Talon-Charm)}}} {{{i(Sacred-Bow)}}} {{{i(Coldsteel-Shield)}}} {{{i(Waterfall-Polearm)}}} {{{i(Crane-Katana)}}} {{{i(Vorpal-Dao)}}} {{{i(Falconfeather-Dagger)}}}
-#+MACRO: S4i {{{N4i}}} {{{i(Coldsteel-Shield)}}} {{{i(Flamedancer-Dagger)}}} {{{i(Firststrike-Bracelet)}}}
-#+MACRO: R4i {{{i(Tiny-Wings)}}} {{{i(Gladiator-Helmet)}}} {{{i(Garnet-Staff)}}}(\rightarrow {{{i(Obsidian-Hairpin)}}}) {{{i(Peridot-Rapier)}}} {{{i(Greysteel-Shield)}}} 
-#+MACRO: G4i {{{N4i}}} {{{i(Spark-of-Determination)}}}
-#+MACRO: E4i {{{i(Firststrike-Bracelet)}}} {{{i(Starry-Cloak)}}}(\rightarrow {{{i(Timemage-Cap)}}}) {{{i(Timespace-Dagger)}}} {{{i(Bloodhound-Greatsword)}}} {{{i(Lonesome-Pendant)}}}
+#+macro: N4i {{{i(Gladiator-Helmet)}}} {{{i(Battery-Shield)}}} {{{i(Shadow-Bracelet)}}}
+#+macro: O4i {{{N4i}}} {{{i(Beach-Sandals)}}} {{{i(Hermes-Bow)}}}  {{{i(Talon-Charm)}}} {{{i(Sacred-Bow)}}} {{{i(Coldsteel-Shield)}}} {{{i(Waterfall-Polearm)}}} {{{i(Crane-Katana)}}} {{{i(Vorpal-Dao)}}} {{{i(Falconfeather-Dagger)}}}
+#+macro: S4i {{{N4i}}} {{{i(Coldsteel-Shield)}}} {{{i(Flamedancer-Dagger)}}} {{{i(Firststrike-Bracelet)}}}
+#+macro: R4i {{{i(Tiny-Wings)}}} {{{i(Gladiator-Helmet)}}} {{{i(Garnet-Staff)}}}(\rightarrow {{{i(Obsidian-Hairpin)}}}) {{{i(Peridot-Rapier)}}} {{{i(Greysteel-Shield)}}}
+#+macro: G4i {{{N4i}}} {{{i(Spark-of-Determination)}}}
+#+macro: E4i {{{i(Firststrike-Bracelet)}}} {{{i(Starry-Cloak)}}}(\rightarrow {{{i(Timemage-Cap)}}}) {{{i(Timespace-Dagger)}}} {{{i(Bloodhound-Greatsword)}}} {{{i(Lonesome-Pendant)}}}
 
-| Gem | Leap | Gem Synergies           | Item Synergies | Notes                                                    |
-|-----+------+-------------------------+----------------+----------------------------------------------------------|
-| {{{N4}}}  | -    | {{{O2s}}} {{{G3s}}}                 | {{{N4i}}}            | Has GCD; good burst for class N4 and Shackles reroll     |
-| {{{O4}}}  | Y    | {{{R1s}}} {{{R2s}}} {{{O2s}}} {{{G3s}}}         | {{{O4i}}}            | *Leaps*; *+m/s*; allows clicking attacks most times          |
-| {{{S4}}}  | -    | {{{O1s}}} {{{G1s}}} {{{R1s}}} {{{G2s}}} {{{O2s}}} {{{G3s}}} | {{{S4i}}}            | oGCD burst damage early-game; but oGCD on 10s is bad     |
-| {{{R4}}}  | -    | {{{O2s}}} {{{S2s}}} {{{R2s}}} {{{E2s}}} {{{G3s}}}     | {{{R4i}}}            | +300 on Leaps is amazing                                 |
-| {{{G4}}}  | -    | {{{G1s}}} {{{G2s}}} {{{R3s}}} {{{O2s}}} {{{G3s}}}     | {{{G4i}}}            | Good Sanctum/Mice tech, best {{{G2}}} option                   |
-| {{{E4}}}  | -    | {{{G1s}}} {{{O2s}}} {{{E3s}}} {{{G3s}}}         | {{{E4i}}}            | Amazing burst, trivializes first two fights of midstages |
+| Gem      | Leap | Gem Synergies                                               | Item Synergies | Notes                                                    |
+|----------+------+-------------------------------------------------------------+----------------+----------------------------------------------------------|
+| {{{n4}}} | -    | {{{o2s}}} {{{g3s}}}                                         | {{{n4i}}}      | Has GCD; good burst for class N4 and Shackles reroll     |
+| {{{o4}}} | Y    | {{{r1s}}} {{{r2s}}} {{{o2s}}} {{{g3s}}}                     | {{{o4i}}}      | *Leaps*; *+m/s*; allows clicking attacks most times      |
+| {{{s4}}} | -    | {{{o1s}}} {{{g1s}}} {{{r1s}}} {{{g2s}}} {{{o2s}}} {{{g3s}}} | {{{s4i}}}      | oGCD burst damage early-game; but oGCD on 10s is bad     |
+| {{{r4}}} | -    | {{{o2s}}} {{{s2s}}} {{{r2s}}} {{{e2s}}} {{{g3s}}}           | {{{r4i}}}      | +300 on Leaps is amazing                                 |
+| {{{g4}}} | -    | {{{g1s}}} {{{g2s}}} {{{r3s}}} {{{o2s}}} {{{g3s}}}           | {{{g4i}}}      | Good Sanctum/Mice tech, best {{{g2}}} option             |
+| {{{e4}}} | -    | {{{g1s}}} {{{o2s}}} {{{e3s}}} {{{g3s}}}                     | {{{e4i}}}      | Amazing burst, trivializes first two fights of midstages |
 
 #+begin_quote
-Worth saving Defensive to reroll {{{Shackles}}}, to line up
-Wavestrike, Blacktrike, Flash-* and Counter/Vanish/Ghost effects, with for example, {{{E1}}}.
+Worth saving Defensive to reroll {{{shackles}}}, to line up
+Wavestrike, Blacktrike, Flash-* and Counter/Vanish/Ghost effects, with for example, {{{e1}}}.
 
-{{{Firststrike-Bracelet}}} or Blackstrike buff ({{{Book-of-Cheats}}}, {{{E3}}})
+{{{firststrike-bracelet}}} or Blackstrike buff ({{{book-of-cheats}}}, {{{e3}}})
 applies to Defensive damage without consuming it.
 #+end_quote
 
 * REVIEW Gems Tier List
 :PROPERTIES:
-:CUSTOM_ID: h:gems_tier_list
+:CUSTOM_ID: gems_tier_list
 :END:
 
 Tier placing prioritizes "lines" and WR by Lunar Shira/Witch of 900 DPS (~600 base DPS/level 1.)
 - In >99% of runs, buy a gem first shop:
-  + On *Subterra Sanctum* or *Churchmouse Streets*, slam Special Gem, {{{E1}}}, {{{G1}}}, {{{E2}}}, {{{S2}}}, {{{G4}}}, {{{E4}}} or Longarm Potion.
-  + Optionally on *Darkhouse Depths*, for Tauros, slam Special Gem, {{{R2}}}, {{{E2}}}, {{{S2}}}, {{{E4}}} or Longarm Potion.
-- [4P MP] auto-buy {{{O2}}} and {{{G3}}}.
-- [Player Trap] Special-damage lines are not viable late-game usually (see [[#h:special][Special]].)
+  - On *Subterra Sanctum* or *Churchmouse Streets*, slam Special Gem, {{{e1}}}, {{{g1}}}, {{{e2}}}, {{{s2}}}, {{{g4}}}, {{{e4}}} or Longarm Potion.
+  - Optionally on *Darkhouse Depths*, for Tauros, slam Special Gem, {{{r2}}}, {{{e2}}}, {{{s2}}}, {{{e4}}} or Longarm Potion.
+- [4P MP] auto-buy {{{o2}}} and {{{g3}}}.
+- [Player Trap] Special-damage lines are not viable late-game usually (see [[#special][Special]].)
 
 ** RENEW Multipliers
 :PROPERTIES:
-:CUSTOM_ID: h:gems_s
+:CUSTOM_ID: gems_s
 :END:
 Super-high damage standalones requiring only leap, accessible immediately through base kit.
 They solve DPS easily with minimal synergies required.
 
-{{{R4g}}}
-{{{R2g}}}
-{{{R1g}}}
+{{{r4g}}}
+{{{r2g}}}
+{{{r1g}}}
 
 Non-DPS carry gems but universal damage multipliers into any line.
 
-{{{O2g}}}
-{{{G3g}}}
+{{{o2g}}}
+{{{g3g}}}
 
 #+begin_quote
-- {{{R4}}} :: 580 base DPS on successive leaps is astounding.
-  + If triggered every <5s, still _out-damages all other Shadow Defensive_ on base.
-    
-  + Leaps are free on Phase 2's of Witch and Shira (no leap movement at 3 Rabbitleaps.)
-- {{{R2}}} :: +180 double damage on leaps (360 DPS on successive leaps).
-  + Unlike {{{R4}}}, {{{R1}}} and {{{R2}}} typically have better item scaling.
-- {{{R1}}} :: optimal $(2\rightarrow1)$ rotations yields 390 base DPS.
+- {{{r4}}} :: 580 base DPS on successive leaps is astounding.
+  - If triggered every <5s, still _out-damages all other Shadow Defensive_ on base.
 
-- {{{O2}}} and {{{G3}}} :: immediate and lategame _universal damage multipliers_.
-  + [4P] practically autobuy.
-  + Excluding {{{R2}}} and {{{E3}}}, worth replacing other gems over,
+  - Leaps are free on Phase 2's of Witch and Shira (no leap movement at 3 Rabbitleaps.)
+- {{{r2}}} :: +180 double damage on leaps (360 DPS on successive leaps).
+  - Unlike {{{r4}}}, {{{r1}}} and {{{r2}}} typically have better item scaling.
+- {{{r1}}} :: optimal $(2\rightarrow1)$ rotations yields 390 base DPS.
+
+- {{{o2}}} and {{{g3}}} :: immediate and lategame _universal damage multipliers_.
+  - [4P] practically autobuy.
+  - Excluding {{{r2}}} and {{{e3}}}, worth replacing other gems over,
     especially once you have any teammates or loot damage source.
 #+end_quote
-   
+
 ** REVIEW Great
 :PROPERTIES:
-:CUSTOM_ID: h:gems_a
+:CUSTOM_ID: gems_a
 :END:
 Weaker damage throughputs, but nonetheless safer and great options throughout the run.
 
-{{{S1g}}}
-{{{G1g}}}
-{{{O4g}}}
-{{{E3g}}}
-{{{S2g}}}
-    
+{{{s1g}}}
+{{{g1g}}}
+{{{o4g}}}
+{{{e3g}}}
+{{{s2g}}}
+
 #+begin_quote
-- {{{S1}}} :: more consistent single-target DPS on non-leap _Secondary_ builds.
-- {{{G1}}} :: in-class {{{Darkstorm-Knife}}} and amazing in Rabbitluck or when multiple enemies are present.
-  + Very decent % trigger without Rabbitluck.
-  + Similar to {{{S1}}} allowing extra damage on Secondary builds, but extended to Special and Defensive.
+- {{{s1}}} :: more consistent single-target DPS on non-leap _Secondary_ builds.
+- {{{g1}}} :: in-class {{{darkstorm-knife}}} and amazing in Rabbitluck or when multiple enemies are present.
+  - Very decent % trigger without Rabbitluck.
+  - Similar to {{{s1}}} allowing extra damage on Secondary builds, but extended to Special and Defensive.
 
-- {{{O4}}} :: moreso an attack damage/loot-trigger multiplier (scaling in late game.)
-  + Unlike {{{S4}}}, in the same 10s span, {{{O4}}} allows an extra attack (11 vs S4's 10.)
-  + In 5s buffs like Smite, allows 2-3 extra attacks.
-  + Only internal "perma" speed for Shadow.
+- {{{o4}}} :: moreso an attack damage/loot-trigger multiplier (scaling in late game.)
+  - Unlike {{{s4}}}, in the same 10s span, {{{o4}}} allows an extra attack (11 vs S4's 10.)
+  - In 5s buffs like Smite, allows 2-3 extra attacks.
+  - Only internal "perma" speed for Shadow.
 
-- {{{E3}}} :: good damage bump and utility tool (single/group buffs + debuffs.)
-  + Enables {{{E1}}} and buff/debuff item lines.
-  + Needs {{{O1}}}, {{{G2}}} or CD reduction for consistent triggers (but good on base.)
-  + _Inconsistent AoE_, but otherwise, ~+51% mean damage/Special from base.
-    [fn:e3:{{{E3}}} average mean does not factor in damage buffs or Sap, code available (https://gist.github.com/quoise-ps/82ce0dcc0ff5f5c8222e90b51bd9c4b0.)]
+- {{{e3}}} :: good damage bump and utility tool (single/group buffs + debuffs.)
+  - Enables {{{e1}}} and buff/debuff item lines.
+  - Needs {{{o1}}}, {{{g2}}} or CD reduction for consistent triggers (but good on base.)
+  - _Inconsistent AoE_, but otherwise, ~+51% mean damage/Special from base.
+    [fn:e3:{{{e3}}} average mean does not factor in damage buffs or Sap, code available (https://gist.github.com/quoise-ps/82ce0dcc0ff5f5c8222e90b51bd9c4b0.)]
 
-- {{{S2}}} :: amazing for damage uptime via ranged attacks, charge and wider area.
-  + Consistent trigger for {{{R1}}}.
+- {{{s2}}} :: amazing for damage uptime via ranged attacks, charge and wider area.
+  - Consistent trigger for {{{r1}}}.
 #+end_quote
 
 ** REVIEW Good
 :PROPERTIES:
-:CUSTOM_ID: h:gems_b
+:CUSTOM_ID: gems_b
 :END:
 Weaker gems that solve specific encounters exceedingly well, have certain downsides or broad synergies.
 
-{{{E1g}}}
-{{{E4g}}}
-{{{G4g}}}
-{{{S3g}}}
-{{{O3g}}}
+{{{e1g}}}
+{{{e4g}}}
+{{{g4g}}}
+{{{s3g}}}
+{{{o3g}}}
 
 #+begin_quote
-- {{{E1}}} :: best non-leap damage slam with decent snapshot buff and multihit scaling.
-  + Strongly hindered by movement slow on use (bad for /Extra/ mechs.)
-  + Average 4 Primaries/7.0s (100*16 damage + 2 other abilities.)
-    
-- {{{E4}}} :: high burst trivializing the first two fights in each midstage when used at t=0s+20s.
-  + Highest burst when used with {{{G1}}} and Blackstrike buff ({{{E3}}}, {{{Firststrike-Bracelet}}}.)
-  + Good _ads tech_ when timed.
+- {{{e1}}} :: best non-leap damage slam with decent snapshot buff and multihit scaling.
+  - Strongly hindered by movement slow on use (bad for /Extra/ mechs.)
+  - Average 4 Primaries/7.0s (100*16 damage + 2 other abilities.)
 
-- {{{G4}}} :: significant dmg increase that hits all AoE (good _ads tech_.)
-  + The 10% luck is mediocre until you have a % and %-proc (e.g. {{{G1}}} and {{{Lightning-Bow}}}.)
+- {{{e4}}} :: high burst trivializing the first two fights in each midstage when used at t=0s+20s.
+  - Highest burst when used with {{{g1}}} and Blackstrike buff ({{{e3}}}, {{{firststrike-bracelet}}}.)
+  - Good _ads tech_ when timed.
 
-- {{{S3}}} :: 4s oGCD is pretty good; simplifies rotations and good early damage.
-  + QoL {{{Shackles}}} reroll in an instant (e.g. clicking Primary in Flow-Str more.)
-  + Damage falloff with no synergies.
-  + Enables {{{E1}}} by bypassing its slow (2/3rds of the time.)
+- {{{g4}}} :: significant dmg increase that hits all AoE (good _ads tech_.)
+  - The 10% luck is mediocre until you have a % and %-proc (e.g. {{{g1}}} and {{{lightning-bow}}}.)
 
-- {{{O3}}} :: highest base Special (exceptional for 1.0s GCD), good _ads tech_ and slam option at base on 15s CD.
-  + [MP] {{{O3}}} is pickable given other class O3 gems are not high base damage.
-  + {{{O3}}} may be the second-most consistent Special damage dealer next to {{{E3}}}.
-    - Note, most {{{O3}}} items are mediocre with other Specials.
-  + _Losing potential % procs is typically insignificant_ for its use.
+- {{{s3}}} :: 4s oGCD is pretty good; simplifies rotations and good early damage.
+  - QoL {{{shackles}}} reroll in an instant (e.g. clicking Primary in Flow-Str more.)
+  - Damage falloff with no synergies.
+  - Enables {{{e1}}} by bypassing its slow (2/3rds of the time.)
+
+- {{{o3}}} :: highest base Special (exceptional for 1.0s GCD), good _ads tech_ and slam option at base on 15s CD.
+  - [MP] {{{o3}}} is pickable given other class O3 gems are not high base damage.
+  - {{{o3}}} may be the second-most consistent Special damage dealer next to {{{e3}}}.
+    - Note, most {{{o3}}} items are mediocre with other Specials.
+  - _Losing potential % procs is typically insignificant_ for its use.
 #+end_quote
 
 ** REVIEW Conditionally good
 :PROPERTIES:
-:CUSTOM_ID: h:gems_c
+:CUSTOM_ID: gems_c
 :END:
 Gems that are average, build-altering or have very narrow synergies for low yield.
 
-{{{S4g}}}
-{{{R3g}}}
-{{{E2g}}}
-{{{G2g}}}
-{{{O1g}}}
+{{{s4g}}}
+{{{r3g}}}
+{{{e2g}}}
+{{{g2g}}}
+{{{o1g}}}
 
 #+begin_quote
-- {{{S4}}} :: QoL 10s oGCD with good early DPS. Falloffs harshly with no synergies.
-  + 10s for an oGCD is bad, thus item/{{{G2}}}-dependant for damage scaling.
-  + {{{Shackles}}} reroll in an instant, making it "quicker" to snapshot effects or spam attack.
+- {{{s4}}} :: QoL 10s oGCD with good early DPS. Falloffs harshly with no synergies.
+  - 10s for an oGCD is bad, thus item/{{{g2}}}-dependant for damage scaling.
+  - {{{shackles}}} reroll in an instant, making it "quicker" to snapshot effects or spam attack.
 
-- {{{R3}}} :: good option Special-trigger for loot ({{{Saltwater-Staff}}}) and AoE (_ads tech_), but a *player trap* otherwise.
-  + 60% chance for it to whiff (into 4s CD) and 250 base is _super bad_ in late-game.
-    - Weakest % trigger for loot effects like {{{Lightning-Bow}}}.
-  + Besides {{{O2}}}, no internal gem synergies and may become anti-synergistic late-game
-    (i.e. _GCD is contested_; and 10% luck {{{G4}}} provides is too inconsequential.)
-  + {{{R3}}}-only damage builds strictly require {{{Obsidian-Rod}}} or >50% Rabbitluck uptime for Witch DPS.
+- {{{r3}}} :: good option Special-trigger for loot ({{{saltwater-staff}}}) and AoE (_ads tech_), but a *player trap* otherwise.
+  - 60% chance for it to whiff (into 4s CD) and 250 base is _super bad_ in late-game.
+    - Weakest % trigger for loot effects like {{{lightning-bow}}}.
+  - Besides {{{o2}}}, no internal gem synergies and may become anti-synergistic late-game
+    (i.e. _GCD is contested_; and 10% luck {{{g4}}} provides is too inconsequential.)
+  - {{{r3}}}-only damage builds strictly require {{{obsidian-rod}}} or >50% Rabbitluck uptime for Witch DPS.
 
-- {{{E2}}} :: okay DPS slam option, but impossible to out-damage {{{R2}}} (and {{{S2}}} / {{{O2}}} in mixed builds.)
+- {{{e2}}} :: okay DPS slam option, but impossible to out-damage {{{r2}}} (and {{{s2}}} / {{{o2}}} in mixed builds.)
 
-- {{{G2}}} :: 0 dmg line-specific % gem, late-buy only (requires synergies), no leap or invuln.
-  + Damage positive but high variance off base, risks wipe without synergies (if not clicking Primary.)
-  + In 4P with Rabbitluck, you should still run {{{O2}}} anyways unless damage lead.
+- {{{g2}}} :: 0 dmg line-specific % gem, late-buy only (requires synergies), no leap or invuln.
+  - Damage positive but high variance off base, risks wipe without synergies (if not clicking Primary.)
+  - In 4P with Rabbitluck, you should still run {{{o2}}} anyways unless damage lead.
 
-- {{{O1}}} :: clicks Special and loot CD's more; no Primary base damage increase.
-  + Effect ends up being awkward with 80% of loot items and Special's low base damage.
-  + Most other gem picks scale better.
+- {{{o1}}} :: clicks Special and loot CD's more; no Primary base damage increase.
+  - Effect ends up being awkward with 80% of loot items and Special's low base damage.
+  - Most other gem picks scale better.
 #+end_quote
 
 * REVIEW Item Tier List
 :PROPERTIES:
-:CUSTOM_ID: h:item_tier_list
+:CUSTOM_ID: item_tier_list
 :END:
 
 Again, tier placing prioritizes "lines" for final 900DPS (~600 base DPS.)
@@ -662,14 +1549,14 @@ Items are sorted by their name alphabetically.
 
 ** Perfect
 :PROPERTIES:
-:CUSTOM_ID: h:it_perfect
+:CUSTOM_ID: it_perfect
 :END:
 *** General
 :PROPERTIES:
-:CUSTOM_ID: h:it_perfect_general
+:CUSTOM_ID: it_perfect_general
 :END:
-Both this and [[#h:it_perfect_arch][More Archetypical]] are good early picks.
-[[#h:it_perfect_general][General]] is more well-rounded.
+Both this and [[#it_perfect_arch][More Archetypical]] are good early picks.
+[[#it_perfect_general][General]] is more well-rounded.
 
 #+begin_center
 {{{i(Amethyst-Bracelet)}}}
@@ -681,11 +1568,11 @@ Both this and [[#h:it_perfect_arch][More Archetypical]] are good early picks.
 {{{i(Bloody-Bandage)}}}
 {{{i(Butterfly-Hairpin)}}}
 {{{i(Chrome-Shield)}}}
-{{{i(Cursed-Candlestaff)}}}[fn:cursed-candlestaff:{{{Cursed-Candlestaff}}} is unironically really good on Shadow's hitall. You should not be skipping this in MP unless you have {{{O3}}}.]
+{{{i(Cursed-Candlestaff)}}}[fn:cursed-candlestaff:{{{cursed-candlestaff}}} is unironically really good on Shadow's hitall. You should not be skipping this in MP unless you have {{{o3}}}.]
 {{{i(Demon-Horns)}}}
 {{{i(Eaglewing-Charm)}}}
 {{{i(Heavens-Codex)}}}
-{{{i(Hells-Codex)}}}[fn:darkstorm:[4P] {{{Hells-Codex}}} +30 is godly and coveted for multihit, though loses prio to Druid/Defender/Gren for {{{Heavens-Codex}}}'s resets.]
+{{{i(Hells-Codex)}}}[fn:darkstorm:[4P] {{{hells-codex}}} +30 is godly and coveted for multihit, though loses prio to Druid/Defender/Gren for {{{heavens-codex}}}'s resets.]
 {{{i(Kunoichi-Hood)}}}
 {{{i(Large-Umbrella)}}}
 {{{i(Leech-Staff)}}}
@@ -702,13 +1589,13 @@ Both this and [[#h:it_perfect_arch][More Archetypical]] are good early picks.
 {{{i(Storm-Petticoat)}}}
 {{{i(Timewarp-Wand)}}}
 {{{i(Vampiric-Dagger)}}}
-{{{i(Venom-Hood)}}}[fn:venom:[4P] {{{Venom-Hood}}} has higher priority for Sniper and Grenadier.]
+{{{i(Venom-Hood)}}}[fn:venom:[4P] {{{venom-hood}}} has higher priority for Sniper and Grenadier.]
 {{{i(Whitewing-Bracelet)}}}
 #+end_center
 
 *** More Archetypical
 :PROPERTIES:
-:CUSTOM_ID: h:it_perfect_arch
+:CUSTOM_ID: it_perfect_arch
 :END:
 Good now and influences build direction later.
 #+begin_center
@@ -716,9 +1603,9 @@ Good now and influences build direction later.
 {{{i(Brightstorm-Spear)}}}
 {{{i(Coldsteel-Shield)}}}
 {{{i(Crane-Katana)}}}
-{{{i(Darkstorm-Knife)}}}[fn:darkstorm:[4P] {{{Darkstorm-Knife}}} loses prio to Dancer/Sin/Pyro due to {{{Shackles}}}.]
+{{{i(Darkstorm-Knife)}}}[fn:darkstorm:[4P] {{{darkstorm-knife}}} loses prio to Dancer/Sin/Pyro due to {{{shackles}}}.]
 {{{i(Falconfeather-Dagger)}}}
-{{{i(Firststrike-Bracelet)}}}[fn:firstrike:[4P] {{{Firststrike-Bracelet}}} loses prio to anyone with high base and Omegacharge.]
+{{{i(Firststrike-Bracelet)}}}[fn:firstrike:[4P] {{{firststrike-bracelet}}} loses prio to anyone with high base and Omegacharge.]
 {{{i(Grandmaster-Spear)}}}
 {{{i(Hexed-Blindfold)}}}
 {{{i(Saltwater-Staff)}}}
@@ -732,22 +1619,22 @@ Good now and influences build direction later.
 
 *** Conditional
 :PROPERTIES:
-:CUSTOM_ID: h:it_perfect_cond
+:CUSTOM_ID: it_perfect_cond
 :END:
 Requires specific gem or item before substantial effect.
-#+BEGIN_CENTER
+#+begin_center
 {{{i(Colorful-Earrings)}}}
 {{{i(Crown-of-Storms)}}}
 {{{i(Icicle-Earrings)}}}
 {{{i(Lightning-Bow)}}}
 {{{i(Onepiece-Swimsuit)}}}
 {{{i(Usagi-Kamen)}}} \\
-/About 48.8% chance to find one of three % gems (BiS: {{{G1}}}) next shop./
+/About 48.8% chance to find one of three % gems (BiS: {{{g1}}}) next shop./
 
 {{{i(Lancer-Gauntlets)}}}
 {{{i(Lefthand-Cast)}}}
 {{{i(Righthand-Cast)}}} \\
-/Good when enabled with CD reduction, {{{R3}}}, {{{O1}}} or loot/debuff damage source./
+/Good when enabled with CD reduction, {{{r3}}}, {{{o1}}} or loot/debuff damage source./
 
 {{{i(Robe-of-Dark)}}}
 {{{i(Robe-of-Light)}}}
@@ -755,18 +1642,18 @@ Requires specific gem or item before substantial effect.
 /Stack GCD and loot triggers together./
 
 {{{i(Darkcloud-Necklace)}}}
-{{{i(Desert-Earrings)}}}[fn:desert:{{{Desert-Earrings}}} good for rolling Flow-Str/Dex or Haste when you meet req.]
-{{{i(Greysteel-Shield)}}}[fn:greysteel:{{{Greysteel-Shield}}} allows better leap uptime, diving into moons and beams for much longer safely.]
+{{{i(Desert-Earrings)}}}[fn:desert:{{{desert-earrings}}} good for rolling Flow-Str/Dex or Haste when you meet req.]
+{{{i(Greysteel-Shield)}}}[fn:greysteel:{{{greysteel-shield}}} allows better leap uptime, diving into moons and beams for much longer safely.]
 {{{i(Reflection-Shield)}}}
 {{{i(Sacred-Bow)}}}
 {{{i(Spiked-Shield)}}} \\
 /Other reqs.../
-#+END_CENTER
+#+end_center
 
 ** Great
 *** General
 :PROPERTIES:
-:CUSTOM_ID: h:it_great_general
+:CUSTOM_ID: it_great_general
 :END:
 #+begin_center
 {{{i(Aquamarine-Bracelet)}}}
@@ -810,7 +1697,7 @@ Requires specific gem or item before substantial effect.
 
 *** Scaling / Team-Focused
 :PROPERTIES:
-:CUSTOM_ID: h:it_great_scale
+:CUSTOM_ID: it_great_scale
 :END:
 #+begin_center
 Curse:
@@ -833,7 +1720,7 @@ Buff:
 
 *** Other Debuffs
 :PROPERTIES:
-:CUSTOM_ID: h:it_great_debuff
+:CUSTOM_ID: it_great_debuff
 :END:
 #+begin_center
 {{{i(Bluebolt-Staff)}}}
@@ -867,7 +1754,7 @@ Buff:
 
 *** Conditional
 :PROPERTIES:
-:CUSTOM_ID: h:it_great_cond
+:CUSTOM_ID: it_great_cond
 :END:
 #+begin_center
 {{{i(Obsidian-Rod)}}} \ggg
@@ -880,7 +1767,7 @@ Buff:
 {{{i(Ruins-Sword)}}}
 {{{i(Tough-Gauntlet)}}}
 {{{i(Vega-Spear)}}} \\
-/High GCD is very synergistic with snapshot buffs like {{{Beach-Sandals}}}, Ancient G3 or SS G4./
+/High GCD is very synergistic with snapshot buffs like {{{beach-sandals}}}, Ancient G3 or SS G4./
 
 {{{i(Ballroom-Gown)}}}
 {{{i(Mimick-Rabbitfoot)}}}
@@ -892,7 +1779,7 @@ Buff:
 {{{i(Battlemaiden-Armor)}}}
 {{{i(Crown-of-Love)}}}
 {{{i(Crown-of-Swords)}}}
-{{{i(Garnet-Staff)}}}[fn:garnet-staff:{{{Garnet-Staff}}} is a good alternate invuln proc for {{{R1}}} and {{{R4}}}.]
+{{{i(Garnet-Staff)}}}[fn:garnet-staff:{{{garnet-staff}}} is a good alternate invuln proc for {{{r1}}} and {{{r4}}}.]
 {{{i(Jesters-Hat)}}}
 {{{i(Lonesome-Pendant)}}}
 {{{i(Lost-Pendant)}}}
@@ -911,11 +1798,11 @@ Buff:
 
 ** Average-good
 :PROPERTIES:
-:CUSTOM_ID: h:it_good
+:CUSTOM_ID: it_good
 :END:
 *** General
 :PROPERTIES:
-:CUSTOM_ID: h:it_good_general
+:CUSTOM_ID: it_good_general
 :END:
 #+begin_center
 {{{i(Blackhole-Charm)}}}
@@ -969,7 +1856,7 @@ Buff:
 
 *** Special CD
 :PROPERTIES:
-:CUSTOM_ID: h:it_good_special
+:CUSTOM_ID: it_good_special
 :END:
 #+begin_center
 {{{i(Dark-Wings)}}}
@@ -977,13 +1864,13 @@ Buff:
 {{{i(Hawkfeather-Fan)}}}
 {{{i(Mermaid-Scalemail)}}}
 {{{i(Quartz-Shield)}}}
-{{{i(Staff-of-Sorrow)}}}[fn:staff-of-sorrow:{{{Staff-of-Sorrow}}}, no, it doesn't work with {{{O1}}}'s effect.] \\
-/Be wary of poor {{{spe}}} lategame scaling, see [[#h:special][Special]] for suggestions./
+{{{i(Staff-of-Sorrow)}}}[fn:staff-of-sorrow:{{{staff-of-sorrow}}}, no, it doesn't work with {{{o1}}}'s effect.] \\
+/Be wary of poor {{{spe}}} lategame scaling, see [[#special][Special]] for suggestions./
 #+end_center
 
 *** Gold
 :PROPERTIES:
-:CUSTOM_ID: h:it_good_gold
+:CUSTOM_ID: it_good_gold
 :END:
 #+begin_center
 {{{i(Silver-Coin)}}}
@@ -998,11 +1885,11 @@ Buff:
 
 ** "Dead or bad!"
 :PROPERTIES:
-:CUSTOM_ID: h:it_dead
+:CUSTOM_ID: it_dead
 :END:
 *** Damage
 :PROPERTIES:
-:CUSTOM_ID: h:it_dead_damage
+:CUSTOM_ID: it_dead_damage
 :END:
 #+begin_center
 {{{i(Apple-Plate)}}}
@@ -1044,7 +1931,7 @@ Buff:
 
 *** QoL
 :PROPERTIES:
-:CUSTOM_ID: h:it_dead_qol
+:CUSTOM_ID: it_dead_qol
 :END:
 #+begin_center
 {{{i(Abyss-Artifact)}}}
@@ -1059,7 +1946,7 @@ Buff:
 {{{i(Feathered-Overcoat)}}}
 {{{i(Frozen-Staff)}}}
 {{{i(Jade-Staff)}}}
-{{{i(Midsummer-Dress)}}}[fn:Midsummer-Dress:{{{Midsummer-Dress}}} can slow bypass {{{E1}}} or {{{G2}}}-Spc/Def-spam builds.]
+{{{i(Midsummer-Dress)}}}[fn:Midsummer-Dress:{{{midsummer-dress}}} can slow bypass {{{e1}}} or {{{g2}}}-Spc/Def-spam builds.]
 {{{i(Phoenix-Charm)}}}
 {{{i(Red-Tanzaku)}}}
 {{{i(Rockdragon-Mail)}}}
@@ -1071,7 +1958,7 @@ Buff:
 
 * REVIEW Other Notes
 :PROPERTIES:
-:CUSTOM_ID: h:other
+:CUSTOM_ID: other
 :END:
 
 This section is a mosaic of Shadow and general gameplay advice I've followed in the past.
@@ -1080,10 +1967,10 @@ If you have not yet, please toggle [[*Turn on Mini Hotbar][mini hotbar]] to moni
 
 ** REVIEW Practices on Targetting
 :PROPERTIES:
-:CUSTOM_ID: h:targetting
+:CUSTOM_ID: targetting
 :END:
-#+MACRO: nt @@html: <span style="font-size: small; border:2px DarkSalmon solid; padding: 1px;">@@Nearest Target@@html:</span>@@
-#+MACRO: ct @@html: <span style="font-size: small; border:2px DarkSeaGreen solid; padding: 1px;">@@Change Target@@html:</span>@@
+#+macro: nt @@html: <span style="font-size: small; border:2px DarkSalmon solid; padding: 1px;">@@Nearest Target@@html:</span>@@
+#+macro: ct @@html: <span style="font-size: small; border:2px DarkSeaGreen solid; padding: 1px;">@@Change Target@@html:</span>@@
 
 Targetting goes based on *enemy ID order*. Once you determine it for e.g. Tassha, it's typically fixed for that pattern.
 # need to verify this.
@@ -1091,8 +1978,8 @@ Targetting goes based on *enemy ID order*. Once you determine it for e.g. Tassha
 Regarding player controls {{{nt}}} and {{{ct}}} (ignoring shielded enemies.)
 - {{{nt}}} :: changes enemy target to _nearest enemy_.
 - {{{ct}}} :: /two functions:/
-  a. While held, targets _center between enemies_ and slows your character.
-  b. When released, _advances targetting_ in queue.
+  1. While held, targets _center between enemies_ and slows your character.
+  2. When released, _advances targetting_ in queue.
 - {{{nt}}} press \land {{{ct}}} released :: _resets to frontmost enemy_ in queue.
 
 #+begin_quote
@@ -1105,7 +1992,7 @@ such that further target resets require {{{nt}}} to be refreshed (released and r
 
 *** Untargettables
 :PROPERTIES:
-:CUSTOM_ID: h:untarget
+:CUSTOM_ID: untarget
 :END:
 
 Some enemy status effects are untargettable (non-exhaustive):
@@ -1117,7 +2004,7 @@ Some enemy status effects are untargettable (non-exhaustive):
 
 *** Tips: Avoiding Leap
 :PROPERTIES:
-:CUSTOM_ID: h:avoid_leap
+:CUSTOM_ID: avoid_leap
 :END:
 
 If you're in a fight with multiple enemies, and you do _not want to leap_:
@@ -1132,42 +2019,42 @@ Vice versa, I may refresh and force leap by pressing {{{nt}}} \rightarrow {{{ct}
 
 *** Tips: Alternate forms of movement
 :PROPERTIES:
-:CUSTOM_ID: h:alt_movement
+:CUSTOM_ID: alt_movement
 :END:
 
 - Alternatively, use "tapping" movement keys (*streaming*) for micromovements.
 - Using {{{spe}}} or {{{def}}} to slow movement temporarily.
-  
+
 ** REVIEW Invuln Chaining
 :PROPERTIES:
-:CUSTOM_ID: h:leap_chain
+:CUSTOM_ID: leap_chain
 :END:
 
 For damage/consistency, see [[*Ruby Leap Archetypes - R2/R4][Ruby Leap Archetypes - R2/R4]]. To repeat:
-- For {{{R1}}}/{{{R2}}}/{{{R4}}} leaps, leap just outside the minimum leap distance whenever you can.
+- For {{{r1}}}/{{{r2}}}/{{{r4}}} leaps, leap just outside the minimum leap distance whenever you can.
 
 Additionally:
 - Spreads have a small end-window where you can leap without taking damage.
 
 Additionally,
-- {{{def}}} \rightarrow {{{secl}}} does provide back-to-back invuln, but (2/3) {{{sec}}} can roll {{{Shackles}}}.
-- {{{secl}}} \rightarrow {{{secl}}} / {{{def}}} only chain invulns if <0.7s GCD or {{{Greysteel-Shield}}}.
+- {{{def}}} \rightarrow {{{secl}}} does provide back-to-back invuln, but (2/3) {{{sec}}} can roll {{{shackles}}}.
+- {{{secl}}} \rightarrow {{{secl}}} / {{{def}}} only chain invulns if <0.7s GCD or {{{greysteel-shield}}}.
 
 ** DONE Turn on Mini Hotbar
 :PROPERTIES:
-:CUSTOM_ID: h:mini_hotbar
+:CUSTOM_ID: mini_hotbar
 :END:
 
-#+MACRO: options ~Options>More Options~
-#+MACRO: hotbar @@html: <span style="font-size: small; border:2px darkcyan solid; padding: 1px;">@@Mini Hotbar@@html:</span>@@
+#+macro: options ~Options>More Options~
+#+macro: hotbar @@html: <span style="font-size: small; border:2px darkcyan solid; padding: 1px;">@@Mini Hotbar@@html:</span>@@
 In {{{options}}}, you can toggle and customize your {{{hotbar}}}. This allows you to see
-your available abilities (and {{{Shackles}}}) adjacent to your hitbox.
+your available abilities (and {{{shackles}}}) adjacent to your hitbox.
 
 An accent colour will border the Secondary if _leap is enabled,_ dependant on
 Shadow palette.
 
 #+caption: Mini Hotbar Settings
-[[./img/game/options_hotbar.jpg]]
+[[file:img/game/options_hotbar.jpg]]
 
 #+begin_quote
 [Author] I suggest using green Shadow palettes,
@@ -1176,7 +2063,7 @@ they're light in contrast and are visible during either final boss fights.
 
 ** REVIEW Hidden Leap Disable Radius
 :PROPERTIES:
-:CUSTOM_ID: h:leap_buffer
+:CUSTOM_ID: leap_buffer
 :END:
 
 After enabling leap on Secondary, disabling leap uses a smaller "buffer" distance.
@@ -1190,17 +2077,17 @@ Due to this, I typically play with my leap disabled and move (just) outside the 
 #+end_quote
 
 #+name: fig:rabbitleap_buffer
-#+CAPTION: Rabbitleap "Buffer" Disable Radius
-[[./img/game/rabbitleap-buffer-inkscape.svg]]
+#+caption: Rabbitleap "Buffer" Disable Radius
+[[file:/img/game/rabbitleap-buffer-inkscape.svg]]
 
 * TODO Example Builds :noexport:
 :PROPERTIES:
-:CUSTOM_ID: h:builds
+:CUSTOM_ID: builds
 :END:
 
 * RENEW Changelog (Releases)
 :PROPERTIES:
-:CUSTOM_ID: h:changelog
+:CUSTOM_ID: changelog
 :END:
 
 - v0.1.x (2026-04-18) :: release with ability synergies, gem tier list and ability tier list
@@ -1211,7 +2098,56 @@ Due to this, I typically play with my leap disabled and move (just) outside the 
   - v0.3.2 (2026-05-14) :: bad macro in item table, modified CSS; added abbreviations in gem tier list, headers are "fixed".
 - v0.4.0 (2026-06-07) :: gem-item retiers; actually fill item synergies.
   - v0.4.1 (2026-06-16) :: reordered some gems, review synergies, added o2/g3 as synergies, link repo's own JS/.css
-    to avoid failed site loading.
+       to avoid failed site loading.
 - v0.5.0 (2026-07-04) :: major item tiering rework. Added gameplan, multiplayer conflicts and targetting.
 
 #  LocalWords:  dmg synergize pickable Hammermaid BiS
+
+* TODO Planned Stuff to Do :noexport:
+** TODO Move to Hugo for Website
+/Entered on/ <2026-07-09 Thu>
+- Requires extra work to get tooltips to work
+- Prefer to setup Github runner on Github side to export from org to md to Hugo.
+
+** TODO Use a Shadow Thumbnail logo and Cover Art (Cover Page)
+/Entered on/ <2026-07-09 Thu>
+- Commission?
+
+** [0/2] Add more Diagrams/Pictures
+/Entered on/ <2026-07-09 Thu>
+*** TODO Upload Character Icons
+/Entered on/ <2026-07-09 Thu>
+- For class build conflicts and mentions
+
+*** TODO Upload other buff icons
+/Entered on/ <2026-07-09 Thu>
+- Rabbitluck
+- Flash Str, Dex, Int, Chr
+- Blackstrike
+- Wavestrike
+- Haste
+
+** TODO Animated Gifs
+/Entered on/ <2026-07-09 Thu>
+- Gifs for targetting
+- Streaming movement
+  
+** TODO Flowchart of Example Gem/Loot Choices
+/Entered on/ <2026-07-09 Thu>
+- Graphviz this shit (it's going to require HTML to get images to work)
+
+** TODO Write a proper build archetype section
+/Entered on/ <2026-07-09 Thu>
+- Large base + buffs
+- Loot/debuff
+- Percent procs (G1)
+
+** TODO move hourglass up
+/Entered on/ <2026-07-09 Thu>
+- [Stev] +15 DPS at 24s, 105 DPS at 240s.
+
+** TODO Revamp changelog, so it's actually legible
+/Entered on/ <2026-07-09 Thu>
+
+** TODO Move casts down for intuition
+/Entered on/ <2026-07-09 Thu>
