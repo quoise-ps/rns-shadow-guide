@@ -30,6 +30,8 @@
 #+macro: gamever v2.0.2.7
 #+macro: guidever v0.5.0
 #+macro: WIP @@html:<span style="color:red;">@@WIP@@html:</span>@@
+# With Hugo book, this is required on pages with math inside them. 
+#+macro: katex @@hugo:{{< katex />}}@@
 :END:
 :MACROS_ABBREVIATIONS:
 #+macro: pri {{{abl(N1)}}} *Primary*
@@ -1003,6 +1005,7 @@
 :EXPORT_HUGO_MENU: :menu "1.main" :title "Homepage"
 :CUSTOM_ID: main
 :END:
+{{{katex}}}
 
 #+begin_center
 @@html:<b><u>@@
@@ -1073,6 +1076,7 @@ For community jargon:
 :PROPERTIES:
 :CUSTOM_ID: class_summary
 :END:
+{{{katex}}}
 
 Shadow is a mobile close-quarters bunny with a potent versatility; she excels when playing flexibly, due to {{{shackles}}}.
 Many of her effects are unique or inspired from other classes and effects.
@@ -1195,6 +1199,7 @@ This distinctly allows Shadow to build into debuffs, multi-hit (on Special); or 
 :PROPERTIES:
 :CUSTOM_ID: rotation
 :END:
+{{{katex}}}
 
 Shadow's abilities' damage are more "symmetrical" at base kit.
 The base kit optimization below are in magnitudes of about \pm20dps (10%) and only
@@ -1261,6 +1266,7 @@ Same principle to activate leap above:
 :PROPERTIES:
 :CUSTOM_ID: ability_synergies
 :END:
+{{{katex}}}
 
 Unique or notable gem and item synergies are only presented.
 
@@ -1393,6 +1399,7 @@ applies to Defensive damage without consuming it.
 :PROPERTIES:
 :CUSTOM_ID: gems_tier_list
 :END:
+{{{katex}}}
 
 Tier placing prioritizes "lines" and WR by Lunar Shira/Witch of 900 DPS (~600 base DPS/level 1.)
 - In >99% of runs, buy a gem first shop:
@@ -1540,6 +1547,7 @@ Gems that are average, build-altering or have very narrow synergies for low yiel
 :PROPERTIES:
 :CUSTOM_ID: item_tier_list
 :END:
+{{{katex}}}
 
 Again, tier placing prioritizes "lines" for final 900DPS (~600 base DPS.)
 
@@ -1960,6 +1968,7 @@ Buff:
 :PROPERTIES:
 :CUSTOM_ID: other
 :END:
+{{{katex}}}
 
 This section is a mosaic of Shadow and general gameplay advice I've followed in the past.
 
@@ -2107,7 +2116,7 @@ Due to this, I typically play with my leap disabled and move (just) outside the 
 ** TODO Move to Hugo for Website
 /Entered on/ <2026-07-09 Thu>
 - Requires extra work to get tooltips to work
-- Prefer to setup Github runner on Github side to export from org to md to Hugo.
+- Prefer to setup Github runner on Github side to export from org to md to Hugo
 
 ** TODO Use a Shadow Thumbnail logo and Cover Art (Cover Page)
 /Entered on/ <2026-07-09 Thu>
@@ -2151,3 +2160,11 @@ Due to this, I typically play with my leap disabled and move (just) outside the 
 
 ** TODO Move casts down for intuition
 /Entered on/ <2026-07-09 Thu>
+
+** TODO Add export hooks for Katex
+/Entered on/ <2026-07-12 Sun>
+- Reference: https://orgmode.org/manual/Advanced-Export-Configuration.html
+- Katex Hugo Book: https://book.alxs.dev/docs/content/shortcodes/katex/
+
+Mostly to remove the "silent" katex macro,
+which is required to initially activate katex for the hugo book page.
