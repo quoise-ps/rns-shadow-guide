@@ -10,6 +10,13 @@ title = "Something about Shadow"
   [[module.imports]]
     path = "github.com/alex-shpak/hugo-book"
 
+# Link to homepage
+[[menu.before]]
+  name = 'Homepage'
+  url = '/'
+  weight = 1
+
+
 # Specific Hugo Book Configuration
 [params]
   # Color theme: 'light', 'dark' or 'auto'

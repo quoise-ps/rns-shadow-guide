@@ -3,6 +3,8 @@
 # #+subtitle: ({{{guidever}}})
 # #+description: Unofficial Shadow Class guide for the Rabbit & Steel game.
 # #+date: {{{modification-time(%Y-%m-%d)}}}
+#+macro: gamever v2.0.2.7
+#+macro: guidever v0.5.0
 
 # #+setup_file: macros.org
 :PREFERENCES:
@@ -27,8 +29,6 @@
 #+macro: abls [[./img/abilities-40px/$1.png]]
 #+macro: Shackle [[./img/other/Shackles.png]]
 #+macro: Shackles {{{i1}}}{{{tShackles}}}{{{i2}}}{{{Shackle}}} {{{span_dot}}}Shackles{{{span_end}}}{{{i3}}}
-#+macro: gamever v2.0.2.7
-#+macro: guidever v0.5.0
 #+macro: WIP @@html:<span style="color:red;">@@WIP@@html:</span>@@
 # With Hugo book, this is required on pages with math inside them. 
 #+macro: katex @@hugo:{{< katex />}}@@
@@ -997,16 +997,16 @@
 #+MACRO: tShackles On ability use, an attack is disabled randomly.
 :END:
 
-* RENEW Homepage
+* Homepage
 :PROPERTIES:
+:CUSTOM_ID: main
+# :EXPORT_TITLE: Shadow Guide (Rabbit & Steel)
 :EXPORT_FILE_NAME: _index
 :EXPORT_HUGO_TYPE: homepage
 :EXPORT_HUGO_SECTION: /
-:EXPORT_HUGO_MENU: :menu "1.main" :title "Homepage"
-:CUSTOM_ID: main
+:EXPORT_HUGO_WEIGHT: 100
 :END:
 {{{katex}}}
-
 #+begin_center
 @@html:<b><u>@@
 This guide is in
@@ -1021,62 +1021,46 @@ Additions would be welcome.
 @@html:</b></u>@@
 #+end_center
 
-Post class-rework Shadow Class guide written primarily for {{{gamever}}} of Rabbit & Steel.
+** Overview
+Shadow Class guide {{{guidever}}} written primarily for {{{gamever}}} of Rabbit & Steel.
 
 Primarily, the recommendations here are targetted as a carry at 4P Lunar
 and high WR consistency and with tactless author bias.
 
-#+begin_quote
-[Author] I'm primarily a Dancer main first with 260 Lunar Wins; some of these come from
+** About me
+I'm primarily a Dancer main first with 260 Lunar Wins; some of these come from
 4P nohits, 4P 1.5x (Game Speed) DT and 4P Touhou wins.
 
 On Shadow, I currently have 72 MP Lunar wins and 62 Total Hard wins.
-#+end_quote
 
+** Special Thanks
 This guide could not be made possible without the help of other players in mino_dev Discord.
 
 Special thanks to Obi Rod, Ins'Ania and Kero for early help.
 # check to see if said players are okay with being mentioned in guide.
 
-** DONE Related Resources
+* Introduction
 :PROPERTIES:
-:CUSTOM_ID: related_resources
+:CUSTOM_ID: introduction
+:EXPORT_HUGO_SECTION: intro/
+:EXPORT_HUGO_WEIGHT: 200
 :END:
 
-Details of Shadow's kit can be found in:
-- [[https://rns.miraheze.org/wiki/Shadow][Shadow | Rabbit & Steel Wiki (rns.miraheze.org)]]
-
-For latest available guides:
-- [[https://discord.com/channels/496640298844422149/1238375581486288916][Guides Catalogue maintained by Stagz | mino_dev Discord (discord.com)]]
-
-For community jargon:
-- [[https://docs.google.com/document/d/1rrSEIEstdKtajTY1xkXWoQKw3BIz4eENyJBHiyqCKcU/edit?tab=t.0][Rabbit & Steel Community Jargon by tomeking (docs.google.com)]]
-
-# attributions and claims to not own used images of R&S Loot + Gems
-
-** DONE Sample Definitions
+** Index
 :PROPERTIES:
-:CUSTOM_ID: sample_definitions
+:EXPORT_TITLE: Introduction
+:EXPORT_FILE_NAME: _index
+:EXPORT_HUGO_WEIGHT: 200
 :END:
 
-- {{{n1}}}, {{{o1}}}, {{{s1}}}, {{{r1}}}, {{{e1}}}, {{{g1}}} :: _Normal_ and _gem_ variants of Primary.
-- {{{r1}}}, {{{r2}}}, {{{r3}}}, {{{r4}}} :: _Ruby_ variants of each respectively: Primary, Secondary, Special and Defensive.
-- \( 2' \ggg 3 > 1 > 4 > 2 \) :: move priority for {{{r2}}}
-  - {{{secl}}} (\( 2' \)) is drastically favoured and clicked whenever available;
-  - Followed by Special, Primary, Defensive and (non-leap) Secondary.
-- AoE :: Area-of-Effect; typically used in context of hitting multiple enemies, e.g. fights in Churchouse or Sanctum.
-- oGCD :: Shadow's S3, S4; these can be used without sacrificing GCD time spent on other
-- prio :: priority; typically what item/gems should be picked and by whom
-  - BiS :: Best in Slot; universal best upgrade.
-  - line :: if buying a gem, typically how broad or strong its item-gem synergies are.
-- slam :: a forced gem-item pick to solve the immediate stage/encounter.
-  - In R&S, often this does expand your item lines off base, even if not BiS.
-
-* REVIEW Class Summary
+** Class Overview
 :PROPERTIES:
 :CUSTOM_ID: class_summary
+:EXPORT_HUGO_WEIGHT: 201
 :END:
 {{{katex}}}
+
+*** Shadow Class Overview
 
 Shadow is a mobile close-quarters bunny with a potent versatility; she excels when playing flexibly, due to {{{shackles}}}.
 Many of her effects are unique or inspired from other classes and effects.
@@ -1101,7 +1085,7 @@ Shadow is best characterized by having:
 | Consistent damage and AoE solves                   | Almost 0 hacky Rabbitluck 8k+ damage builds |
 |                                                    | Contests most items of Sin                  |
 
-** REVIEW General Gameplan
+**** General Gameplan
 :PROPERTIES:
 :CUSTOM_ID: gameplan
 :END:
@@ -1113,7 +1097,7 @@ you should be playing just under 3 Rabbitleaps, then moving out enable leap when
 In MP, Shadow adjusts by walking for teammates as she shares _fastest base speed with Assassin_ and, like Sin,
 has no slows on two of three attacks.
 
-*** REVIEW Multiplayer Item Conflicts
+***** Multiplayer Item Conflicts
 :PROPERTIES:
 :CUSTOM_ID: mp_conflict
 :END:
@@ -1133,12 +1117,12 @@ Most item conflicts do and _should occur with Sin, Dancer, SS and Druid._
 Pubs Grens may also contest low GCD/trigger items, though they have alternate lines and GCD cancel.
 #+end_quote
 
-*** TODO First Shop Buys and Slams :noexport:
+***** TODO First Shop Buys and Slams :noexport:
 :PROPERTIES:
 :CUSTOM_ID: shop
 :END:
 
-*** DRAFT Scaling Ability Damage :noexport:
+***** DRAFT Scaling Ability Damage :noexport:
 :PROPERTIES:
 :CUSTOM_ID: scale_ability
 :END:
@@ -1158,7 +1142,7 @@ Most of the time on Shadow, your damage will come from abilities, so you often w
 
 See [[#ability_synergies][Ability synergies]] for specific synergies.
 
-** REVIEW Shackles
+**** Shackles
 :PROPERTIES:
 :CUSTOM_ID: shackles
 :END:
@@ -1172,7 +1156,7 @@ This is independent of any Magicklock trinket effects, cooldowns or item effects
 you could hold down {{{sec}}} and {{{spe}}}.
 #+end_quote
 
-** REVIEW Inspirations from other Classes and Loot
+**** Inspirations from other Classes and Loot
 :PROPERTIES:
 :CUSTOM_ID: inspirations
 :END:
@@ -1186,7 +1170,7 @@ Shadow gains some distinct effects that appear in other classes, namely:
 # - {{{S1}}}, {{{S4}}} oGCD's
 # - {{{S1}}}, {{{G1}}} and {{{R4}}} automatic abilities (do not trigger items that require /use/, i.e. {{{Black-Wakizashi}}})
 
-** REVIEW Gacha ability
+**** Gacha ability
 :PROPERTIES:
 :CUSTOM_ID: gacha
 :END:
@@ -1195,9 +1179,94 @@ Shadow gains some distinct effects that appear in other classes, namely:
 This distinctly allows Shadow to build into debuffs, multi-hit (on Special); or support most Shadow builds.
 - See [[https://rns.miraheze.org/wiki/Shadow][Shadow (rns.miraheze.org)]] for exhaustive list of effects.
 
-* REVIEW Move Priority (/Rotations/)
+** Other Resources
+:PROPERTIES:
+:CUSTOM_ID: related_resources
+:EXPORT_FILE_NAME: related_resources
+:EXPORT_HUGO_WEIGHT: 202
+:END:
+
+*** Related resources
+
+Here are some other relevant resources I recommend checking out.
+
+**** Shadow Wiki Link
+Details of Shadow's kit can be found in:
+- [[https://rns.miraheze.org/wiki/Shadow][Shadow | Rabbit & Steel Wiki (rns.miraheze.org)]]
+
+**** Guide Catalogue
+For latest available guides:
+- [[https://discord.com/channels/496640298844422149/1238375581486288916][Guides Catalogue maintained by Stagz | mino_dev Discord (discord.com)]]
+
+**** Community Jargon
+For community jargon:
+- [[https://docs.google.com/document/d/1rrSEIEstdKtajTY1xkXWoQKw3BIz4eENyJBHiyqCKcU/edit?tab=t.0][Rabbit & Steel Community Jargon by tomeking (docs.google.com)]]
+
+** Sample Definitions
+:PROPERTIES:
+:CUSTOM_ID: sample_definitions
+:EXPORT_FILE_NAME: sample_definitions
+:EXPORT_HUGO_WEIGHT: 203
+:END:
+
+*** R&S and Guide Definitions
+{{{katex}}}
+- {{{n1}}}, {{{o1}}}, {{{s1}}}, {{{r1}}}, {{{e1}}}, {{{g1}}} :: _Normal_ and _gem_ variants of Primary.
+- {{{r1}}}, {{{r2}}}, {{{r3}}}, {{{r4}}} :: _Ruby_ variants of each respectively: Primary, Secondary, Special and Defensive.
+- \( 2' \ggg 3 > 1 > 4 > 2 \) :: move priority for {{{r2}}}
+  - {{{secl}}} (\( 2' \)) is drastically favoured and clicked whenever available;
+  - Followed by Special, Primary, Defensive and (non-leap) Secondary.
+
+*** Generic Game Definitions
+- AoE :: Area-of-Effect; typically used in context of hitting multiple enemies, e.g. fights in Churchouse or Sanctum.
+- oGCD :: Shadow's S3, S4; these can be used without sacrificing GCD time spent on other
+- prio :: priority; typically what item/gems should be picked and by whom
+  - BiS :: Best in Slot; universal best upgrade.
+  - line :: if buying a gem, typically how broad or strong its item-gem synergies are.
+- slam :: a forced gem-item pick to solve the immediate stage/encounter.
+  - In R&S, often this does expand your item lines off base, even if not BiS.
+
+** Changelog
+:PROPERTIES:
+:CUSTOM_ID: changelog
+:EXPORT_FILE_NAME: changelog
+:EXPORT_HUGO_WEIGHT: 204
+:END:
+
+- v0.1.x (2026-04-18) :: release with ability synergies, gem tier list and ability tier list
+- v0.2.0 (2026-04-21) :: applied feedback changes to rotation, gems, items.
+  - v0.2.1 (2026-04-21) :: fixed versioning and added dating.
+- v0.3.0 (2026-05-02) :: added rotations, class summary, tooltips, other notes; moved gems again.
+  - v0.3.1 (2026-05-02) :: grammar.
+  - v0.3.2 (2026-05-14) :: bad macro in item table, modified CSS; added abbreviations in gem tier list, headers are "fixed".
+- v0.4.0 (2026-06-07) :: gem-item retiers; actually fill item synergies.
+  - v0.4.1 (2026-06-16) :: reordered some gems, review synergies, added o2/g3 as synergies, link repo's own JS/.css
+       to avoid failed site loading.
+- v0.5.0 (2026-07-04) :: major item tiering rework. Added gameplan, multiplayer conflicts and targetting.
+
+* Core
+:PROPERTIES:
+:EXPORT_HUGO_SECTION: core
+:EXPORT_HUGO_WEIGHT: 300
+:END:
+
+** Index
+:PROPERTIES:
+:EXPORT_TITLE: Core
+:EXPORT_FILE_NAME: _index
+:EXPORT_HUGO_WEIGHT: 300
+:END:
+
+** Move Priority (/Rotations/)
 :PROPERTIES:
 :CUSTOM_ID: rotation
+:EXPORT_FILE_NAME: rotation
+:EXPORT_HUGO_WEIGHT: 301
+:END:
+
+*** Basic Move Priorities
+:PROPERTIES:
+:CUSTOM_ID: rotation_basic
 :END:
 {{{katex}}}
 
@@ -1229,7 +1298,7 @@ save your {{{spe}}} or {{{def}}} until they spawn.
 For *Darkhouse Depths'* Darkbeast Tauros, due to her zoning,
 use the late hit animations of {{{pri}}} and {{{def}}} to deal damage consistently.
 
-** REVIEW Ruby Leap Archetypes - R2/R4
+*** Ruby Leap Archetypes - R2/R4
 :PROPERTIES:
 :CUSTOM_ID: ruby_leap
 :END:
@@ -1251,7 +1320,7 @@ Larger enemies like *Red Darkhouse* Ranalie P2 allow you to leap without lunging
 #+caption: Distances in Rabbitleaps (lp) with Stella
 [[file:img/game/rabbitleap-inkscape2.svg]]
 
-*** REVIEW Alt: Omegacharge Ruby Primary (R1)
+*** Alt: Omegacharge Ruby Primary (R1)
 :PROPERTIES:
 :CUSTOM_ID: r1
 :END:
@@ -1262,10 +1331,14 @@ Same principle to activate leap above:
 2. {{{r1}}};
 3. Repeat.
 
-* REVIEW Ability synergies
+** Ability synergies
 :PROPERTIES:
 :CUSTOM_ID: ability_synergies
+:EXPORT_FILE_NAME: ability_synergies
+:EXPORT_HUGO_WEIGHT: 302
 :END:
+
+*** Ability Synergies
 {{{katex}}}
 
 Unique or notable gem and item synergies are only presented.
@@ -1276,7 +1349,7 @@ Generic item damage bonuses are assumed:
 
 Also most gems here are universally good with {{{o2}}}, {{{g3}}} and {{{o4}}}.
 
-** REVIEW Primary
+**** Primary
 :PROPERTIES:
 :CUSTOM_ID: primary
 :END:
@@ -1309,7 +1382,7 @@ At base kit, the effect triggers {{{pocketwatch}}}, but not {{{sacredstone-charm
 {{{s3}}} cancels this slow when used immediately after.
 #+end_quote
 
-** REVIEW Secondary
+**** Secondary
 :PROPERTIES:
 :CUSTOM_ID: secondary
 :END:
@@ -1333,7 +1406,7 @@ At base kit, the effect triggers {{{pocketwatch}}}, but not {{{sacredstone-charm
 #+begin_quote
 nil#+end_quote
 
-** REVIEW Special
+**** Special
 :PROPERTIES:
 :CUSTOM_ID: special
 :END:
@@ -1367,7 +1440,7 @@ thus Special-only is heavily dependant on {{{e3}}}, {{{o3}}} or {{{obsidian-rod}
 {{{e3}}} is affected by {{{obsidian-rod}}}, {{{cursed-candlestaff}}}, {{{old-bonnet}}} / {{{haunted-gloves}}}, {{{mountain-staff}}} and other special items changes.
 #+end_quote
 
-** REVIEW Defensive
+**** Defensive
 :PROPERTIES:
 :CUSTOM_ID: defensive
 :END:
@@ -1395,10 +1468,14 @@ Wavestrike, Blacktrike, Flash-* and Counter/Vanish/Ghost effects, with for examp
 applies to Defensive damage without consuming it.
 #+end_quote
 
-* REVIEW Gems Tier List
+** Gems Tier List
 :PROPERTIES:
 :CUSTOM_ID: gems_tier_list
+:EXPORT_FILE_NAME: gems_tier_list
+:EXPORT_HUGO_WEIGHT: 303
 :END:
+
+*** Gems Tiering
 {{{katex}}}
 
 Tier placing prioritizes "lines" and WR by Lunar Shira/Witch of 900 DPS (~600 base DPS/level 1.)
@@ -1408,7 +1485,7 @@ Tier placing prioritizes "lines" and WR by Lunar Shira/Witch of 900 DPS (~600 ba
 - [4P MP] auto-buy {{{o2}}} and {{{g3}}}.
 - [Player Trap] Special-damage lines are not viable late-game usually (see [[#special][Special]].)
 
-** RENEW Multipliers
+**** Multipliers
 :PROPERTIES:
 :CUSTOM_ID: gems_s
 :END:
@@ -1439,7 +1516,7 @@ Non-DPS carry gems but universal damage multipliers into any line.
     especially once you have any teammates or loot damage source.
 #+end_quote
 
-** REVIEW Great
+**** Great
 :PROPERTIES:
 :CUSTOM_ID: gems_a
 :END:
@@ -1472,7 +1549,7 @@ Weaker damage throughputs, but nonetheless safer and great options throughout th
   - Consistent trigger for {{{r1}}}.
 #+end_quote
 
-** REVIEW Good
+**** Good
 :PROPERTIES:
 :CUSTOM_ID: gems_b
 :END:
@@ -1508,7 +1585,7 @@ Weaker gems that solve specific encounters exceedingly well, have certain downsi
   - _Losing potential % procs is typically insignificant_ for its use.
 #+end_quote
 
-** REVIEW Conditionally good
+**** Conditionally good
 :PROPERTIES:
 :CUSTOM_ID: gems_c
 :END:
@@ -1543,10 +1620,14 @@ Gems that are average, build-altering or have very narrow synergies for low yiel
   - Most other gem picks scale better.
 #+end_quote
 
-* REVIEW Item Tier List
+** Item Tier List
 :PROPERTIES:
 :CUSTOM_ID: item_tier_list
+:EXPORT_FILE_NAME: item_tier_list
+:EXPORT_HUGO_WEIGHT: 304
 :END:
+
+*** Item Tiering
 {{{katex}}}
 
 Again, tier placing prioritizes "lines" for final 900DPS (~600 base DPS.)
@@ -1555,11 +1636,11 @@ Again, tier placing prioritizes "lines" for final 900DPS (~600 base DPS.)
 Items are sorted by their name alphabetically.
 #+end_quote
 
-** Perfect
+**** Perfect
 :PROPERTIES:
 :CUSTOM_ID: it_perfect
 :END:
-*** General
+***** General
 :PROPERTIES:
 :CUSTOM_ID: it_perfect_general
 :END:
@@ -1601,7 +1682,7 @@ Both this and [[#it_perfect_arch][More Archetypical]] are good early picks.
 {{{i(Whitewing-Bracelet)}}}
 #+end_center
 
-*** More Archetypical
+***** More Archetypical
 :PROPERTIES:
 :CUSTOM_ID: it_perfect_arch
 :END:
@@ -1625,7 +1706,7 @@ Good now and influences build direction later.
 {{{i(Youkai-Bracelet)}}}
 #+end_center
 
-*** Conditional
+***** Conditional
 :PROPERTIES:
 :CUSTOM_ID: it_perfect_cond
 :END:
@@ -1658,8 +1739,8 @@ Requires specific gem or item before substantial effect.
 /Other reqs.../
 #+end_center
 
-** Great
-*** General
+**** Great
+***** General
 :PROPERTIES:
 :CUSTOM_ID: it_great_general
 :END:
@@ -1703,7 +1784,7 @@ Requires specific gem or item before substantial effect.
 {{{i(Wolf-Hood)}}}
 #+end_center
 
-*** Scaling / Team-Focused
+***** Scaling / Team-Focused
 :PROPERTIES:
 :CUSTOM_ID: it_great_scale
 :END:
@@ -1726,7 +1807,7 @@ Buff:
 /Universal/attack damage multipliers \rightarrow good too by 1P final stage./
 #+end_center
 
-*** Other Debuffs
+***** Other Debuffs
 :PROPERTIES:
 :CUSTOM_ID: it_great_debuff
 :END:
@@ -1760,7 +1841,7 @@ Buff:
 # Note, {{{Ghost-Spear}}} and {{{Phantom-Dagger}}} should be treated more like {{{Lefthand-Cast}}} and etc.
 # They're good, but may block ability damage scaling.
 
-*** Conditional
+***** Conditional
 :PROPERTIES:
 :CUSTOM_ID: it_great_cond
 :END:
@@ -1804,11 +1885,11 @@ Buff:
 /Other super-niche conditionals here./
 #+end_center
 
-** Average-good
+**** Average-good
 :PROPERTIES:
 :CUSTOM_ID: it_good
 :END:
-*** General
+***** General
 :PROPERTIES:
 :CUSTOM_ID: it_good_general
 :END:
@@ -1862,7 +1943,7 @@ Buff:
 {{{i(Volcano-Spear)}}}
 #+end_center
 
-*** Special CD
+***** Special CD
 :PROPERTIES:
 :CUSTOM_ID: it_good_special
 :END:
@@ -1876,7 +1957,7 @@ Buff:
 /Be wary of poor {{{spe}}} lategame scaling, see [[#special][Special]] for suggestions./
 #+end_center
 
-*** Gold
+***** Gold
 :PROPERTIES:
 :CUSTOM_ID: it_good_gold
 :END:
@@ -1891,11 +1972,11 @@ Buff:
 /Good immediate damage slam to solve next few fights./
 #+end_center
 
-** "Dead or bad!"
+**** "Dead or bad!"
 :PROPERTIES:
 :CUSTOM_ID: it_dead
 :END:
-*** Damage
+***** Damage
 :PROPERTIES:
 :CUSTOM_ID: it_dead_damage
 :END:
@@ -1937,7 +2018,7 @@ Buff:
 /Items that are too passive or potentially harmful to be worth considering./
 #+end_center
 
-*** QoL
+***** QoL
 :PROPERTIES:
 :CUSTOM_ID: it_dead_qol
 :END:
@@ -1964,22 +2045,57 @@ Buff:
 {{{i(Tiny-Wings)}}}
 #+end_center
 
-* REVIEW Other Notes
+* Other Notes
 :PROPERTIES:
 :CUSTOM_ID: other
+:EXPORT_HUGO_SECTION: other
+:EXPORT_HUGO_WEIGHT: 400
 :END:
+
+** Index
+:PROPERTIES:
+:EXPORT_TITLE: Other Notes
+:EXPORT_FILE_NAME: _index
+:EXPORT_HUGO_WEIGHT: 400
+:END:
+
+** Mini Hotbar
+:PROPERTIES:
+:CUSTOM_ID: mini_hotbar
+:EXPORT_FILE_NAME: mini_hotbar
+:EXPORT_HUGO_WEIGHT: 401
+:END:
+
+*** Turn on your Mini Hotbar
+#+macro: options ~Options>More Options~
+#+macro: hotbar @@html: <span style="font-size: small; border:2px darkcyan solid; padding: 1px;">@@Mini Hotbar@@html:</span>@@
 {{{katex}}}
 
-This section is a mosaic of Shadow and general gameplay advice I've followed in the past.
+In {{{options}}}, you can toggle and customize your {{{hotbar}}}. This allows you to see
+your available abilities (and {{{shackles}}}) adjacent to your hitbox.
 
-If you have not yet, please toggle [[*Turn on Mini Hotbar][mini hotbar]] to monitor leap toggle better.
+An accent colour will border the Secondary if _leap is enabled,_ dependant on
+Shadow palette.
 
-** REVIEW Practices on Targetting
+#+caption: Mini Hotbar Settings
+[[file:img/game/options_hotbar.jpg]]
+
+#+begin_quote
+[Author] I suggest using green Shadow palettes,
+they're light in contrast and are visible during either final boss fights.
+#+end_quote
+
+** Targetting
 :PROPERTIES:
 :CUSTOM_ID: targetting
+:EXPORT_FILE_NAME: targetting
+:EXPORT_HUGO_WEIGHT: 402
 :END:
+
+*** Practices on Targetting
 #+macro: nt @@html: <span style="font-size: small; border:2px DarkSalmon solid; padding: 1px;">@@Nearest Target@@html:</span>@@
 #+macro: ct @@html: <span style="font-size: small; border:2px DarkSeaGreen solid; padding: 1px;">@@Change Target@@html:</span>@@
+{{{katex}}}
 
 Targetting goes based on *enemy ID order*. Once you determine it for e.g. Tassha, it's typically fixed for that pattern.
 # need to verify this.
@@ -2034,46 +2150,31 @@ Vice versa, I may refresh and force leap by pressing {{{nt}}} \rightarrow {{{ct}
 - Alternatively, use "tapping" movement keys (*streaming*) for micromovements.
 - Using {{{spe}}} or {{{def}}} to slow movement temporarily.
 
-** REVIEW Invuln Chaining
+** Invuln Chain
 :PROPERTIES:
 :CUSTOM_ID: leap_chain
+:EXPORT_FILE_NAME: leap_chain
+:EXPORT_HUGO_WEIGHT: 403
 :END:
 
+*** Chaining Invulnerability
 For damage/consistency, see [[*Ruby Leap Archetypes - R2/R4][Ruby Leap Archetypes - R2/R4]]. To repeat:
 - For {{{r1}}}/{{{r2}}}/{{{r4}}} leaps, leap just outside the minimum leap distance whenever you can.
 
-Additionally:
 - Spreads have a small end-window where you can leap without taking damage.
 
 Additionally,
 - {{{def}}} \rightarrow {{{secl}}} does provide back-to-back invuln, but (2/3) {{{sec}}} can roll {{{shackles}}}.
 - {{{secl}}} \rightarrow {{{secl}}} / {{{def}}} only chain invulns if <0.7s GCD or {{{greysteel-shield}}}.
 
-** DONE Turn on Mini Hotbar
-:PROPERTIES:
-:CUSTOM_ID: mini_hotbar
-:END:
-
-#+macro: options ~Options>More Options~
-#+macro: hotbar @@html: <span style="font-size: small; border:2px darkcyan solid; padding: 1px;">@@Mini Hotbar@@html:</span>@@
-In {{{options}}}, you can toggle and customize your {{{hotbar}}}. This allows you to see
-your available abilities (and {{{shackles}}}) adjacent to your hitbox.
-
-An accent colour will border the Secondary if _leap is enabled,_ dependant on
-Shadow palette.
-
-#+caption: Mini Hotbar Settings
-[[file:img/game/options_hotbar.jpg]]
-
-#+begin_quote
-[Author] I suggest using green Shadow palettes,
-they're light in contrast and are visible during either final boss fights.
-#+end_quote
-
-** REVIEW Hidden Leap Disable Radius
+** Leap Radius
 :PROPERTIES:
 :CUSTOM_ID: leap_buffer
+:EXPORT_FILE_NAME: leap_buffer
+:EXPORT_HUGO_WEIGHT: 404
 :END:
+
+*** Hidden Disable Leap Radius
 
 After enabling leap on Secondary, disabling leap uses a smaller "buffer" distance.
 
@@ -2089,30 +2190,7 @@ Due to this, I typically play with my leap disabled and move (just) outside the 
 #+caption: Rabbitleap "Buffer" Disable Radius
 [[file:/img/game/rabbitleap-buffer-inkscape.svg]]
 
-* TODO Example Builds :noexport:
-:PROPERTIES:
-:CUSTOM_ID: builds
-:END:
-
-* RENEW Changelog (Releases)
-:PROPERTIES:
-:CUSTOM_ID: changelog
-:END:
-
-- v0.1.x (2026-04-18) :: release with ability synergies, gem tier list and ability tier list
-- v0.2.0 (2026-04-21) :: applied feedback changes to rotation, gems, items.
-  - v0.2.1 (2026-04-21) :: fixed versioning and added dating.
-- v0.3.0 (2026-05-02) :: added rotations, class summary, tooltips, other notes; moved gems again.
-  - v0.3.1 (2026-05-02) :: grammar.
-  - v0.3.2 (2026-05-14) :: bad macro in item table, modified CSS; added abbreviations in gem tier list, headers are "fixed".
-- v0.4.0 (2026-06-07) :: gem-item retiers; actually fill item synergies.
-  - v0.4.1 (2026-06-16) :: reordered some gems, review synergies, added o2/g3 as synergies, link repo's own JS/.css
-       to avoid failed site loading.
-- v0.5.0 (2026-07-04) :: major item tiering rework. Added gameplan, multiplayer conflicts and targetting.
-
-#  LocalWords:  dmg synergize pickable Hammermaid BiS
-
-* TODO Planned Stuff to Do :noexport:
+* [0/9] Planned Stuff to Do :noexport:
 ** TODO Move to Hugo for Website
 /Entered on/ <2026-07-09 Thu>
 - Requires extra work to get tooltips to work
@@ -2168,3 +2246,5 @@ Due to this, I typically play with my leap disabled and move (just) outside the 
 
 Mostly to remove the "silent" katex macro,
 which is required to initially activate katex for the hugo book page.
+
+#  LocalWords:  dmg synergize pickable Hammermaid BiS
