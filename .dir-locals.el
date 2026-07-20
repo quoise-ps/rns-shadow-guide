@@ -4,7 +4,7 @@
          (org-log-done . time)
          (calendar-date-style . iso)
          (org-auto-align-tags . t)
-         (org-preview-latex-default-process . dvisvg)
+         (org-preview-latex-default-process . dvisvgm)
          (org-export-allow-bind-keywords . t)
          (org-startup-with-inline-images . t)
          (org-hide-macro-markers . t)
