@@ -8,6 +8,7 @@
 
 # #+setup_file: macros.org
 :PREFERENCES:
+#  LocalWords:  dmg synergize pickable Hammermaid BiS prio Pyro uncheatable
 # #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="./styles/gongzhitaao-org.css"/>
 # #+html_head: <link rel="stylesheet" type="text/css" href="./styles/hint.base.css">
 # #+html_head_extra: <style> p {line-height: 1.8em;} </style>
@@ -1076,14 +1077,14 @@ Shadow is best characterized by having:
 - {{{shackles}}} status effect.
 
 #+caption: Class Advantages Table
-| Pros                                               | Cons                                        |
-|----------------------------------------------------+---------------------------------------------|
-| Unique, gacha-like effects                         | Defensive has GCD                           |
-| Higher APM                                         | Complex rotations ({{{shackles}}})          |
-| Secondary invulnerability                          | Punishes bad targetting and leaps           |
+| Pros                                   | Cons                                        |
+|----------------------------------------+---------------------------------------------|
+| Unique, gacha-like effects             | Defensive has GCD                           |
+| Higher APM                             | Complex rotations ({{{shackles}}})                |
+| Secondary invulnerability              | Punishes bad targetting and leaps           |
 | Global+4P damage multipliers ({{{o2s}}} {{{g3s}}}) | Weak Special-only builds                    |
-| Consistent damage and AoE solves                   | Almost 0 hacky Rabbitluck 8k+ damage builds |
-|                                                    | Contests most items of Sin                  |
+| Consistent damage and AoE solves       | Almost 0 hacky Rabbitluck 8k+ damage builds |
+|                                        | Contests most items of Sin                  |
 
 **** General Gameplan
 :PROPERTIES:
@@ -1147,7 +1148,7 @@ See [[#ability_synergies][Ability synergies]] for specific synergies.
 :CUSTOM_ID: shackles
 :END:
 
-Shadow's {{{shackles}}} locks up one of her attacks[fn:attacks:Attacks include {{{pri}}}, {{{sec}}}, {{{spe}}}.] from use on any ability usage.
+Shadow's {{{shackles}}} locks up one of her attacks[fn:1] from use on any ability usage.
 This is independent of any Magicklock trinket effects, cooldowns or item effects (e.g. {{{lefthand-cast}}}.)
 
 # This doesn't feel as relevant, but I'll quote it.
@@ -1270,33 +1271,29 @@ For community jargon:
 :END:
 {{{katex}}}
 
-Shadow's abilities' damage are more "symmetrical" at base kit.
-The base kit optimization below are in magnitudes of about \pm20dps (10%) and only
-_only valid if attacks hit consistently_.
+Shadow does not have a proper rotation, due to {{{shackles}}}.
+Here, the abilities are clicked based on availability and if it's safe.
+Some moves require specifically a leap ($2'$) or {{{R1}}}'s Omegacharge ($1''$).
 
 #+name: rotations
 #+caption: Common Move Priorities off Base Kit
-| Base*                  | $3 > 1 > 4 > 2$                                            |
-| {{{r2}}} \lor {{{r4}}} | $2' \ggg 3 > 4 > 1 > 2$                                    |
-| {{{e2}}}               | $2 \ggg 3 > 4 > 1$                                         |
-| {{{s1}}} \lor {{{g1}}} | $2 > 3 > 4 > 1$                                            |
-| {{{r1}}}               | $\text{Repeat}(1'' \rightarrow 2' \lor 4) \gg \text{Base}$ |
-| {{{s4}}} \lor {{{o4}}} | $4 > 3 > 1 > 2$                                            |
-| {{{e4}}}               | $4 > 1 > 3 > 2$                                            |
-@@html:<div style="padding-left:20%; padding-right:20%;">@@
-*Based on MDP; in Outskirts, force {{{n4}}} by 6s and 21s (twice),
-can reach 9 gold easier if the enemy is beaten by 22.5s.
+| Base[fn:2]  | $3 > 1 > 4 > 2$                              |
+| {{{r2}}} \lor {{{r4}}} | $2' \ggg 3 > 4 > 1 > 2$                         |
+| {{{e2}}}      | $2 \ggg 3 > 4 > 1$                              |
+| {{{s1}}} \lor {{{g1}}} | $2 > 3 > 4 > 1$                              |
+| {{{r1}}}      | $\text{Repeat}(1'' \rightarrow 2' \lor 4) \gg \text{Base}$ |
+| {{{s4}}} \lor {{{o4}}} | $4 > 3 > 1 > 2$                              |
+| {{{e4}}}      | $4 > 1 > 3 > 2$                              |
 
-Leaps are designated by $2'$; charge by $2''$.
+**** Adjustments
 
-{{{spe}}} (3) can be delayed for mobile enemies.
-@@html:</div>@@
+- {{{spe}}} (3) can be delayed for enemies that leave your range, i.e. Rem.
 
-In fights with _multiple enemies_, like *Churchmouse Streets'* Matti's P2 mice ads or *Geode* Plee,
-save your {{{spe}}} or {{{def}}} until they spawn.
+- In fights with _multiple enemies_, like *Churchmouse Streets'* Matti's P2 mice ads or *Geode* Plee,
+save your {{{spe}}} or {{{def}}} until they spawn or group up.
 
-For *Darkhouse Depths'* Darkbeast Tauros, due to her zoning,
-use the late hit animations of {{{pri}}} and {{{def}}} to deal damage consistently.
+- For *Darkhouse Depths'* Darkbeast Tauros, due to her zoning,
+use the detached hit animations of {{{pri}}} and {{{def}}} to deal damage consistently.[fn:3]
 
 *** Ruby Leap Archetypes - R2/R4
 :PROPERTIES:
@@ -1361,22 +1358,21 @@ Also most gems here are universally good with {{{o2}}}, {{{g3}}} and {{{o4}}}.
 #+macro: E1i {{{N1i}}} {{{i(Firststrike-Bracelet)}}} {{{i(Midsummer-Dress)}}} {{{i(Abyss-Artifact)}}} {{{i(Flamedancer-Dagger)}}} {{{i(Whiteflame-Staff)}}} {{{i(Hexed-Blindfold)}}}
 #+macro: E1n "Needs" slow bypass, but best internal multi-hit and good snapshot buff synergy
 
-| Gem      | Gem Synergies                                               | Item Synergies | Notes                                                                        |
-|----------+-------------------------------------------------------------+----------------+------------------------------------------------------------------------------|
-| {{{n1}}} | {{{o2s}}} {{{g3s}}}                                         | {{{n1i}}}      | Good class N1, main ability to click on base                                 |
-| {{{o1}}} | {{{o2s}}} {{{e3s}}} \ggg {{{s3s}}}                          | {{{o1i}}}      | {{{g2}}} variant for {{{e3}}}, Special and loot CD—generally bad though.    |
-| {{{s1}}} | {{{o2s}}} {{{g3s}}} {{{o4s}}}                               | {{{s1i}}}      | +100 on Secondary, more consistent than {{{g1}}} for single enemies          |
-| {{{r1}}} | {{{o2s}}} {{{s2s}}} {{{r2s}}} {{{e2s}}} {{{o4s}}} {{{g3s}}} | {{{r1i}}}      | _600dmg on only iframe req_; easiest with {{{s2}}}, good with snapshot buffs |
-| {{{g1}}} | All (-{{{g2s}}}/-{{{r3s}}})                                 | {{{g1i}}}      | Avg +25 dmg on other ability hits, decent AoE and best % proc trigger.       |
-| {{{e1}}} | {{{s3s}}} {{{o2s}}} {{{e3s}}} {{{o4s}}}                     | {{{e1i}}}      | {{{e1n}}}                                                                    |
+| Gem | Gem Synergies           | Item Synergies | Notes                                                                  |
+|-----+-------------------------+----------------+------------------------------------------------------------------------|
+| {{{n1}}}  | {{{o2s}}} {{{g3s}}}                 | {{{n1i}}}            | Good class N1, main ability to click on base                           |
+| {{{o1}}}  | {{{o2s}}} {{{e3s}}} \ggg {{{s3s}}}           | {{{o1i}}}            | {{{g2}}} variant for {{{e3}}}, Special and loot CD—generally bad though.          |
+| {{{s1}}}  | {{{o2s}}} {{{g3s}}} {{{o4s}}}             | {{{s1i}}}            | +100 on Secondary, more consistent than {{{g1}}} for single enemies          |
+| {{{r1}}}  | {{{o2s}}} {{{s2s}}} {{{r2s}}} {{{e2s}}} {{{o4s}}} {{{g3s}}} | {{{r1i}}}            | _600dmg on only iframe req_; easiest with {{{s2}}}, good with snapshot buffs   |
+| {{{g1}}}  | All (-{{{g2s}}}/-{{{r3s}}})         | {{{g1i}}}            | Avg +25 dmg on other ability hits, decent AoE and best % proc trigger. |
+| {{{e1}}}  | {{{s3s}}} {{{o2s}}} {{{e3s}}} {{{o4s}}}         | {{{e1i}}}            | {{{e1n}}}                                                                    |
 
 #+begin_quote
 {{{s1}}} and {{{g1}}} effects does not trigger "use" abilities like {{{black-wakizashi}}} or {{{golden-katana}}}, but can trigger {{{brightstorm-spear}}}.
 
 {{{s1}}} and {{{g1}}} are fine with taking +GCD (includes {{{r1}}} to some extent.)
 
-{{{e1}}} 2s GCD effect can't be cheated via GCD items, Berserk, Quickdraw or even {{{shinsoku-katana}}}.
-At base kit, the effect triggers {{{pocketwatch}}}, but not {{{sacredstone-charm}}}.
+{{{e1}}} 2s GCD itself is completely uncheatable, the movement slow can be cancelled.[fn:4]
 
 {{{e1}}} ~1.5s slow on effect can be bypassed with Berserk, Super, Flutterstep, {{{e3}}}, and {{{midsummer-dress}}}.
 {{{s3}}} cancels this slow when used immediately after.
@@ -1394,14 +1390,14 @@ At base kit, the effect triggers {{{pocketwatch}}}, but not {{{sacredstone-charm
 #+macro: E2i {{{n2i}}} {{{i(Hexed-Blindfold)}}}
 #+macro: O2n SS superhex (universal damage mult.); scales loot and team damage, unlike others
 
-| Gem      | Leap | Gem Synergies                           | Item Synergies | Notes                                                   |
-|----------+------+-----------------------------------------+----------------+---------------------------------------------------------|
-| {{{n2}}} | Y    | {{{r4s}}} {{{g3s}}}                     | {{{n2i}}}      | Good class N2                                           |
-| {{{o2}}} | Y    | All                                     | {{{o2i}}}      | {{{o2n}}}                                               |
-| {{{s2}}} | -    | {{{r4s}}} {{{r1s}}} {{{s3s}}} {{{g3s}}} | {{{s2i}}}      | Ranged secondary and wide-hitbox, easy uptime           |
-| {{{r2}}} | Y    | {{{r4s}}} {{{o4s}}} {{{s3s}}} {{{g3s}}} | {{{r2i}}}      | _"Supercharge" double damage effect_ with only leap req |
-| {{{g2}}} | -    | {{{e3s}}} {{{g4}}} \ggg {{{s4s}}}       | {{{g2i}}}      | Good with oGCD gems; loses Secondary damage             |
-| {{{e2}}} | Y    | {{{r4s}}} {{{g3s}}} {{{s3s}}}           | {{{e2i}}}      | Average upgrade due to {{{shackles}}}                   |
+| Gem | Leap | Gem Synergies   | Item Synergies | Notes                                                 |
+|-----+------+-----------------+----------------+-------------------------------------------------------|
+| {{{n2}}}  | Y    | {{{r4s}}} {{{g3s}}}         | {{{n2i}}}            | Good class N2                                         |
+| {{{o2}}}  | Y    | All             | {{{o2i}}}            | {{{o2n}}}                                                   |
+| {{{s2}}}  | -    | {{{r4s}}} {{{r1s}}} {{{s3s}}} {{{g3s}}} | {{{s2i}}}            | Ranged secondary and wide-hitbox, easy uptime         |
+| {{{r2}}}  | Y    | {{{r4s}}} {{{o4s}}} {{{s3s}}} {{{g3s}}} | {{{r2i}}}            | _"Supercharge" double damage effect_ with only leap req |
+| {{{g2}}}  | -    | {{{e3s}}} {{{g4}}} \ggg {{{s4s}}}    | {{{g2i}}}            | Good with oGCD gems; loses Secondary damage           |
+| {{{e2}}}  | Y    | {{{r4s}}} {{{g3s}}} {{{s3s}}}     | {{{e2i}}}            | Average upgrade due to {{{shackles}}}                       |
 
 #+begin_quote
 nil#+end_quote
@@ -1427,14 +1423,14 @@ thus Special-only is heavily dependant on {{{e3}}}, {{{o3}}} or {{{obsidian-rod}
 #+macro: S3n Good early oGCD damage; no slow (and removes {{{E1}}}/{{{def}}} slow), but terrible damage scaling.
 #+macro: G3n Dancer Warcry (universal damage mult.); scales loot and team damage consistently (alt: {{{E3}}})
 
-| Gem      | Gem Synergies                           | Item Synergies | Notes                                                                 |
-|----------+-----------------------------------------+----------------+-----------------------------------------------------------------------|
-| {{{n3}}} | {{{o2s}}}                               | {{{n3i}}}      | Weaker class N3, but strong AoE (hits all) and decent debuff Spreader |
-| {{{o3}}} | (With item reset: {{{o1s}}}) {{{o2s}}}  | {{{o3i}}}      | Special damage scaling; huge hitting Special; disables universal %    |
-| {{{s3}}} | {{{e1s}}} {{{o1s}}} {{{g2s}}} {{{o2s}}} | {{{s3i}}}      | {{{s3n}}}                                                             |
-| {{{r3}}} | {{{o1s}}} {{{g2s}}} {{{o2s}}}           | {{{r3i}}}      | Only good for ads, Obsidian Rod or Special triggers                   |
-| {{{g3}}} | All                                     | {{{g3i}}}      | {{{g3n}}}                                                             |
-| {{{e3}}} | {{{e1s}}} {{{o1s}}} {{{g2s}}} {{{o2s}}} | {{{e3i}}}      | +~33% on Special;[fn:e3] debuff/buff archetype; inconsistent AoE.     |
+| Gem | Gem Synergies              | Item Synergies | Notes                                                                 |
+|-----+----------------------------+----------------+-----------------------------------------------------------------------|
+| {{{n3}}}  | {{{o2s}}}                        | {{{n3i}}}            | Weaker class N3, but strong AoE (hits all) and decent debuff Spreader |
+| {{{o3}}}  | (With item reset: {{{o1s}}}) {{{o2s}}} | {{{o3i}}}            | Special damage scaling; huge hitting Special; disables universal %    |
+| {{{s3}}}  | {{{e1s}}} {{{o1s}}} {{{g2s}}} {{{o2s}}}            | {{{s3i}}}            | {{{s3n}}}                                                                   |
+| {{{r3}}}  | {{{o1s}}} {{{g2s}}} {{{o2s}}}                | {{{r3i}}}            | Only good for ads, Obsidian Rod or Special triggers                   |
+| {{{g3}}}  | All                        | {{{g3i}}}            | {{{g3n}}}                                                                   |
+| {{{e3}}}  | {{{e1s}}} {{{o1s}}} {{{g2s}}} {{{o2s}}}            | {{{e3i}}}            | +~33% on Special;[fn:5] debuff/buff archetype; inconsistent AoE.          |
 
 #+begin_quote
 {{{e3}}} is affected by {{{obsidian-rod}}}, {{{cursed-candlestaff}}}, {{{old-bonnet}}} / {{{haunted-gloves}}}, {{{mountain-staff}}} and other special items changes.
@@ -1451,14 +1447,14 @@ thus Special-only is heavily dependant on {{{e3}}}, {{{o3}}} or {{{obsidian-rod}
 #+macro: G4i {{{N4i}}} {{{i(Spark-of-Determination)}}}
 #+macro: E4i {{{i(Firststrike-Bracelet)}}} {{{i(Starry-Cloak)}}}(\rightarrow {{{i(Timemage-Cap)}}}) {{{i(Timespace-Dagger)}}} {{{i(Bloodhound-Greatsword)}}} {{{i(Lonesome-Pendant)}}}
 
-| Gem      | Leap | Gem Synergies                                               | Item Synergies | Notes                                                    |
-|----------+------+-------------------------------------------------------------+----------------+----------------------------------------------------------|
-| {{{n4}}} | -    | {{{o2s}}} {{{g3s}}}                                         | {{{n4i}}}      | Has GCD; good burst for class N4 and Shackles reroll     |
-| {{{o4}}} | Y    | {{{r1s}}} {{{r2s}}} {{{o2s}}} {{{g3s}}}                     | {{{o4i}}}      | *Leaps*; *+m/s*; allows clicking attacks most times      |
-| {{{s4}}} | -    | {{{o1s}}} {{{g1s}}} {{{r1s}}} {{{g2s}}} {{{o2s}}} {{{g3s}}} | {{{s4i}}}      | oGCD burst damage early-game; but oGCD on 10s is bad     |
-| {{{r4}}} | -    | {{{o2s}}} {{{s2s}}} {{{r2s}}} {{{e2s}}} {{{g3s}}}           | {{{r4i}}}      | +300 on Leaps is amazing                                 |
-| {{{g4}}} | -    | {{{g1s}}} {{{g2s}}} {{{r3s}}} {{{o2s}}} {{{g3s}}}           | {{{g4i}}}      | Good Sanctum/Mice tech, best {{{g2}}} option             |
-| {{{e4}}} | -    | {{{g1s}}} {{{o2s}}} {{{e3s}}} {{{g3s}}}                     | {{{e4i}}}      | Amazing burst, trivializes first two fights of midstages |
+| Gem | Leap | Gem Synergies           | Item Synergies | Notes                                                    |
+|-----+------+-------------------------+----------------+----------------------------------------------------------|
+| {{{n4}}}  | -    | {{{o2s}}} {{{g3s}}}                 | {{{n4i}}}            | Has GCD; good burst for class N4 and Shackles reroll     |
+| {{{o4}}}  | Y    | {{{r1s}}} {{{r2s}}} {{{o2s}}} {{{g3s}}}         | {{{o4i}}}            | *Leaps*; *+m/s*; allows clicking attacks most times          |
+| {{{s4}}}  | -    | {{{o1s}}} {{{g1s}}} {{{r1s}}} {{{g2s}}} {{{o2s}}} {{{g3s}}} | {{{s4i}}}            | oGCD burst damage early-game; but oGCD on 10s is bad     |
+| {{{r4}}}  | -    | {{{o2s}}} {{{s2s}}} {{{r2s}}} {{{e2s}}} {{{g3s}}}     | {{{r4i}}}            | +300 on Leaps is amazing                                 |
+| {{{g4}}}  | -    | {{{g1s}}} {{{g2s}}} {{{r3s}}} {{{o2s}}} {{{g3s}}}     | {{{g4i}}}            | Good Sanctum/Mice tech, best {{{g2}}} option                   |
+| {{{e4}}}  | -    | {{{g1s}}} {{{o2s}}} {{{e3s}}} {{{g3s}}}         | {{{e4i}}}            | Amazing burst, trivializes first two fights of midstages |
 
 #+begin_quote
 Worth saving Defensive to reroll {{{shackles}}}, to line up
@@ -1543,7 +1539,7 @@ Weaker damage throughputs, but nonetheless safer and great options throughout th
   - Enables {{{e1}}} and buff/debuff item lines.
   - Needs {{{o1}}}, {{{g2}}} or CD reduction for consistent triggers (but good on base.)
   - _Inconsistent AoE_, but otherwise, ~+51% mean damage/Special from base.
-    [fn:e3:{{{e3}}} average mean does not factor in damage buffs or Sap, code available (https://gist.github.com/quoise-ps/82ce0dcc0ff5f5c8222e90b51bd9c4b0.)]
+    [fn:5]
 
 - {{{s2}}} :: amazing for damage uptime via ranged attacks, charge and wider area.
   - Consistent trigger for {{{r1}}}.
@@ -1657,11 +1653,11 @@ Both this and [[#it_perfect_arch][More Archetypical]] are good early picks.
 {{{i(Bloody-Bandage)}}}
 {{{i(Butterfly-Hairpin)}}}
 {{{i(Chrome-Shield)}}}
-{{{i(Cursed-Candlestaff)}}}[fn:cursed-candlestaff:{{{cursed-candlestaff}}} is unironically really good on Shadow's hitall. You should not be skipping this in MP unless you have {{{o3}}}.]
+{{{i(Cursed-Candlestaff)}}}[fn:6]
 {{{i(Demon-Horns)}}}
 {{{i(Eaglewing-Charm)}}}
 {{{i(Heavens-Codex)}}}
-{{{i(Hells-Codex)}}}[fn:darkstorm:[4P] {{{hells-codex}}} +30 is godly and coveted for multihit, though loses prio to Druid/Defender/Gren for {{{heavens-codex}}}'s resets.]
+{{{i(Hells-Codex)}}}[fn:7]
 {{{i(Kunoichi-Hood)}}}
 {{{i(Large-Umbrella)}}}
 {{{i(Leech-Staff)}}}
@@ -1678,7 +1674,7 @@ Both this and [[#it_perfect_arch][More Archetypical]] are good early picks.
 {{{i(Storm-Petticoat)}}}
 {{{i(Timewarp-Wand)}}}
 {{{i(Vampiric-Dagger)}}}
-{{{i(Venom-Hood)}}}[fn:venom:[4P] {{{venom-hood}}} has higher priority for Sniper and Grenadier.]
+{{{i(Venom-Hood)}}}[fn:8]
 {{{i(Whitewing-Bracelet)}}}
 #+end_center
 
@@ -1692,9 +1688,9 @@ Good now and influences build direction later.
 {{{i(Brightstorm-Spear)}}}
 {{{i(Coldsteel-Shield)}}}
 {{{i(Crane-Katana)}}}
-{{{i(Darkstorm-Knife)}}}[fn:darkstorm:[4P] {{{darkstorm-knife}}} loses prio to Dancer/Sin/Pyro due to {{{shackles}}}.]
+{{{i(Darkstorm-Knife)}}}[fn:7]
 {{{i(Falconfeather-Dagger)}}}
-{{{i(Firststrike-Bracelet)}}}[fn:firstrike:[4P] {{{firststrike-bracelet}}} loses prio to anyone with high base and Omegacharge.]
+{{{i(Firststrike-Bracelet)}}}[fn:9]
 {{{i(Grandmaster-Spear)}}}
 {{{i(Hexed-Blindfold)}}}
 {{{i(Saltwater-Staff)}}}
@@ -1731,8 +1727,8 @@ Requires specific gem or item before substantial effect.
 /Stack GCD and loot triggers together./
 
 {{{i(Darkcloud-Necklace)}}}
-{{{i(Desert-Earrings)}}}[fn:desert:{{{desert-earrings}}} good for rolling Flow-Str/Dex or Haste when you meet req.]
-{{{i(Greysteel-Shield)}}}[fn:greysteel:{{{greysteel-shield}}} allows better leap uptime, diving into moons and beams for much longer safely.]
+{{{i(Desert-Earrings)}}}[fn:10]
+{{{i(Greysteel-Shield)}}}[fn:11]
 {{{i(Reflection-Shield)}}}
 {{{i(Sacred-Bow)}}}
 {{{i(Spiked-Shield)}}} \\
@@ -1868,7 +1864,7 @@ Buff:
 {{{i(Battlemaiden-Armor)}}}
 {{{i(Crown-of-Love)}}}
 {{{i(Crown-of-Swords)}}}
-{{{i(Garnet-Staff)}}}[fn:garnet-staff:{{{garnet-staff}}} is a good alternate invuln proc for {{{r1}}} and {{{r4}}}.]
+{{{i(Garnet-Staff)}}}[fn:12]
 {{{i(Jesters-Hat)}}}
 {{{i(Lonesome-Pendant)}}}
 {{{i(Lost-Pendant)}}}
@@ -1953,7 +1949,7 @@ Buff:
 {{{i(Hawkfeather-Fan)}}}
 {{{i(Mermaid-Scalemail)}}}
 {{{i(Quartz-Shield)}}}
-{{{i(Staff-of-Sorrow)}}}[fn:staff-of-sorrow:{{{staff-of-sorrow}}}, no, it doesn't work with {{{o1}}}'s effect.] \\
+{{{i(Staff-of-Sorrow)}}}[fn:13] \\
 /Be wary of poor {{{spe}}} lategame scaling, see [[#special][Special]] for suggestions./
 #+end_center
 
@@ -2035,7 +2031,7 @@ Buff:
 {{{i(Feathered-Overcoat)}}}
 {{{i(Frozen-Staff)}}}
 {{{i(Jade-Staff)}}}
-{{{i(Midsummer-Dress)}}}[fn:Midsummer-Dress:{{{midsummer-dress}}} can slow bypass {{{e1}}} or {{{g2}}}-Spc/Def-spam builds.]
+{{{i(Midsummer-Dress)}}}[fn:14]
 {{{i(Phoenix-Charm)}}}
 {{{i(Red-Tanzaku)}}}
 {{{i(Rockdragon-Mail)}}}
@@ -2179,9 +2175,9 @@ Additionally,
 After enabling leap on Secondary, disabling leap uses a smaller "buffer" distance.
 
 #+begin_quote
-When your leap is disabled, for most enemies[fn:small_enemy:Excludes small enemies like butterflies, dummy and mice spawns in Matti.]:
+When your leap is disabled, for most enemies[fn:15]:
 - Your Primary will always hit the enemy.
-- Your Secondary[fn:sec_size:{{{sec}}} rectangle hitbox length is ~5% shorter than {{{pri}}}'s diameter] will always hit the enemy horizontally.
+- Your Secondary[fn:16] will always hit the enemy horizontally.
 
 Due to this, I typically play with my leap disabled and move (just) outside the leap distance when needed.
 #+end_quote
@@ -2247,4 +2243,48 @@ Due to this, I typically play with my leap disabled and move (just) outside the 
 Mostly to remove the "silent" katex macro,
 which is required to initially activate katex for the hugo book page.
 
-#  LocalWords:  dmg synergize pickable Hammermaid BiS
+* Footnotes
+
+[fn:1] Attacks include {{{pri}}}, {{{sec}}}, {{{spe}}}; but not {{{def}}}.
+
+This is relevant for {{{shackles}}} and
+buffs that are consumed upon using an attack.
+
+[fn:2] Based on MDP; in Outskirts, force {{{n4}}} by 6s and 21s (twice),
+can reach 9 gold easier if the enemy is beaten by 22.5s.
+
+Leaps are designated by $2'$; charge by $2''$.
+
+[fn:3] Shadow's {{{pri}}} and {{{def}}} when clicked, their hitbox will linger in the area when the ability was first clicked.
+
+Shadow's {{{sec}}} when clicked, its hitbox will stay /attached/ to where she is.
+
+When you're trying to hit your attacks in Tauros,
+you should consider clicking a {{{pri}}} or {{{def}}} just before her pushbacks.
+
+[fn:4] {{{e1}}} cannot be cheated via GCD items, Berserk, Quickdraw or even {{{shinsoku-katana}}}.
+At base kit, the effect triggers {{{pocketwatch}}}, but not {{{sacredstone-charm}}}.
+
+[fn:5] {{{e3}}} average mean does not factor in damage buffs or Sap, [[https://gist.github.com/quoise-ps/82ce0dcc0ff5f5c8222e90b51bd9c4b0][code available (gist.github.com)]].
+
+[fn:6] {{{cursed-candlestaff}}} works well with Shadow's hit-all ({{{spe}}}, {{{S3}}}, {{{G3}}})
+
+[fn:7] [4P] {{{darkstorm-knife}}} loses prio to Dancer/Sin/Pyro due to {{{shackles}}}.
+
+[fn:8] [4P] {{{venom-hood}}} has higher priority for Sniper and Grenadier.
+
+[fn:9] [4P] {{{firststrike-bracelet}}} loses prio to anyone with high base and Omegacharge.
+
+[fn:10] {{{desert-earrings}}} good for rolling Flow-Str/Dex or Haste when you meet req.
+
+[fn:11] {{{greysteel-shield}}} allows better leap uptime, diving into moons and beams for much longer safely.
+
+[fn:12] {{{garnet-staff}}} is a good alternate invuln proc for {{{r1}}} and {{{r4}}}.
+
+[fn:13] {{{staff-of-sorrow}}} will not work with {{{o1}}}'s effect.
+
+[fn:14] {{{midsummer-dress}}} can bypass slows from {{{e1}}} or {{{g2}}}-Spc/Def-spam builds.
+
+[fn:15] Excludes small enemies like butterflies, dummy and mice spawns in Matti.
+
+[fn:16] {{{sec}}} rectangle hitbox length is ~5% shorter than {{{pri}}}'s diameter

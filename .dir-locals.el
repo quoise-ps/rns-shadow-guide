@@ -11,7 +11,7 @@
 
          ;;; Project-specific settings
          ;;;; Content
-         (org-footnote-section . nil )
+         (org-footnote-section . "Footnotes")
          (org-hugo-base-dir . "./")
          (org-hugo-section . "doc")
 
