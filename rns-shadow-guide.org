@@ -110,7 +110,7 @@
 #+MACRO: itm_link [[file:./img/items/$1.png]] {{{span_dot}}}{{{n$1}}}{{{span_end}}}
 #+MACRO: itm_aria {{{t$1}}}
 # html + tooltip + html + image and name + html
-#+MACRO: i1 @@html:<span class="hint--large" aria-label="
+#+MACRO: i1 @@html:<span class="hint--medium hint--top" style="text-align: center;" aria-label="
 #+MACRO: i2 ">@@
 #+MACRO: i3 @@html:</span>@@
 #+MACRO: itm {{{i1}}}{{{itm_aria($1)}}}{{{i2}}}{{{itm_link($1)}}}{{{i3}}}
@@ -1000,7 +1000,7 @@
 * Homepage
 :PROPERTIES:
 :CUSTOM_ID: main
-# :EXPORT_TITLE: Shadow Guide (Rabbit & Steel)
+:EXPORT_TITLE: Shadow Guide (Rabbit & Steel)
 :EXPORT_FILE_NAME: _index
 :EXPORT_HUGO_TYPE: homepage
 :EXPORT_HUGO_SECTION: /

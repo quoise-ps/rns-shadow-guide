@@ -1,0 +1,3 @@
+[submodule "include/hint.css"]
+	path = include/hint.css
+	url = https://github.com/chinchang/hint.css
