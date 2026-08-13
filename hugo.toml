@@ -19,6 +19,8 @@ title = "Something about Shadow"
 
 # Specific Hugo Book Configuration
 [params]
+  BookCollapseSection = true
+
   # Color theme: 'light', 'dark' or 'auto'
   # Auto switches based on OS/browser preference
   BookTheme = 'light'

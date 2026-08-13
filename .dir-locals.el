@@ -5,9 +5,10 @@
          (calendar-date-style . iso)
          (org-auto-align-tags . t)
          (org-preview-latex-default-process . dvisvgm)
-         (org-export-allow-bind-keywords . t)
          (org-startup-with-inline-images . t)
          (org-hide-macro-markers . t)
+         (org-export-headline-levels 4)
+         (org-src-fontify-natively . t)
 
          ;;; Project-specific settings
          ;;;; Content
@@ -17,5 +18,5 @@
 
          ;;;; Export-related
          (org-export-with-sub-superscripts . nil)
-         (org-export-with-section-numbers . 3)
+         (org-export-with-section-numbers . t)
          (org-export-with-todo-keywords . nil))))
