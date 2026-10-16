@@ -3,10 +3,8 @@
 # #+subtitle: ({{{guidever}}})
 # #+description: Unofficial Shadow Class guide for the Rabbit & Steel game.
 # #+date: {{{modification-time(%Y-%m-%d)}}}
-#+macro: gamever v2.0.2.7
+#+macro: gamever v2.0.2.8
 #+macro: guidever v0.5.0
-
-# #+setup_file: macros.org
 :PREFERENCES:
 #  LocalWords:  dmg synergize pickable Hammermaid BiS prio Pyro uncheatable
 # #+html_head_extra: <style> p {line-height: 1.8em;} </style>
@@ -1341,7 +1339,7 @@ Also most gems here are universally good with {{{o2}}}, {{{g3}}} and {{{o4}}}.
 :CUSTOM_ID: primary
 :END:
 #+macro: N1i {{{i(Waterfall-Polearm)}}} {{{i(Crane-Katana)}}}
-#+macro: O1i {{{i(Sand-Shovel)}}} {{{i(Miners-Headlamp)}}} {{{i(Large-Anchor)}}} {{{i(Lefthand-Cast)}}}
+#+macro: O1i {{{i(Sand-Shovel)}}} {{{i(Miners-Headlamp)}}} {{{i(Large-Anchor)}}} {{{i(Lefthand-Cast)}}} {{{i(Dragonhead-Spear)}}}
 #+macro: S1i {{{i(Crane-Katana)}}} {{{i(Windbite-Dagger)}}} {{{i(Giant-Stone-Club)}}} {{{i(Hexed-Blindfold)}}}
 #+macro: R1i {{{N1i}}} {{{i(Firststrike-Bracelet)}}} {{{i(Garnet-Staff)}}}(\rightarrow {{{i(Obsidian-Hairpin)}}}) {{{i(Flamedancer-Dagger)}}}
 #+macro: G1i {{{i(Crane-Katana)}}} {{{i(Colorful-Earrings)}}} {{{i(Lightning-Bow)}}} {{{i(Crown-of-Storms)}}} {{{i(Usagi-Kamen)}}} {{{i(Giant-Stone-Club)}}} {{{i(Vega-Spear)}}} {{{i(Hexed-Blindfold)}}}
@@ -2169,7 +2167,17 @@ Due to this, I typically play with my leap disabled and move (just) outside the 
 #+caption: Rabbitleap "Buffer" Disable Radius
 [[file:img/game/rabbitleap-buffer-inkscape.svg]]
 
-* [0/9] Planned Stuff to Do :noexport:
+* [0/9] Todo :noexport:
+** Prepare a separate Abilities tab
+/Entered on/ <2026-08-23 Sun>
+
+This should ideally explain the bitboxes, invulnerability durations, slows if any.
+
+** TODO Prepare a Github runner to Pages
+/Entered on/ <2026-08-13 Thu>
+
+Ideally setting this up on Nix but not required.
+
 ** TODO Move to Hugo for Website
 /Entered on/ <2026-07-09 Thu>
 - Requires extra work to get tooltips to work

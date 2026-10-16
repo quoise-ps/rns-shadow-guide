@@ -5,7 +5,6 @@
          (calendar-date-style . iso)
          (org-auto-align-tags . t)
          (org-preview-latex-default-process . dvisvgm)
-         (org-startup-with-inline-images . t)
          (org-hide-macro-markers . t)
          (org-export-headline-levels 4)
          (org-src-fontify-natively . t)
