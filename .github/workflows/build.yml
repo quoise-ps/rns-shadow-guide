@@ -17,8 +17,6 @@ jobs:
       - uses: cachix/install-nix-action@v31
         with:
           github_access_token: ${{ secrets.GITHUB_TOKEN }}
-          enable_kvm: true # for tests on local Linux machine
-          extra_nix_config: "system-features = nixos-test benchmark big-parallel kvm"
       - run: nix build
       - run: nix flake check
       - name: Build site
