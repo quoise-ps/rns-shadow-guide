@@ -38,9 +38,6 @@ jobs:
           version: ${{ matrix.emacs_version }}
 
       - name: Build via Emacs
-        uses: purcell/setup-emacs@master
-        with:
-          version: ${{ matrix.emacs_version }}
         run: |
           echo "Generate Hugo markdown using ox-hugo"
           emacs -Q --script build.el
