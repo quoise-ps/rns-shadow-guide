@@ -18,12 +18,12 @@
 #+todo: | CANCELLED(c)
 :END:
 :MACROS:
-#+macro: gem [[./img/gems/$1.png]]
-#+macro: gems [[./img/gems-40px/$1.png]]
-#+macro: gemss [[./img/gems-40px/$1.png]]
-#+macro: abl [[./img/abilities-40px/$1.png]]
-#+macro: abls [[./img/abilities-40px/$1.png]]
-#+macro: Shackle [[./img/other/Shackles.png]]
+#+macro: gem [[/img/gems/$1.png]]
+#+macro: gems [[/img/gems-40px/$1.png]]
+#+macro: gemss [[/img/gems-40px/$1.png]]
+#+macro: abl [[/img/abilities-40px/$1.png]]
+#+macro: abls [[/img/abilities-40px/$1.png]]
+#+macro: Shackle [[/img/other/Shackles.png]]
 #+macro: Shackles {{{i1}}}{{{tShackles}}}{{{i2}}}{{{Shackle}}} {{{span_dot}}}Shackles{{{span_end}}}{{{i3}}}
 #+macro: WIP @@html:<span style="color:red;">@@WIP@@html:</span>@@
 # With Hugo book, this is required on pages with math inside them. 
@@ -103,7 +103,7 @@
 :GENERAL:
 #+MACRO: span_dot @@html:<span style="text-decoration:underline; text-decoration-style:dotted;">@@
 #+MACRO: span_end @@html:</span>@@
-#+MACRO: itm_link [[file:./img/items/$1.png]] {{{span_dot}}}{{{n$1}}}{{{span_end}}}
+#+MACRO: itm_link [[/img/items/$1.png]] {{{span_dot}}}{{{n$1}}}{{{span_end}}}
 #+MACRO: itm_aria {{{t$1}}}
 # html + tooltip + html + image and name + html
 #+MACRO: i1 @@html:<span class="hint--medium hint--top" style="text-align: center;" aria-label="
@@ -111,7 +111,7 @@
 #+MACRO: i3 @@html:</span>@@
 #+MACRO: itm {{{i1}}}{{{itm_aria($1)}}}{{{i2}}}{{{itm_link($1)}}}{{{i3}}}
 # version without name showing for item tier list
-#+MACRO: i {{{i1}}}{{{i_aria($1)}}}{{{i2}}}[[file:./img/items/$1.png]]{{{i3}}}
+#+MACRO: i {{{i1}}}{{{i_aria($1)}}}{{{i2}}}[[/img/items/$1.png]]{{{i3}}}
 #+MACRO: i_aria ({{{n$1}}}) {{{t$1}}}
 :END:
 :ITEM_NAMES:
@@ -1304,7 +1304,7 @@ Larger enemies like *Red Darkhouse* Ranalie P2 allow you to leap without lunging
 
 #+name: fig:rabbitleap
 #+caption: Distances in Rabbitleaps (lp) with Stella
-[[file:img/game/rabbitleap-inkscape2.svg]]
+[[/img/game/rabbitleap-inkscape2.svg]]
 
 *** Alt: Omegacharge Ruby Primary (R1)
 :PROPERTIES:
@@ -2059,7 +2059,7 @@ An accent colour will border the Secondary if _leap is enabled,_ dependant on
 Shadow palette.
 
 #+caption: Mini Hotbar Settings
-[[file:img/game/options_hotbar.jpg]]
+[[/img/game/options_hotbar.jpg]]
 
 #+begin_quote
 [Author] I suggest using green Shadow palettes,
@@ -2165,7 +2165,7 @@ Due to this, I typically play with my leap disabled and move (just) outside the 
 
 #+name: fig:rabbitleap_buffer
 #+caption: Rabbitleap "Buffer" Disable Radius
-[[file:img/game/rabbitleap-buffer-inkscape.svg]]
+[[/img/game/rabbitleap-buffer-inkscape.svg]]
 
 * [0/9] Todo :noexport:
 ** Prepare a separate Abilities tab
