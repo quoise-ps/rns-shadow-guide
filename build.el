@@ -15,7 +15,7 @@
 ;;
 ;;; Commentary: modified automated build for ox-hugo org mode website from Shom.
 ;;
-;;  Description
+;;  Description: BUild script for exporting from org. Do *not* run this locally without removing "(setq enable-local-variables :all)".
 ;;
 ;;; Code:
 
@@ -36,6 +36,11 @@
 (package-install 'ox-hugo)
 (require 'org-id)
 (require 'ox-hugo)
+
+;; Enable local variables
+(message "\n==== (Unsafe) Enabling all variables ====")
+(setq enable-local-variables :all)
+
 
 ;; Export content from org to Hugo md
 (message "\n==== Exporting Hugo markdown ====")
