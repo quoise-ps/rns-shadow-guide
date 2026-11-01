@@ -21,28 +21,7 @@ defaults:
 jobs:
   build:
     runs-on: ubuntu-latest
-    strategy:
-      fail-fast: false
-      matrix:
-        emacs_version:
-          - 28.1
-          - 28.2
-          - 29.1
-          - 29.2
-          - 29.3
-          - 29.4
     steps:
-      - name: Install Emacs
-        uses: purcell/setup-emacs@master
-        with:
-          version: ${{ matrix.emacs_version }}
-
-      - name: Build via Emacs
-        run: |
-          echo "Generate Hugo markdown using ox-hugo"
-          emacs -Q --script build.el
-
-      # Remaining defaults from https://gohugo.io/host-and-deploy/deploy-to-github-pages/
       - name: Checkout
         uses: actions/checkout@v7
         with:
@@ -50,6 +29,17 @@ jobs:
           fetch-depth: 0
           lfs: false
 
+      - name: Install Emacs
+        uses: purcell/setup-emacs@master
+        with:
+          version: 30.1
+
+      - name: Build via Emacs
+        run: |
+          echo "Generate Hugo markdown using ox-hugo"
+          emacs -Q --script build.el
+
+      # Remaining defaults from https://gohugo.io/host-and-deploy/deploy-to-github-pages/
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v6
