@@ -163,6 +163,11 @@ title = "Something about Shadow"
           # block = [['\[', '\]'], ['$$', '$$'], ['\\(','\\)']]
           inline = [['\(', '\)'], ['$','$'], ['\\(','\\)']]
 
+    # Ideally, this overrides Hugo Book's render hooks to fix Github Pages image linking
+    [markup.goldmark.renderHooks]
+      [markup.goldmark.renderHooks.image]
+        useEmbedded = 'always'
+
 [caches]
   [caches.images]
     dir = ':cacheDir/images'
