@@ -1,0 +1,6 @@
+/* Custom Styles for Hugo Book */
+
+/* Disables the scrollbar but fixes the tooltip not peeking outside the table. */
+.markdown table {
+    overflow: visible;
+}

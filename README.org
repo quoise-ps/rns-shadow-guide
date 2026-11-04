@@ -1,0 +1,42 @@
+
+#+begin_quote
+[!NOTE]
+Welcome to the author's source repository for the Shadow guide.
+
+Currently, the Shadow game is unfinished and has been slow in-progress.
+[You can visit it here.](https://quoise-ps.github.io/rns-shadow-guide/)
+#+end_quote
+
+-----
+
+
+* Something about Shadow
+
+[[https://quoise-ps.github.io/rns-shadow-guide/][Site Homepage]] • [[file:rns-shadow-guide.org][guide in org]] • [[file:rns-shadow-guide.org::*Todo][Todo]]
+
+A video game guide for playing Shadow in the critically acclaimed raiding roguelike /Rabbit & Steel/.
+
+** Export Process
+
+The guide uses Emacs, Org-Mode, Org-Hugo and Hugo.
+
+In a general gist, the workflow looks like:
+1. Write up the guide in Emacs Org-Mode (.org)
+2. Export to Hugo-compatible Markdown (org-hugo)
+3. Hugo builds a static site of the Markdown files
+4. Publish the site
+
+# Write a bit more about the process for self-reference
+
+Also see:
+
+- [[https://github.com/kaushalmodi/ox-hugo][ox-hugo]] (using a fork [[https://github.com/HaoZeke/haozeke.github.io.git][HaoZeke's repo]])
+- [[https://github.com/chinchang/hint.css][hint.css]]
+- [[https://github.com/alex-shpak/hugo-book/][hugo-book Theme]]
+
+* Disclaimer
+
+This guide re-uses modified images and assets directly from the game /Rabbit & Steel/ by mino_dev.
+
+All logos, trademarks, and copyrighted materials belong to their respective owners.
+

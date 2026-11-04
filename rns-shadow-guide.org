@@ -2,16 +2,12 @@
 #+author: Quoise
 # #+subtitle: ({{{guidever}}})
 # #+description: Unofficial Shadow Class guide for the Rabbit & Steel game.
-# #+date: {{{modification-time(%Y-%m-%d)}}}
+#+date: {{{modification-time(%Y-%m-%d)}}}
+#+macro: commit (eval (substring (magit-commit-oid $1) 0 7))
 #+macro: gamever v2.0.2.8
-#+macro: guidever v0.5.0
+#+macro: guidever v0.6.0-rc1 ({{{commit(main)}}})
 :PREFERENCES:
 #  LocalWords:  dmg synergize pickable Hammermaid BiS prio Pyro uncheatable
-# #+html_head_extra: <style> p {line-height: 1.8em;} </style>
-# #+html_head_extra: <style> html {background-color: #e7e7e7;} </style>
-# #+html_head_extra: <style> body {max-width: 80em; margin: 0 auto 2em; padding: .5em 1.5em 1.5em 1.5em; border: .1em solid #c0c0c0;} </style>
-:END:
-:TODOs:
 #+todo: TODO(t) DRAFT(D) | REVIEW(r)
 #+todo: | DONE(d)
 #+todo: | RENEW(R)
@@ -27,7 +23,6 @@
 #+macro: Shackles {{{i1}}}{{{tShackles}}}{{{i2}}}{{{Shackle}}} {{{span_dot}}}Shackles{{{span_end}}}{{{i3}}}
 #+macro: WIP @@html:<span style="color:red;">@@WIP@@html:</span>@@
 # With Hugo book, this is required on pages with math inside them. 
-#+macro: katex @@hugo:{{< katex />}}@@
 :END:
 :MACROS_ABBREVIATIONS:
 #+macro: pri {{{abl(N1)}}} *Primary*
@@ -1002,23 +997,24 @@
 :EXPORT_HUGO_SECTION: /
 :EXPORT_HUGO_WEIGHT: 100
 :END:
-{{{katex}}}
-#+begin_center
-@@html:<b><u>@@
-This guide is in
-@@html:<span style="color:green;">@@
-review phase.
+#+begin_quote
+[!Tip]
+@@html:<u><b>@@
+This guide is being 
+@@html:<span style="color:red;">@@
+redone,
 @@html:</span>@@
-@@html:</b></u>@@
+including its front-end and section writeups.
+@@html:</u></b>@@
 
-@@html:<b><u>@@
+You may encounter formatting issues and unintended site hitches.
+
 Please feel free to send any feedback or corrections in ~mino_dev~ Discord.
 Additions would be welcome.
-@@html:</b></u>@@
-#+end_center
+#+end_quote
 
 ** Overview
-Shadow Class guide {{{guidever}}} written primarily for {{{gamever}}} of Rabbit & Steel.
+Shadow Class guide {{{guidever}}} written primarily for {{{gamever}}} of Rabbit & Steel at about {{{date}}}.
 
 Primarily, the recommendations here are targetted as a carry at 4P Lunar
 and high WR consistency and with tactless author bias.
@@ -1052,11 +1048,9 @@ Special thanks to Obi Rod, Ins'Ania and Kero for early help.
 ** Class Overview
 :PROPERTIES:
 :CUSTOM_ID: class_summary
-:EXPORT_HUGO_SECTION_FRAG: class_summary
-:EXPORT_FILE_NAME: _index
+:EXPORT_FILE_NAME: class_summary
 :EXPORT_HUGO_WEIGHT: 201
 :END:
-{{{katex}}}
 
 
 Shadow is a mobile close-quarters bunny with a potent versatility; she excels when playing flexibly, due to {{{shackles}}}.
@@ -1188,7 +1182,7 @@ Here are some other relevant resources I recommend checking out.
 **** Shadow Wiki Link
 Details of Shadow's kit can be found in:
 - [[https://rns.miraheze.org/wiki/Shadow][Shadow | Rabbit & Steel Wiki (rns.miraheze.org)]]
-
+/
 **** Guide Catalogue
 For latest available guides:
 - [[https://discord.com/channels/496640298844422149/1238375581486288916][Guides Catalogue maintained by Stagz | mino_dev Discord (discord.com)]]
@@ -1205,7 +1199,6 @@ For community jargon:
 :END:
 
 *** Guide Specific
-{{{katex}}}
 - {{{n1}}}, {{{o1}}}, {{{s1}}}, {{{r1}}}, {{{e1}}}, {{{g1}}} :: _Normal_ and _gem_ variants of Primary.
 - {{{r1}}}, {{{r2}}}, {{{r3}}}, {{{r4}}} :: _Ruby_ variants of each respectively: Primary, Secondary, Special and Defensive.
 - \( 2' \ggg 3 > 1 > 4 > 2 \) :: move priority for {{{r2}}}
@@ -1238,6 +1231,11 @@ For community jargon:
   - v0.4.1 (2026-06-16) :: reordered some gems, review synergies, added o2/g3 as synergies, link repo's own JS/.css
        to avoid failed site loading.
 - v0.5.0 (2026-07-04) :: major item tiering rework. Added gameplan, multiplayer conflicts and targetting.
+- pre-v0.6.0 (2026-11-03) :: switch to Hugo
+  + Moving frontend to Hugo Books
+    # Internally this is from ~.html~ (gongzhitaao/orgcss ~.css~) to Hugo (alex-shpak/hugo-book)
+  + Mostly internal refactors, including exporting workflow and README
+  + Moved loots based on feedback, e.g. Casts down/Hourglass up
 
 * Core
 :PROPERTIES:
@@ -1258,7 +1256,6 @@ For community jargon:
 :EXPORT_FILE_NAME: rotation
 :EXPORT_HUGO_WEIGHT: 301
 :END:
-{{{katex}}}
 
 Shadow does not have a proper rotation, due to {{{shackles}}}.
 Here, the abilities are clicked based on availability and if it's safe.
@@ -1324,7 +1321,6 @@ Same principle to activate leap above:
 :EXPORT_HUGO_WEIGHT: 302
 :END:
 
-{{{katex}}}
 
 Unique or notable gem and item synergies are only presented.
 
@@ -1388,7 +1384,8 @@ Also most gems here are universally good with {{{o2}}}, {{{g3}}} and {{{o4}}}.
 | {{{e2}}}  | Y    | {{{r4s}}} {{{g3s}}} {{{s3s}}}     | {{{e2i}}}            | Average upgrade due to {{{shackles}}}                       |
 
 #+begin_quote
-nil#+end_quote
+nil
+#+end_quote
 
 *** Special
 :PROPERTIES:
@@ -1459,7 +1456,6 @@ applies to Defensive damage without consuming it.
 :EXPORT_HUGO_WEIGHT: 303
 :END:
 
-{{{katex}}}
 
 Tier placing prioritizes "lines" and WR by Lunar Shira/Witch of 900 DPS (~600 base DPS/level 1.)
 - In >99% of runs, buy a gem first shop:
@@ -1610,7 +1606,6 @@ Gems that are average, build-altering or have very narrow synergies for low yiel
 :EXPORT_HUGO_WEIGHT: 304
 :END:
 
-{{{katex}}}
 
 Again, tier placing prioritizes "lines" for final 900DPS (~600 base DPS.)
 
@@ -1702,11 +1697,6 @@ Requires specific gem or item before substantial effect.
 {{{i(Usagi-Kamen)}}} \\
 /About 48.8% chance to find one of three % gems (BiS: {{{g1}}}) next shop./
 
-{{{i(Lancer-Gauntlets)}}}
-{{{i(Lefthand-Cast)}}}
-{{{i(Righthand-Cast)}}} \\
-/Good when enabled with CD reduction, {{{r3}}}, {{{o1}}} or loot/debuff damage source./
-
 {{{i(Robe-of-Dark)}}}
 {{{i(Robe-of-Light)}}}
 {{{i(Flamewalker-Boots)}}} \\
@@ -1761,6 +1751,7 @@ Requires specific gem or item before substantial effect.
 {{{i(Strawberry-Cake)}}}
 {{{i(Talon-Charm)}}}
 {{{i(Thunderclap-Gloves)}}}
+{{{i(Tiny-Hourglass)}}}
 {{{i(Whiteflame-Staff)}}}
 {{{i(Winter-Hat)}}}
 {{{i(Wolf-Hood)}}}
@@ -1845,6 +1836,11 @@ Buff:
 {{{i(Straw-Hat)}}} \\
 /30 luck is good; 10/15 luck needs percent trigger AND percent proc loot./
 
+{{{i(Lancer-Gauntlets)}}}
+{{{i(Lefthand-Cast)}}}
+{{{i(Righthand-Cast)}}} \\
+/Good when enabled with CD reduction, {{{r3}}}, {{{o1}}} or loot/debuff damage source./
+
 {{{i(Altair-Dagger)}}}
 {{{i(Artist-Smock)}}}
 {{{i(Battlemaiden-Armor)}}}
@@ -1920,7 +1916,6 @@ Buff:
 {{{i(Stuffed-Rabbit)}}}
 {{{i(Throwing-Dagger)}}}
 {{{i(Tidal-Greatsword)}}}
-{{{i(Tiny-Hourglass)}}}
 {{{i(Unsacred-Pendant)}}}
 {{{i(Volcano-Spear)}}}
 #+end_center
@@ -2050,7 +2045,6 @@ Buff:
 
 #+macro: options ~Options>More Options~
 #+macro: hotbar @@html: <span style="font-size: small; border:2px darkcyan solid; padding: 1px;">@@Mini Hotbar@@html:</span>@@
-{{{katex}}}
 
 In {{{options}}}, you can toggle and customize your {{{hotbar}}}. This allows you to see
 your available abilities (and {{{shackles}}}) adjacent to your hitbox.
@@ -2075,7 +2069,6 @@ they're light in contrast and are visible during either final boss fights.
 
 #+macro: nt @@html: <span style="font-size: small; border:2px DarkSalmon solid; padding: 1px;">@@Nearest Target@@html:</span>@@
 #+macro: ct @@html: <span style="font-size: small; border:2px DarkSeaGreen solid; padding: 1px;">@@Change Target@@html:</span>@@
-{{{katex}}}
 
 Targetting goes based on *enemy ID order*. Once you determine it for e.g. Tassha, it's typically fixed for that pattern.
 # need to verify this.
@@ -2167,18 +2160,19 @@ Due to this, I typically play with my leap disabled and move (just) outside the 
 #+caption: Rabbitleap "Buffer" Disable Radius
 [[/img/game/rabbitleap-buffer-inkscape.svg]]
 
-* [0/9] Todo :noexport:
-** Prepare a separate Abilities tab
+* [4/11] Todo :noexport:
+** TODO Prepare a separate Abilities tab
 /Entered on/ <2026-08-23 Sun>
 
 This should ideally explain the bitboxes, invulnerability durations, slows if any.
 
-** TODO Prepare a Github runner to Pages
+** DRAFT Prepare a Github runner to Pages
 /Entered on/ <2026-08-13 Thu>
 
 Ideally setting this up on Nix but not required.
 
-** TODO Move to Hugo for Website
+** REVIEW Move to Hugo for Website
+CLOSED: [2026-11-03 Tue 19:55]
 /Entered on/ <2026-07-09 Thu>
 - Requires extra work to get tooltips to work
 - Prefer to setup Github runner on Github side to export from org to md to Hugo
@@ -2203,12 +2197,10 @@ Ideally setting this up on Nix but not required.
 
 ** TODO Animated Gifs
 /Entered on/ <2026-07-09 Thu>
-- Gifs for targetting
-- Streaming movement
+Not sure how to make this?
   
 ** TODO Flowchart of Example Gem/Loot Choices
 /Entered on/ <2026-07-09 Thu>
-- Graphviz this shit (it's going to require HTML to get images to work)
 
 ** TODO Write a proper build archetype section
 /Entered on/ <2026-07-09 Thu>
@@ -2216,17 +2208,20 @@ Ideally setting this up on Nix but not required.
 - Loot/debuff
 - Percent procs (G1)
 
-** TODO move hourglass up
+** DONE move hourglass up
+CLOSED: [2026-11-03 Tue 19:56]
 /Entered on/ <2026-07-09 Thu>
 - [Stev] +15 DPS at 24s, 105 DPS at 240s.
 
 ** TODO Revamp changelog, so it's actually legible
 /Entered on/ <2026-07-09 Thu>
 
-** TODO Move casts down for intuition
+** DONE Move casts down for intuition
+CLOSED: [2026-11-03 Tue 19:57]
 /Entered on/ <2026-07-09 Thu>
 
-** TODO Add export hooks for Katex
+** DONE Add export hooks for Katex
+CLOSED: [2026-11-03 Tue 19:57]
 /Entered on/ <2026-07-12 Sun>
 - Reference: https://orgmode.org/manual/Advanced-Export-Configuration.html
 - Katex Hugo Book: https://book.alxs.dev/docs/content/shortcodes/katex/
