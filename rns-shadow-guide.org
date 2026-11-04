@@ -1183,7 +1183,7 @@ Here are some other relevant resources I recommend checking out.
 **** Shadow Wiki Link
 Details of Shadow's kit can be found in:
 - [[https://rns.miraheze.org/wiki/Shadow][Shadow | Rabbit & Steel Wiki (rns.miraheze.org)]]
-/
+
 **** Guide Catalogue
 For latest available guides:
 - [[https://discord.com/channels/496640298844422149/1238375581486288916][Guides Catalogue maintained by Stagz | mino_dev Discord (discord.com)]]
