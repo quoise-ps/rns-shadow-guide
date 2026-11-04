@@ -6,6 +6,12 @@ title = "Something about Shadow"
 [module]
   [[module.imports]]
     path = "github.com/alex-shpak/hugo-book"
+  [[module.mounts]]
+    source = 'assets'
+    target = 'assets'
+  [[module.mounts]]
+    source = 'static'
+    target = 'assets'
 
 # Link to homepage
 [[menu.before]]
