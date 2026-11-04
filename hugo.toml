@@ -157,7 +157,9 @@ title = "Something about Shadow"
           # block = [['\[', '\]'], ['$$', '$$'], ['\\(','\\)']]
           inline = [['\(', '\)'], ['$','$'], ['\\(','\\)']]
 
-# [caches]
+[caches]
+  [caches.images]
+    dir = ':cacheDir/images'
 #   [caches.getjson]
 #     dir = ":cacheDir/:project"
 #     maxAge = "1m" # Disable caching getJSON data
