@@ -4,8 +4,9 @@
 # #+description: Unofficial Shadow Class guide for the Rabbit & Steel game.
 #+date: {{{modification-time(%Y-%m-%d)}}}
 #+macro: commit (eval (substring (magit-commit-oid $1) 0 7))
+#+macro: tag (eval (magit-get-current-tag $1))
 #+macro: gamever v2.0.2.8
-#+macro: guidever v0.6.0-rc1 ({{{commit(main)}}})
+#+macro: guidever {{{tag(main)}}} ({{{commit(main)}}})
 :PREFERENCES:
 #  LocalWords:  dmg synergize pickable Hammermaid BiS prio Pyro uncheatable
 #+todo: TODO(t) DRAFT(D) | REVIEW(r)
